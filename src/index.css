@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #f7f9fc;
+    color: #191c1e;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+  }
+
+  img { display: block; max-width: 100%; }
+  button { cursor: pointer; }
+
+  ::selection { background-color: #0a192f; color: #fff; }
+}
+
+@layer components {
+  /* ── Pill button (navbar) */
+  .btn-pill {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-full
+           bg-[#0a192f] text-white font-body font-medium text-[13px]
+           transition-all duration-300
+           hover:shadow-[0_6px_28px_rgba(10,25,47,0.35)] hover:-translate-y-px;
+  }
+
+  /* ── Solid primary */
+  .btn-primary {
+    @apply inline-flex items-center gap-2.5 px-8 py-4
+           bg-[#0a192f] text-white font-body font-semibold text-[13px] tracking-[0.04em]
+           rounded-full transition-all duration-300
+           hover:shadow-[0_8px_32px_rgba(10,25,47,0.35)] hover:-translate-y-0.5;
+  }
+
+  /* ── Outline */
+  .btn-outline {
+    @apply inline-flex items-center gap-2.5 px-8 py-4
+           border border-[#0a192f] text-[#0a192f] font-body font-semibold text-[13px] tracking-[0.04em]
+           rounded-full transition-all duration-300
+           hover:bg-[#0a192f] hover:text-white;
+  }
+
+  /* ── Ghost on dark bg */
+  .btn-ghost-light {
+    @apply inline-flex items-center gap-2.5 px-8 py-4
+           border border-white/20 text-white font-body font-medium text-[13px]
+           rounded-full transition-all duration-300
+           hover:bg-white/10 hover:border-white/40;
+  }
+
+  /* ── Text link */
+  .btn-link {
+    @apply inline-flex items-center gap-2
+           font-body font-semibold text-[13px] tracking-[0.02em];
+  }
+
+  /* ── Section eyebrow */
+  .eyebrow {
+    @apply flex items-center gap-2.5
+           font-body font-bold text-[12px] tracking-[0.2em] uppercase text-slate-500 mb-6;
+  }
+  .eyebrow::before {
+    content: '';
+    @apply block w-5 h-px bg-[#e31e24] flex-shrink-0;
+  }
+
+  /* Remove red line from partners section */
+  #partners .eyebrow::before {
+    @apply hidden;
+  }
+
+  /* Remove red line from brands section */
+  #brands .eyebrow::before {
+    @apply hidden;
+  }
+
+  /* Remove red line from services section */
+  #services .eyebrow::before {
+    @apply hidden;
+  }
+
+  /* ── Form */
+  .form-field  { @apply flex flex-col gap-2; }
+  .form-label  { @apply font-body font-semibold text-[10px] tracking-[0.14em] uppercase text-slate-400; }
+  /* Line-only input — very premium feel */
+  .form-input  {
+    @apply w-full bg-transparent border-0 border-b border-slate-200
+           px-0 py-3 font-body text-[15px] text-[#0a192f] placeholder:text-slate-300
+           focus:outline-none focus:border-[#0a192f] transition-colors duration-200;
+  }
+  .form-input-box {
+    @apply w-full bg-white border border-slate-200 px-4 py-3
+           font-body text-[14px] text-[#0a192f] placeholder:text-slate-300
+           focus:outline-none focus:border-[#0a192f] focus:ring-1 focus:ring-[#0a192f]
+           transition-colors duration-150;
+  }
+}
+
+@layer utilities {
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    user-select: none;
+    vertical-align: middle;
+    line-height: 1;
+  }
+
+  .glass-nav {
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+  }
+
+  .text-stroke-white {
+    -webkit-text-stroke: 1px rgba(255,255,255,0.1);
+    color: transparent;
+  }
+
+  .industry-card {
+    transition: transform 0.35s cubic-bezier(0.4,0,0.2,1), border-color 0.25s ease;
+  }
+  .industry-card:hover { transform: translateY(-6px); }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .card-appear { animation: fadeInUp 0.3s ease forwards; }
+
+  /* Arrow nudge on btn-link hover */
+  .group:hover .arrow-nudge { transform: translateX(4px); }
+  .arrow-nudge { transition: transform 0.2s ease; display: inline-block; }
+
+  @keyframes shimmer {
+    0%   { background-position: -400px 0; }
+    100% { background-position: 400px 0; }
+  }
+  .shimmer {
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.06) 50%, transparent 100%);
+    background-size: 800px 100%;
+    animation: shimmer 2.5s infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+  }
+  .animate-float { animation: float 3.5s ease-in-out infinite; }
+
+  @keyframes glow-pulse {
+    0%, 100% { box-shadow: 0 16px 48px rgba(227,30,36,0.25); }
+    50% { box-shadow: 0 20px 60px rgba(227,30,36,0.35); }
+  }
+  .animate-glow-pulse { animation: glow-pulse 3s ease-in-out infinite; }
+}

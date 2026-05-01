@@ -1,0 +1,63 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}'],
+  theme: {
+    extend: {
+      colors: {
+        'primary-accent':              '#e31e24',
+        'primary':                     '#0a192f',
+        'outline-variant':             '#c5c6cd',
+        'secondary':                   '#5a5e6a',
+        'on-primary-container':        '#76849f',
+        'on-primary':                  '#ffffff',
+        'on-background':               '#191c1e',
+        'surface-bright':              '#f7f9fc',
+        'primary-fixed':               '#e31e24',
+        'surface-container-low':       '#f2f4f7',
+        'on-secondary':                '#ffffff',
+        'on-primary-fixed':            '#0d1c32',
+        'surface-container':           '#eceef1',
+        'secondary-container':         '#dee2f0',
+        'surface-container-high':      '#e6e8eb',
+        'surface-variant':             '#e0e3e6',
+        'on-tertiary':                 '#ffffff',
+        'on-error':                    '#ffffff',
+        'surface-container-lowest':    '#ffffff',
+        'error-container':             '#ffdad6',
+        'surface-container-highest':   '#e0e3e6',
+        'error':                       '#e31e24',
+        'primary-container':           '#0a192f',
+        'on-surface':                  '#191c1e',
+        'inverse-surface':             '#2d3133',
+        'surface-dim':                 '#d8dadd',
+        'on-surface-variant':          '#44474d',
+        'outline':                     '#75777e',
+        'inverse-on-surface':          '#eff1f4',
+        'background':                  '#f7f9fc',
+        'surface':                     '#f7f9fc',
+      },
+      fontFamily: {
+        headline: ['"Plus Jakarta Sans"', 'sans-serif'],
+        display:  ['"Plus Jakarta Sans"', 'sans-serif'],
+        body:     ['"DM Sans"', 'sans-serif'],
+        label:    ['"DM Sans"', 'sans-serif'],
+      },
+      borderRadius: {
+        DEFAULT: '0.125rem',
+        lg:      '0.25rem',
+        xl:      '0.5rem',
+        full:    '0.75rem',
+      },
+      animation: {
+        float: 'float 6s ease-in-out infinite',
+      },
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%':      { transform: 'translateY(-20px)' },
+        },
+      },
+    },
+  },
+  plugins: [],
+}
