@@ -1,4 +1,28 @@
 import { useParams, Link } from 'react-router-dom'
+import FAQ from '../components/FAQ'
+
+const GENERIC_FAQS = [
+  {
+    q: 'How long does a typical engagement take?',
+    a: 'Most engagements run between 2 and 6 weeks depending on scope and complexity. We agree on a clear timeline and milestone plan before starting so there are no surprises.',
+  },
+  {
+    q: 'Do I need to prepare anything before we start?',
+    a: 'A brief onboarding call is all we need to begin. We then run a structured discovery process to gather what\'s needed — you won\'t be handed a long questionnaire to fill out on your own.',
+  },
+  {
+    q: 'How are deliverables handed over?',
+    a: 'All work is delivered in a structured format — documented, editable, and built to be owned by your team. We don\'t create black-box outputs that only we can interpret.',
+  },
+  {
+    q: 'Can services be combined or run in parallel?',
+    a: 'Yes. Many clients run multiple services in parallel or sequence them across a 3–6 month roadmap. We design a phased plan that maximises impact without overloading your internal capacity.',
+  },
+  {
+    q: 'What kind of ongoing support is available after the engagement?',
+    a: 'We offer a standard 30-day post-engagement support window on all services. For clients who want continued advisory access, monthly retainer options are available.',
+  },
+]
 
 const SERVICES_DATA = {
   lb: {
@@ -226,6 +250,9 @@ export default function Service() {
             </div>
           </div>
         </section>
+
+        {/* FAQ Section */}
+        <FAQ items={GENERIC_FAQS} />
 
         {/* CTA Section */}
         <section className="py-24 bg-gradient-to-r from-[#0a192f] to-[#0f2240]">

@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom'
 
 const QUICK_LINKS = [
-  { label: 'Home',          href: '/',              isLink: true },
-  { label: 'Services',      href: '/services',       isLink: true },
+  { label: 'About Us',      href: '/',              isLink: true },
   { label: 'Teams',         href: '/teams',          isLink: true },
   { label: 'Partners',      href: '/#partners'                   },
   { label: 'Brands',        href: '/#brands'                     },
@@ -50,12 +49,20 @@ export default function Footer() {
 
           {/* Col 1 — Brand */}
           <div>
-            <Link to="/" className="inline-flex items-center gap-1 group mb-4">
-              <span className="font-headline font-extrabold text-xl text-white tracking-tight leading-none">Bz</span>
-              <span className="w-[7px] h-[7px] bg-[#e31e24] rounded-sm mx-0.5 shrink-0 group-hover:rotate-45 transition-transform duration-300" />
-              <span className="font-headline font-extrabold text-xl text-white tracking-tight leading-none">simplified</span>
+            <Link to="/" className="inline-flex items-center gap-3 mb-6">
+              {/* B mark */}
+              <div className="relative flex items-end leading-none">
+                <span className="font-headline font-black tracking-tighter text-white select-none" style={{ fontSize: '2.4rem', lineHeight: 1 }}>B</span>
+                <span className="absolute bg-[#e31e24]" style={{ width: 10, height: 10, top: 2, right: -3 }} />
+              </div>
+              {/* Divider */}
+              <div className="w-px self-stretch my-1 bg-white/30" />
+              {/* Word-mark */}
+              <div className="flex flex-col justify-center gap-0.5">
+                <span className="font-headline font-extrabold text-[13px] tracking-tight leading-none text-white">Business</span>
+                <span className="font-headline font-extrabold text-[13px] tracking-tight leading-none text-white">Simplified</span>
+              </div>
             </Link>
-            <div className="w-8 h-[2px] bg-[#e31e24] rounded-full mb-5" />
             <p className="font-body text-white/50 text-[13px] leading-[1.75] max-w-[240px]">
               Structural clarity for ambitious growth. We partner with founders and leaders to simplify operations and scale with confidence.
             </p>

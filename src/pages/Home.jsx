@@ -1,34 +1,31 @@
-import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 /* ─── Static data ────────────────────────────────────────────────────────── */
 
-const INDUSTRY_FILTERS = [
-  { label: 'All Sectors',    value: 'all' },
-  { label: 'FinTech',        value: 'fintech' },
-  { label: 'Logistics',      value: 'logistics' },
-  { label: 'SaaS',           value: 'saas' },
-  { label: 'Healthcare Tech', value: 'healthcare' },
-]
-
-const INDUSTRY_CARDS = [
+const WALL_OF_FAME = [
   {
-    id: 1, category: 'fintech', label: 'FinTech Success',
-    title: 'Scalable Payments Infrastructure',
-    description:
-      'Streamlined cross-border transactions for a Tier 1 digital bank, reducing latency by 45% and ensuring 99.9% uptime.',
+    slug: 'brand-alpha',
+    name: 'Brand Alpha',
+    sector: 'F&B',
+    what: 'End-to-end franchise system design — SOPs, training manuals, and outlet rollout playbook.',
+    outcome: '12 outlets launched in 8 months',
+    img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDAPk_nAYdIsuvI2bXmVaB-yZwCEuH3sZCbE5lfefQ7pC1jetVZ2f44AM9EK2xU5Yr-XhKaXvepeYfvPsyyB4O5WRi9oQO4BQVMiNxVwv_73B-eOefnFvp0rs-LT1ask7EEdkTzW3v6mRSriewcQYkMEPhWnqeLcokl61is46pgpGVnGORiRAanDalw_LeBKINc_T6BzJCja3bsmG6V4-pH_eiQwxkcyr1o4CIdvjgZwomXHWPonoNsRqkoEMSDHLYiwz4F-0Oxde4x',
   },
   {
-    id: 2, category: 'logistics', label: 'Logistics Success',
-    title: 'Last-Mile Optimization',
-    description:
-      'Deployed dynamic routing algorithms for a regional carrier, resulting in a 22% reduction in fuel costs and 15% faster delivery times.',
+    slug: 'brand-beta',
+    name: 'Brand Beta',
+    sector: 'Retail',
+    what: 'Full brand identity overhaul and go-to-market strategy for Pan-India expansion.',
+    outcome: '3× revenue growth in Year 1',
+    img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDbV5NaKPNAAfG5yOAdqa7pAEmLaOx2s4rLjNC5-n_5UPt1ZXJ44eVlkm5OcMq813emmNVfCHXjdB_TH9IIw8svlZKxIDl-BwxAWiUR5tSdm-x5MG5_i4Yu8cJJ0AoFMv0Hq4sAZ9Vcf-ZLU1ploIw-flCmfysfh201boh1G_LHVz6NjgdRM2N1s2fUo44JSBC6aekqlhjHjatm1hb6CXxaE10DLw_hnTz9-cCOUXlSdiRV6o_sNQ_j9JekFEaXvzRh0WoivRMBkJ3',
   },
   {
-    id: 3, category: 'saas', label: 'SaaS Success',
-    title: 'GTM Engine Architecture',
-    description:
-      'Restructured the sales-to-success handoff for a Series C platform, increasing net revenue retention (NRR) by 18 points.',
+    slug: 'brand-gamma',
+    name: 'Brand Gamma',
+    sector: 'F&B',
+    what: 'Operational restructuring, cost-control systems, and supply chain standardisation.',
+    outcome: '28% reduction in operational cost',
+    img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAsoj-B0C57r8KoBjwiGFyMYlAAvE50YZfeulsL_h3afiNRNtAft4z2w9wxfbb6jRyFU7eZZ_Y0v1zDQ3sxfz0rFbVMp0DDXQ6uFA84duxK3mkeZDeA_oI7idqmRVps4cYyduyI7oCA8wE-sdw4s_he2_CPsFzqvX3P4hlQD5GkaIaGrchwqZD_shiLWDRMOsGHkTMi7JJBrmVjlil44MOocWc6nSEeMZlogcGPZtvu7tAEHItoH_5KZcQmaocbCcEV0SQR6uZiGiPP',
   },
 ]
 
@@ -61,15 +58,15 @@ const ARCH_CARDS = [
 ]
 
 const SERVICES = [
-  { stage: 'START', code: 'LB', num: '01', title: 'Launch Your Brand', desc: 'Identity, positioning, and go-to-market.' },
-  { stage: 'START', code: 'BB', num: '02', title: 'Build Your Business', desc: 'Legal structure, ops, and funding systems.' },
-  { stage: 'START', code: 'ST', num: '03', title: 'Set Up Your Tech', desc: 'Core stack to run and measure your business.' },
-  { stage: 'STABILIZE', code: 'PB', num: '04', title: 'Protect Your Brand', desc: 'Trademarks, contracts, and brand governance.' },
-  { stage: 'STABILIZE', code: 'FF', num: '05', title: 'Fix Your Finances', desc: 'Books, cash flow, and profitability controls.' },
-  { stage: 'STABILIZE', code: 'EC', num: '06', title: 'Ensure Compliance', desc: 'Statutory, regulatory, and internal policy.' },
-  { stage: 'STABILIZE', code: 'MO', num: '07', title: 'Manage Your Operations', desc: 'SOPs, KPIs, and daily rhythm of execution.' },
-  { stage: 'SCALE', code: 'ET', num: '08', title: 'Empower Your Team', desc: 'Org design, hiring, and leadership cadence.' },
-  { stage: 'SCALE', code: 'GB', num: '09', title: 'Grow Your Business', desc: 'Expansion strategy, capital, and new markets.' },
+  { stage: 'START',     code: 'LB', num: '01', icon: 'rocket_launch',   title: 'Launch Your Brand',      desc: 'Identity, positioning, and go-to-market.',          img: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=600&q=80' },
+  { stage: 'START',     code: 'BB', num: '02', icon: 'business_center', title: 'Build Your Business',    desc: 'Legal structure, ops, and funding systems.',        img: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80' },
+  { stage: 'START',     code: 'ST', num: '03', icon: 'devices',         title: 'Set Up Your Tech',       desc: 'Core stack to run and measure your business.',      img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80' },
+  { stage: 'STABILIZE', code: 'PB', num: '04', icon: 'shield',          title: 'Protect Your Brand',     desc: 'Trademarks, contracts, and brand governance.',      img: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=600&q=80' },
+  { stage: 'STABILIZE', code: 'FF', num: '05', icon: 'account_balance', title: 'Fix Your Finances',      desc: 'Books, cash flow, and profitability controls.',     img: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=600&q=80' },
+  { stage: 'STABILIZE', code: 'EC', num: '06', icon: 'gavel',           title: 'Ensure Compliance',      desc: 'Statutory, regulatory, and internal policy.',       img: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=600&q=80' },
+  { stage: 'SCALE',     code: 'MO', num: '07', icon: 'tune',            title: 'Manage Your Operations', desc: 'SOPs, KPIs, and daily rhythm of execution.',        img: 'https://images.unsplash.com/photo-1553484771-371a605b060b?auto=format&fit=crop&w=600&q=80' },
+  { stage: 'SCALE',     code: 'ET', num: '08', icon: 'groups',          title: 'Empower Your Team',      desc: 'Org design, hiring, and leadership cadence.',       img: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80' },
+  { stage: 'SCALE',     code: 'GB', num: '09', icon: 'trending_up',     title: 'Grow Your Business',     desc: 'Expansion strategy, capital, and new markets.',     img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80' },
 ]
 
 const WHY_US_ITEMS = [
@@ -88,12 +85,12 @@ const PARTNERS = [
 ]
 
 const BRANDS = [
-  { name: 'OpsForge',   icon: 'settings',         desc: 'Enterprise process automation and workflow orchestration for high-growth teams.' },
-  { name: 'DataPulse',  icon: 'analytics',         desc: 'Real-time business intelligence and market analytics suite.' },
-  { name: 'TalentAxis', icon: 'people',            desc: 'AI-powered talent acquisition and organisational design tool.' },
-  { name: 'FinGuard',   icon: 'account_balance',   desc: 'Regulatory compliance and financial governance framework.' },
-  { name: 'ScaleIQ',    icon: 'open_in_full',      desc: 'Multi-market expansion intelligence and entry strategy platform.' },
-  { name: 'VentureBase',icon: 'trending_up',       desc: 'M&A pipeline management and deal structuring solution.' },
+  { slug: 'opsforge',    name: 'OpsForge',    icon: 'settings',       desc: 'Enterprise process automation and workflow orchestration for high-growth teams.' },
+  { slug: 'datapulse',   name: 'DataPulse',   icon: 'analytics',      desc: 'Real-time business intelligence and market analytics suite.' },
+  { slug: 'talentaxis',  name: 'TalentAxis',  icon: 'people',         desc: 'AI-powered talent acquisition and organisational design tool.' },
+  // { slug: 'finguard',    name: 'FinGuard',    icon: 'account_balance',desc: 'Regulatory compliance and financial governance framework.' },
+  // { slug: 'scaleiq',     name: 'ScaleIQ',     icon: 'open_in_full',   desc: 'Multi-market expansion intelligence and entry strategy platform.' },
+  // { slug: 'venturebase', name: 'VentureBase', icon: 'trending_up',    desc: 'M&A pipeline management and deal structuring solution.' },
 ]
 
 const BG_IMG =
@@ -105,18 +102,12 @@ const TEAM_IMG =
 /* ─── Component ──────────────────────────────────────────────────────────── */
 
 export default function Home() {
-  const [activeFilter, setActiveFilter] = useState('all')
-
-  const visibleCards = INDUSTRY_CARDS.filter(
-    c => activeFilter === 'all' || c.category === activeFilter
-  )
-
   return (
     <main>
         {/* ═══════════════════════════════════════════════════════
             HERO
         ═══════════════════════════════════════════════════════ */}
-        <section className="relative min-h-screen flex items-center pt-32 pb-24 overflow-hidden bg-[#0a192f]">
+        <section className="relative min-h-screen flex items-center pt-36 pb-28 overflow-hidden bg-[#0a192f]">
 
           {/* Background photo */}
           <div className="absolute right-0 top-0 w-full lg:w-2/3 h-full z-0 overflow-hidden">
@@ -133,15 +124,21 @@ export default function Home() {
 
               {/* Left copy */}
               <div className="lg:col-span-7 xl:col-span-7">
-                <h1 className="text-white font-headline text-5xl md:text-6xl lg:text-7xl font-black leading-[1.0] tracking-tight mb-8">
-                  Bringing Structure to
-                  <br />
-                  <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/70 mt-2">
-                    Business Growth
-                  </span>
+                <h1 className="font-headline leading-[1.0] tracking-tight mb-14 text-5xl md:text-6xl lg:text-7xl">
+                  {/* Line 1: outline ghost */}
+                  <div
+                    className="block mb-2 font-black"
+                    style={{ color: 'transparent', WebkitTextStroke: '1.5px rgba(255,255,255,0.45)' }}
+                  >
+                    Bringing Structure
+                  </div>
+                  {/* Line 2: solid bold white */}
+                  <div className="block font-black text-white">
+                    to Business Growth<span className="text-[#e31e24]">.</span>
+                  </div>
                 </h1>
 
-                <p className="text-slate-300 text-base md:text-lg leading-relaxed mb-12 font-body font-light max-w-2xl">
+                <p className="text-slate-300 text-base md:text-lg leading-relaxed mb-16 font-body font-light max-w-2xl">
                   Navigating scale requires more than ambition — it requires an architectural foundation. We help ambitious leaders transform operational complexity into sustainable competitive advantage through structural clarity and execution rigor.
                 </p>
 
@@ -159,37 +156,19 @@ export default function Home() {
                   </button>
                 </div>
 
-                {/* Trust indicators */}
-                <div className="mt-16 pt-12 border-t border-white/10 grid grid-cols-3 gap-4 sm:gap-8 max-w-xl">
-                  {[
-                    { num: '12+',   label: 'Global Partnerships' },
-                    { num: '500M+', label: 'Value Delivered'      },
-                    { num: '98%',   label: 'Client Success Rate'  },
-                  ].map(stat => (
-                    <div key={stat.label} className="flex flex-col gap-1.5">
-                      <p className="text-white font-headline font-bold text-2xl md:text-3xl leading-none tracking-tight">
-                        {stat.num}
-                      </p>
-                      <p className="text-white/50 text-[12px] md:text-[13px] font-body leading-tight">
-                        {stat.label}
-                      </p>
-                    </div>
-                  ))}
-                </div>
               </div>
 
               {/* Right floating card — desktop only */}
               <div className="lg:col-span-5 xl:col-span-5 relative hidden lg:flex items-center justify-center">
-                <div className="relative w-full max-w-md">
-                  <div className="relative w-full aspect-[4/5] group">
+                <div className="relative w-full max-w-xl">
+                  <div className="relative w-full aspect-[5/4] group">
                     {/* Glow effect */}
                     <div className="absolute -inset-4 bg-gradient-to-r from-[#e31e24]/20 to-blue-500/10 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                    <div className="relative h-full w-full rounded-3xl overflow-hidden border border-white/15 shadow-[0_40px_100px_-12px_rgba(0,0,0,0.7)] transition-all duration-500 group-hover:border-white/25 group-hover:shadow-[0_48px_120px_-12px_rgba(227,30,36,0.2)]">
+                    <div className="relative h-full w-full rounded-2xl overflow-hidden border border-white/15 shadow-[0_24px_60px_-12px_rgba(0,0,0,0.7)] transition-all duration-500 group-hover:border-white/25 group-hover:shadow-[0_32px_80px_-12px_rgba(227,30,36,0.2)]">
                       <img src={BG_IMG} alt="Architectural structure" className="w-full h-full object-cover" />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#0a192f] via-transparent to-transparent opacity-40" />
                     </div>
-
                   </div>
                 </div>
               </div>
@@ -276,29 +255,52 @@ export default function Home() {
         {/* ═══════════════════════════════════════════════════════
             PARTNERS
         ═══════════════════════════════════════════════════════ */}
-        <section className="pt-20 pb-8 bg-[#f7f9fc]" id="partners">
+        <section className="py-20 bg-[#f7f9fc]" id="partners">
           <div className="mx-auto px-6 md:px-10 lg:px-16 max-w-[1440px]">
-            <div className="text-center mb-14">
-              <p className="eyebrow justify-center">Our Partners</p>
-              <h2 className="font-headline font-bold text-[#0a192f] text-3xl md:text-4xl tracking-tight">
-                Backed by trusted alliances.
-              </h2>
+
+            {/* Header */}
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12">
+              <div>
+                <p className="eyebrow">Our Partners</p>
+                <h2 className="font-headline font-bold text-[#0a192f] text-3xl md:text-4xl tracking-tight">
+                  Backed by trusted alliances.
+                </h2>
+              </div>
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 font-body font-semibold text-sm text-[#0a192f] group flex-shrink-0"
+              >
+                Become a Partner
+                <span className="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform duration-200">arrow_forward</span>
+              </Link>
             </div>
 
-            {/* Partner logo strip */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-px bg-slate-200">
+            {/* Partner cards */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
               {PARTNERS.map(p => (
-                <div
+                <Link
                   key={p.name}
-                  className="bg-[#0a192f] flex flex-col items-center justify-center py-10 px-6 gap-3 group hover:bg-[#0f2847] transition-all duration-300 cursor-pointer"
+                  to="/contact"
+                  className="group relative bg-[#0a192f] border border-[#0e2340] rounded-xl px-5 py-8 flex flex-col items-center justify-center gap-4 hover:bg-[#0e2340] hover:shadow-[0_8px_30px_rgba(10,25,47,0.4)] hover:-translate-y-1 transition-all duration-300"
                 >
-                  <div className="w-8 h-px bg-white/30 group-hover:bg-white transition-colors duration-300" />
-                  <p className="font-headline font-bold text-white text-[13px] tracking-wide transition-colors duration-300 text-center">
+                  {/* Icon placeholder */}
+                  <div className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center">
+                    <span className="material-symbols-outlined text-[18px] text-white/70">handshake</span>
+                  </div>
+
+                  {/* Name */}
+                  <p className="font-headline font-bold text-white text-[12px] tracking-wide text-center leading-snug">
                     {p.name}
                   </p>
-                </div>
+
+                  {/* Arrow */}
+                  <span className="material-symbols-outlined text-[14px] text-white/30 group-hover:text-white group-hover:translate-x-0.5 transition-all duration-300">
+                    arrow_forward
+                  </span>
+                </Link>
               ))}
             </div>
+
           </div>
         </section>
 
@@ -321,32 +323,49 @@ export default function Home() {
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {BRANDS.map(brand => (
-                <div
+                <Link
                   key={brand.name}
-                  className="group relative bg-[#0a192f] border border-[#0a192f] rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:border-[#e31e24] transition-all duration-300 cursor-pointer overflow-hidden"
+                  to={`/brand/${brand.slug}`}
+                  className="group relative bg-[#0a192f] border border-white/10 rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:border-[#e31e24] hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col"
                 >
-                  {/* Shine effect on hover */}
+                  {/* Shine sweep */}
                   <div className="absolute inset-0 -top-1/2 -right-1/2 w-1/2 h-full bg-white/5 rotate-45 group-hover:translate-x-full transition-transform duration-700 pointer-events-none" />
 
-                  {/* Content wrapper */}
-                  <div className="relative z-10">
-                    <div className="w-12 h-12 bg-white/10 group-hover:bg-[#e31e24] flex items-center justify-center rounded-xl mb-6 transition-all duration-300">
-                      <span className="material-symbols-outlined text-white text-[22px] transition-colors duration-300">
+                  {/* Top row — icon + arrow always visible */}
+                  <div className="relative z-10 flex items-start justify-between mb-6">
+                    <div className="w-12 h-12 bg-white/10 group-hover:bg-[#e31e24] flex items-center justify-center rounded-xl transition-all duration-300">
+                      <span className="material-symbols-outlined text-white text-[22px]">
                         {brand.icon}
                       </span>
                     </div>
-                    <h3 className="font-headline font-bold text-white text-lg mb-3 transition-colors duration-300">
-                      {brand.name}
-                    </h3>
-                    <p className="font-body text-white/70 group-hover:text-white text-[13px] leading-relaxed transition-colors duration-300">
-                      {brand.desc}
-                    </p>
-                    <div className="flex items-center gap-2 mt-6 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
-                      <div className="w-1.5 h-1.5 rounded-full bg-[#e31e24]" />
-                      <span className="font-body text-white text-[11px] tracking-widest uppercase">Explore</span>
+                    {/* Arrow — always shown, animates on hover */}
+                    <div className="w-8 h-8 rounded-full border border-white/20 group-hover:border-[#e31e24] group-hover:bg-[#e31e24] flex items-center justify-center transition-all duration-300">
+                      <span className="material-symbols-outlined text-white/50 group-hover:text-white text-[15px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300">
+                        arrow_outward
+                      </span>
                     </div>
                   </div>
-                </div>
+
+                  {/* Body */}
+                  <div className="relative z-10 flex flex-col flex-1">
+                    <h3 className="font-headline font-bold text-white text-lg mb-3">
+                      {brand.name}
+                    </h3>
+                    <p className="font-body text-white/60 group-hover:text-white/80 text-[13px] leading-relaxed flex-1 transition-colors duration-300">
+                      {brand.desc}
+                    </p>
+
+                    {/* Explore link — looks and acts like a link */}
+                    <div className="flex items-center justify-between mt-6 pt-5 border-t border-white/10 group-hover:border-white/20 transition-colors duration-300">
+                      <span className="font-body font-semibold text-[#e31e24] text-[13px] underline underline-offset-4 decoration-[#e31e24]/40 group-hover:decoration-[#e31e24] transition-all duration-200">
+                        Explore Brand
+                      </span>
+                      <span className="material-symbols-outlined text-[16px] text-[#e31e24] group-hover:translate-x-1 group-hover:-translate-y-0.5 transition-transform duration-200">
+                        arrow_outward
+                      </span>
+                    </div>
+                  </div>
+                </Link>
               ))}
             </div>
           </div>
@@ -387,82 +406,74 @@ export default function Home() {
         {/* ═══════════════════════════════════════════════════════
             SERVICES NAVIGATION
         ═══════════════════════════════════════════════════════ */}
-        <section className="py-20 bg-white" id="services">
+        <section className="py-24 bg-[#f7f9fc]" id="services">
           <div className="mx-auto px-6 md:px-10 lg:px-16 max-w-[1440px]">
+
             {/* Header */}
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-14">
-              <div>
-                <p className="eyebrow">Our Services</p>
+            <div className="mb-12">
+              <p className="eyebrow">Our Services</p>
+              <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
                 <h2 className="text-3xl md:text-4xl font-headline font-bold text-[#0a192f] leading-tight">
-                  Three stages of operational evolution.
+                  Everything your business needs to scale.
                 </h2>
+                <p className="font-body text-slate-400 text-sm shrink-0">Click any service to explore →</p>
               </div>
-              <Link
-                to="/services"
-                className="btn-link text-[#0a192f] group inline-flex items-center gap-2 flex-shrink-0"
-              >
-                View All Services
-                <span className="material-symbols-outlined text-[16px] arrow-nudge">arrow_forward</span>
-              </Link>
             </div>
 
-            {/* Services Grid - Rich Ocean Blue Design */}
-            <div className="grid md:grid-cols-3 gap-6">
-              {['START', 'STABILIZE', 'SCALE'].map(stage => {
-                const stageServices = SERVICES.filter(s => s.stage === stage)
+            {/* 9-card flat grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {SERVICES.map(service => (
+                <Link
+                  key={service.code}
+                  to={`/service/${service.code.toLowerCase()}`}
+                  className="group relative bg-white rounded-2xl overflow-hidden border border-slate-100 cursor-pointer
+                    hover:shadow-2xl hover:-translate-y-1.5 hover:border-slate-200
+                    transition-all duration-300 flex flex-col"
+                >
+                  {/* Image strip */}
+                  <div className="aspect-[16/7] overflow-hidden">
+                    <img
+                      src={service.img}
+                      alt={service.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
 
-                return (
-                  <div key={stage} className="group relative bg-[#0a192f] border border-[#0a192f] rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:border-[#0a192f]/80 transition-all duration-300 overflow-hidden">
-                    {/* Shine effect on hover */}
-                    <div className="absolute inset-0 -top-1/2 -right-1/2 w-1/2 h-full bg-white/5 rotate-45 group-hover:translate-x-full transition-transform duration-700 pointer-events-none" />
-
-                    {/* Content wrapper */}
-                    <div className="relative z-10">
-                      {/* Stage Header */}
-                      <div className="flex items-center gap-3 mb-8">
-                        <div className="w-3 h-3 bg-white/30 rounded-full group-hover:bg-white transition-colors duration-300" />
-                        <h3 className="font-headline font-bold text-white text-lg tracking-wide group-hover:text-white transition-colors duration-300">
-                          {stage}
-                        </h3>
-                        <span className="text-xs font-body font-semibold ml-auto text-white/50 group-hover:text-white/70 transition-colors duration-300">
-                          {stageServices[0].num}–{stageServices[stageServices.length - 1].num}
+                  <div className="p-7 flex flex-col flex-1">
+                    {/* Top row: icon + number */}
+                    <div className="flex items-start justify-between mb-5">
+                      <div className="w-11 h-11 bg-slate-100 group-hover:bg-[#0a192f] rounded-xl flex items-center justify-center transition-colors duration-300 flex-shrink-0">
+                        <span className="material-symbols-outlined text-[#0a192f] group-hover:text-white text-[20px] transition-colors duration-300">
+                          {service.icon}
                         </span>
                       </div>
+                      <span className="font-headline font-black text-slate-200 group-hover:text-slate-300 text-4xl leading-none transition-colors duration-300 select-none">
+                        {service.num}
+                      </span>
+                    </div>
 
-                      {/* Services List */}
-                      <div className="space-y-3">
-                        {stageServices.map(service => (
-                          <Link
-                            key={service.code}
-                            to={`/service/${service.code.toLowerCase()}`}
-                            className="group/service flex items-start gap-3 p-3 rounded-lg hover:bg-white/10 transition-all duration-200"
-                          >
-                            <div className="flex items-center justify-center w-8 h-8 bg-white/15 rounded-lg flex-shrink-0 group-hover/service:bg-white/20 transition-colors duration-300">
-                              <span className="font-headline font-bold text-[10px] text-white">
-                                {service.code}
-                              </span>
-                            </div>
-                            <div className="flex-1 min-w-0">
-                              <p className="font-headline font-semibold text-white text-[13px] leading-snug group-hover/service:text-white transition-colors duration-300">
-                                {service.title}
-                              </p>
-                              <p className="font-body text-white/60 text-[11px] mt-1 leading-tight line-clamp-1 group-hover/service:text-white/80 transition-colors duration-300">
-                                {service.desc}
-                              </p>
-                            </div>
-                          </Link>
-                        ))}
-                      </div>
+                    {/* Title */}
+                    <h3 className="font-headline font-bold text-[#0a192f] text-[17px] mb-2 leading-snug">
+                      {service.title}
+                    </h3>
 
-                      {/* Explore link */}
-                      <div className="flex items-center gap-2 mt-6 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-1 group-hover:translate-y-0">
-                        <div className="w-1.5 h-1.5 rounded-full bg-white/50" />
-                        <span className="font-body text-white/70 text-[10px] tracking-widest uppercase">Services</span>
+                    {/* Desc */}
+                    <p className="font-body text-slate-500 group-hover:text-slate-600 text-[13px] leading-relaxed mb-6 transition-colors duration-300">
+                      {service.desc}
+                    </p>
+
+                    {/* CTA row */}
+                    <div className="mt-auto flex items-center justify-between pt-5 border-t border-slate-100 group-hover:border-slate-200 transition-colors duration-300">
+                      <span className="font-body font-semibold text-[13px] text-[#e31e24] underline underline-offset-4 decoration-[#e31e24]/40 group-hover:decoration-[#e31e24] transition-all duration-200">
+                        Explore Service
+                      </span>
+                      <div className="w-8 h-8 rounded-full bg-slate-100 group-hover:bg-[#0a192f] flex items-center justify-center transition-all duration-300 group-hover:translate-x-1">
+                        <span className="material-symbols-outlined text-[16px] text-[#0a192f] group-hover:text-white transition-colors duration-300">arrow_forward</span>
                       </div>
                     </div>
                   </div>
-                )
-              })}
+                </Link>
+              ))}
             </div>
           </div>
         </section>
@@ -502,72 +513,78 @@ export default function Home() {
         {/* ═══════════════════════════════════════════════════════
             WALL OF FAME
         ═══════════════════════════════════════════════════════ */}
-        <section className="py-32 bg-[#0a192f] overflow-hidden" id="industries">
+        <section className="py-32 bg-[#0a192f] overflow-hidden" id="wall-of-fame">
           <div className="mx-auto px-6 md:px-10 lg:px-16 max-w-[1440px]">
-            {/* Header + filters */}
-            <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-10 mb-16">
-              <div className="max-w-2xl">
-                <p className="font-body font-semibold text-[10px] tracking-[0.2em] uppercase text-white/30 flex items-center gap-2.5 mb-5">
-                  <span className="block w-5 h-px bg-[#e31e24] flex-shrink-0" />
-                  Wall of Fame
-                </p>
-                <h2 className="text-4xl md:text-6xl font-headline font-black text-white leading-[1.02]">
-                  Sector-specific structural mastery.
-                </h2>
-              </div>
-
-              <div className="flex flex-wrap gap-3">
-                {INDUSTRY_FILTERS.map(f => (
-                  <button
-                    key={f.value}
-                    onClick={() => setActiveFilter(f.value)}
-                    className={`px-5 py-2.5 rounded-full text-xs font-body font-bold border transition-all duration-300 ${
-                      activeFilter === f.value
-                        ? 'bg-[#e31e24] text-white border-[#e31e24] shadow-[0_4px_18px_rgba(227,30,36,0.35)]'
-                        : 'border-white/15 text-white/55 hover:text-white hover:border-white/35'
-                    }`}
-                  >
-                    {f.label}
-                  </button>
-                ))}
-              </div>
+            {/* Header */}
+            <div className="mb-16">
+              <p className="font-body font-semibold text-[10px] tracking-[0.2em] uppercase text-white/30 flex items-center gap-2.5 mb-5">
+                <span className="block w-5 h-px bg-[#e31e24] flex-shrink-0" />
+                Wall of Fame
+              </p>
+              <h2 className="text-4xl md:text-5xl font-headline font-black text-white leading-[1.02] whitespace-nowrap">
+                Brands we've helped build.
+              </h2>
             </div>
 
             {/* Cards grid */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {visibleCards.length > 0 ? (
-                visibleCards.map(card => (
-                  <div
-                    key={`${card.id}-${activeFilter}`}
-                    className="industry-card card-appear group relative bg-white/[0.04] border border-white/10 p-10 rounded-2xl overflow-hidden hover:border-white/20 hover:bg-white/[0.07]"
-                  >
-                    <div className="absolute -right-8 -top-8 w-36 h-36 bg-white/5 rounded-full blur-3xl group-hover:bg-white/10 transition-all duration-500 pointer-events-none" />
-                    <div className="relative z-10">
-                      <div className="flex items-center gap-2 mb-6">
-                        <span className="w-1.5 h-1.5 bg-[#e31e24] rounded-full" />
-                        <span className="font-body text-white/45 font-bold uppercase text-[10px] tracking-[0.18em]">
-                          {card.label}
-                        </span>
-                      </div>
-                      <h4 className="text-xl font-headline font-bold text-white mb-4 leading-snug">
-                        {card.title}
-                      </h4>
-                      <p className="font-body text-slate-400 text-sm leading-relaxed mb-8">{card.description}</p>
-                      <a
-                        href="#"
-                        className="inline-flex items-center gap-2 text-white/70 font-body font-semibold text-xs group-hover:text-white group-hover:gap-3 transition-all duration-300"
-                      >
-                        View Case Study
-                        <span className="material-symbols-outlined text-sm leading-none">arrow_forward</span>
-                      </a>
+            <div className="grid md:grid-cols-3 gap-6">
+              {WALL_OF_FAME.map(brand => (
+                <Link
+                  key={brand.slug}
+                  to={`/brand/${brand.slug}`}
+                  className="group relative bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:border-[#e31e24]/50 hover:shadow-[0_24px_60px_rgba(0,0,0,0.5)] flex flex-col cursor-pointer"
+                >
+                  {/* Image area */}
+                  <div className="relative w-full aspect-[16/9] overflow-hidden flex-shrink-0">
+                    <img
+                      src={brand.img}
+                      alt={brand.name}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    />
+                    {/* Overlay darkens more on hover */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent group-hover:from-black/80 transition-all duration-500" />
+
+                    {/* Sector slides up on hover */}
+                    <span className="absolute bottom-4 left-4 bg-[#e31e24] text-white font-body font-bold text-[10px] tracking-[0.15em] uppercase px-3 py-1 rounded-full translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                      {brand.sector}
+                    </span>
+
+                    {/* Success Story badge */}
+                    <div className="absolute top-4 left-4">
+                      <span className="inline-flex items-center gap-1.5 bg-emerald-500/90 text-white font-body font-semibold text-[10px] tracking-[0.1em] uppercase px-2.5 py-1 rounded-full backdrop-blur-sm">
+                        <span className="material-symbols-outlined text-[13px]">check_circle</span>
+                        Success Story
+                      </span>
                     </div>
                   </div>
-                ))
-              ) : (
-                <div className="md:col-span-2 lg:col-span-3 text-center py-16 font-body text-slate-500">
-                  No case studies yet for this sector — check back soon.
-                </div>
-              )}
+
+                  <div className="relative z-10 p-7 flex flex-col flex-1">
+                    {/* Brand name */}
+                    <h4 className="text-xl font-headline font-black text-white mb-3 leading-tight group-hover:text-[#e31e24] transition-colors duration-300">
+                      {brand.name}
+                    </h4>
+
+                    {/* What we did */}
+                    <p className="font-body text-slate-400 group-hover:text-slate-300 text-sm leading-relaxed flex-1 mb-5 transition-colors duration-300">
+                      {brand.what}
+                    </p>
+
+                    {/* Outcome pill */}
+                    <div className="inline-flex items-center gap-2 bg-white/5 group-hover:bg-white/10 border border-white/10 rounded-full px-4 py-2 mb-6 self-start transition-colors duration-300">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#e31e24] flex-shrink-0" />
+                      <span className="font-body text-white/60 group-hover:text-white/80 text-xs transition-colors duration-300">{brand.outcome}</span>
+                    </div>
+
+                    {/* View Testimonial */}
+                    <div className="inline-flex items-center gap-2 self-start">
+                      <span className="material-symbols-outlined text-[18px] text-white/25 group-hover:text-[#e31e24] transition-colors duration-300">format_quote</span>
+                      <span className="font-body text-[12px] text-white/35 group-hover:text-white/80 transition-colors duration-300 border-b border-transparent group-hover:border-white/30 pb-px">
+                        View Testimonial
+                      </span>
+                    </div>
+                  </div>
+                </Link>
+              ))}
             </div>
           </div>
         </section>
@@ -590,25 +607,38 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-10">
+            <div className="grid md:grid-cols-3 gap-8">
               {BLOG_POSTS.map(post => (
-                <article key={post.id} className="group cursor-pointer">
-                  <div className="aspect-[16/10] overflow-hidden mb-5 bg-slate-100">
+                <article key={post.id} className="group cursor-pointer bg-white rounded-2xl overflow-hidden border border-slate-100 hover:border-[#0a192f]/20 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300">
+                  {/* Image */}
+                  <div className="aspect-[16/10] overflow-hidden relative">
                     <img
                       src={post.img}
                       alt={post.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
+                    {/* Read indicator appears on hover */}
+                    <div className="absolute inset-0 bg-[#0a192f]/0 group-hover:bg-[#0a192f]/20 transition-all duration-300 flex items-center justify-center">
+                      <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-300 shadow-lg">
+                        <span className="material-symbols-outlined text-[#0a192f] text-[20px]">arrow_forward</span>
+                      </div>
+                    </div>
                   </div>
-                  <div className="border-l-2 border-transparent group-hover:border-[#0a192f] pl-4 transition-all duration-300">
-                    <h3 className="text-lg font-headline font-bold mb-3 leading-snug text-[#191c1e] group-hover:text-[#0a192f] transition-colors">
+
+                  {/* Content */}
+                  <div className="p-6">
+                    <h3 className="text-[16px] font-headline font-bold mb-3 leading-snug text-[#0a192f]">
                       {post.title}
                     </h3>
-                    <p className="font-body text-slate-500 text-sm leading-relaxed line-clamp-2">{post.excerpt}</p>
-                    <span className="inline-flex items-center gap-1 mt-4 text-[#0a192f] font-body font-bold text-xs opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
-                      Read More
-                      <span className="material-symbols-outlined text-sm leading-none">arrow_forward</span>
-                    </span>
+                    <p className="font-body text-slate-500 text-sm leading-relaxed line-clamp-2 mb-5">{post.excerpt}</p>
+                    <div className="flex items-center justify-between pt-4 border-t border-slate-100">
+                      <span className="font-body font-semibold text-[12px] text-[#0a192f] uppercase tracking-widest">
+                        Read Story
+                      </span>
+                      <div className="w-7 h-7 rounded-full bg-slate-100 group-hover:bg-[#0a192f] flex items-center justify-center transition-colors duration-300 group-hover:translate-x-0.5 transition-transform">
+                        <span className="material-symbols-outlined text-[14px] text-[#0a192f] group-hover:text-white transition-colors duration-300">arrow_forward</span>
+                      </div>
+                    </div>
                   </div>
                 </article>
               ))}

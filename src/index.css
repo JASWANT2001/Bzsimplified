@@ -5,7 +5,7 @@
 @layer base {
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  html { -webkit-text-size-adjust: 100%; }
 
   body {
     font-family: 'DM Sans', sans-serif;
@@ -70,7 +70,7 @@
   /* ── Section eyebrow */
   .eyebrow {
     @apply flex items-center gap-2.5
-           font-body font-bold text-[12px] tracking-[0.2em] uppercase text-slate-500 mb-6;
+           font-body font-bold text-[13px] tracking-[0.18em] uppercase text-[#e31e24] mb-6;
   }
   .eyebrow::before {
     content: '';
@@ -142,6 +142,16 @@
   /* Arrow nudge on btn-link hover */
   .group:hover .arrow-nudge { transform: translateX(4px); }
   .arrow-nudge { transition: transform 0.2s ease; display: inline-block; }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(36px);
+    transition: opacity 0.75s ease-out, transform 0.75s ease-out;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
   @keyframes shimmer {
     0%   { background-position: -400px 0; }

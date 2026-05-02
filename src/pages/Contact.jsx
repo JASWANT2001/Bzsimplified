@@ -27,21 +27,58 @@ export default function Contact() {
   }
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] pt-24 pb-20">
-      <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16">
+    <div className="pt-[82px] min-h-screen bg-[#f8fafc]">
 
-        {/* ── Page header */}
-        <div className="mb-10">
-          <p className="font-body font-semibold text-[10px] tracking-[0.22em] uppercase text-slate-400 flex items-center gap-2 mb-4">
-            <span className="w-4 h-px bg-slate-300" />
-            Get in touch
+      {/* ── Hero */}
+      <div className="relative bg-[#0a192f] overflow-hidden py-14 lg:py-20 min-h-[420px] lg:min-h-[480px]">
+        {/* Background image */}
+        <img
+          src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+        {/* Dark gradient overlay — keeps text readable */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0a192f] via-[#0a192f]/88 to-[#0a192f]/60" />
+        {/* Subtle bottom fade */}
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#0a192f] to-transparent" />
+
+        <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16">
+          <p className="font-body font-bold text-[13px] tracking-[0.28em] uppercase text-[#e31e24] mb-6">
+            Get in Touch
           </p>
-          <h1 className="font-headline font-black text-[#0a192f] tracking-tight leading-[1.05]"
-              style={{ fontSize: 'clamp(2rem, 4.5vw, 3.4rem)' }}>
-            Big moves begin with<br />
-            <span className="text-[#e31e24]">one</span> conversation.
+          <h1
+            className="font-headline font-black text-white tracking-tight leading-[1.0] mb-6 whitespace-nowrap"
+            style={{ fontSize: 'clamp(2.2rem, 4.5vw, 4.2rem)' }}
+          >
+            Big moves begin with one conversation
           </h1>
+          <p className="font-body text-white/45 text-[15px] leading-relaxed mb-10 max-w-[520px]">
+            No sales pitch, no obligations — just a real conversation about your business.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <a
+              href="#contact-form"
+              onClick={e => { e.preventDefault(); document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' }) }}
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#0a192f] font-body font-semibold text-[13px] rounded-xl hover:bg-white/90 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 group"
+            >
+              Start the Conversation
+              <span className="material-symbols-outlined text-[15px] group-hover:translate-x-0.5 transition-transform duration-200">arrow_forward</span>
+            </a>
+            <a
+              href="mailto:hello@bzsimplified.com"
+              className="inline-flex items-center gap-2 px-6 py-3 border border-white/20 text-white/80 font-body font-semibold text-[13px] rounded-xl hover:bg-white/8 hover:text-white hover:border-white/40 transition-all duration-200"
+            >
+              <span className="material-symbols-outlined text-[15px]">mail</span>
+              Email Us
+            </a>
+          </div>
         </div>
+      </div>
+
+      {/* ── Main content */}
+      <div id="contact-form" className="pb-20 pt-16">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16">
 
         {/* ── Split panel */}
         <div className="grid lg:grid-cols-[380px_1fr] gap-6">
@@ -157,6 +194,7 @@ export default function Contact() {
             )}
           </div>
         </div>
+      </div>
       </div>
     </div>
   )

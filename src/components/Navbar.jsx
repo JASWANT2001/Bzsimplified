@@ -2,13 +2,13 @@ import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
 const NAV_LINKS = [
-  { label: 'Home',          href: '/', isLink: true },
-  { label: 'Services',      href: '/services', isLink: true, hasDropdown: true },
+  { label: 'About Us',      href: '/', isLink: true },
+  { label: 'Services',      hasDropdown: true },
   { label: 'Teams',         href: '/teams', isLink: true },
-  { label: 'Partners',      href: '/#partners'      },
+  { label: 'Partners',      href: '/partners', isLink: true },
   { label: 'Brands',        href: '/#brands'        },
   { label: 'Wall of Fame',  href: '/#industries'    },
-  { label: 'Brand Stories', href: '/#brand-stories' },
+  { label: 'Brand Stories', href: '/brand-stories', isLink: true },
 ]
 
 const SERVICES = [
@@ -29,7 +29,15 @@ export default function Navbar() {
   const [scrolled, setScrolled]   = useState(false)
   const [servicesHovered, setServicesHovered] = useState(false)
   const { pathname } = useLocation()
-  const light = scrolled || pathname === '/contact'
+  const light = scrolled || pathname === '/contact' || pathname === '/teams' || pathname === '/partners' || pathname.startsWith('/brand-stories') || pathname.startsWith('/service')
+
+  useEffect(() => {
+    const onOutside = e => {
+      if (!e.target.closest('[data-services-menu]')) setServicesHovered(false)
+    }
+    document.addEventListener('mousedown', onOutside)
+    return () => document.removeEventListener('mousedown', onOutside)
+  }, [])
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > window.innerHeight - 120)
@@ -48,17 +56,36 @@ export default function Navbar() {
         ? 'glass-nav border-b border-slate-200/60 shadow-sm'
         : 'bg-[#0a192f]/30 backdrop-blur-md border-b border-white/5'
     }`}>
-      <div className="flex items-center justify-between px-6 md:px-10 lg:px-16 h-[68px] max-w-[1440px] mx-auto">
+      <div className="flex items-center justify-between px-6 md:px-10 lg:px-16 h-[82px] max-w-[1440px] mx-auto">
 
         {/* ── Logo */}
-        <Link to="/" className="flex items-center gap-1 shrink-0 group">
-          <span className={`font-headline font-extrabold text-xl tracking-tight leading-none transition-colors duration-300 ${
-            light ? 'text-[#0a192f]' : 'text-white'
-          }`}>Bz</span>
-          <span className="w-[7px] h-[7px] bg-[#e31e24] rounded-sm mx-0.5 shrink-0 group-hover:rotate-45 transition-transform duration-300" />
-          <span className={`font-headline font-extrabold text-xl tracking-tight leading-none transition-colors duration-300 ${
-            light ? 'text-[#0a192f]' : 'text-white'
-          }`}>simplified</span>
+        <Link to="/" className="flex items-center gap-3 shrink-0">
+          {/* B mark */}
+          <div className="relative flex items-end leading-none">
+            <span className={`font-headline font-black tracking-tighter transition-colors duration-300 select-none ${
+              light ? 'text-[#0a192f]' : 'text-white'
+            }`} style={{ fontSize: '2.4rem', lineHeight: 1 }}>B</span>
+            {/* Red square — top-right of the B */}
+            <span
+              className="absolute bg-[#e31e24]"
+              style={{ width: 10, height: 10, top: 2, right: -3 }}
+            />
+          </div>
+
+          {/* Divider */}
+          <div className={`w-px self-stretch my-1 transition-colors duration-300 ${
+            light ? 'bg-slate-300' : 'bg-white/30'
+          }`} />
+
+          {/* Word-mark */}
+          <div className="flex flex-col justify-center gap-0.5">
+            <span className={`font-headline font-extrabold text-[13px] tracking-tight leading-none transition-colors duration-300 ${
+              light ? 'text-[#0a192f]' : 'text-white'
+            }`}>Business</span>
+            <span className={`font-headline font-extrabold text-[13px] tracking-tight leading-none transition-colors duration-300 ${
+              light ? 'text-[#0a192f]' : 'text-white'
+            }`}>Simplified</span>
+          </div>
         </Link>
 
         {/* ── Desktop links */}
@@ -67,33 +94,38 @@ export default function Navbar() {
             <div
               key={link.label}
               className="relative"
+              data-services-menu={link.hasDropdown ? true : undefined}
               onMouseEnter={() => link.hasDropdown && setServicesHovered(true)}
               onMouseLeave={() => link.hasDropdown && setServicesHovered(false)}
             >
-              {link.isLink ? (
-                <Link
-                  to={link.href}
-                  className={`relative font-body font-medium text-[14px] transition-colors duration-150 py-2 inline-flex items-center gap-1 group ${
-                    light
-                      ? 'text-slate-600 hover:text-[#0a192f]'
-                      : 'text-white/75 hover:text-white'
+              {link.hasDropdown ? (
+                <button
+                  onClick={() => setServicesHovered(p => !p)}
+                  className={`relative font-body font-medium text-[14px] transition-colors duration-150 py-2 inline-flex items-center gap-1 group bg-transparent border-0 cursor-pointer ${
+                    light ? 'text-slate-600 hover:text-[#0a192f]' : 'text-white/75 hover:text-white'
                   }`}
                 >
                   {link.label}
-                  {link.hasDropdown && (
-                    <span className={`material-symbols-outlined text-[14px] transition-transform duration-300 ${servicesHovered ? 'rotate-180' : ''}`}>
-                      expand_more
-                    </span>
-                  )}
+                  <span className={`material-symbols-outlined text-[14px] transition-transform duration-300 ${servicesHovered ? 'rotate-180' : ''}`}>
+                    expand_more
+                  </span>
+                  <span className="absolute bottom-0 left-0 w-0 h-px bg-[#0a192f] group-hover:w-full transition-all duration-250 ease-out" />
+                </button>
+              ) : link.isLink ? (
+                <Link
+                  to={link.href}
+                  className={`relative font-body font-medium text-[14px] transition-colors duration-150 py-2 inline-flex items-center gap-1 group ${
+                    light ? 'text-slate-600 hover:text-[#0a192f]' : 'text-white/75 hover:text-white'
+                  }`}
+                >
+                  {link.label}
                   <span className="absolute bottom-0 left-0 w-0 h-px bg-[#0a192f] group-hover:w-full transition-all duration-250 ease-out" />
                 </Link>
               ) : (
                 <a
                   href={link.href}
                   className={`relative font-body font-medium text-[14px] transition-colors duration-150 py-2 block group ${
-                    light
-                      ? 'text-slate-600 hover:text-[#0a192f]'
-                      : 'text-white/75 hover:text-white'
+                    light ? 'text-slate-600 hover:text-[#0a192f]' : 'text-white/75 hover:text-white'
                   }`}
                 >
                   {link.label}
