@@ -68,7 +68,7 @@ export default function ServiceFF() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-0 rounded-xl overflow-hidden shadow-sm">
 
           {/* Left — phases */}
-          <div className="md:col-span-7 bg-white p-10 lg:p-16">
+          <div className="md:col-span-7 bg-white p-6 md:p-10 lg:p-16">
 
             {/* Phase 1 */}
             <div className="mb-16">
@@ -126,7 +126,7 @@ export default function ServiceFF() {
           </div>
 
           {/* Right — dark column */}
-          <div className="md:col-span-5 bg-[#0a192f] p-10 lg:p-16 text-white">
+          <div className="md:col-span-5 bg-[#0a192f] p-6 md:p-10 lg:p-16 text-white">
             <h3 className="font-body text-xs font-bold uppercase tracking-[0.2em] mb-12 text-[#76849f]">
               Strategic Focus
             </h3>
@@ -168,7 +168,7 @@ export default function ServiceFF() {
       </section>
 
       {/* ── Metrics */}
-      <section className="bg-[#eceef1] py-24 mt-0">
+      <section className="bg-[#eceef1] py-16 md:py-24 mt-0">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16">
           <h2 className="font-headline text-4xl font-extrabold tracking-tight text-[#0a192f] text-center mb-16">
             Measurable Restoration Outcomes

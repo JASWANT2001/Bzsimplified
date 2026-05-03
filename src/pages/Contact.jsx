@@ -30,7 +30,7 @@ export default function Contact() {
     <div className="pt-[82px] min-h-screen bg-[#f8fafc]">
 
       {/* ── Hero */}
-      <div className="relative bg-[#0a192f] overflow-hidden py-14 lg:py-20 min-h-[420px] lg:min-h-[480px]">
+      <div data-hero="true" className="relative bg-[#0a192f] overflow-hidden py-14 lg:py-20 min-h-[420px] lg:min-h-[480px]">
         {/* Background image */}
         <img
           src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80"
@@ -48,12 +48,12 @@ export default function Contact() {
             Get in Touch
           </p>
           <h1
-            className="font-headline font-black text-white tracking-tight leading-[1.0] mb-6 whitespace-nowrap"
-            style={{ fontSize: 'clamp(2.2rem, 4.5vw, 4.2rem)' }}
+            className="font-headline font-black text-white tracking-tight leading-[1.05] mb-6"
+            style={{ fontSize: 'clamp(1.8rem, 4.5vw, 4.2rem)' }}
           >
             Big moves begin with one conversation
           </h1>
-          <p className="font-body text-white/45 text-[15px] leading-relaxed mb-10 max-w-[520px]">
+          <p className="font-body text-white/45 text-[14px] sm:text-[15px] leading-relaxed mb-8 md:mb-10 max-w-[520px]">
             No sales pitch, no obligations — just a real conversation about your business.
           </p>
           <div className="flex flex-wrap gap-3">
@@ -74,17 +74,25 @@ export default function Contact() {
             </a>
           </div>
         </div>
+        <button
+          aria-label="Scroll to content"
+          onClick={e => e.currentTarget.closest('[data-hero]')?.nextElementSibling?.scrollIntoView({ behavior: 'smooth' })}
+          className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1 group"
+        >
+          <span className="font-body text-[9px] uppercase tracking-[0.2em] text-white/30 group-hover:text-white/60 transition-colors">Scroll</span>
+          <span className="material-symbols-outlined animate-bounce text-white/40 group-hover:text-white/70 transition-colors" style={{ fontSize: '30px' }}>keyboard_arrow_down</span>
+        </button>
       </div>
 
       {/* ── Main content */}
-      <div id="contact-form" className="pb-20 pt-16">
+      <div id="contact-form" className="pb-14 pt-10 md:pb-20 md:pt-16">
       <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16">
 
         {/* ── Split panel */}
         <div className="grid lg:grid-cols-[380px_1fr] gap-6">
 
           {/* Left — dark info panel */}
-          <div className="bg-[#0a192f] rounded-2xl p-8 lg:p-10 flex flex-col text-white">
+          <div className="bg-[#0a192f] rounded-2xl p-7 md:p-8 lg:p-10 flex flex-col text-white">
             <p className="font-body text-white/50 text-[13px] leading-relaxed mb-10">
               We partner with ambitious leaders to turn operational complexity into competitive advantage.
               Start a conversation — no sales pitch, no obligations.
@@ -118,7 +126,7 @@ export default function Contact() {
           </div>
 
           {/* Right — form panel */}
-          <div className="bg-white rounded-2xl border border-slate-100 shadow-[0_8px_40px_rgba(0,0,0,0.05)] p-8 lg:p-10">
+          <div className="bg-white rounded-2xl border border-slate-100 shadow-[0_8px_40px_rgba(0,0,0,0.05)] p-6 md:p-8 lg:p-10">
             {submitted ? (
               <SuccessState onReset={() => setSubmitted(false)} />
             ) : (

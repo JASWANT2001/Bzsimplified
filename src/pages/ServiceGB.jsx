@@ -36,8 +36,8 @@ export default function ServiceGB() {
       </div>
 
       {/* ── Hero */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-24">
-        <div className="grid grid-cols-12 gap-12 items-end">
+      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-12 md:mb-24">
+        <div className="grid grid-cols-12 gap-8 lg:gap-12 items-end">
           <div className="col-span-12 lg:col-span-8">
             <h1
               className="font-headline font-extrabold leading-[1.05] tracking-tight text-[#0a192f] mb-12"
@@ -56,8 +56,8 @@ export default function ServiceGB() {
       </section>
 
       {/* ── Full-width image */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-32">
-        <div className="relative h-[500px] md:h-[600px] w-full rounded-xl overflow-hidden bg-[#eceef1]">
+      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-16 md:mb-32">
+        <div className="relative h-[280px] sm:h-[380px] md:h-[480px] lg:h-[600px] w-full rounded-xl overflow-hidden bg-[#eceef1]">
           <img
             className="w-full h-full object-cover"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_jwRx8GORsKZJaOTVuiFEjsx8Fu1HhAccY5A3VJ4IYlJvHQqCcpEHhjywBeETo7embteOhsJliejAdPcX6-ro4MgYJz3A0MCE3QFJPBwxV9okRfPV92ZeQ17OnEPS0MU1HXb6NM5tKGm1mtL2tobmLE7mNK24-HB7jhu6XlK1Lzk_0jP4ludHh-jAsJvZtmjPnoWzFtTRNTC2L11XPWlLNMewi3r8uTa3ECaFkcByoX9_UwvPbzCYDnw6uWG0JMAB6sYL5gMJcdj4"
@@ -69,8 +69,8 @@ export default function ServiceGB() {
       </section>
 
       {/* ── Three pillars */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-32">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-16 md:mb-32">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
           {[
             {
               icon: 'trending_up',
@@ -100,8 +100,8 @@ export default function ServiceGB() {
       </section>
 
       {/* ── Growth benchmarks */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-32">
-        <div className="bg-[#eceef1] rounded-xl p-12 lg:p-16">
+      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-16 md:mb-32">
+        <div className="bg-[#eceef1] rounded-xl p-8 md:p-12 lg:p-16">
           <div className="grid grid-cols-12 gap-12 items-center">
 
             {/* Stats */}
@@ -149,11 +149,11 @@ export default function ServiceGB() {
       </section>
 
       {/* ── Two CTA cards */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-32">
+      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-16 md:mb-32">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
           {/* Light card */}
-          <div className="bg-white p-12 rounded-xl flex flex-col justify-between h-[360px] group hover:shadow-xl transition-all duration-300 border border-slate-100">
+          <div className="bg-white p-8 md:p-12 rounded-xl flex flex-col justify-between min-h-[280px] md:h-[360px] group hover:shadow-xl transition-all duration-300 border border-slate-100">
             <h3 className="font-headline text-3xl font-extrabold text-[#0a192f]">Grow Your Portfolio</h3>
             <p className="font-body text-[#5a5e6a] text-lg leading-relaxed">
               Diversify your assets and market reach with our proprietary investment and expansion frameworks.
@@ -168,7 +168,7 @@ export default function ServiceGB() {
           </div>
 
           {/* Dark card */}
-          <div className="bg-[#0a192f] p-12 rounded-xl flex flex-col justify-between h-[360px] group relative overflow-hidden">
+          <div className="bg-[#0a192f] p-8 md:p-12 rounded-xl flex flex-col justify-between min-h-[280px] md:h-[360px] group relative overflow-hidden">
             <h3 className="font-headline text-3xl font-extrabold text-white">Scale Your Impact</h3>
             <p className="font-body text-[#76849f] text-lg leading-relaxed">
               Measure and amplify your corporate social responsibility and market influence on a global scale.

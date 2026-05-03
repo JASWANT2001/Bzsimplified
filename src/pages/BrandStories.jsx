@@ -50,34 +50,42 @@ export default function BrandStories() {
     <main className="pt-[82px] bg-[#f7f9fc] text-[#191c1e] min-h-screen">
 
       {/* ── Hero */}
-      <section className="relative overflow-hidden bg-[#0a192f] py-14 lg:py-20 min-h-[420px] lg:min-h-[480px] flex items-center">
-        <div
-          className="absolute right-0 top-0 w-1/3 h-full opacity-[0.06] pointer-events-none"
-          style={{
-            background: 'linear-gradient(90deg, #e31e24 0%, #e31e24 4px, transparent 4px)',
-            backgroundSize: '12px 100%',
-          }}
+      <section data-hero="true" className="relative overflow-hidden bg-[#0a192f] py-14 lg:py-20 min-h-[420px] lg:min-h-[480px] flex items-center">
+        <img
+          src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover object-center"
         />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0a192f] via-[#0a192f]/88 to-[#0a192f]/60" />
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#0a192f] to-transparent" />
         <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 w-full">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="h-[2px] w-10 bg-[#e31e24]" />
+          <div className="mb-6">
             <span className="font-body text-xs font-bold uppercase tracking-[0.3em] text-[#e31e24]">Consulting Excellence</span>
           </div>
           <h1
             className="font-headline font-extrabold tracking-tighter leading-[1.1] text-white mb-6 max-w-3xl"
-            style={{ fontSize: 'clamp(3rem, 7vw, 5.5rem)' }}
+            style={{ fontSize: 'clamp(2.5rem, 7vw, 5.5rem)' }}
           >
             Brand Stories
           </h1>
-          <p className="font-body text-white/60 text-xl max-w-2xl leading-relaxed">
+          <p className="font-body text-white/60 text-base sm:text-xl max-w-2xl leading-relaxed">
             Celebrating the visionary organisations and leadership teams that achieved transformative
             growth through precision consulting and strategic engineering.
           </p>
         </div>
+        <button
+          aria-label="Scroll to content"
+          onClick={e => e.currentTarget.closest('[data-hero]')?.nextElementSibling?.scrollIntoView({ behavior: 'smooth' })}
+          className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1 group"
+        >
+          <span className="font-body text-[9px] uppercase tracking-[0.2em] text-white/30 group-hover:text-white/60 transition-colors">Scroll</span>
+          <span className="material-symbols-outlined animate-bounce text-white/40 group-hover:text-white/70 transition-colors" style={{ fontSize: '30px' }}>keyboard_arrow_down</span>
+        </button>
       </section>
 
       {/* ── Stories Grid */}
-      <section className="bg-[#f2f4f7] py-20">
+      <section className="bg-[#f2f4f7] py-14 md:py-20">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {STORIES.map(story => (

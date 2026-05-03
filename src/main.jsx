@@ -19,6 +19,9 @@ import Partners from './pages/Partners'
 import BrandStories from './pages/BrandStories'
 import BrandStoryDetail from './pages/BrandStoryDetail'
 import BrandDetail from './pages/BrandDetail'
+import WallOfFame from './pages/WallOfFame'
+import PrivacyPolicy from './pages/PrivacyPolicy'
+import Terms from './pages/Terms'
 import './index.css'
 
 const router = createBrowserRouter([
@@ -42,7 +45,10 @@ const router = createBrowserRouter([
       { path: 'partners',      element: <Partners />     },
       { path: 'brand-stories',       element: <BrandStories />     },
       { path: 'brand-stories/:slug', element: <BrandStoryDetail /> },
-      { path: 'brand/:slug',  element: <BrandDetail />  },
+      { path: 'brand/:slug',   element: <BrandDetail />  },
+      { path: 'wall-of-fame',   element: <WallOfFame />    },
+      { path: 'privacy-policy', element: <PrivacyPolicy /> },
+      { path: 'terms-of-usage', element: <Terms />         },
     ],
   },
 ])

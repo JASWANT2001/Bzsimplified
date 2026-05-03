@@ -68,7 +68,7 @@ export default function ServiceMO() {
       </section>
 
       {/* ── Bento Grid */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-24">
+      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-14 md:mb-24">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
           {/* Large image card */}
@@ -136,9 +136,9 @@ export default function ServiceMO() {
       </section>
 
       {/* ── How We Stabilize */}
-      <section className="bg-[#f2f4f7] py-24">
+      <section className="bg-[#f2f4f7] py-16 md:py-24">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
 
             {/* Steps */}
             <div>
@@ -190,7 +190,7 @@ export default function ServiceMO() {
                 />
               </div>
               {/* Floating card */}
-              <div className="absolute -bottom-8 -left-6 bg-white p-8 rounded-xl shadow-xl max-w-xs border border-slate-100">
+              <div className="hidden md:block absolute -bottom-8 -left-6 bg-white p-8 rounded-xl shadow-xl max-w-xs border border-slate-100">
                 <h5 className="font-body text-xs font-bold uppercase tracking-widest text-[#0a192f] mb-4">
                   Operations Hub
                 </h5>

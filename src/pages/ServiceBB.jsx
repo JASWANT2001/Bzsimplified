@@ -36,7 +36,7 @@ export default function ServiceBB() {
       </div>
 
       {/* ── Hero */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-32">
+      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-12 md:mb-32">
         <div className="grid grid-cols-12 gap-6 items-end">
           <div className="col-span-12 lg:col-span-7">
             <h1
@@ -63,7 +63,7 @@ export default function ServiceBB() {
       </section>
 
       {/* ── Bento Grid */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-32">
+      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-16 md:mb-32">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
           {/* Foundation Card */}
@@ -130,9 +130,9 @@ export default function ServiceBB() {
       </section>
 
       {/* ── Metrics */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-32">
-        <div className="bg-[#0a192f] text-white p-12 lg:p-16 rounded-xl relative overflow-hidden">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-16 relative z-10">
+      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-16 md:mb-32">
+        <div className="bg-[#0a192f] text-white p-8 md:p-12 lg:p-16 rounded-xl relative overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 relative z-10">
             <div>
               <p className="font-headline font-extrabold tracking-tighter mb-2" style={{ fontSize: '3.5rem' }}>150+</p>
               <p className="font-body text-xs tracking-widest uppercase opacity-60">Architectures Built</p>

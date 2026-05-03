@@ -67,8 +67,8 @@ export default function ServiceET() {
       </div>
 
       {/* ── Hero */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-24">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-12 md:mb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
           <div className="lg:col-span-8">
             <h1
               className="font-headline font-extrabold tracking-tight text-[#0a192f] leading-[1.1] mb-8"
@@ -100,9 +100,9 @@ export default function ServiceET() {
       </section>
 
       {/* ── Structural Pillars */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-32">
-        <div className="flex items-center gap-4 mb-12">
-          <h2 className="font-headline text-xl font-bold uppercase tracking-widest text-[#0a192f] whitespace-nowrap">
+      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-16 md:mb-32">
+        <div className="flex items-center gap-4 mb-8 md:mb-12">
+          <h2 className="font-headline text-xl font-bold uppercase tracking-widest text-[#0a192f]">
             Structural Pillars
           </h2>
           <div className="h-px flex-grow bg-slate-200" />
@@ -125,11 +125,11 @@ export default function ServiceET() {
       </section>
 
       {/* ── CTA + Metrics split */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-32">
+      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-16 md:mb-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 overflow-hidden rounded-2xl shadow-2xl">
 
           {/* CTA — dark */}
-          <div className="bg-[#0a192f] text-white p-12 lg:p-20 relative overflow-hidden">
+          <div className="bg-[#0a192f] text-white p-8 md:p-12 lg:p-20 relative overflow-hidden">
             <div className="relative z-10">
               <h2 className="font-headline text-3xl font-bold text-white mb-6">
                 Let's audit your team's current architecture.
@@ -151,7 +151,7 @@ export default function ServiceET() {
           </div>
 
           {/* Metrics — white */}
-          <div className="bg-white p-12 lg:p-20 flex flex-col justify-center">
+          <div className="bg-white p-8 md:p-12 lg:p-20 flex flex-col justify-center">
             <div className="space-y-10">
               {METRICS.map(m => (
                 <div key={m.label} className="flex items-end gap-6">
@@ -174,8 +174,8 @@ export default function ServiceET() {
       </section>
 
       {/* ── Full-width image banner */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-32">
-        <div className="rounded-3xl overflow-hidden h-[420px] md:h-[500px] relative">
+      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-16 md:mb-32">
+        <div className="rounded-3xl overflow-hidden h-[280px] sm:h-[360px] md:h-[420px] lg:h-[500px] relative">
           <img
             alt="High-end office architecture"
             className="w-full h-full object-cover"

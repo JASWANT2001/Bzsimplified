@@ -36,7 +36,7 @@ export default function ServicePB() {
       </div>
 
       {/* ── Hero */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-12 gap-8 items-end mb-24">
+      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-12 gap-8 items-end mb-12 md:mb-24">
         <div className="col-span-12 lg:col-span-8">
           <h1
             className="font-headline font-extrabold leading-[1.1] tracking-tighter text-[#0a192f] mb-8"
@@ -62,7 +62,7 @@ export default function ServicePB() {
       </section>
 
       {/* ── Bento Grid */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-32">
+      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-16 md:mb-32">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
 
           {/* Large card — Risk Mitigation */}
@@ -152,12 +152,12 @@ export default function ServicePB() {
       </section>
 
       {/* ── The Stabilize Protocol */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-32">
+      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-16 md:mb-32">
         <div className="bg-white rounded-xl overflow-hidden border border-slate-100 shadow-sm">
           <div className="grid grid-cols-1 md:grid-cols-2">
 
             {/* Left — steps */}
-            <div className="p-12 lg:p-16 border-b md:border-b-0 md:border-r border-slate-100">
+            <div className="p-8 md:p-12 lg:p-16 border-b md:border-b-0 md:border-r border-slate-100">
               <h2 className="font-headline text-4xl font-bold mb-12 tracking-tight text-[#0a192f]">
                 The Stabilize Protocol
               </h2>
@@ -223,8 +223,8 @@ export default function ServicePB() {
       </section>
 
       {/* ── Metrics */}
-      <section className="bg-[#eceef1] py-24">
-        <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-1 md:grid-cols-3 gap-16">
+      <section className="bg-[#eceef1] py-16 md:py-24">
+        <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16">
           <div className="border-l-4 border-[#0a192f] pl-8">
             <div className="font-headline font-extrabold text-[#0a192f] mb-2" style={{ fontSize: '3.5rem' }}>200+</div>
             <div className="font-body text-xs font-bold uppercase tracking-[0.3em] text-[#39475f]">Brands Protected</div>

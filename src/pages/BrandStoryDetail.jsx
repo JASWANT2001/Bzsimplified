@@ -4,6 +4,9 @@ const STORIES = {
   'streamlining-global-logistics': {
     category: 'Operational Excellence',
     title: 'Streamlining Global Logistics',
+    publishedAt: 'March 12, 2025',
+    readTime: '6 min read',
+    tags: ['Supply Chain', 'Logistics', 'Digital Infrastructure', 'Operations'],
     img: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80',
     author: { name: 'Kalyan', role: 'Principal Consultant, Logistics Strategy', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80' },
     quote: '"Innovation in infrastructure isn\'t about more roads; it\'s about smarter paths. We don\'t just move products — we move potential across borders."',
@@ -18,6 +21,9 @@ const STORIES = {
   'the-digital-pivot': {
     category: 'Strategy',
     title: 'The Digital Pivot',
+    publishedAt: 'February 5, 2025',
+    readTime: '5 min read',
+    tags: ['Digital Transformation', 'Fintech', 'Technology', 'Strategy'],
     img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80',
     author: { name: 'Arjun Mehta', role: 'Senior Strategy Consultant', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80' },
     quote: '"Legacy institutions don\'t fail because they lack resources — they fail because they can\'t unlearn. Our job is to make unlearning safe."',
@@ -32,6 +38,9 @@ const STORIES = {
   'incubating-tomorrow': {
     category: 'Innovation',
     title: 'Incubating Tomorrow',
+    publishedAt: 'January 20, 2025',
+    readTime: '7 min read',
+    tags: ['Startups', 'R&D', 'Renewable Energy', 'Ventures'],
     img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80',
     author: { name: 'Priya Nair', role: 'Innovation & Ventures Lead', avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=200&q=80' },
     quote: '"A prototype is just a hypothesis with a power source. Our role is to turn that hypothesis into a market reality — before the window closes."',
@@ -46,6 +55,9 @@ const STORIES = {
   'enterprise-scaling': {
     category: 'Transformation',
     title: 'Enterprise Scaling',
+    publishedAt: 'April 3, 2025',
+    readTime: '6 min read',
+    tags: ['Enterprise', 'Cross-Border', 'Operating Model', 'Manufacturing'],
     img: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=1200&q=80',
     author: { name: 'Rajan Pillai', role: 'Enterprise Transformation Director', avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80' },
     quote: '"Scaling an enterprise isn\'t about replicating what works locally. It\'s about designing systems that thrive in contexts you haven\'t encountered yet."',
@@ -60,6 +72,9 @@ const STORIES = {
   'capital-restructuring': {
     category: 'Finance',
     title: 'Capital Restructuring',
+    publishedAt: 'March 28, 2025',
+    readTime: '5 min read',
+    tags: ['IPO', 'Capital Markets', 'Debt Restructuring', 'Finance'],
     img: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80',
     author: { name: 'Sandeep Iyer', role: 'Financial Architecture Consultant', avatar: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=200&q=80' },
     quote: '"Capital structure is not a spreadsheet exercise — it\'s a signal to every stakeholder about where this organisation is going and how it intends to get there."',
@@ -74,6 +89,9 @@ const STORIES = {
   'sustainable-foundations': {
     category: 'ESG Strategy',
     title: 'Sustainable Foundations',
+    publishedAt: 'April 18, 2025',
+    readTime: '7 min read',
+    tags: ['ESG', 'Sustainability', 'Decarbonisation', 'Green Finance'],
     img: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=80',
     author: { name: 'Meera Krishnan', role: 'ESG & Sustainability Strategist', avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80' },
     quote: '"Sustainability embedded in operations is a competitive advantage. Sustainability bolted on as a reporting exercise is a liability waiting to be exposed."',
@@ -95,7 +113,7 @@ export default function BrandStoryDetail() {
 
   return (
     <main className="pt-[82px] bg-[#f7f9fc] text-[#191c1e] min-h-screen">
-      <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 pt-12 pb-24">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 pt-8 md:pt-12 pb-16 md:pb-24">
 
         {/* ── Back link */}
         <div className="mb-10">
@@ -116,11 +134,36 @@ export default function BrandStoryDetail() {
               <span className="font-body text-[10px] font-bold uppercase tracking-[0.3em] text-[#e31e24]">{story.category}</span>
             </div>
             <h1
-              className="font-headline font-extrabold text-[#0a192f] leading-tight tracking-tighter mb-8"
+              className="font-headline font-extrabold text-[#0a192f] leading-tight tracking-tighter mb-6"
               style={{ fontSize: 'clamp(2.2rem, 5vw, 3.8rem)' }}
             >
               {story.title}
             </h1>
+
+            {/* Blog metadata */}
+            <div className="flex flex-wrap items-center gap-x-5 gap-y-2 mb-5 pb-5 border-b border-slate-200">
+              <span className="flex items-center gap-1.5 font-body text-xs text-[#75777e]">
+                <span className="material-symbols-outlined text-[14px] text-slate-400">calendar_today</span>
+                {story.publishedAt}
+              </span>
+              <span className="flex items-center gap-1.5 font-body text-xs text-[#75777e]">
+                <span className="material-symbols-outlined text-[14px] text-slate-400">schedule</span>
+                {story.readTime}
+              </span>
+            </div>
+
+            {/* Tags */}
+            <div className="flex flex-wrap gap-2 mb-6">
+              {story.tags.map(tag => (
+                <span
+                  key={tag}
+                  className="font-body text-[10px] font-semibold uppercase tracking-[0.15em] text-[#39475f] bg-[#eceef1] px-3 py-1 rounded-full"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+
             {/* Author */}
             <div className="flex items-center gap-5 py-4">
               <div className="relative">
@@ -154,7 +197,7 @@ export default function BrandStoryDetail() {
             {/* Quote */}
             <div className="bg-[#f2f4f7] border-l-4 border-[#e31e24] p-8 relative overflow-hidden">
               <span className="material-symbols-outlined absolute -top-3 -left-3 text-[#e31e24]/10 select-none" style={{ fontSize: '64px', fontVariationSettings: "'FILL' 1" }}>format_quote</span>
-              <blockquote className="font-headline font-bold text-[#0a192f] text-2xl md:text-3xl italic leading-tight relative z-10">
+              <blockquote className="font-headline font-bold text-[#0a192f] text-lg md:text-2xl lg:text-3xl italic leading-snug relative z-10">
                 {story.quote}
               </blockquote>
             </div>
@@ -181,10 +224,17 @@ export default function BrandStoryDetail() {
                 </svg>
               </div>
               <p className="font-body text-xs text-[#75777e] mb-4 leading-relaxed">Share this story with your professional network on LinkedIn.</p>
-              <button className="w-full bg-white border border-slate-200 text-[#0a192f] py-2.5 rounded-lg font-body font-bold text-xs flex items-center justify-center gap-2 hover:bg-[#f2f4f7] transition-colors">
+              <a
+                href={`https://www.linkedin.com/feed/?shareActive=true&text=${encodeURIComponent(`📖 "${story.title}" — ${story.category}\n\nA perspective from ${story.author.name}, ${story.author.role} at Bzsimplified.\n\n${story.quote.replace(/^"|"$/g, '')}\n\nRead the full story: ${window.location.href}\n\n#BusinessStrategy #Consulting #Bzsimplified`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full bg-[#0077b5] text-white py-2.5 rounded-lg font-body font-bold text-xs flex items-center justify-center gap-2 hover:bg-[#005e93] transition-colors"
+              >
                 Share on LinkedIn
-                <span className="material-symbols-outlined text-[14px]">ios_share</span>
-              </button>
+                <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+              </a>
             </div>
 
             {/* Connect */}

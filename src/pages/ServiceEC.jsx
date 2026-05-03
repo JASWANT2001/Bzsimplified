@@ -36,7 +36,7 @@ export default function ServiceEC() {
       </div>
 
       {/* ── Hero */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-32">
+      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16 md:mb-32">
         <div className="lg:col-span-7">
           <h1
             className="font-headline font-extrabold tracking-tighter text-[#0a192f] leading-[1.1] mb-8"
@@ -79,7 +79,7 @@ export default function ServiceEC() {
             />
           </div>
           {/* Floating stat */}
-          <div className="absolute -bottom-6 -left-6 bg-white p-7 shadow-2xl rounded-xl border border-slate-100 max-w-[220px]">
+          <div className="hidden sm:block absolute -bottom-6 -left-6 bg-white p-7 shadow-2xl rounded-xl border border-slate-100 max-w-[220px]">
             <span className="material-symbols-outlined text-[#0a192f] text-4xl mb-3 block">verified_user</span>
             <p className="font-headline font-bold text-2xl text-[#0a192f]">100%</p>
             <p className="font-body text-sm text-[#5a5e6a] mt-1 leading-snug">Audit Success Rate for Tier 1 Clients</p>
@@ -88,7 +88,7 @@ export default function ServiceEC() {
       </section>
 
       {/* ── Three Service Cards */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-32">
+      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-16 md:mb-32">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
             {
@@ -112,7 +112,7 @@ export default function ServiceEC() {
           ].map(card => (
             <div
               key={card.title}
-              className={`bg-white p-10 rounded-2xl flex flex-col justify-between group hover:bg-[#0a192f] transition-all duration-500 border border-slate-100 ${card.elevated ? 'shadow-2xl -translate-y-4' : 'shadow-sm'}`}
+              className={`bg-white p-8 md:p-10 rounded-2xl flex flex-col justify-between group hover:bg-[#0a192f] transition-all duration-500 border border-slate-100 ${card.elevated ? 'shadow-2xl md:-translate-y-4' : 'shadow-sm'}`}
             >
               <div>
                 <div className="w-12 h-12 bg-[#eceef1] rounded-full flex items-center justify-center mb-8 group-hover:bg-white/10 transition-colors duration-300">
@@ -133,11 +133,11 @@ export default function ServiceEC() {
       </section>
 
       {/* ── Bento Grid */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-32">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-16 md:mb-32">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
           {/* Large image card */}
-          <div className="lg:col-span-2 lg:row-span-2 bg-[#eceef1] rounded-3xl p-10 lg:p-12 flex flex-col justify-end relative overflow-hidden min-h-[480px]">
+          <div className="sm:col-span-2 lg:col-span-2 lg:row-span-2 bg-[#eceef1] rounded-3xl p-8 md:p-10 lg:p-12 flex flex-col justify-end relative overflow-hidden min-h-[360px] lg:min-h-[480px]">
             <img
               alt="Framework Planning"
               className="absolute inset-0 w-full h-full object-cover opacity-20 grayscale"

@@ -36,7 +36,7 @@ export default function ServiceST() {
       </div>
 
       {/* ── Hero */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-12 gap-8 items-end mb-24">
+      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-12 gap-8 items-end mb-12 md:mb-24">
         <div className="col-span-12 lg:col-span-8">
           <h1
             className="font-headline font-extrabold leading-[1.1] tracking-tighter text-[#0a192f] mb-8"
@@ -61,7 +61,7 @@ export default function ServiceST() {
       </section>
 
       {/* ── Bento Grid */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-32">
+      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-16 md:mb-32">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
 
           {/* Large card — Cloud Infrastructure */}
@@ -137,8 +137,8 @@ export default function ServiceST() {
       </section>
 
       {/* ── Why We're Different */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-32">
-        <div className="grid md:grid-cols-2 gap-16 items-start">
+      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-16 md:mb-32">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-start">
           <div className="md:sticky md:top-40">
             <h2 className="font-headline text-4xl font-bold tracking-tight text-[#0a192f] mb-6">
               Why our tech setup is different.
@@ -178,8 +178,8 @@ export default function ServiceST() {
       </section>
 
       {/* ── Metrics */}
-      <section className="bg-[#eceef1] py-24">
-        <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-1 md:grid-cols-3 gap-16">
+      <section className="bg-[#eceef1] py-16 md:py-24">
+        <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16">
           <div className="border-l-4 border-[#0a192f] pl-8">
             <div className="font-headline font-extrabold text-[#0a192f] mb-2" style={{ fontSize: '3.5rem' }}>50+</div>
             <div className="font-body text-xs font-bold uppercase tracking-[0.3em] text-[#39475f]">Tech Stacks Built</div>

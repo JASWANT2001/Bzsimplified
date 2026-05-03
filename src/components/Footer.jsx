@@ -3,38 +3,53 @@ import { Link } from 'react-router-dom'
 const QUICK_LINKS = [
   { label: 'About Us',      href: '/',              isLink: true },
   { label: 'Teams',         href: '/teams',          isLink: true },
-  { label: 'Partners',      href: '/#partners'                   },
-  { label: 'Brands',        href: '/#brands'                     },
-  { label: 'Wall of Fame',  href: '/#industries'                 },
-  { label: 'Brand Stories', href: '/#brand-stories'              },
+  { label: 'Partners',      href: '/partners',       isLink: true },
+  { label: 'Wall of Fame',  href: '/wall-of-fame',   isLink: true },
+  { label: 'Brand Stories', href: '/brand-stories',  isLink: true },
   { label: 'Contact',       href: '/contact',        isLink: true },
 ]
 
-const SERVICES = [
-  { label: 'Launch Your Brand',      href: '/service/lb' },
-  { label: 'Build Your Business',    href: '/service/bb' },
-  { label: 'Set Up Your Tech',       href: '/service/st' },
-  { label: 'Protect Your Brand',     href: '/service/pb' },
-  { label: 'Fix Your Finances',      href: '/service/ff' },
-  { label: 'Ensure Compliance',      href: '/service/ec' },
-  { label: 'Manage Operations',      href: '/service/mo' },
-  { label: 'Empower Your Team',      href: '/service/et' },
-  { label: 'Grow Your Business',     href: '/service/gb' },
+const SERVICES_A = [
+  { label: 'Launch Your Brand',   href: '/service/lb' },
+  { label: 'Build Your Business', href: '/service/bb' },
+  { label: 'Set Up Your Tech',    href: '/service/st' },
+  { label: 'Protect Your Brand',  href: '/service/pb' },
+  { label: 'Fix Your Finances',   href: '/service/ff' },
+]
+
+const SERVICES_B = [
+  { label: 'Ensure Compliance',   href: '/service/ec' },
+  { label: 'Manage Operations',   href: '/service/mo' },
+  { label: 'Empower Your Team',   href: '/service/et' },
+  { label: 'Grow Your Business',  href: '/service/gb' },
 ]
 
 const CONTACT = [
-  { icon: 'location_on', lines: ['Bzsimplified HQ', 'hello@bzsimplified.com'] },
-  { icon: 'phone',       lines: ['+1 (800) 000-0000'] },
-  { icon: 'schedule',    lines: ['Response: Within 48 hrs', 'Mon – Fri, 9 am – 6 pm'] },
+  { icon: 'mail_outline', val: 'hello@bzsimplified.com'  },
+  { icon: 'phone',        val: '+1 (800) 000-0000'       },
+  { icon: 'schedule',     val: 'Response within 48 hrs'  },
+  { icon: 'location_on',  val: 'Dubai · Mumbai · London' },
 ]
 
 function ColHeader({ children }) {
   return (
-    <div className="mb-6">
-      <h4 className="font-headline font-bold text-white text-[13px] tracking-[0.12em] uppercase">{children}</h4>
-      <div className="mt-2 w-8 h-[2px] bg-[#e31e24] rounded-full" />
+    <div className="mb-5">
+      <h4 className="font-headline font-bold text-white text-[11px] tracking-[0.18em] uppercase mb-2">
+        {children}
+      </h4>
+      <div className="flex gap-1">
+        <span className="block h-[2px] w-6 bg-[#e31e24] rounded-full" />
+        <span className="block h-[2px] w-3 bg-white/15 rounded-full" />
+      </div>
     </div>
   )
+}
+
+function NavLink({ href, isLink, children }) {
+  const cls = "font-body text-white/50 text-[12px] hover:text-white transition-colors duration-200"
+  return isLink
+    ? <Link to={href} className={cls}>{children}</Link>
+    : <a href={href} className={cls}>{children}</a>
 }
 
 export default function Footer() {
@@ -43,29 +58,68 @@ export default function Footer() {
   return (
     <footer className="bg-[#0a192f] w-full">
 
-      {/* ── Main grid */}
-      <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 pt-16 pb-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.6fr_1fr_1.4fr_1.4fr] gap-10 lg:gap-8">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 pt-16 md:pt-20 pb-14">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr_1.2fr] gap-10 xl:gap-14">
 
-          {/* Col 1 — Brand */}
-          <div>
-            <Link to="/" className="inline-flex items-center gap-3 mb-6">
-              {/* B mark */}
+          {/* Col 1 — Brand + Follow Us */}
+          <div className="flex flex-col gap-7">
+            <Link to="/" className="inline-flex items-center gap-4">
               <div className="relative flex items-end leading-none">
-                <span className="font-headline font-black tracking-tighter text-white select-none" style={{ fontSize: '2.4rem', lineHeight: 1 }}>B</span>
-                <span className="absolute bg-[#e31e24]" style={{ width: 10, height: 10, top: 2, right: -3 }} />
+                <span className="font-headline font-black tracking-tighter text-white select-none" style={{ fontSize: '2.8rem', lineHeight: 1 }}>B</span>
+                <span className="absolute bg-[#e31e24]" style={{ width: 10, height: 10, top: 3, right: -3 }} />
               </div>
-              {/* Divider */}
-              <div className="w-px self-stretch my-1 bg-white/30" />
-              {/* Word-mark */}
-              <div className="flex flex-col justify-center gap-0.5">
-                <span className="font-headline font-extrabold text-[13px] tracking-tight leading-none text-white">Business</span>
-                <span className="font-headline font-extrabold text-[13px] tracking-tight leading-none text-white">Simplified</span>
+              <div className="w-px h-8 bg-white/25" />
+              <div className="flex flex-col gap-1">
+                <span className="font-headline font-extrabold text-[15px] tracking-tight leading-none text-white">Business</span>
+                <span className="font-headline font-extrabold text-[15px] tracking-tight leading-none text-white">Simplified</span>
               </div>
             </Link>
-            <p className="font-body text-white/50 text-[13px] leading-[1.75] max-w-[240px]">
-              Structural clarity for ambitious growth. We partner with founders and leaders to simplify operations and scale with confidence.
+
+            <p className="font-body text-white/40 text-[12px] leading-relaxed max-w-[210px]">
+              Structural clarity for ambitious growth. We partner with founders to simplify operations and scale with confidence.
             </p>
+
+            <div>
+              <ColHeader>Follow Us</ColHeader>
+              <div className="flex items-center gap-2">
+
+                {/* LinkedIn */}
+                <a href="#" title="LinkedIn" className="w-8 h-8 rounded-lg bg-white/8 hover:bg-[#0077b5]/30 border border-white/10 flex items-center justify-center transition-colors duration-200 group">
+                  <svg className="w-3.5 h-3.5 fill-white/50 group-hover:fill-[#0077b5] transition-colors duration-200" viewBox="0 0 24 24">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                  </svg>
+                </a>
+
+                {/* Instagram */}
+                <a href="#" title="Instagram" className="w-8 h-8 rounded-lg bg-white/8 hover:bg-[#e1306c]/20 border border-white/10 flex items-center justify-center transition-colors duration-200 group">
+                  <svg className="w-3.5 h-3.5 fill-white/50 group-hover:fill-[#e1306c] transition-colors duration-200" viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                  </svg>
+                </a>
+
+                {/* X / Twitter */}
+                <a href="#" title="X (Twitter)" className="w-8 h-8 rounded-lg bg-white/8 hover:bg-white/15 border border-white/10 flex items-center justify-center transition-colors duration-200 group">
+                  <svg className="w-3.5 h-3.5 fill-white/50 group-hover:fill-white transition-colors duration-200" viewBox="0 0 24 24">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                  </svg>
+                </a>
+
+                {/* Facebook */}
+                <a href="#" title="Facebook" className="w-8 h-8 rounded-lg bg-white/8 hover:bg-[#1877f2]/20 border border-white/10 flex items-center justify-center transition-colors duration-200 group">
+                  <svg className="w-3.5 h-3.5 fill-white/50 group-hover:fill-[#1877f2] transition-colors duration-200" viewBox="0 0 24 24">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                  </svg>
+                </a>
+
+                {/* YouTube */}
+                <a href="#" title="YouTube" className="w-8 h-8 rounded-lg bg-white/8 hover:bg-[#ff0000]/20 border border-white/10 flex items-center justify-center transition-colors duration-200 group">
+                  <svg className="w-3.5 h-3.5 fill-white/50 group-hover:fill-[#ff0000] transition-colors duration-200" viewBox="0 0 24 24">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                  </svg>
+                </a>
+
+              </div>
+            </div>
           </div>
 
           {/* Col 2 — Quick Links */}
@@ -74,27 +128,19 @@ export default function Footer() {
             <ul className="space-y-3">
               {QUICK_LINKS.map(link => (
                 <li key={link.label}>
-                  {link.isLink ? (
-                    <Link to={link.href} className="font-body text-white/55 text-[13px] hover:text-white transition-colors duration-200">
-                      {link.label}
-                    </Link>
-                  ) : (
-                    <a href={link.href} className="font-body text-white/55 text-[13px] hover:text-white transition-colors duration-200">
-                      {link.label}
-                    </a>
-                  )}
+                  <NavLink href={link.href} isLink={link.isLink}>{link.label}</NavLink>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Col 3 — Services */}
+          {/* Col 3 — Services A */}
           <div>
             <ColHeader>Our Services</ColHeader>
             <ul className="space-y-3">
-              {SERVICES.map(s => (
+              {SERVICES_A.map(s => (
                 <li key={s.label}>
-                  <Link to={s.href} className="font-body text-white/55 text-[13px] hover:text-white transition-colors duration-200">
+                  <Link to={s.href} className="font-body text-white/50 text-[12px] hover:text-white transition-colors duration-200">
                     {s.label}
                   </Link>
                 </li>
@@ -102,34 +148,30 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 4 — Contact */}
+          {/* Col 4 — Services B */}
           <div>
-            <ColHeader>Contact Info</ColHeader>
-            <ul className="space-y-5 mb-6">
-              {CONTACT.map(item => (
-                <li key={item.icon} className="flex items-start gap-3">
-                  <span className="material-symbols-outlined text-[#e31e24] text-[18px] mt-0.5 shrink-0">{item.icon}</span>
-                  <div>
-                    {item.lines.map(line => (
-                      <p key={line} className="font-body text-white/55 text-[13px] leading-[1.6]">{line}</p>
-                    ))}
-                  </div>
+            <ColHeader>Our Services</ColHeader>
+            <ul className="space-y-3">
+              {SERVICES_B.map(s => (
+                <li key={s.label}>
+                  <Link to={s.href} className="font-body text-white/50 text-[12px] hover:text-white transition-colors duration-200">
+                    {s.label}
+                  </Link>
                 </li>
               ))}
             </ul>
+          </div>
 
-            {/* Map embed */}
-            <div className="rounded-xl overflow-hidden border border-white/10 h-[140px]">
-              <iframe
-                title="Location map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0!2d-122.4194!3d37.7749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDQ2JzI5LjYiTiAxMjLCsDI1JzA5LjkiVw!5e0!3m2!1sen!2sus!4v1600000000000"
-                width="100%"
-                height="140"
-                style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg) saturate(0.6) brightness(0.85)' }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
+          {/* Col 5 — Contact Info */}
+          <div>
+            <ColHeader>Contact Info</ColHeader>
+            <div className="space-y-3">
+              {CONTACT.map(item => (
+                <div key={item.val} className="flex items-center gap-2">
+                  <span className="material-symbols-outlined text-[#e31e24] text-[13px] shrink-0">{item.icon}</span>
+                  <span className="font-body text-white/50 text-[12px]">{item.val}</span>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -137,15 +179,13 @@ export default function Footer() {
       </div>
 
       {/* ── Bottom bar */}
-      <div className="border-t border-white/10">
-        <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-          <p className="font-body text-white/30 text-[12px]">
-            © {year} Bzsimplified. All rights reserved.
-          </p>
-          <div className="flex items-center gap-5">
-            <a href="#" className="font-body text-white/30 text-[12px] hover:text-white/60 transition-colors duration-200">Privacy Policy</a>
+      <div className="border-t border-white/8">
+        <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+          <p className="font-body text-white/25 text-[11px]">© {year} Bzsimplified. All rights reserved.</p>
+          <div className="flex items-center gap-4">
+            <Link to="/privacy-policy" className="font-body text-white/25 text-[11px] hover:text-white/50 transition-colors duration-200">Privacy Policy</Link>
             <span className="w-px h-3 bg-white/15" />
-            <a href="#" className="font-body text-white/30 text-[12px] hover:text-white/60 transition-colors duration-200">Terms of Use</a>
+            <Link to="/terms-of-usage" className="font-body text-white/25 text-[11px] hover:text-white/50 transition-colors duration-200">Terms of Usage</Link>
           </div>
         </div>
       </div>

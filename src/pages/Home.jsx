@@ -107,7 +107,7 @@ export default function Home() {
         {/* ═══════════════════════════════════════════════════════
             HERO
         ═══════════════════════════════════════════════════════ */}
-        <section className="relative min-h-screen flex items-center pt-36 pb-28 overflow-hidden bg-[#0a192f]">
+        <section data-hero="true" className="relative min-h-screen flex items-center pt-24 pb-16 md:pt-36 md:pb-28 overflow-hidden bg-[#0a192f]">
 
           {/* Background photo */}
           <div className="absolute right-0 top-0 w-full lg:w-2/3 h-full z-0 overflow-hidden">
@@ -120,11 +120,11 @@ export default function Home() {
           </div>
 
           <div className="w-full mx-auto px-6 md:px-10 lg:px-16 relative z-20 max-w-[1440px]">
-            <div className="grid lg:grid-cols-12 gap-16 items-center">
+            <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-center">
 
               {/* Left copy */}
               <div className="lg:col-span-7 xl:col-span-7">
-                <h1 className="font-headline leading-[1.0] tracking-tight mb-14 text-5xl md:text-6xl lg:text-7xl">
+                <h1 className="font-headline leading-[1.0] tracking-tight mb-8 md:mb-14 text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
                   {/* Line 1: outline ghost */}
                   <div
                     className="block mb-2 font-black"
@@ -138,7 +138,7 @@ export default function Home() {
                   </div>
                 </h1>
 
-                <p className="text-slate-300 text-base md:text-lg leading-relaxed mb-16 font-body font-light max-w-2xl">
+                <p className="text-slate-300 text-base md:text-lg leading-relaxed mb-8 md:mb-16 font-body font-light max-w-2xl">
                   Navigating scale requires more than ambition — it requires an architectural foundation. We help ambitious leaders transform operational complexity into sustainable competitive advantage through structural clarity and execution rigor.
                 </p>
 
@@ -180,6 +180,15 @@ export default function Home() {
           <div className="absolute -bottom-16 -left-2 text-[18vw] font-black text-stroke-white select-none opacity-5 leading-none pointer-events-none font-headline">
             STRUCTURE
           </div>
+
+          <button
+            aria-label="Scroll to content"
+            onClick={e => e.currentTarget.closest('[data-hero]')?.nextElementSibling?.scrollIntoView({ behavior: 'smooth' })}
+            className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1 group"
+          >
+            <span className="font-body text-[9px] uppercase tracking-[0.2em] text-white/30 group-hover:text-white/60 transition-colors">Scroll</span>
+            <span className="material-symbols-outlined animate-bounce text-white/40 group-hover:text-white/70 transition-colors" style={{ fontSize: '30px' }}>keyboard_arrow_down</span>
+          </button>
         </section>
 
         {/* ═══════════════════════════════════════════════════════
@@ -255,11 +264,11 @@ export default function Home() {
         {/* ═══════════════════════════════════════════════════════
             PARTNERS
         ═══════════════════════════════════════════════════════ */}
-        <section className="py-20 bg-[#f7f9fc]" id="partners">
+        <section className="py-14 md:py-20 bg-[#f7f9fc]" id="partners">
           <div className="mx-auto px-6 md:px-10 lg:px-16 max-w-[1440px]">
 
             {/* Header */}
-            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12">
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-8 md:mb-12">
               <div>
                 <p className="eyebrow">Our Partners</p>
                 <h2 className="font-headline font-bold text-[#0a192f] text-3xl md:text-4xl tracking-tight">
@@ -280,7 +289,7 @@ export default function Home() {
               {PARTNERS.map(p => (
                 <Link
                   key={p.name}
-                  to="/contact"
+                  to=""
                   className="group relative bg-[#0a192f] border border-[#0e2340] rounded-xl px-5 py-8 flex flex-col items-center justify-center gap-4 hover:bg-[#0e2340] hover:shadow-[0_8px_30px_rgba(10,25,47,0.4)] hover:-translate-y-1 transition-all duration-300"
                 >
                   {/* Icon placeholder */}
@@ -307,9 +316,9 @@ export default function Home() {
         {/* ═══════════════════════════════════════════════════════
             BRANDS
         ═══════════════════════════════════════════════════════ */}
-        <section className="py-24 bg-gradient-to-b from-white via-slate-50 to-slate-100" id="brands">
+        <section className="py-16 md:py-24 bg-gradient-to-b from-white via-slate-50 to-slate-100" id="brands">
           <div className="mx-auto px-6 md:px-10 lg:px-16 max-w-[1440px]">
-            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-12 mb-16">
+            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 mb-10 md:mb-16">
               <div>
                 <p className="eyebrow">Brands We Represent</p>
                 <h2 className="font-headline font-extrabold text-[#0a192f] text-4xl md:text-5xl tracking-tight leading-tight">
@@ -325,7 +334,7 @@ export default function Home() {
               {BRANDS.map(brand => (
                 <Link
                   key={brand.name}
-                  to={`/brand/${brand.slug}`}
+                 
                   className="group relative bg-[#0a192f] border border-white/10 rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:border-[#e31e24] hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col"
                 >
                   {/* Shine sweep */}
@@ -406,11 +415,11 @@ export default function Home() {
         {/* ═══════════════════════════════════════════════════════
             SERVICES NAVIGATION
         ═══════════════════════════════════════════════════════ */}
-        <section className="py-24 bg-[#f7f9fc]" id="services">
+        <section className="py-16 md:py-24 bg-[#f7f9fc]" id="services">
           <div className="mx-auto px-6 md:px-10 lg:px-16 max-w-[1440px]">
 
             {/* Header */}
-            <div className="mb-12">
+            <div className="mb-8 md:mb-12">
               <p className="eyebrow">Our Services</p>
               <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
                 <h2 className="text-3xl md:text-4xl font-headline font-bold text-[#0a192f] leading-tight">
@@ -481,25 +490,27 @@ export default function Home() {
         {/* ═══════════════════════════════════════════════════════
             WHY US
         ═══════════════════════════════════════════════════════ */}
-        <section className="py-24 bg-[#f2f4f7]">
-          <div className="mx-auto px-6 md:px-10 lg:px-16 max-w-[1440px] grid lg:grid-cols-2 gap-16 items-center">
+        <section className="py-16 md:py-24 bg-[#f2f4f7]">
+          <div className="mx-auto px-6 md:px-10 lg:px-16 max-w-[1440px] grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             {/* Image */}
             <div className="order-2 lg:order-1 relative">
-              <div className="relative w-full aspect-video bg-gradient-to-br from-slate-200 via-slate-300 to-slate-400 rounded-xl shadow-lg overflow-hidden">
-                {/* Placeholder with decorative elements */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <span className="material-symbols-outlined text-white text-5xl opacity-40">image</span>
-                    <p className="text-white/50 font-body text-xs mt-2">Team & Operations</p>
-                  </div>
-                </div>
+              <div className="relative w-full aspect-[4/3] sm:aspect-video rounded-xl shadow-xl overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1200&q=80"
+                  alt="Consulting team at work"
+                  className="w-full h-full object-cover"
+                />
+                {/* Subtle navy overlay for brand consistency */}
+                <div className="absolute inset-0 bg-[#0a192f]/20" />
               </div>
+              {/* Floating accent */}
+              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-[#e31e24]/10 rounded-xl blur-2xl pointer-events-none" />
             </div>
 
             {/* Copy */}
             <div className="order-1 lg:order-2">
-              <p className="eyebrow">Why Us</p>
-              <h2 className="text-4xl font-headline font-bold text-[#0a192f] mb-6 leading-tight">
+              <p className="font-body font-bold text-[15px] tracking-[0.18em] uppercase text-[#e31e24] mb-6">Why Us</p>
+              <h2 className="text-4xl md:text-5xl font-headline font-bold text-[#0a192f] mb-6 leading-tight">
                 Operator thinking for complex systems
               </h2>
               <p className="text-lg font-body text-slate-600 leading-relaxed">
@@ -513,25 +524,24 @@ export default function Home() {
         {/* ═══════════════════════════════════════════════════════
             WALL OF FAME
         ═══════════════════════════════════════════════════════ */}
-        <section className="py-32 bg-[#0a192f] overflow-hidden" id="wall-of-fame">
+        <section className="py-20 md:py-32 bg-[#0a192f] overflow-hidden" id="wall-of-fame">
           <div className="mx-auto px-6 md:px-10 lg:px-16 max-w-[1440px]">
             {/* Header */}
-            <div className="mb-16">
-              <p className="font-body font-semibold text-[10px] tracking-[0.2em] uppercase text-white/30 flex items-center gap-2.5 mb-5">
-                <span className="block w-5 h-px bg-[#e31e24] flex-shrink-0" />
+            <div className="mb-10 md:mb-16">
+              <p className="font-body font-bold text-[13px] tracking-[0.18em] uppercase text-[#e31e24] mb-5">
                 Wall of Fame
               </p>
-              <h2 className="text-4xl md:text-5xl font-headline font-black text-white leading-[1.02] whitespace-nowrap">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-headline font-black text-white leading-[1.05]">
                 Brands we've helped build.
               </h2>
             </div>
 
             {/* Cards grid */}
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-6">
               {WALL_OF_FAME.map(brand => (
                 <Link
                   key={brand.slug}
-                  to={`/brand/${brand.slug}`}
+                  to="/wall-of-fame"
                   className="group relative bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:border-[#e31e24]/50 hover:shadow-[0_24px_60px_rgba(0,0,0,0.5)] flex flex-col cursor-pointer"
                 >
                   {/* Image area */}
@@ -592,24 +602,25 @@ export default function Home() {
         {/* ═══════════════════════════════════════════════════════
             BRAND STORIES
         ═══════════════════════════════════════════════════════ */}
-        <section className="py-24 bg-white" id="brand-stories">
+        <section className="py-16 md:py-24 bg-white" id="brand-stories">
           <div className="mx-auto px-6 md:px-10 lg:px-16 max-w-[1440px]">
-            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-6 mb-14">
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-6 mb-8 md:mb-14">
               <div>
                 <p className="eyebrow">Brand Stories</p>
                 <h2 className="text-4xl font-headline font-bold text-[#0a192f]">Brand Stories</h2>
               </div>
-              <a
-                href="#"
+              <Link
+                to="/brand-stories"
                 className="btn-link text-[#0a192f] underline underline-offset-8 hover:opacity-60 transition-opacity"
               >
                 View All Brand Stories →
-              </a>
+              </Link>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
               {BLOG_POSTS.map(post => (
-                <article key={post.id} className="group cursor-pointer bg-white rounded-2xl overflow-hidden border border-slate-100 hover:border-[#0a192f]/20 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300">
+                <Link key={post.id} to="/brand-stories">
+                <article className="group cursor-pointer bg-white rounded-2xl overflow-hidden border border-slate-100 hover:border-[#0a192f]/20 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300">
                   {/* Image */}
                   <div className="aspect-[16/10] overflow-hidden relative">
                     <img
@@ -641,6 +652,7 @@ export default function Home() {
                     </div>
                   </div>
                 </article>
+                </Link>
               ))}
             </div>
           </div>

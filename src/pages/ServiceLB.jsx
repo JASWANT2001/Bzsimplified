@@ -36,7 +36,7 @@ export default function ServiceLB() {
       </div>
 
       {/* ── Hero */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-12 gap-8 items-end mb-24">
+      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-12 gap-8 items-end mb-12 md:mb-24">
         <div className="col-span-12 lg:col-span-8">
           <h1
             className="font-headline font-extrabold leading-[1.1] tracking-tighter text-[#0a192f] mb-8"
@@ -62,11 +62,11 @@ export default function ServiceLB() {
       </section>
 
       {/* ── Bento Grid */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-32">
+      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-16 md:mb-32">
         <div className="grid grid-cols-12 gap-4">
 
           {/* Primary dark card */}
-          <div className="col-span-12 md:col-span-7 bg-[#0a192f] rounded-xl p-10 lg:p-12 flex flex-col justify-between relative overflow-hidden min-h-[300px]">
+          <div className="col-span-12 md:col-span-7 bg-[#0a192f] rounded-xl p-7 md:p-10 lg:p-12 flex flex-col justify-between relative overflow-hidden min-h-[260px] md:min-h-[300px]">
             <div className="relative z-10">
               <span className="font-body text-[#b9c7e4] text-xs uppercase tracking-widest mb-4 block">Core Strategy</span>
               <h3 className="font-headline text-white text-3xl lg:text-4xl font-bold mb-6">
@@ -137,8 +137,8 @@ export default function ServiceLB() {
       </section>
 
       {/* ── Metrics */}
-      <section className="bg-[#eceef1] py-24">
-        <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-1 md:grid-cols-3 gap-16">
+      <section className="bg-[#eceef1] py-16 md:py-24">
+        <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16">
           <div className="border-l-4 border-[#0a192f] pl-8">
             <div className="font-headline font-extrabold text-[#0a192f] mb-2" style={{ fontSize: '3.5rem' }}>30+</div>
             <div className="font-body text-xs font-bold uppercase tracking-[0.3em] text-[#39475f]">Brands Launched</div>

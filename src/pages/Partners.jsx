@@ -62,7 +62,7 @@ export default function Partners() {
     <main className="pt-[82px] bg-[#f7f9fc] text-[#191c1e] min-h-screen">
 
       {/* ── Hero */}
-      <section className="relative overflow-hidden bg-[#0a192f] py-14 lg:py-20 min-h-[420px] lg:min-h-[480px] flex items-center">
+      <section data-hero="true" className="relative overflow-hidden bg-[#0a192f] py-14 lg:py-20 min-h-[420px] lg:min-h-[480px] flex items-center">
         <div className="absolute inset-0 z-0">
           <img
             className="w-full h-full object-cover"
@@ -80,21 +80,29 @@ export default function Partners() {
 
         <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 w-full">
           <h1
-            className="font-headline font-extrabold tracking-tighter leading-none text-white mb-6"
-            style={{ fontSize: 'clamp(3rem, 7vw, 5.5rem)' }}
+            className="font-headline font-extrabold tracking-tighter leading-[1.05] text-white mb-6"
+            style={{ fontSize: 'clamp(2.5rem, 7vw, 5.5rem)' }}
           >
             Collaborating<br />
             <span className="text-[#b9c7e4]">for Excellence.</span>
           </h1>
-          <p className="font-body text-white/60 text-xl max-w-xl leading-relaxed">
+          <p className="font-body text-white/60 text-base sm:text-xl max-w-xl leading-relaxed">
             Forging powerful connections with industry leaders to deliver unprecedented value
             and transformative solutions across the global consulting landscape.
           </p>
         </div>
+        <button
+          aria-label="Scroll to content"
+          onClick={e => e.currentTarget.closest('[data-hero]')?.nextElementSibling?.scrollIntoView({ behavior: 'smooth' })}
+          className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1 group"
+        >
+          <span className="font-body text-[9px] uppercase tracking-[0.2em] text-white/30 group-hover:text-white/60 transition-colors">Scroll</span>
+          <span className="material-symbols-outlined animate-bounce text-white/40 group-hover:text-white/70 transition-colors" style={{ fontSize: '30px' }}>keyboard_arrow_down</span>
+        </button>
       </section>
 
       {/* ── Partners Grid */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 py-24 relative">
+      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 py-16 md:py-24 relative">
         <div
           className="absolute top-0 right-0 w-1/3 h-full opacity-[0.04] pointer-events-none"
           style={{ backgroundImage: 'radial-gradient(#75777e 0.5px, transparent 0.5px)', backgroundSize: '16px 16px' }}
@@ -116,7 +124,7 @@ export default function Partners() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {PARTNERS.map(p => (
-              <div key={p.name} className="group bg-white border border-slate-200 rounded-xl p-10 flex flex-col transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 relative overflow-hidden"
+              <div key={p.name} className="group bg-white border border-slate-200 rounded-xl p-7 md:p-10 flex flex-col transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 relative overflow-hidden"
                 style={{ borderTop: `4px solid ${p.accent}` }}
               >
                 <div
@@ -151,17 +159,17 @@ export default function Partners() {
       </section>
 
       {/* ── Partner Selection Standards */}
-      <section className="bg-[#0a192f] py-24 relative overflow-hidden">
+      <section className="bg-[#0a192f] py-16 md:py-24 relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-[0.07] pointer-events-none"
           style={{ backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(227,30,36,0.1) 10px, rgba(227,30,36,0.1) 20px)' }}
         />
 
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 relative z-10">
-          <div className="grid grid-cols-12 gap-8 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-start">
 
             {/* Header column */}
-            <div className="col-span-12 lg:col-span-4 flex flex-col justify-center">
+            <div className="lg:col-span-4 flex flex-col justify-center">
               <div className="flex items-center gap-4 mb-4">
                 <div className="h-[2px] w-10 bg-[#e31e24]" />
                 <span className="font-body text-xs font-bold uppercase tracking-[0.3em] text-white/50">How We Collaborate</span>
@@ -179,7 +187,7 @@ export default function Partners() {
             </div>
 
             {/* Standards cards */}
-            <div className="col-span-12 lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-5">
 
               {/* Domain Expertise — tall */}
               <div className="group md:row-span-2 p-10 bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/[0.08] transition-all duration-500 flex flex-col justify-between relative">

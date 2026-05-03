@@ -58,7 +58,7 @@ function useReveal() {
 
 function PhotoCard({ flip }) {
   return (
-    <div className="relative h-full min-h-[280px]">
+    <div className="relative h-full min-h-[240px] sm:min-h-[280px]">
       <div
         className="absolute inset-0 bg-[#e31e24]/8 rounded-xl"
         style={{ transform: flip ? 'translate(-8px, 8px)' : 'translate(8px, 8px)' }}
@@ -78,7 +78,7 @@ function MemberSection({ member }) {
   const { id, name, role, dept, bio, expertise, website, flip } = member
 
   return (
-    <section className={`relative py-24 overflow-hidden reveal ${flip ? 'bg-white' : 'bg-slate-50/80'}`}>
+    <section className={`relative py-14 md:py-24 overflow-hidden reveal ${flip ? 'bg-white' : 'bg-slate-50/80'}`}>
       {/* Watermark number */}
       <span
         className="absolute font-headline font-black select-none pointer-events-none leading-none text-[#0a192f]/[0.03]"
@@ -189,7 +189,7 @@ export default function Teams() {
     <div className="pt-[82px]">
 
       {/* ── Hero */}
-      <div className="relative bg-[#0a192f] overflow-hidden py-14 lg:py-20 min-h-[420px] lg:min-h-[480px]">
+      <div data-hero="true" className="relative bg-[#0a192f] overflow-hidden py-14 lg:py-20 min-h-[420px] lg:min-h-[480px]">
         {/* Background image */}
         <img
           src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1600&q=80"
@@ -207,12 +207,12 @@ export default function Teams() {
             Our People
           </p>
           <h1
-            className="font-headline font-black text-white tracking-tight leading-[1.0] mb-6 whitespace-nowrap"
-            style={{ fontSize: 'clamp(2.2rem, 4.5vw, 4.2rem)' }}
+            className="font-headline font-black text-white tracking-tight leading-[1.05] mb-6"
+            style={{ fontSize: 'clamp(1.8rem, 4.5vw, 4.2rem)' }}
           >
             The minds behind every move
           </h1>
-          <p className="font-body text-white/45 text-[15px] leading-relaxed mb-10 max-w-[520px]">
+          <p className="font-body text-white/45 text-[14px] sm:text-[15px] leading-relaxed mb-8 md:mb-10 max-w-[520px]">
             A lean team of operators, strategists, and builders — who've built, scaled, and fixed businesses across industries.
           </p>
           <div className="flex flex-wrap gap-3">
@@ -233,6 +233,14 @@ export default function Teams() {
             </Link>
           </div>
         </div>
+        <button
+          aria-label="Scroll to content"
+          onClick={e => e.currentTarget.closest('[data-hero]')?.nextElementSibling?.scrollIntoView({ behavior: 'smooth' })}
+          className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1 group"
+        >
+          <span className="font-body text-[9px] uppercase tracking-[0.2em] text-white/30 group-hover:text-white/60 transition-colors">Scroll</span>
+          <span className="material-symbols-outlined animate-bounce text-white/40 group-hover:text-white/70 transition-colors" style={{ fontSize: '30px' }}>keyboard_arrow_down</span>
+        </button>
       </div>
 
       {/* ── Team sections */}
