@@ -296,7 +296,7 @@ export default function Home() {
         {/* ═══════════════════════════════════════════════════════
             SERVICES NAVIGATION
         ═══════════════════════════════════════════════════════ */}
-        <section className="py-16 md:py-24 bg-[#f7f9fc]" id="services">
+        <section className="pt-16 md:pt-20 pb-10 md:pb-14 bg-[#f7f9fc]" id="services">
           <div className="mx-auto px-6 md:px-10 lg:px-16 max-w-[1440px]">
 
             {/* Header */}
@@ -364,6 +364,69 @@ export default function Home() {
                   </div>
                 </Link>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ═══════════════════════════════════════════════════════
+            TEAM PREVIEW
+        ═══════════════════════════════════════════════════════ */}
+        <section className="pt-10 md:pt-14 pb-16 md:pb-20 bg-white" id="team-preview">
+          <div className="mx-auto px-6 md:px-10 lg:px-16 max-w-[1440px]">
+
+            {/* Header + grid share the same width so all edges align perfectly */}
+            <div className="w-full">
+
+              {/* Header */}
+              <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 md:mb-14">
+                <div>
+                  <p className="eyebrow">Our People</p>
+                  <h2 className="text-3xl md:text-4xl font-headline font-bold text-[#0a192f] leading-tight">
+                    The team that executes.
+                  </h2>
+                </div>
+                <Link
+                  to="/teams"
+                  className="btn-link text-[#0a192f] underline underline-offset-8 hover:opacity-60 transition-opacity flex-shrink-0"
+                >
+                  View Full Team →
+                </Link>
+              </div>
+
+              {/* 4 members — each flex-1 so they share the full width equally */}
+              <div className="flex flex-col sm:flex-row gap-8 sm:gap-6">
+                {[
+                  { img: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80', name: 'Kalyan',    role: 'Founder & Managing Director'     },
+                  { img: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80', name: 'Sunil Jose', role: 'Director – Growth & Strategy'    },
+                  { img: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80', name: 'Dinesh',     role: 'Head of Operations & Logistics'  },
+                  { img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80', name: 'Sanal',      role: 'Lead – Technology & Integration' },
+                ].map(member => (
+                  <Link
+                    key={member.name}
+                    to="/teams"
+                    className="group flex-1 flex flex-col items-center text-center gap-4"
+                  >
+                    {/* Circle — sized relative to flex item width, always square */}
+                    <div className="w-full max-w-[180px] aspect-square rounded-full overflow-hidden ring-[3px] ring-slate-200 group-hover:ring-slate-300 shadow-sm group-hover:shadow-md transition-all duration-300">
+                      <img
+                        src={member.img}
+                        alt={member.name}
+                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+
+                    <div>
+                      <h3 className="font-headline font-bold text-[#0a192f] text-[18px] leading-tight mb-1 group-hover:text-[#e31e24] transition-colors duration-300">
+                        {member.name}
+                      </h3>
+                      <p className="font-body font-semibold text-[11px] tracking-[0.14em] uppercase text-slate-400 leading-snug">
+                        {member.role}
+                      </p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+
             </div>
           </div>
         </section>

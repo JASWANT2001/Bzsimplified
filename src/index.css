@@ -92,6 +92,11 @@
     @apply hidden;
   }
 
+  /* Remove red line from team section */
+  #team-preview .eyebrow::before {
+    @apply hidden;
+  }
+
   /* ── Form */
   .form-field  { @apply flex flex-col gap-2; }
   .form-label  { @apply font-body font-semibold text-[11px] tracking-[0.14em] uppercase text-slate-400; }
