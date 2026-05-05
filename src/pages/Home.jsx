@@ -394,20 +394,20 @@ export default function Home() {
               </div>
 
               {/* 4 members — each flex-1 so they share the full width equally */}
-              <div className="flex flex-col sm:flex-row gap-8 sm:gap-6">
+              <div className="flex flex-col sm:flex-row sm:justify-between gap-6">
                 {[
-                  { img: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80', name: 'Kalyan',    role: 'Founder & Managing Director'     },
-                  { img: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80', name: 'Sunil Jose', role: 'Director – Growth & Strategy'    },
-                  { img: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80', name: 'Dinesh',     role: 'Head of Operations & Logistics'  },
-                  { img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80', name: 'Sanal',      role: 'Lead – Technology & Integration' },
+                  { img: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80', name: 'Kalyan',    role: 'Founder & Managing Director'     },
+                  { img: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=800&q=80', name: 'Sunil Jose', role: 'Director – Growth & Strategy'    },
+                  { img: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80', name: 'Dinesh',     role: 'Head of Operations & Logistics'  },
+                  { img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80', name: 'Sanal',      role: 'Lead – Technology & Integration' },
                 ].map(member => (
                   <Link
                     key={member.name}
                     to="/teams"
-                    className="group flex-1 flex flex-col items-center text-center gap-4"
+                    className="group w-full sm:w-[22%] flex flex-col text-left"
                   >
-                    {/* Circle — sized relative to flex item width, always square */}
-                    <div className="w-full max-w-[180px] aspect-square rounded-full overflow-hidden ring-[3px] ring-slate-200 group-hover:ring-slate-300 shadow-sm group-hover:shadow-md transition-all duration-300">
+                    {/* Full-width image from top edge to bottom, portrait ratio */}
+                    <div className="w-full aspect-square overflow-hidden rounded-xl shadow-md group-hover:shadow-xl transition-shadow duration-300">
                       <img
                         src={member.img}
                         alt={member.name}
@@ -415,7 +415,7 @@ export default function Home() {
                       />
                     </div>
 
-                    <div>
+                    <div className="pt-5">
                       <h3 className="font-headline font-bold text-[#0a192f] text-[18px] leading-tight mb-1 group-hover:text-[#e31e24] transition-colors duration-300">
                         {member.name}
                       </h3>
