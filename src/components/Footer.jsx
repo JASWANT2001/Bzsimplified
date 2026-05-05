@@ -34,7 +34,7 @@ const CONTACT = [
 function ColHeader({ children }) {
   return (
     <div className="mb-5">
-      <h4 className="font-headline font-bold text-white text-[11px] tracking-[0.18em] uppercase mb-2">
+      <h4 className="font-headline font-bold text-white text-[12px] tracking-[0.18em] uppercase mb-2">
         {children}
       </h4>
       <div className="flex gap-1">
@@ -46,7 +46,7 @@ function ColHeader({ children }) {
 }
 
 function NavLink({ href, isLink, children }) {
-  const cls = "font-body text-white/50 text-[12px] hover:text-white transition-colors duration-200"
+  const cls = "font-body text-white/50 text-[13px] hover:text-white transition-colors duration-200"
   return isLink
     ? <Link to={href} className={cls}>{children}</Link>
     : <a href={href} className={cls}>{children}</a>
@@ -70,12 +70,12 @@ export default function Footer() {
               </div>
               <div className="w-px h-8 bg-white/25" />
               <div className="flex flex-col gap-1">
-                <span className="font-headline font-extrabold text-[15px] tracking-tight leading-none text-white">Business</span>
-                <span className="font-headline font-extrabold text-[15px] tracking-tight leading-none text-white">Simplified</span>
+                <span className="font-headline font-extrabold text-[16px] tracking-tight leading-none text-white">Business</span>
+                <span className="font-headline font-extrabold text-[16px] tracking-tight leading-none text-white">Simplified</span>
               </div>
             </Link>
 
-            <p className="font-body text-white/40 text-[12px] leading-relaxed max-w-[210px]">
+            <p className="font-body text-white/40 text-[13px] leading-relaxed max-w-[210px]">
               Structural clarity for ambitious growth. We partner with founders to simplify operations and scale with confidence.
             </p>
 
@@ -140,7 +140,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {SERVICES_A.map(s => (
                 <li key={s.label}>
-                  <Link to={s.href} className="font-body text-white/50 text-[12px] hover:text-white transition-colors duration-200">
+                  <Link to={s.href} className="font-body text-white/50 text-[13px] hover:text-white transition-colors duration-200">
                     {s.label}
                   </Link>
                 </li>
@@ -154,7 +154,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {SERVICES_B.map(s => (
                 <li key={s.label}>
-                  <Link to={s.href} className="font-body text-white/50 text-[12px] hover:text-white transition-colors duration-200">
+                  <Link to={s.href} className="font-body text-white/50 text-[13px] hover:text-white transition-colors duration-200">
                     {s.label}
                   </Link>
                 </li>
@@ -168,8 +168,8 @@ export default function Footer() {
             <div className="space-y-3">
               {CONTACT.map(item => (
                 <div key={item.val} className="flex items-center gap-2">
-                  <span className="material-symbols-outlined text-[#e31e24] text-[13px] shrink-0">{item.icon}</span>
-                  <span className="font-body text-white/50 text-[12px]">{item.val}</span>
+                  <span className="material-symbols-outlined text-[#e31e24] text-[14px] shrink-0">{item.icon}</span>
+                  <span className="font-body text-white/50 text-[13px]">{item.val}</span>
                 </div>
               ))}
             </div>
@@ -181,11 +181,11 @@ export default function Footer() {
       {/* ── Bottom bar */}
       <div className="border-t border-white/8">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-          <p className="font-body text-white/25 text-[11px]">© {year} Bzsimplified. All rights reserved.</p>
+          <p className="font-body text-white/25 text-[12px]">© {year} Bzsimplified. All rights reserved.</p>
           <div className="flex items-center gap-4">
-            <Link to="/privacy-policy" className="font-body text-white/25 text-[11px] hover:text-white/50 transition-colors duration-200">Privacy Policy</Link>
+            <Link to="/privacy-policy" className="font-body text-white/25 text-[12px] hover:text-white/50 transition-colors duration-200">Privacy Policy</Link>
             <span className="w-px h-3 bg-white/15" />
-            <Link to="/terms-of-usage" className="font-body text-white/25 text-[11px] hover:text-white/50 transition-colors duration-200">Terms of Usage</Link>
+            <Link to="/terms-of-usage" className="font-body text-white/25 text-[12px] hover:text-white/50 transition-colors duration-200">Terms of Usage</Link>
           </div>
         </div>
       </div>

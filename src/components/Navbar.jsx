@@ -94,8 +94,8 @@ export default function Navbar() {
             </div>
             <div className={`w-px self-stretch my-1 transition-colors duration-300 ${light ? 'bg-slate-300' : 'bg-white/30'}`} />
             <div className="flex flex-col justify-center gap-0.5">
-              <span className={`font-headline font-extrabold text-[13px] tracking-tight leading-none transition-colors duration-300 ${light ? 'text-[#0a192f]' : 'text-white'}`}>Business</span>
-              <span className={`font-headline font-extrabold text-[13px] tracking-tight leading-none transition-colors duration-300 ${light ? 'text-[#0a192f]' : 'text-white'}`}>Simplified</span>
+              <span className={`font-headline font-extrabold text-[14px] tracking-tight leading-none transition-colors duration-300 ${light ? 'text-[#0a192f]' : 'text-white'}`}>Business</span>
+              <span className={`font-headline font-extrabold text-[14px] tracking-tight leading-none transition-colors duration-300 ${light ? 'text-[#0a192f]' : 'text-white'}`}>Simplified</span>
             </div>
           </Link>
 
@@ -112,21 +112,21 @@ export default function Navbar() {
                 {link.hasDropdown ? (
                   <button
                     onClick={() => setServicesHovered(p => !p)}
-                    className={`relative font-body font-medium text-[14px] transition-colors duration-150 py-2 inline-flex items-center gap-1 group bg-transparent border-0 cursor-pointer ${
+                    className={`relative font-body font-medium text-[15px] transition-colors duration-150 py-2 inline-flex items-center gap-1 group bg-transparent border-0 cursor-pointer ${
                       light ? 'text-slate-600 hover:text-[#0a192f]' : 'text-white/75 hover:text-white'
                     }`}
                   >
                     {link.label}
-                    <span className={`material-symbols-outlined text-[14px] transition-transform duration-300 ${servicesHovered ? 'rotate-180' : ''}`}>expand_more</span>
+                    <span className={`material-symbols-outlined text-[15px] transition-transform duration-300 ${servicesHovered ? 'rotate-180' : ''}`}>expand_more</span>
                     <span className="absolute bottom-0 left-0 w-0 h-px bg-[#0a192f] group-hover:w-full transition-all duration-250 ease-out" />
                   </button>
                 ) : link.isLink ? (
-                  <Link to={link.href} className={`relative font-body font-medium text-[14px] transition-colors duration-150 py-2 inline-flex items-center gap-1 group ${light ? 'text-slate-600 hover:text-[#0a192f]' : 'text-white/75 hover:text-white'}`}>
+                  <Link to={link.href} className={`relative font-body font-medium text-[15px] transition-colors duration-150 py-2 inline-flex items-center gap-1 group ${light ? 'text-slate-600 hover:text-[#0a192f]' : 'text-white/75 hover:text-white'}`}>
                     {link.label}
                     <span className="absolute bottom-0 left-0 w-0 h-px bg-[#0a192f] group-hover:w-full transition-all duration-250 ease-out" />
                   </Link>
                 ) : (
-                  <a href={link.href} className={`relative font-body font-medium text-[14px] transition-colors duration-150 py-2 block group ${light ? 'text-slate-600 hover:text-[#0a192f]' : 'text-white/75 hover:text-white'}`}>
+                  <a href={link.href} className={`relative font-body font-medium text-[15px] transition-colors duration-150 py-2 block group ${light ? 'text-slate-600 hover:text-[#0a192f]' : 'text-white/75 hover:text-white'}`}>
                     {link.label}
                     <span className="absolute bottom-0 left-0 w-0 h-px bg-[#0a192f] group-hover:w-full transition-all duration-250 ease-out" />
                   </a>
@@ -156,14 +156,14 @@ export default function Navbar() {
                                   >
                                     <div className="flex items-start gap-2">
                                       <div className="flex items-center justify-center w-7 h-7 rounded-lg bg-slate-100 flex-shrink-0 group-hover:bg-[#0a192f] transition-colors duration-300">
-                                        <span className="font-headline font-bold text-[9px] text-[#0a192f] group-hover:text-white">{service.code}</span>
+                                        <span className="font-headline font-bold text-[10px] text-[#0a192f] group-hover:text-white">{service.code}</span>
                                       </div>
                                       <div className="flex-1">
-                                        <p className="font-headline font-bold text-[#0a192f] text-[12px] group-hover:text-[#e31e24] transition-colors">{service.title}</p>
-                                        <p className="font-body text-slate-500 text-[10px] leading-tight mt-0.5">{service.desc}</p>
+                                        <p className="font-headline font-bold text-[#0a192f] text-[13px] group-hover:text-[#e31e24] transition-colors">{service.title}</p>
+                                        <p className="font-body text-slate-500 text-[11px] leading-tight mt-0.5">{service.desc}</p>
                                       </div>
                                       <span className="w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center flex-shrink-0 group-hover:bg-[#0a192f] transition-colors duration-200">
-                                        <span className="material-symbols-outlined text-[11px] text-slate-500 group-hover:text-white transition-colors">arrow_forward</span>
+                                        <span className="material-symbols-outlined text-[12px] text-slate-500 group-hover:text-white transition-colors">arrow_forward</span>
                                       </span>
                                     </div>
                                   </Link>
@@ -184,14 +184,14 @@ export default function Navbar() {
           <div className="flex items-center gap-4">
             <Link
               to="/contact"
-              className={`hidden lg:inline-flex items-center gap-2 px-5 py-2 rounded-full font-body font-semibold text-[13px] tracking-wide border transition-all duration-200 group ${
+              className={`hidden lg:inline-flex items-center gap-2 px-5 py-2 rounded-full font-body font-semibold text-[14px] tracking-wide border transition-all duration-200 group ${
                 light
                   ? 'border-[#0a192f] bg-[#0a192f] text-white hover:bg-transparent hover:text-[#0a192f]'
                   : 'border-white/70 bg-transparent text-white hover:bg-white hover:text-[#0a192f] hover:border-white'
               }`}
             >
               Let's Talk
-              <span className="material-symbols-outlined text-[14px] group-hover:translate-x-0.5 transition-transform duration-200">arrow_forward</span>
+              <span className="material-symbols-outlined text-[15px] group-hover:translate-x-0.5 transition-transform duration-200">arrow_forward</span>
             </Link>
 
             {/* Hamburger */}
@@ -230,14 +230,14 @@ export default function Navbar() {
               <span className="absolute bg-[#e31e24]" style={{ width: 7, height: 7, top: 1, right: -2 }} />
             </div>
             <div className="w-px h-4 bg-slate-200" />
-            <span className="font-headline font-extrabold text-[11px] tracking-tight text-[#0a192f] leading-tight">Business<br />Simplified</span>
+            <span className="font-headline font-extrabold text-[12px] tracking-tight text-[#0a192f] leading-tight">Business<br />Simplified</span>
           </div>
           <button
             onClick={close}
             className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center hover:bg-slate-200 transition-colors"
             aria-label="Close menu"
           >
-            <span className="material-symbols-outlined text-[#0a192f] text-[18px]">close</span>
+            <span className="material-symbols-outlined text-[#0a192f] text-[19px]">close</span>
           </button>
         </div>
 
@@ -256,8 +256,8 @@ export default function Navbar() {
                       onClick={() => setServicesExpanded(p => !p)}
                       className="w-full flex items-center justify-between px-3 py-3.5 rounded-xl hover:bg-slate-50 transition-colors group"
                     >
-                      <span className="font-body font-semibold text-[15px] text-[#0a192f]">Services</span>
-                      <span className={`material-symbols-outlined text-[20px] text-slate-400 group-hover:text-[#0a192f] transition-all duration-300 ${servicesExpanded ? 'rotate-180 text-[#0a192f]' : ''}`}>
+                      <span className="font-body font-semibold text-[16px] text-[#0a192f]">Services</span>
+                      <span className={`material-symbols-outlined text-[21px] text-slate-400 group-hover:text-[#0a192f] transition-all duration-300 ${servicesExpanded ? 'rotate-180 text-[#0a192f]' : ''}`}>
                         expand_more
                       </span>
                     </button>
@@ -268,7 +268,7 @@ export default function Navbar() {
                         {STAGES.map(stage => (
                           <div key={stage} className="mb-3">
                             {/* Stage label */}
-                            <p className="text-[9px] font-bold uppercase tracking-[0.22em] text-[#e31e24] px-2 py-1.5">
+                            <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#e31e24] px-2 py-1.5">
                               {stage}
                             </p>
                             {/* Service links */}
@@ -279,13 +279,13 @@ export default function Navbar() {
                                 onClick={close}
                                 className="flex items-center gap-3 px-2 py-2.5 rounded-lg hover:bg-slate-50 transition-colors group/item"
                               >
-                                <span className="font-headline font-black text-[9px] text-slate-300 group-hover/item:text-[#0a192f] w-5 shrink-0 transition-colors">
+                                <span className="font-headline font-black text-[10px] text-slate-300 group-hover/item:text-[#0a192f] w-5 shrink-0 transition-colors">
                                   {s.num}
                                 </span>
-                                <span className="font-body text-[13px] text-slate-600 group-hover/item:text-[#0a192f] transition-colors leading-snug flex-1">
+                                <span className="font-body text-[14px] text-slate-600 group-hover/item:text-[#0a192f] transition-colors leading-snug flex-1">
                                   {s.title}
                                 </span>
-                                <span className="material-symbols-outlined text-[15px] text-slate-300 group-hover/item:text-[#e31e24] transition-colors shrink-0">arrow_forward</span>
+                                <span className="material-symbols-outlined text-[16px] text-slate-300 group-hover/item:text-[#e31e24] transition-colors shrink-0">arrow_forward</span>
                               </Link>
                             ))}
                           </div>
@@ -300,9 +300,9 @@ export default function Navbar() {
                     onClick={close}
                     className="flex items-center justify-between px-3 py-3.5 rounded-xl hover:bg-slate-50 transition-colors group"
                   >
-                    <span className="font-body font-semibold text-[15px] text-[#0a192f]">{link.label}</span>
+                    <span className="font-body font-semibold text-[16px] text-[#0a192f]">{link.label}</span>
                     <span className="w-7 h-7 rounded-full bg-slate-100 flex items-center justify-center group-hover:bg-[#0a192f] transition-colors shrink-0">
-                      <span className="material-symbols-outlined text-[13px] text-slate-500 group-hover:text-white transition-colors">arrow_forward</span>
+                      <span className="material-symbols-outlined text-[14px] text-slate-500 group-hover:text-white transition-colors">arrow_forward</span>
                     </span>
                   </Link>
                 ) : (
@@ -311,9 +311,9 @@ export default function Navbar() {
                     onClick={close}
                     className="flex items-center justify-between px-3 py-3.5 rounded-xl hover:bg-slate-50 transition-colors group"
                   >
-                    <span className="font-body font-semibold text-[15px] text-[#0a192f]">{link.label}</span>
+                    <span className="font-body font-semibold text-[16px] text-[#0a192f]">{link.label}</span>
                     <span className="w-7 h-7 rounded-full bg-slate-100 flex items-center justify-center group-hover:bg-[#0a192f] transition-colors shrink-0">
-                      <span className="material-symbols-outlined text-[13px] text-slate-500 group-hover:text-white transition-colors">arrow_forward</span>
+                      <span className="material-symbols-outlined text-[14px] text-slate-500 group-hover:text-white transition-colors">arrow_forward</span>
                     </span>
                   </a>
                 )}
@@ -327,11 +327,11 @@ export default function Navbar() {
           <Link
             to="/contact"
             onClick={close}
-            className="flex items-center justify-center gap-2 w-full bg-[#0a192f] text-white px-6 py-3.5 rounded-xl font-body font-semibold text-[14px] hover:bg-[#0e2340] transition-colors"
+            className="flex items-center justify-center gap-2 w-full bg-[#0a192f] text-white px-6 py-3.5 rounded-xl font-body font-semibold text-[15px] hover:bg-[#0e2340] transition-colors"
           >
             <span className="w-2 h-2 rounded-full bg-[#e31e24] shrink-0" />
             Let's Talk
-            <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
+            <span className="material-symbols-outlined text-[17px]">arrow_forward</span>
           </Link>
         </div>
 

@@ -81,7 +81,7 @@ export default function WallOfFame() {
         <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#0a192f] to-transparent" />
 
         <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 w-full">
-          <p className="font-body font-bold text-[13px] tracking-[0.28em] uppercase text-[#e31e24] mb-6">
+          <p className="font-body font-bold text-[14px] tracking-[0.28em] uppercase text-[#e31e24] mb-6">
             Wall of Fame
           </p>
           <h1
@@ -90,7 +90,7 @@ export default function WallOfFame() {
           >
             Clients who trusted us to deliver.
           </h1>
-          <p className="font-body text-white/45 text-[14px] sm:text-[15px] leading-relaxed max-w-[520px]">
+          <p className="font-body text-white/45 text-[15px] sm:text-[16px] leading-relaxed max-w-[520px]">
             Real clients, real results — click any card to read their full story.
           </p>
         </div>
@@ -99,7 +99,7 @@ export default function WallOfFame() {
           onClick={e => e.currentTarget.closest('[data-hero]')?.nextElementSibling?.scrollIntoView({ behavior: 'smooth' })}
           className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1 group"
         >
-          <span className="font-body text-[9px] uppercase tracking-[0.2em] text-white/30 group-hover:text-white/60 transition-colors">Scroll</span>
+          <span className="font-body text-[10px] uppercase tracking-[0.2em] text-white/30 group-hover:text-white/60 transition-colors">Scroll</span>
           <span className="material-symbols-outlined animate-bounce text-white/40 group-hover:text-white/70 transition-colors" style={{ fontSize: '30px' }}>keyboard_arrow_down</span>
         </button>
       </section>
@@ -108,9 +108,9 @@ export default function WallOfFame() {
       <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 pt-8">
         <button
           onClick={() => expandedId ? setExpandedId(null) : navigate('/')}
-          className="inline-flex items-center gap-1.5 text-slate-400 hover:text-[#0a192f] font-body text-[12px] font-semibold transition-colors group"
+          className="inline-flex items-center gap-1.5 text-slate-400 hover:text-[#0a192f] font-body text-[13px] font-semibold transition-colors group"
         >
-          <span className="material-symbols-outlined text-[16px] group-hover:-translate-x-0.5 transition-transform">arrow_back</span>
+          <span className="material-symbols-outlined text-[17px] group-hover:-translate-x-0.5 transition-transform">arrow_back</span>
           {expandedId ? 'Back to Wall of Fame' : 'Back to Home'}
         </button>
       </div>
@@ -140,7 +140,7 @@ export default function WallOfFame() {
                       className="w-full h-full object-cover brightness-90 hover:brightness-100 hover:scale-105 transition-all duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0a192f]/70 via-transparent to-transparent" />
-                    <span className="absolute top-4 left-4 bg-white/15 backdrop-blur-sm text-white font-body font-bold text-[10px] tracking-[0.18em] uppercase px-3 py-1 rounded-full border border-white/20">
+                    <span className="absolute top-4 left-4 bg-white/15 backdrop-blur-sm text-white font-body font-bold text-[11px] tracking-[0.18em] uppercase px-3 py-1 rounded-full border border-white/20">
                       {client.category}
                     </span>
                     <span className="absolute top-4 right-4 font-headline font-black text-white/20 text-5xl leading-none select-none">
@@ -152,17 +152,17 @@ export default function WallOfFame() {
                 {/* ── Collapsed summary */}
                 {!isExpanded && (
                   <div className="p-6 flex flex-col flex-grow">
-                    <h3 className="font-headline font-bold text-[#0a192f] text-[17px] mb-1.5">{client.name}</h3>
-                    <p className="font-body text-slate-500 text-[13px] leading-relaxed flex-1 mb-5">{client.summary}</p>
+                    <h3 className="font-headline font-bold text-[#0a192f] text-[18px] mb-1.5">{client.name}</h3>
+                    <p className="font-body text-slate-500 text-[14px] leading-relaxed flex-1 mb-5">{client.summary}</p>
                     <div className="flex items-center justify-between pt-4 border-t border-slate-100">
-                      <span className="text-[10px] font-bold tracking-[0.2em] text-[#e31e24] uppercase">{client.category}</span>
+                      <span className="text-[11px] font-bold tracking-[0.2em] text-[#e31e24] uppercase">{client.category}</span>
                       <button
                         onClick={() => toggle(client.id)}
-                        className="flex items-center gap-1.5 text-[12px] font-body font-semibold text-[#0a192f] hover:text-[#e31e24] transition-colors group"
+                        className="flex items-center gap-1.5 text-[13px] font-body font-semibold text-[#0a192f] hover:text-[#e31e24] transition-colors group"
                       >
                         Read Story
                         <span className="w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center group-hover:bg-[#0a192f] transition-colors">
-                          <span className="material-symbols-outlined text-[11px] text-slate-500 group-hover:text-white transition-colors">add</span>
+                          <span className="material-symbols-outlined text-[12px] text-slate-500 group-hover:text-white transition-colors">add</span>
                         </span>
                       </button>
                     </div>
@@ -177,20 +177,20 @@ export default function WallOfFame() {
                     <div className="flex items-center justify-between px-4 md:px-10 py-3.5 border-b border-slate-100">
                       <div className="flex items-center gap-2">
                         <span className="w-2 h-2 rounded-full bg-[#e31e24] shrink-0" />
-                        <span className="font-body font-bold text-[10px] uppercase tracking-[0.22em] text-slate-400">Video Testimonial</span>
+                        <span className="font-body font-bold text-[11px] uppercase tracking-[0.22em] text-slate-400">Video Testimonial</span>
                       </div>
                       <button
                         onClick={() => toggle(client.id)}
-                        className="inline-flex items-center gap-1.5 text-slate-400 hover:text-[#0a192f] font-body text-[12px] font-semibold transition-colors group shrink-0 ml-3"
+                        className="inline-flex items-center gap-1.5 text-slate-400 hover:text-[#0a192f] font-body text-[13px] font-semibold transition-colors group shrink-0 ml-3"
                       >
-                        <span className="material-symbols-outlined text-[15px] group-hover:-translate-x-0.5 transition-transform">arrow_back</span>
+                        <span className="material-symbols-outlined text-[16px] group-hover:-translate-x-0.5 transition-transform">arrow_back</span>
                         <span className="hidden sm:inline">Back to all</span>
                       </button>
                     </div>
 
                     {/* Client identity */}
                     <div className="px-4 md:px-16 lg:px-24 pt-7 pb-5 text-center">
-                      <span className="inline-block bg-[#fff0f0] text-[#e31e24] font-body font-bold text-[10px] uppercase tracking-[0.25em] px-3 py-1 rounded-full mb-3">
+                      <span className="inline-block bg-[#fff0f0] text-[#e31e24] font-body font-bold text-[11px] uppercase tracking-[0.25em] px-3 py-1 rounded-full mb-3">
                         {client.category}
                       </span>
                       <h2 className="font-headline font-black text-[#0a192f] text-xl md:text-3xl tracking-tight">{client.name}</h2>
@@ -218,7 +218,7 @@ export default function WallOfFame() {
                       </p>
                       <div className="flex items-center justify-center gap-3 mt-4">
                         <span className="w-8 h-px bg-[#e31e24]" />
-                        <span className="font-body font-bold text-[10px] uppercase tracking-[0.25em] text-slate-400">{client.name}</span>
+                        <span className="font-body font-bold text-[11px] uppercase tracking-[0.25em] text-slate-400">{client.name}</span>
                         <span className="w-8 h-px bg-[#e31e24]" />
                       </div>
                     </div>
@@ -230,7 +230,7 @@ export default function WallOfFame() {
                           <div className={`font-headline font-black text-xl sm:text-3xl md:text-4xl mb-1 ${idx === 1 ? 'text-white' : 'text-[#0a192f]'}`}>
                             {m.value}
                           </div>
-                          <div className={`font-body text-[9px] sm:text-[10px] uppercase tracking-wider font-bold leading-tight ${idx === 1 ? 'text-white/40' : 'text-slate-400'}`}>
+                          <div className={`font-body text-[10px] sm:text-[11px] uppercase tracking-wider font-bold leading-tight ${idx === 1 ? 'text-white/40' : 'text-slate-400'}`}>
                             {m.label}
                           </div>
                         </div>
@@ -242,21 +242,21 @@ export default function WallOfFame() {
 
                       {/* Story */}
                       <div className="lg:col-span-3 px-4 md:px-10 py-8">
-                        <p className="font-body font-bold text-[10px] uppercase tracking-[0.25em] text-[#e31e24] mb-4">Their Story</p>
-                        <p className="font-body text-slate-600 text-[13px] md:text-[15px] leading-[1.85]">{client.voice}</p>
+                        <p className="font-body font-bold text-[11px] uppercase tracking-[0.25em] text-[#e31e24] mb-4">Their Story</p>
+                        <p className="font-body text-slate-600 text-[14px] md:text-[16px] leading-[1.85]">{client.voice}</p>
                       </div>
 
                       {/* Pillars */}
                       <div className="lg:col-span-2 px-4 md:px-10 py-8 bg-[#f7f9fc] flex flex-col gap-5">
-                        <p className="font-body font-bold text-[10px] uppercase tracking-[0.25em] text-slate-400">What We Focused On</p>
+                        <p className="font-body font-bold text-[11px] uppercase tracking-[0.25em] text-slate-400">What We Focused On</p>
                         {client.pillars.map(p => (
                           <div key={p.title} className="flex items-start gap-3">
                             <div className="w-9 h-9 rounded-xl bg-white border border-slate-100 flex items-center justify-center shrink-0 shadow-sm">
-                              <span className="material-symbols-outlined text-[#e31e24] text-[18px]">{p.icon}</span>
+                              <span className="material-symbols-outlined text-[#e31e24] text-[19px]">{p.icon}</span>
                             </div>
                             <div>
-                              <h4 className="font-headline font-bold text-[#0a192f] text-[13px] mb-1">{p.title}</h4>
-                              <p className="font-body text-slate-500 text-[12px] leading-relaxed">{p.desc}</p>
+                              <h4 className="font-headline font-bold text-[#0a192f] text-[14px] mb-1">{p.title}</h4>
+                              <p className="font-body text-slate-500 text-[13px] leading-relaxed">{p.desc}</p>
                             </div>
                           </div>
                         ))}
@@ -266,15 +266,15 @@ export default function WallOfFame() {
                     {/* CTA footer */}
                     <div className="px-4 md:px-10 py-7 bg-[#0a192f] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                       <div>
-                        <p className="font-headline font-bold text-white text-[15px] mb-1">Want results like these?</p>
-                        <p className="font-body text-white/40 text-[12px]">Let's talk about your business goals.</p>
+                        <p className="font-headline font-bold text-white text-[16px] mb-1">Want results like these?</p>
+                        <p className="font-body text-white/40 text-[13px]">Let's talk about your business goals.</p>
                       </div>
                       <Link
                         to="/contact"
-                        className="shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-[#e31e24] text-white font-body font-semibold text-[13px] rounded-xl hover:bg-[#c9191f] transition-colors group w-full sm:w-auto justify-center"
+                        className="shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-[#e31e24] text-white font-body font-semibold text-[14px] rounded-xl hover:bg-[#c9191f] transition-colors group w-full sm:w-auto justify-center"
                       >
                         Start the Conversation
-                        <span className="material-symbols-outlined text-[15px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+                        <span className="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
                       </Link>
                     </div>
 
@@ -293,14 +293,14 @@ export default function WallOfFame() {
             <h2 className="font-headline font-black text-white text-xl md:text-2xl tracking-tight mb-1">
               Ready to build your legacy?
             </h2>
-            <p className="font-body text-white/40 text-[13px]">Join the brands that trusted us to transform their operations.</p>
+            <p className="font-body text-white/40 text-[14px]">Join the brands that trusted us to transform their operations.</p>
           </div>
           <Link
             to="/contact"
-            className="shrink-0 inline-flex items-center gap-2 px-7 py-3 bg-white text-[#0a192f] font-body font-semibold text-[13px] rounded-xl hover:bg-slate-100 transition-colors"
+            className="shrink-0 inline-flex items-center gap-2 px-7 py-3 bg-white text-[#0a192f] font-body font-semibold text-[14px] rounded-xl hover:bg-slate-100 transition-colors"
           >
             Start Your Story
-            <span className="material-symbols-outlined text-[15px]">arrow_forward</span>
+            <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
           </Link>
         </div>
       </div>

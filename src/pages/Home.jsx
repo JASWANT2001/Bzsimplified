@@ -9,7 +9,7 @@ const WALL_OF_FAME = [
     sector: 'F&B',
     what: 'End-to-end franchise system design — SOPs, training manuals, and outlet rollout playbook.',
     outcome: '12 outlets launched in 8 months',
-    img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDAPk_nAYdIsuvI2bXmVaB-yZwCEuH3sZCbE5lfefQ7pC1jetVZ2f44AM9EK2xU5Yr-XhKaXvepeYfvPsyyB4O5WRi9oQO4BQVMiNxVwv_73B-eOefnFvp0rs-LT1ask7EEdkTzW3v6mRSriewcQYkMEPhWnqeLcokl61is46pgpGVnGORiRAanDalw_LeBKINc_T6BzJCja3bsmG6V4-pH_eiQwxkcyr1o4CIdvjgZwomXHWPonoNsRqkoEMSDHLYiwz4F-0Oxde4x',
+    img: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80',
   },
   {
     slug: 'brand-beta',
@@ -17,7 +17,7 @@ const WALL_OF_FAME = [
     sector: 'Retail',
     what: 'Full brand identity overhaul and go-to-market strategy for Pan-India expansion.',
     outcome: '3× revenue growth in Year 1',
-    img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDbV5NaKPNAAfG5yOAdqa7pAEmLaOx2s4rLjNC5-n_5UPt1ZXJ44eVlkm5OcMq813emmNVfCHXjdB_TH9IIw8svlZKxIDl-BwxAWiUR5tSdm-x5MG5_i4Yu8cJJ0AoFMv0Hq4sAZ9Vcf-ZLU1ploIw-flCmfysfh201boh1G_LHVz6NjgdRM2N1s2fUo44JSBC6aekqlhjHjatm1hb6CXxaE10DLw_hnTz9-cCOUXlSdiRV6o_sNQ_j9JekFEaXvzRh0WoivRMBkJ3',
+    img: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80',
   },
   {
     slug: 'brand-gamma',
@@ -25,26 +25,26 @@ const WALL_OF_FAME = [
     sector: 'F&B',
     what: 'Operational restructuring, cost-control systems, and supply chain standardisation.',
     outcome: '28% reduction in operational cost',
-    img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAsoj-B0C57r8KoBjwiGFyMYlAAvE50YZfeulsL_h3afiNRNtAft4z2w9wxfbb6jRyFU7eZZ_Y0v1zDQ3sxfz0rFbVMp0DDXQ6uFA84duxK3mkeZDeA_oI7idqmRVps4cYyduyI7oCA8wE-sdw4s_he2_CPsFzqvX3P4hlQD5GkaIaGrchwqZD_shiLWDRMOsGHkTMi7JJBrmVjlil44MOocWc6nSEeMZlogcGPZtvu7tAEHItoH_5KZcQmaocbCcEV0SQR6uZiGiPP',
+    img: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80',
   },
 ]
 
 const BLOG_POSTS = [
   {
     id: 1,
-    img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDAPk_nAYdIsuvI2bXmVaB-yZwCEuH3sZCbE5lfefQ7pC1jetVZ2f44AM9EK2xU5Yr-XhKaXvepeYfvPsyyB4O5WRi9oQO4BQVMiNxVwv_73B-eOefnFvp0rs-LT1ask7EEdkTzW3v6mRSriewcQYkMEPhWnqeLcokl61is46pgpGVnGORiRAanDalw_LeBKINc_T6BzJCja3bsmG6V4-pH_eiQwxkcyr1o4CIdvjgZwomXHWPonoNsRqkoEMSDHLYiwz4F-0Oxde4x',
+    img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
     title: 'The Cost of Operational Fragility in Rapid Growth',
     excerpt: 'How early-stage debt in systems becomes a critical failure point during market expansion.',
   },
   {
     id: 2,
-    img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDbV5NaKPNAAfG5yOAdqa7pAEmLaOx2s4rLjNC5-n_5UPt1ZXJ44eVlkm5OcMq813emmNVfCHXjdB_TH9IIw8svlZKxIDl-BwxAWiUR5tSdm-x5MG5_i4Yu8cJJ0AoFMv0Hq4sAZ9Vcf-ZLU1ploIw-flCmfysfh201boh1G_LHVz6NjgdRM2N1s2fUo44JSBC6aekqlhjHjatm1hb6CXxaE10DLw_hnTz9-cCOUXlSdiRV6o_sNQ_j9JekFEaXvzRh0WoivRMBkJ3',
+    img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80',
     title: 'Bridging the Gap: From Strategy to Applied Results',
     excerpt: 'Why 70% of strategic initiatives fail and how operator-led implementation solves the disconnect.',
   },
   {
     id: 3,
-    img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAsoj-B0C57r8KoBjwiGFyMYlAAvE50YZfeulsL_h3afiNRNtAft4z2w9wxfbb6jRyFU7eZZ_Y0v1zDQ3sxfz0rFbVMp0DDXQ6uFA84duxK3mkeZDeA_oI7idqmRVps4cYyduyI7oCA8wE-sdw4s_he2_CPsFzqvX3P4hlQD5GkaIaGrchwqZD_shiLWDRMOsGHkTMi7JJBrmVjlil44MOocWc6nSEeMZlogcGPZtvu7tAEHItoH_5KZcQmaocbCcEV0SQR6uZiGiPP',
+    img: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80',
     title: 'Designing Governance for Distributed Global Teams',
     excerpt: 'Structural frameworks that maintain culture and speed across borders and time zones.',
   },
@@ -145,13 +145,13 @@ export default function Home() {
                 <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
                   <Link
                     to="/contact"
-                    className="group inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-white text-[#0a192f] font-body font-semibold text-[14px] tracking-[0.04em] rounded-full transition-all duration-300 hover:shadow-[0_16px_48px_rgba(255,255,255,0.2)] hover:-translate-y-1 hover:scale-[1.02] active:scale-95 whitespace-nowrap"
+                    className="group inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-white text-[#0a192f] font-body font-semibold text-[15px] tracking-[0.04em] rounded-full transition-all duration-300 hover:shadow-[0_16px_48px_rgba(255,255,255,0.2)] hover:-translate-y-1 hover:scale-[1.02] active:scale-95 whitespace-nowrap"
                   >
-                    <span className="material-symbols-outlined text-[18px] flex-shrink-0">arrow_forward</span>
+                    <span className="material-symbols-outlined text-[19px] flex-shrink-0">arrow_forward</span>
                     Start Your Transformation
                   </Link>
-                  <button className="group inline-flex items-center justify-center gap-2.5 px-7 py-4 border border-white/30 text-white font-body font-medium text-[14px] rounded-full transition-all duration-300 hover:bg-white/[0.08] hover:border-white/50 hover:shadow-[0_8px_24px_rgba(255,255,255,0.1)]">
-                    <span className="material-symbols-outlined text-[20px] group-hover:-translate-y-0.5 transition-transform">play_circle</span>
+                  <button className="group inline-flex items-center justify-center gap-2.5 px-7 py-4 border border-white/30 text-white font-body font-medium text-[15px] rounded-full transition-all duration-300 hover:bg-white/[0.08] hover:border-white/50 hover:shadow-[0_8px_24px_rgba(255,255,255,0.1)]">
+                    <span className="material-symbols-outlined text-[21px] group-hover:-translate-y-0.5 transition-transform">play_circle</span>
                     <span>See Our Approach</span>
                   </button>
                 </div>
@@ -186,7 +186,7 @@ export default function Home() {
             onClick={e => e.currentTarget.closest('[data-hero]')?.nextElementSibling?.scrollIntoView({ behavior: 'smooth' })}
             className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1 group"
           >
-            <span className="font-body text-[9px] uppercase tracking-[0.2em] text-white/30 group-hover:text-white/60 transition-colors">Scroll</span>
+            <span className="font-body text-[10px] uppercase tracking-[0.2em] text-white/30 group-hover:text-white/60 transition-colors">Scroll</span>
             <span className="material-symbols-outlined animate-bounce text-white/40 group-hover:text-white/70 transition-colors" style={{ fontSize: '30px' }}>keyboard_arrow_down</span>
           </button>
         </section>
@@ -213,10 +213,10 @@ export default function Home() {
                     { icon: 'check_circle', text: 'Zero handoff surprises' },
                   ].map(item => (
                     <div key={item.text} className="flex items-start gap-3">
-                      <span className="material-symbols-outlined text-[#e31e24] text-[20px] flex-shrink-0 mt-1">
+                      <span className="material-symbols-outlined text-[#e31e24] text-[21px] flex-shrink-0 mt-1">
                         {item.icon}
                       </span>
-                      <p className="font-body text-slate-700 text-[15px] leading-relaxed">
+                      <p className="font-body text-slate-700 text-[16px] leading-relaxed">
                         {item.text}
                       </p>
                     </div>
@@ -225,7 +225,7 @@ export default function Home() {
 
                 <Link to="/contact" className="btn-primary inline-flex items-center gap-2.5">
                   Start a Conversation
-                  <span className="material-symbols-outlined text-[17px] arrow-nudge">arrow_forward</span>
+                  <span className="material-symbols-outlined text-[18px] arrow-nudge">arrow_forward</span>
                 </Link>
               </div>
 
@@ -239,7 +239,7 @@ export default function Home() {
                       'Track record of 45% operational improvements',
                       'Transparent methodology, no black boxes',
                     ].map(item => (
-                      <li key={item} className="flex items-center gap-2 font-body text-[14px] text-slate-700">
+                      <li key={item} className="flex items-center gap-2 font-body text-[15px] text-slate-700">
                         <div className="w-1.5 h-1.5 rounded-full bg-[#e31e24] flex-shrink-0" />
                         {item}
                       </li>
@@ -260,125 +260,6 @@ export default function Home() {
           </div>
         </section>
         */}
-
-        {/* ═══════════════════════════════════════════════════════
-            PARTNERS
-        ═══════════════════════════════════════════════════════ */}
-        <section className="py-14 md:py-20 bg-[#f7f9fc]" id="partners">
-          <div className="mx-auto px-6 md:px-10 lg:px-16 max-w-[1440px]">
-
-            {/* Header */}
-            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-8 md:mb-12">
-              <div>
-                <p className="eyebrow">Our Partners</p>
-                <h2 className="font-headline font-bold text-[#0a192f] text-3xl md:text-4xl tracking-tight">
-                  Backed by trusted alliances.
-                </h2>
-              </div>
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 font-body font-semibold text-sm text-[#0a192f] group flex-shrink-0"
-              >
-                Become a Partner
-                <span className="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform duration-200">arrow_forward</span>
-              </Link>
-            </div>
-
-            {/* Partner cards */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-              {PARTNERS.map(p => (
-                <Link
-                  key={p.name}
-                  to=""
-                  className="group relative bg-[#0a192f] border border-[#0e2340] rounded-xl px-5 py-8 flex flex-col items-center justify-center gap-4 hover:bg-[#0e2340] hover:shadow-[0_8px_30px_rgba(10,25,47,0.4)] hover:-translate-y-1 transition-all duration-300"
-                >
-                  {/* Icon placeholder */}
-                  <div className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center">
-                    <span className="material-symbols-outlined text-[18px] text-white/70">handshake</span>
-                  </div>
-
-                  {/* Name */}
-                  <p className="font-headline font-bold text-white text-[12px] tracking-wide text-center leading-snug">
-                    {p.name}
-                  </p>
-
-                  {/* Arrow */}
-                  <span className="material-symbols-outlined text-[14px] text-white/30 group-hover:text-white group-hover:translate-x-0.5 transition-all duration-300">
-                    arrow_forward
-                  </span>
-                </Link>
-              ))}
-            </div>
-
-          </div>
-        </section>
-
-        {/* ═══════════════════════════════════════════════════════
-            BRANDS
-        ═══════════════════════════════════════════════════════ */}
-        <section className="py-16 md:py-24 bg-gradient-to-b from-white via-slate-50 to-slate-100" id="brands">
-          <div className="mx-auto px-6 md:px-10 lg:px-16 max-w-[1440px]">
-            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 mb-10 md:mb-16">
-              <div>
-                <p className="eyebrow">Brands We Represent</p>
-                <h2 className="font-headline font-extrabold text-[#0a192f] text-4xl md:text-5xl tracking-tight leading-tight">
-                  Premium brands in our portfolio
-                </h2>
-              </div>
-              <p className="font-body text-slate-500 text-[14px] leading-relaxed max-w-sm lg:text-right">
-                Each brand we carry is vetted for operator-readiness and measurable client impact.
-              </p>
-            </div>
-
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {BRANDS.map(brand => (
-                <Link
-                  key={brand.name}
-                 
-                  className="group relative bg-[#0a192f] border border-white/10 rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:border-[#e31e24] hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col"
-                >
-                  {/* Shine sweep */}
-                  <div className="absolute inset-0 -top-1/2 -right-1/2 w-1/2 h-full bg-white/5 rotate-45 group-hover:translate-x-full transition-transform duration-700 pointer-events-none" />
-
-                  {/* Top row — icon + arrow always visible */}
-                  <div className="relative z-10 flex items-start justify-between mb-6">
-                    <div className="w-12 h-12 bg-white/10 group-hover:bg-[#e31e24] flex items-center justify-center rounded-xl transition-all duration-300">
-                      <span className="material-symbols-outlined text-white text-[22px]">
-                        {brand.icon}
-                      </span>
-                    </div>
-                    {/* Arrow — always shown, animates on hover */}
-                    <div className="w-8 h-8 rounded-full border border-white/20 group-hover:border-[#e31e24] group-hover:bg-[#e31e24] flex items-center justify-center transition-all duration-300">
-                      <span className="material-symbols-outlined text-white/50 group-hover:text-white text-[15px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300">
-                        arrow_outward
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Body */}
-                  <div className="relative z-10 flex flex-col flex-1">
-                    <h3 className="font-headline font-bold text-white text-lg mb-3">
-                      {brand.name}
-                    </h3>
-                    <p className="font-body text-white/60 group-hover:text-white/80 text-[13px] leading-relaxed flex-1 transition-colors duration-300">
-                      {brand.desc}
-                    </p>
-
-                    {/* Explore link — looks and acts like a link */}
-                    <div className="flex items-center justify-between mt-6 pt-5 border-t border-white/10 group-hover:border-white/20 transition-colors duration-300">
-                      <span className="font-body font-semibold text-[#e31e24] text-[13px] underline underline-offset-4 decoration-[#e31e24]/40 group-hover:decoration-[#e31e24] transition-all duration-200">
-                        Explore Brand
-                      </span>
-                      <span className="material-symbols-outlined text-[16px] text-[#e31e24] group-hover:translate-x-1 group-hover:-translate-y-0.5 transition-transform duration-200">
-                        arrow_outward
-                      </span>
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* ═══════════════════════════════════════════════════════
             STRATEGIC ARCHITECTURE - HIDDEN FOR NOW
@@ -452,7 +333,7 @@ export default function Home() {
                     {/* Top row: icon + number */}
                     <div className="flex items-start justify-between mb-5">
                       <div className="w-11 h-11 bg-slate-100 group-hover:bg-[#0a192f] rounded-xl flex items-center justify-center transition-colors duration-300 flex-shrink-0">
-                        <span className="material-symbols-outlined text-[#0a192f] group-hover:text-white text-[20px] transition-colors duration-300">
+                        <span className="material-symbols-outlined text-[#0a192f] group-hover:text-white text-[21px] transition-colors duration-300">
                           {service.icon}
                         </span>
                       </div>
@@ -462,22 +343,22 @@ export default function Home() {
                     </div>
 
                     {/* Title */}
-                    <h3 className="font-headline font-bold text-[#0a192f] text-[17px] mb-2 leading-snug">
+                    <h3 className="font-headline font-bold text-[#0a192f] text-[18px] mb-2 leading-snug">
                       {service.title}
                     </h3>
 
                     {/* Desc */}
-                    <p className="font-body text-slate-500 group-hover:text-slate-600 text-[13px] leading-relaxed mb-6 transition-colors duration-300">
+                    <p className="font-body text-slate-500 group-hover:text-slate-600 text-[14px] leading-relaxed mb-6 transition-colors duration-300">
                       {service.desc}
                     </p>
 
                     {/* CTA row */}
                     <div className="mt-auto flex items-center justify-between pt-5 border-t border-slate-100 group-hover:border-slate-200 transition-colors duration-300">
-                      <span className="font-body font-semibold text-[13px] text-[#e31e24] underline underline-offset-4 decoration-[#e31e24]/40 group-hover:decoration-[#e31e24] transition-all duration-200">
+                      <span className="font-body font-semibold text-[14px] text-[#e31e24] underline underline-offset-4 decoration-[#e31e24]/40 group-hover:decoration-[#e31e24] transition-all duration-200">
                         Explore Service
                       </span>
                       <div className="w-8 h-8 rounded-full bg-slate-100 group-hover:bg-[#0a192f] flex items-center justify-center transition-all duration-300 group-hover:translate-x-1">
-                        <span className="material-symbols-outlined text-[16px] text-[#0a192f] group-hover:text-white transition-colors duration-300">arrow_forward</span>
+                        <span className="material-symbols-outlined text-[17px] text-[#0a192f] group-hover:text-white transition-colors duration-300">arrow_forward</span>
                       </div>
                     </div>
                   </div>
@@ -488,35 +369,120 @@ export default function Home() {
         </section>
 
         {/* ═══════════════════════════════════════════════════════
-            WHY US
+            PARTNERS
         ═══════════════════════════════════════════════════════ */}
-        <section className="py-16 md:py-24 bg-[#f2f4f7]">
-          <div className="mx-auto px-6 md:px-10 lg:px-16 max-w-[1440px] grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-            {/* Image */}
-            <div className="order-2 lg:order-1 relative">
-              <div className="relative w-full aspect-[4/3] sm:aspect-video rounded-xl shadow-xl overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1200&q=80"
-                  alt="Consulting team at work"
-                  className="w-full h-full object-cover"
-                />
-                {/* Subtle navy overlay for brand consistency */}
-                <div className="absolute inset-0 bg-[#0a192f]/20" />
+        <section className="py-14 md:py-20 bg-[#0a192f]" id="partners">
+          <div className="mx-auto px-6 md:px-10 lg:px-16 max-w-[1440px]">
+
+            {/* Header */}
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-8 md:mb-12">
+              <div>
+                <p className="font-body font-bold text-[14px] tracking-[0.18em] uppercase text-[#e31e24] mb-3">Our Partners</p>
+                <h2 className="font-headline font-bold text-white text-3xl md:text-4xl tracking-tight">
+                  Backed by trusted alliances.
+                </h2>
               </div>
-              {/* Floating accent */}
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-[#e31e24]/10 rounded-xl blur-2xl pointer-events-none" />
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 font-body font-semibold text-sm text-white/70 hover:text-white group flex-shrink-0 transition-colors duration-200"
+              >
+                Become a Partner
+                <span className="material-symbols-outlined text-[17px] group-hover:translate-x-1 transition-transform duration-200">arrow_forward</span>
+              </Link>
             </div>
 
-            {/* Copy */}
-            <div className="order-1 lg:order-2">
-              <p className="font-body font-bold text-[15px] tracking-[0.18em] uppercase text-[#e31e24] mb-6">Why Us</p>
-              <h2 className="text-4xl md:text-5xl font-headline font-bold text-[#0a192f] mb-6 leading-tight">
-                Operator thinking for complex systems
-              </h2>
-              <p className="text-lg font-body text-slate-600 leading-relaxed">
-                We don't sell decks; we build outcomes. Our model is built on the shared reality that business success
-                is 10% strategy and 90% persistent, high-quality execution.
+            {/* Partner cards */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+              {PARTNERS.map(p => (
+                <Link
+                  key={p.name}
+                  to=""
+                  className="group relative bg-white/[0.05] border border-white/10 rounded-xl px-5 py-8 flex flex-col items-center justify-center gap-4 hover:bg-white/[0.10] hover:border-[#e31e24]/50 hover:shadow-[0_8px_30px_rgba(0,0,0,0.4)] hover:-translate-y-1 transition-all duration-300"
+                >
+                  {/* Icon placeholder */}
+                  <div className="w-9 h-9 rounded-lg bg-white/10 group-hover:bg-[#e31e24]/20 flex items-center justify-center transition-colors duration-300">
+                    <span className="material-symbols-outlined text-[19px] text-white/70 group-hover:text-white transition-colors duration-300">handshake</span>
+                  </div>
+
+                  {/* Name */}
+                  <p className="font-headline font-bold text-white text-[13px] tracking-wide text-center leading-snug">
+                    {p.name}
+                  </p>
+
+                  {/* Arrow */}
+                  <span className="material-symbols-outlined text-[15px] text-white/30 group-hover:text-[#e31e24] group-hover:translate-x-0.5 transition-all duration-300">
+                    arrow_forward
+                  </span>
+                </Link>
+              ))}
+            </div>
+
+          </div>
+        </section>
+
+        {/* ═══════════════════════════════════════════════════════
+            BRANDS
+        ═══════════════════════════════════════════════════════ */}
+        <section className="py-16 md:py-24 bg-gradient-to-b from-white via-slate-50 to-slate-100" id="brands">
+          <div className="mx-auto px-6 md:px-10 lg:px-16 max-w-[1440px]">
+            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 mb-10 md:mb-16">
+              <div>
+                <p className="eyebrow">Brands We Represent</p>
+                <h2 className="font-headline font-extrabold text-[#0a192f] text-4xl md:text-5xl tracking-tight leading-tight">
+                  Premium brands in our portfolio
+                </h2>
+              </div>
+              <p className="font-body text-slate-500 text-[15px] leading-relaxed max-w-sm lg:text-right">
+                Each brand we carry is vetted for operator-readiness and measurable client impact.
               </p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {BRANDS.map(brand => (
+                <Link
+                  key={brand.name}
+
+                  className="group relative bg-[#0a192f] border border-white/10 rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:border-[#e31e24] hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col"
+                >
+                  {/* Shine sweep */}
+                  <div className="absolute inset-0 -top-1/2 -right-1/2 w-1/2 h-full bg-white/5 rotate-45 group-hover:translate-x-full transition-transform duration-700 pointer-events-none" />
+
+                  {/* Top row — icon + arrow always visible */}
+                  <div className="relative z-10 flex items-start justify-between mb-6">
+                    <div className="w-12 h-12 bg-white/10 group-hover:bg-[#e31e24] flex items-center justify-center rounded-xl transition-all duration-300">
+                      <span className="material-symbols-outlined text-white text-[23px]">
+                        {brand.icon}
+                      </span>
+                    </div>
+                    {/* Arrow — always shown, animates on hover */}
+                    <div className="w-8 h-8 rounded-full border border-white/20 group-hover:border-[#e31e24] group-hover:bg-[#e31e24] flex items-center justify-center transition-all duration-300">
+                      <span className="material-symbols-outlined text-white/50 group-hover:text-white text-[16px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300">
+                        arrow_outward
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Body */}
+                  <div className="relative z-10 flex flex-col flex-1">
+                    <h3 className="font-headline font-bold text-white text-lg mb-3">
+                      {brand.name}
+                    </h3>
+                    <p className="font-body text-white/60 group-hover:text-white/80 text-[14px] leading-relaxed flex-1 transition-colors duration-300">
+                      {brand.desc}
+                    </p>
+
+                    {/* Explore link — looks and acts like a link */}
+                    <div className="flex items-center justify-between mt-6 pt-5 border-t border-white/10 group-hover:border-white/20 transition-colors duration-300">
+                      <span className="font-body font-semibold text-[#e31e24] text-[14px] underline underline-offset-4 decoration-[#e31e24]/40 group-hover:decoration-[#e31e24] transition-all duration-200">
+                        Explore Brand
+                      </span>
+                      <span className="material-symbols-outlined text-[17px] text-[#e31e24] group-hover:translate-x-1 group-hover:-translate-y-0.5 transition-transform duration-200">
+                        arrow_outward
+                      </span>
+                    </div>
+                  </div>
+                </Link>
+              ))}
             </div>
           </div>
         </section>
@@ -528,7 +494,7 @@ export default function Home() {
           <div className="mx-auto px-6 md:px-10 lg:px-16 max-w-[1440px]">
             {/* Header */}
             <div className="mb-10 md:mb-16">
-              <p className="font-body font-bold text-[13px] tracking-[0.18em] uppercase text-[#e31e24] mb-5">
+              <p className="font-body font-bold text-[14px] tracking-[0.18em] uppercase text-[#e31e24] mb-5">
                 Wall of Fame
               </p>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-headline font-black text-white leading-[1.05]">
@@ -555,14 +521,14 @@ export default function Home() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent group-hover:from-black/80 transition-all duration-500" />
 
                     {/* Sector slides up on hover */}
-                    <span className="absolute bottom-4 left-4 bg-[#e31e24] text-white font-body font-bold text-[10px] tracking-[0.15em] uppercase px-3 py-1 rounded-full translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                    <span className="absolute bottom-4 left-4 bg-[#e31e24] text-white font-body font-bold text-[11px] tracking-[0.15em] uppercase px-3 py-1 rounded-full translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                       {brand.sector}
                     </span>
 
                     {/* Success Story badge */}
                     <div className="absolute top-4 left-4">
-                      <span className="inline-flex items-center gap-1.5 bg-emerald-500/90 text-white font-body font-semibold text-[10px] tracking-[0.1em] uppercase px-2.5 py-1 rounded-full backdrop-blur-sm">
-                        <span className="material-symbols-outlined text-[13px]">check_circle</span>
+                      <span className="inline-flex items-center gap-1.5 bg-emerald-500/90 text-white font-body font-semibold text-[11px] tracking-[0.1em] uppercase px-2.5 py-1 rounded-full backdrop-blur-sm">
+                        <span className="material-symbols-outlined text-[14px]">check_circle</span>
                         Success Story
                       </span>
                     </div>
@@ -587,8 +553,8 @@ export default function Home() {
 
                     {/* View Testimonial */}
                     <div className="inline-flex items-center gap-2 self-start">
-                      <span className="material-symbols-outlined text-[18px] text-white/25 group-hover:text-[#e31e24] transition-colors duration-300">format_quote</span>
-                      <span className="font-body text-[12px] text-white/35 group-hover:text-white/80 transition-colors duration-300 border-b border-transparent group-hover:border-white/30 pb-px">
+                      <span className="material-symbols-outlined text-[19px] text-white/25 group-hover:text-[#e31e24] transition-colors duration-300">format_quote</span>
+                      <span className="font-body text-[13px] text-white/35 group-hover:text-white/80 transition-colors duration-300 border-b border-transparent group-hover:border-white/30 pb-px">
                         View Testimonial
                       </span>
                     </div>
@@ -631,23 +597,23 @@ export default function Home() {
                     {/* Read indicator appears on hover */}
                     <div className="absolute inset-0 bg-[#0a192f]/0 group-hover:bg-[#0a192f]/20 transition-all duration-300 flex items-center justify-center">
                       <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-300 shadow-lg">
-                        <span className="material-symbols-outlined text-[#0a192f] text-[20px]">arrow_forward</span>
+                        <span className="material-symbols-outlined text-[#0a192f] text-[21px]">arrow_forward</span>
                       </div>
                     </div>
                   </div>
 
                   {/* Content */}
                   <div className="p-6">
-                    <h3 className="text-[16px] font-headline font-bold mb-3 leading-snug text-[#0a192f]">
+                    <h3 className="text-[17px] font-headline font-bold mb-3 leading-snug text-[#0a192f]">
                       {post.title}
                     </h3>
                     <p className="font-body text-slate-500 text-sm leading-relaxed line-clamp-2 mb-5">{post.excerpt}</p>
                     <div className="flex items-center justify-between pt-4 border-t border-slate-100">
-                      <span className="font-body font-semibold text-[12px] text-[#0a192f] uppercase tracking-widest">
+                      <span className="font-body font-semibold text-[13px] text-[#0a192f] uppercase tracking-widest">
                         Read Story
                       </span>
                       <div className="w-7 h-7 rounded-full bg-slate-100 group-hover:bg-[#0a192f] flex items-center justify-center transition-colors duration-300 group-hover:translate-x-0.5 transition-transform">
-                        <span className="material-symbols-outlined text-[14px] text-[#0a192f] group-hover:text-white transition-colors duration-300">arrow_forward</span>
+                        <span className="material-symbols-outlined text-[15px] text-[#0a192f] group-hover:text-white transition-colors duration-300">arrow_forward</span>
                       </div>
                     </div>
                   </div>
@@ -655,8 +621,78 @@ export default function Home() {
                 </Link>
               ))}
             </div>
+
+            {/* CTA Banner */}
+            <div className="mt-16 md:mt-20 relative overflow-hidden rounded-2xl bg-[#0a192f] px-8 py-14 md:px-16 md:py-20 flex flex-col md:flex-row items-center justify-between gap-10">
+              {/* Background glow */}
+              <div className="absolute -top-20 -left-20 w-72 h-72 bg-[#e31e24]/10 rounded-full blur-3xl pointer-events-none" />
+              <div className="absolute -bottom-20 -right-10 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
+
+              {/* Left copy */}
+              <div className="relative z-10 text-center md:text-left">
+                <p className="font-body font-bold text-[14px] tracking-[0.18em] uppercase text-[#e31e24] mb-4">
+                  Ready to Start?
+                </p>
+                <h3 className="font-headline font-black text-white text-3xl md:text-4xl leading-tight mb-3">
+                  Let's build your success story.
+                </h3>
+                <p className="font-body text-slate-400 text-[16px] leading-relaxed max-w-md">
+                  Talk to our team and find out how we can structure your growth, streamline your operations, and get you to the next level.
+                </p>
+              </div>
+
+              {/* Right buttons */}
+              <div className="relative z-10 flex flex-col sm:flex-row gap-4 flex-shrink-0">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-white text-[#0a192f] font-body font-semibold text-[15px] tracking-[0.04em] rounded-full transition-all duration-300 hover:bg-slate-100 hover:shadow-[0_12px_32px_rgba(255,255,255,0.15)] hover:-translate-y-0.5 whitespace-nowrap"
+                >
+                  <span className="material-symbols-outlined text-[19px]">mail</span>
+                  Get in Touch
+                </Link>
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center justify-center gap-2.5 px-8 py-4 border border-white/20 text-white font-body font-medium text-[15px] rounded-full transition-all duration-300 hover:bg-white/[0.08] hover:border-white/40 whitespace-nowrap"
+                >
+                  <span className="material-symbols-outlined text-[19px]">phone_in_talk</span>
+                  Schedule a Call
+                </Link>
+              </div>
+            </div>
+
           </div>
         </section>
+
+        {/* ═══════════════════════════════════════════════════════
+            WHY US - HIDDEN FOR NOW
+        ═══════════════════════════════════════════════════════
+        <section className="py-16 md:py-24 bg-[#f2f4f7]">
+          <div className="mx-auto px-6 md:px-10 lg:px-16 max-w-[1440px] grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <div className="order-2 lg:order-1 relative">
+              <div className="relative w-full aspect-[4/3] sm:aspect-video rounded-xl shadow-xl overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1200&q=80"
+                  alt="Consulting team at work"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-[#0a192f]/20" />
+              </div>
+              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-[#e31e24]/10 rounded-xl blur-2xl pointer-events-none" />
+            </div>
+
+            <div className="order-1 lg:order-2">
+              <p className="font-body font-bold text-[16px] tracking-[0.18em] uppercase text-[#e31e24] mb-6">Why Us</p>
+              <h2 className="text-4xl md:text-5xl font-headline font-bold text-[#0a192f] mb-6 leading-tight">
+                Operator thinking for complex systems
+              </h2>
+              <p className="text-lg font-body text-slate-600 leading-relaxed">
+                We don't sell decks; we build outcomes. Our model is built on the shared reality that business success
+                is 10% strategy and 90% persistent, high-quality execution.
+              </p>
+            </div>
+          </div>
+        </section>
+        */}
 
     </main>
   )

@@ -190,15 +190,15 @@ export default function Service() {
 
           <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16">
             {/* Breadcrumb */}
-            <div className="flex items-center gap-1.5 font-body text-[11px] text-slate-400 mb-12">
+            <div className="flex items-center gap-1.5 font-body text-[12px] text-slate-400 mb-12">
               <Link to="/" className="hover:text-slate-600 transition-colors">
                 Home
               </Link>
-              <span className="material-symbols-outlined text-[12px]">chevron_right</span>
+              <span className="material-symbols-outlined text-[13px]">chevron_right</span>
               <Link to="/#services" className="hover:text-slate-600 transition-colors">
                 Services
               </Link>
-              <span className="material-symbols-outlined text-[12px]">chevron_right</span>
+              <span className="material-symbols-outlined text-[13px]">chevron_right</span>
               <span className="text-slate-500">{service.title}</span>
             </div>
 
@@ -209,7 +209,7 @@ export default function Service() {
                   <span className="font-headline font-bold text-white text-lg">{service.code}</span>
                 </div>
                 <div>
-                  <p className="font-body text-[11px] text-slate-500 uppercase tracking-widest">
+                  <p className="font-body text-[12px] text-slate-500 uppercase tracking-widest">
                     {service.stage} — Service {service.num}
                   </p>
                 </div>
@@ -225,7 +225,7 @@ export default function Service() {
 
               <Link to="/contact" className="btn-primary inline-flex items-center gap-2.5">
                 Get Started
-                <span className="material-symbols-outlined text-[17px]">arrow_forward</span>
+                <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
               </Link>
             </div>
           </div>
@@ -241,9 +241,9 @@ export default function Service() {
                 <div key={idx} className="group bg-gradient-to-br from-slate-50 to-white border border-slate-200 rounded-2xl p-8 hover:border-[#0a192f] hover:shadow-md transition-all duration-300">
                   <div className="flex items-start gap-4">
                     <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[#0a192f] flex-shrink-0 mt-1">
-                      <span className="material-symbols-outlined text-white text-[18px]">check_circle</span>
+                      <span className="material-symbols-outlined text-white text-[19px]">check_circle</span>
                     </div>
-                    <p className="font-body text-slate-700 text-[15px] leading-relaxed">{benefit}</p>
+                    <p className="font-body text-slate-700 text-[16px] leading-relaxed">{benefit}</p>
                   </div>
                 </div>
               ))}
@@ -261,9 +261,9 @@ export default function Service() {
             <p className="font-body text-white/70 text-lg mb-10 max-w-2xl mx-auto">
               Let's discuss how {service.title.toLowerCase()} can drive growth and efficiency for your business.
             </p>
-            <Link to="/contact" className="group inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-white text-[#0a192f] font-body font-semibold text-[14px] rounded-full transition-all duration-300 hover:shadow-[0_16px_48px_rgba(255,255,255,0.2)] hover:-translate-y-1">
+            <Link to="/contact" className="group inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-white text-[#0a192f] font-body font-semibold text-[15px] rounded-full transition-all duration-300 hover:shadow-[0_16px_48px_rgba(255,255,255,0.2)] hover:-translate-y-1">
               Let's Talk
-              <span className="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              <span className="material-symbols-outlined text-[19px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
             </Link>
           </div>
         </section>

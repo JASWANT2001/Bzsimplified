@@ -116,7 +116,7 @@ export default function PrivacyPolicy() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0a192f] via-[#0a192f]/90 to-[#0a192f]/70" />
         <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 w-full">
-          <p className="font-body font-bold text-[13px] tracking-[0.28em] uppercase text-[#e31e24] mb-5">
+          <p className="font-body font-bold text-[14px] tracking-[0.28em] uppercase text-[#e31e24] mb-5">
             Legal
           </p>
           <h1
@@ -125,7 +125,7 @@ export default function PrivacyPolicy() {
           >
             Privacy Policy
           </h1>
-          <p className="font-body text-white/40 text-[13px] sm:text-[14px]">
+          <p className="font-body text-white/40 text-[14px] sm:text-[15px]">
             Effective Date: 1 January 2025 &nbsp;·&nbsp; Last Updated: 1 May 2025
           </p>
         </div>
@@ -134,7 +134,7 @@ export default function PrivacyPolicy() {
           onClick={e => e.currentTarget.closest('[data-hero]')?.nextElementSibling?.scrollIntoView({ behavior: 'smooth' })}
           className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1 group"
         >
-          <span className="font-body text-[9px] uppercase tracking-[0.2em] text-white/30 group-hover:text-white/60 transition-colors">Scroll</span>
+          <span className="font-body text-[10px] uppercase tracking-[0.2em] text-white/30 group-hover:text-white/60 transition-colors">Scroll</span>
           <span className="material-symbols-outlined animate-bounce text-white/40 group-hover:text-white/70 transition-colors" style={{ fontSize: '30px' }}>keyboard_arrow_down</span>
         </button>
       </section>
@@ -145,15 +145,15 @@ export default function PrivacyPolicy() {
 
           {/* Sticky sidebar — TOC */}
           <aside className="hidden lg:block sticky top-28">
-            <p className="font-body font-bold text-[10px] uppercase tracking-[0.25em] text-slate-400 mb-4">Contents</p>
+            <p className="font-body font-bold text-[11px] uppercase tracking-[0.25em] text-slate-400 mb-4">Contents</p>
             <nav className="space-y-1">
               {SECTIONS.map((s, i) => (
                 <a
                   key={s.title}
                   href={`#section-${i}`}
-                  className="flex items-center gap-2 font-body text-[13px] text-slate-500 hover:text-[#0a192f] py-1.5 transition-colors group"
+                  className="flex items-center gap-2 font-body text-[14px] text-slate-500 hover:text-[#0a192f] py-1.5 transition-colors group"
                 >
-                  <span className="font-headline font-black text-[10px] text-slate-300 group-hover:text-[#e31e24] w-5 shrink-0 transition-colors">
+                  <span className="font-headline font-black text-[11px] text-slate-300 group-hover:text-[#e31e24] w-5 shrink-0 transition-colors">
                     {String(i + 1).padStart(2, '0')}
                   </span>
                   {s.title}
@@ -161,13 +161,13 @@ export default function PrivacyPolicy() {
               ))}
             </nav>
             <div className="mt-8 pt-6 border-t border-slate-200">
-              <p className="font-body text-[12px] text-slate-400 leading-relaxed mb-3">Questions about this policy?</p>
+              <p className="font-body text-[13px] text-slate-400 leading-relaxed mb-3">Questions about this policy?</p>
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-1.5 font-body font-semibold text-[12px] text-[#0a192f] hover:text-[#e31e24] transition-colors group"
+                className="inline-flex items-center gap-1.5 font-body font-semibold text-[13px] text-[#0a192f] hover:text-[#e31e24] transition-colors group"
               >
                 Contact us
-                <span className="material-symbols-outlined text-[13px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+                <span className="material-symbols-outlined text-[14px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
               </Link>
             </div>
           </aside>
@@ -177,10 +177,10 @@ export default function PrivacyPolicy() {
 
             {/* Intro */}
             <div className="bg-white rounded-2xl p-7 md:p-10 border border-slate-100 shadow-sm">
-              <p className="font-body text-slate-600 text-[14px] md:text-[15px] leading-[1.9]">
+              <p className="font-body text-slate-600 text-[15px] md:text-[16px] leading-[1.9]">
                 At <span className="font-semibold text-[#0a192f]">Bzsimplified</span>, we are committed to protecting your privacy and handling your personal information with transparency and respect. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or engage with our services.
               </p>
-              <p className="font-body text-slate-600 text-[14px] md:text-[15px] leading-[1.9] mt-4">
+              <p className="font-body text-slate-600 text-[15px] md:text-[16px] leading-[1.9] mt-4">
                 By using our website, you consent to the practices described in this policy. Please read it carefully.
               </p>
             </div>
@@ -189,17 +189,17 @@ export default function PrivacyPolicy() {
             {SECTIONS.map((section, i) => (
               <div key={section.title} id={`section-${i}`} className="scroll-mt-28">
                 <div className="flex items-center gap-3 mb-6">
-                  <span className="font-headline font-black text-[11px] text-[#e31e24]">{String(i + 1).padStart(2, '0')}</span>
+                  <span className="font-headline font-black text-[12px] text-[#e31e24]">{String(i + 1).padStart(2, '0')}</span>
                   <h2 className="font-headline font-black text-[#0a192f] text-lg md:text-xl tracking-tight">{section.title}</h2>
                 </div>
                 <div className="space-y-5">
                   {section.content.map(block => (
                     <div key={block.subtitle} className="bg-white rounded-xl p-6 md:p-8 border border-slate-100">
-                      <h3 className="font-headline font-bold text-[#0a192f] text-[14px] mb-3 flex items-center gap-2">
+                      <h3 className="font-headline font-bold text-[#0a192f] text-[15px] mb-3 flex items-center gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-[#e31e24] shrink-0" />
                         {block.subtitle}
                       </h3>
-                      <p className="font-body text-slate-500 text-[13px] md:text-[14px] leading-[1.85]">{block.text}</p>
+                      <p className="font-body text-slate-500 text-[14px] md:text-[15px] leading-[1.85]">{block.text}</p>
                     </div>
                   ))}
                 </div>
@@ -209,23 +209,23 @@ export default function PrivacyPolicy() {
             {/* Contact block */}
             <div className="bg-[#0a192f] rounded-2xl p-7 md:p-10">
               <h3 className="font-headline font-bold text-white text-lg mb-2">Contact Us</h3>
-              <p className="font-body text-white/50 text-[13px] leading-relaxed mb-6">
+              <p className="font-body text-white/50 text-[14px] leading-relaxed mb-6">
                 If you have any questions, concerns, or requests regarding this Privacy Policy or the handling of your personal data, please reach out to us.
               </p>
               <div className="space-y-2 mb-6">
-                <p className="font-body text-white/70 text-[13px]">
+                <p className="font-body text-white/70 text-[14px]">
                   <span className="text-white/30 mr-2">Email</span> hello@bzsimplified.com
                 </p>
-                <p className="font-body text-white/70 text-[13px]">
+                <p className="font-body text-white/70 text-[14px]">
                   <span className="text-white/30 mr-2">Location</span> Dubai · Mumbai · London
                 </p>
               </div>
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 px-6 py-2.5 bg-white text-[#0a192f] font-body font-semibold text-[13px] rounded-xl hover:bg-slate-100 transition-colors group"
+                className="inline-flex items-center gap-2 px-6 py-2.5 bg-white text-[#0a192f] font-body font-semibold text-[14px] rounded-xl hover:bg-slate-100 transition-colors group"
               >
                 Get in Touch
-                <span className="material-symbols-outlined text-[14px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+                <span className="material-symbols-outlined text-[15px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
               </Link>
             </div>
 

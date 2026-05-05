@@ -115,7 +115,7 @@ export default function ServiceET() {
               className="group bg-[#f2f4f7] p-8 rounded-xl hover:bg-white transition-all duration-500 border border-transparent hover:border-slate-200 hover:shadow-xl"
             >
               <div className="w-12 h-12 bg-[#0a192f] text-white flex items-center justify-center rounded-xl mb-6 group-hover:bg-[#e31e24] transition-colors duration-300">
-                <span className="material-symbols-outlined text-[22px]">{pillar.icon}</span>
+                <span className="material-symbols-outlined text-[23px]">{pillar.icon}</span>
               </div>
               <h3 className="font-headline text-lg font-bold mb-4 text-[#0a192f]">{pillar.title}</h3>
               <p className="font-body text-[#5a5e6a] text-sm leading-relaxed">{pillar.desc}</p>
@@ -142,7 +142,7 @@ export default function ServiceET() {
                 className="inline-flex items-center gap-3 bg-[#e31e24] hover:bg-[#c41920] text-white px-10 py-5 rounded-lg font-body font-bold text-sm uppercase tracking-widest transition-all duration-200 group"
               >
                 Request Audit
-                <span className="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">
+                <span className="material-symbols-outlined text-[19px] group-hover:translate-x-1 transition-transform">
                   arrow_forward
                 </span>
               </Link>
@@ -211,7 +211,7 @@ export default function ServiceET() {
             className="whitespace-nowrap inline-flex items-center gap-2 bg-white text-[#0a192f] px-10 py-4 rounded-lg font-body font-bold text-sm uppercase tracking-widest hover:bg-[#f7f9fc] transition-colors group"
           >
             Let's Talk
-            <span className="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            <span className="material-symbols-outlined text-[19px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
           </Link>
         </div>
       </section>

@@ -96,7 +96,7 @@ export default function Partners() {
           onClick={e => e.currentTarget.closest('[data-hero]')?.nextElementSibling?.scrollIntoView({ behavior: 'smooth' })}
           className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1 group"
         >
-          <span className="font-body text-[9px] uppercase tracking-[0.2em] text-white/30 group-hover:text-white/60 transition-colors">Scroll</span>
+          <span className="font-body text-[10px] uppercase tracking-[0.2em] text-white/30 group-hover:text-white/60 transition-colors">Scroll</span>
           <span className="material-symbols-outlined animate-bounce text-white/40 group-hover:text-white/70 transition-colors" style={{ fontSize: '30px' }}>keyboard_arrow_down</span>
         </button>
       </section>
@@ -137,7 +137,7 @@ export default function Partners() {
                       {p.icon}
                     </span>
                   </div>
-                  <span className="font-body text-[10px] font-black text-[#75777e] uppercase tracking-[0.35em] pt-2">{p.category}</span>
+                  <span className="font-body text-[11px] font-black text-[#75777e] uppercase tracking-[0.35em] pt-2">{p.category}</span>
                 </div>
                 <div className="flex-grow">
                   <h3 className="font-headline font-extrabold text-[#0a192f] text-2xl mb-4 tracking-tighter">{p.name}</h3>
@@ -149,7 +149,7 @@ export default function Partners() {
                     className="inline-flex items-center gap-2 font-body font-bold text-sm text-[#0a192f] hover:gap-3 transition-all duration-200"
                   >
                     {p.cta}
-                    <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    <span className="material-symbols-outlined text-[19px]">arrow_forward</span>
                   </Link>
                 </div>
               </div>

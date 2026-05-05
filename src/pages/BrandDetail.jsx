@@ -22,8 +22,8 @@ export default function BrandDetail() {
           </Link>
 
           <div className="flex items-center gap-3 mb-6">
-            <span className="inline-flex items-center gap-1.5 bg-emerald-500/15 border border-emerald-500/25 text-emerald-400 font-body font-semibold text-[10px] tracking-[0.12em] uppercase px-2.5 py-1 rounded-full">
-              <span className="material-symbols-outlined text-[13px]">check_circle</span>
+            <span className="inline-flex items-center gap-1.5 bg-emerald-500/15 border border-emerald-500/25 text-emerald-400 font-body font-semibold text-[11px] tracking-[0.12em] uppercase px-2.5 py-1 rounded-full">
+              <span className="material-symbols-outlined text-[14px]">check_circle</span>
               Success Story
             </span>
           </div>
@@ -61,7 +61,7 @@ export default function BrandDetail() {
             {/* Sidebar */}
             <div className="space-y-6">
               <div className="bg-[#0a192f] rounded-2xl p-8 text-white">
-                <p className="font-body text-white/40 text-[10px] tracking-widest uppercase mb-4">Key Stats</p>
+                <p className="font-body text-white/40 text-[11px] tracking-widest uppercase mb-4">Key Stats</p>
                 {[
                   { label: 'Duration', value: '—' },
                   { label: 'Sector', value: '—' },

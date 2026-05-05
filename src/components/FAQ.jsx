@@ -22,7 +22,7 @@ export default function FAQ({ items }) {
                   className="w-full flex items-center justify-between gap-4 px-8 py-6 text-left"
                   onClick={() => setOpen(open === idx ? null : idx)}
                 >
-                  <span className="font-headline font-bold text-[#0a192f] text-[15px] leading-snug">
+                  <span className="font-headline font-bold text-[#0a192f] text-[16px] leading-snug">
                     {item.q}
                   </span>
                   <span

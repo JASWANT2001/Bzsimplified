@@ -81,7 +81,7 @@ export default function ServiceMO() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0a192f] via-transparent to-transparent" />
             <div className="absolute bottom-0 left-0 p-10 lg:p-12">
-              <span className="inline-block px-3 py-1 bg-white/10 backdrop-blur-md text-white text-[10px] font-body font-bold uppercase tracking-[0.2em] mb-4 rounded-full">
+              <span className="inline-block px-3 py-1 bg-white/10 backdrop-blur-md text-white text-[11px] font-body font-bold uppercase tracking-[0.2em] mb-4 rounded-full">
                 Core Competency
               </span>
               <h3 className="font-headline text-3xl font-bold text-white mb-3 tracking-tight">
@@ -124,7 +124,7 @@ export default function ServiceMO() {
               {['JD', 'AS', '+4'].map((label, i) => (
                 <div
                   key={label}
-                  className={`w-8 h-8 rounded-full border-2 border-white flex items-center justify-center text-[10px] font-bold ${i === 2 ? 'bg-[#0a192f] text-white' : 'bg-[#eceef1] text-[#0a192f]'}`}
+                  className={`w-8 h-8 rounded-full border-2 border-white flex items-center justify-center text-[11px] font-bold ${i === 2 ? 'bg-[#0a192f] text-white' : 'bg-[#eceef1] text-[#0a192f]'}`}
                 >
                   {label}
                 </div>
@@ -230,7 +230,7 @@ export default function ServiceMO() {
             className="whitespace-nowrap inline-flex items-center gap-2 bg-white text-[#0a192f] px-10 py-4 rounded-lg font-body font-bold text-sm uppercase tracking-widest hover:bg-[#f7f9fc] transition-colors group"
           >
             Let's Talk
-            <span className="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            <span className="material-symbols-outlined text-[19px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
           </Link>
         </div>
       </section>

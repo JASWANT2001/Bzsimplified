@@ -204,14 +204,14 @@ export default function ServicePB() {
               />
               <div className="absolute inset-0 bg-[#0a192f]/40 backdrop-blur-[2px] flex items-center justify-center p-10">
                 <div className="bg-white rounded-xl shadow-2xl p-8 max-w-sm w-full">
-                  <p className="font-headline font-bold text-[#0a192f] italic text-[15px] leading-relaxed mb-6">
+                  <p className="font-headline font-bold text-[#0a192f] italic text-[16px] leading-relaxed mb-6">
                     "Stability is not the absence of change, but the mastery of it. Bzsimplified transformed our defensive posture into a strategic asset."
                   </p>
                   <div className="flex items-center gap-4">
                     <div className="w-10 h-10 rounded-full bg-[#eceef1] flex-shrink-0" />
                     <div>
                       <p className="font-body text-xs font-bold uppercase tracking-widest text-[#0a192f]">Marcus Vane</p>
-                      <p className="font-body text-[10px] text-[#5a5e6a]">Chief Operations, Global Logistics Co.</p>
+                      <p className="font-body text-[11px] text-[#5a5e6a]">Chief Operations, Global Logistics Co.</p>
                     </div>
                   </div>
                 </div>
@@ -260,7 +260,7 @@ export default function ServicePB() {
             className="whitespace-nowrap inline-flex items-center gap-2 bg-white text-[#0a192f] px-10 py-4 rounded-lg font-body font-bold text-sm uppercase tracking-widest hover:bg-[#f7f9fc] transition-colors group"
           >
             Let's Talk
-            <span className="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            <span className="material-symbols-outlined text-[19px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
           </Link>
         </div>
       </section>

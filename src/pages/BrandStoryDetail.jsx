@@ -121,7 +121,7 @@ export default function BrandStoryDetail() {
             to="/brand-stories"
             className="inline-flex items-center gap-2 font-body text-xs font-bold uppercase tracking-[0.2em] text-[#39475f] hover:text-[#0a192f] transition-colors"
           >
-            <span className="material-symbols-outlined text-[16px]">arrow_back</span>
+            <span className="material-symbols-outlined text-[17px]">arrow_back</span>
             Back to Brand Stories
           </Link>
         </div>
@@ -131,7 +131,7 @@ export default function BrandStoryDetail() {
           <div className="lg:col-span-7">
             <div className="flex items-center gap-3 mb-5">
               <span className="w-8 h-[2px] bg-[#e31e24] block" />
-              <span className="font-body text-[10px] font-bold uppercase tracking-[0.3em] text-[#e31e24]">{story.category}</span>
+              <span className="font-body text-[11px] font-bold uppercase tracking-[0.3em] text-[#e31e24]">{story.category}</span>
             </div>
             <h1
               className="font-headline font-extrabold text-[#0a192f] leading-tight tracking-tighter mb-6"
@@ -143,11 +143,11 @@ export default function BrandStoryDetail() {
             {/* Blog metadata */}
             <div className="flex flex-wrap items-center gap-x-5 gap-y-2 mb-5 pb-5 border-b border-slate-200">
               <span className="flex items-center gap-1.5 font-body text-xs text-[#75777e]">
-                <span className="material-symbols-outlined text-[14px] text-slate-400">calendar_today</span>
+                <span className="material-symbols-outlined text-[15px] text-slate-400">calendar_today</span>
                 {story.publishedAt}
               </span>
               <span className="flex items-center gap-1.5 font-body text-xs text-[#75777e]">
-                <span className="material-symbols-outlined text-[14px] text-slate-400">schedule</span>
+                <span className="material-symbols-outlined text-[15px] text-slate-400">schedule</span>
                 {story.readTime}
               </span>
             </div>
@@ -157,7 +157,7 @@ export default function BrandStoryDetail() {
               {story.tags.map(tag => (
                 <span
                   key={tag}
-                  className="font-body text-[10px] font-semibold uppercase tracking-[0.15em] text-[#39475f] bg-[#eceef1] px-3 py-1 rounded-full"
+                  className="font-body text-[11px] font-semibold uppercase tracking-[0.15em] text-[#39475f] bg-[#eceef1] px-3 py-1 rounded-full"
                 >
                   {tag}
                 </span>
@@ -173,7 +173,7 @@ export default function BrandStoryDetail() {
                 </div>
               </div>
               <div className="flex flex-col">
-                <span className="inline-block self-start font-body text-[9px] uppercase tracking-[0.2em] text-[#39475f] font-bold mb-1 italic px-2 py-0.5 bg-[#eceef1] rounded">
+                <span className="inline-block self-start font-body text-[10px] uppercase tracking-[0.2em] text-[#39475f] font-bold mb-1 italic px-2 py-0.5 bg-[#eceef1] rounded">
                   Perspective By
                 </span>
                 <h4 className="font-headline font-extrabold text-[#0a192f] text-lg leading-none mb-0.5">{story.author.name}</h4>
@@ -270,7 +270,7 @@ export default function BrandStoryDetail() {
             className="whitespace-nowrap inline-flex items-center gap-2 bg-white text-[#0a192f] px-10 py-4 rounded-lg font-body font-bold text-sm uppercase tracking-widest hover:bg-[#f7f9fc] transition-colors group"
           >
             Let's Talk
-            <span className="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            <span className="material-symbols-outlined text-[19px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
           </Link>
         </div>
 

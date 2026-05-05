@@ -90,7 +90,7 @@ export default function ServiceGB() {
           ].map(item => (
             <div key={item.title} className="space-y-6">
               <div className="w-12 h-12 bg-[#0a192f] rounded-xl flex items-center justify-center">
-                <span className="material-symbols-outlined text-white text-[22px]">{item.icon}</span>
+                <span className="material-symbols-outlined text-white text-[23px]">{item.icon}</span>
               </div>
               <h3 className="font-headline text-2xl font-bold text-[#0a192f]">{item.title}</h3>
               <p className="font-body text-[#5a5e6a] leading-relaxed">{item.desc}</p>
@@ -163,7 +163,7 @@ export default function ServiceGB() {
               className="inline-flex items-center gap-2 font-body font-bold text-[#0a192f] group-hover:gap-4 transition-all duration-300"
             >
               Explore Framework
-              <span className="material-symbols-outlined text-[20px]">arrow_forward</span>
+              <span className="material-symbols-outlined text-[21px]">arrow_forward</span>
             </Link>
           </div>
 
@@ -178,7 +178,7 @@ export default function ServiceGB() {
               className="inline-flex items-center gap-2 font-body font-bold text-white group-hover:gap-4 transition-all duration-300"
             >
               View Case Studies
-              <span className="material-symbols-outlined text-[20px]">arrow_forward</span>
+              <span className="material-symbols-outlined text-[21px]">arrow_forward</span>
             </Link>
             <div className="absolute -right-12 -bottom-12 w-48 h-48 bg-white/5 rounded-full blur-2xl pointer-events-none" />
           </div>
@@ -206,7 +206,7 @@ export default function ServiceGB() {
             className="whitespace-nowrap inline-flex items-center gap-2 bg-white text-[#0a192f] px-10 py-4 rounded-lg font-body font-bold text-sm uppercase tracking-widest hover:bg-[#f7f9fc] transition-colors group"
           >
             Let's Talk
-            <span className="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            <span className="material-symbols-outlined text-[19px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
           </Link>
         </div>
       </section>

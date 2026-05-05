@@ -111,7 +111,7 @@ function MemberSection({ member }) {
             <div className="flex items-center gap-3 mb-7">
               <span className="font-headline font-black text-[#e31e24] text-xl leading-none">{id}</span>
               <span className="h-px w-8 bg-slate-200" />
-              <span className="font-body font-bold text-[10px] tracking-[0.22em] uppercase text-slate-400">{dept}</span>
+              <span className="font-body font-bold text-[11px] tracking-[0.22em] uppercase text-slate-400">{dept}</span>
             </div>
 
             <h2
@@ -120,11 +120,11 @@ function MemberSection({ member }) {
             >
               {name}
             </h2>
-            <p className="font-body font-bold text-[#e31e24] text-[11px] tracking-[0.22em] uppercase mb-8">
+            <p className="font-body font-bold text-[#e31e24] text-[12px] tracking-[0.22em] uppercase mb-8">
               {role}
             </p>
 
-            <p className="font-body text-slate-500 text-[15px] leading-[1.9] mb-9 max-w-[520px]">
+            <p className="font-body text-slate-500 text-[16px] leading-[1.9] mb-9 max-w-[520px]">
               {bio}
             </p>
 
@@ -133,7 +133,7 @@ function MemberSection({ member }) {
               {expertise.map(tag => (
                 <span
                   key={tag}
-                  className="px-4 py-1.5 rounded-full border border-slate-200 font-body font-semibold text-[11px] text-[#0a192f] tracking-wide cursor-default hover:bg-[#0a192f] hover:text-white hover:border-[#0a192f] transition-all duration-200"
+                  className="px-4 py-1.5 rounded-full border border-slate-200 font-body font-semibold text-[12px] text-[#0a192f] tracking-wide cursor-default hover:bg-[#0a192f] hover:text-white hover:border-[#0a192f] transition-all duration-200"
                 >
                   {tag}
                 </span>
@@ -146,16 +146,16 @@ function MemberSection({ member }) {
                 href="https://wa.me/910000000000"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-2.5 bg-[#0a192f] text-white font-body font-semibold text-[13px] rounded-full border-l-[3px] border-[#e31e24] hover:shadow-[0_8px_28px_rgba(10,25,47,0.28)] hover:-translate-y-0.5 transition-all duration-200"
+                className="inline-flex items-center gap-2 px-6 py-2.5 bg-[#0a192f] text-white font-body font-semibold text-[14px] rounded-full border-l-[3px] border-[#e31e24] hover:shadow-[0_8px_28px_rgba(10,25,47,0.28)] hover:-translate-y-0.5 transition-all duration-200"
               >
-                <span className="material-symbols-outlined text-[15px]">chat</span>
+                <span className="material-symbols-outlined text-[16px]">chat</span>
                 WhatsApp
               </a>
               <a
                 href="tel:+910000000000"
-                className="inline-flex items-center gap-2 px-6 py-2.5 bg-white text-[#0a192f] border border-slate-200 font-body font-semibold text-[13px] rounded-full hover:border-[#0a192f] hover:-translate-y-0.5 transition-all duration-200"
+                className="inline-flex items-center gap-2 px-6 py-2.5 bg-white text-[#0a192f] border border-slate-200 font-body font-semibold text-[14px] rounded-full hover:border-[#0a192f] hover:-translate-y-0.5 transition-all duration-200"
               >
-                <span className="material-symbols-outlined text-[15px]">call</span>
+                <span className="material-symbols-outlined text-[16px]">call</span>
                 Call
               </a>
               {website && (
@@ -163,15 +163,15 @@ function MemberSection({ member }) {
                   href={`https://${website}`}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 text-[#0a192f] border border-slate-200 bg-white font-body font-semibold text-[13px] rounded-full hover:border-[#0a192f] hover:-translate-y-0.5 transition-all duration-200"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 text-[#0a192f] border border-slate-200 bg-white font-body font-semibold text-[14px] rounded-full hover:border-[#0a192f] hover:-translate-y-0.5 transition-all duration-200"
                 >
-                  <span className="material-symbols-outlined text-[15px]">language</span>
+                  <span className="material-symbols-outlined text-[16px]">language</span>
                   {website}
                 </a>
               )}
-              <button className="inline-flex items-center gap-1.5 px-3 py-2.5 text-[#0a192f] font-body font-bold text-[13px] group hover:text-[#e31e24] transition-colors duration-200">
+              <button className="inline-flex items-center gap-1.5 px-3 py-2.5 text-[#0a192f] font-body font-bold text-[14px] group hover:text-[#e31e24] transition-colors duration-200">
                 Insights
-                <span className="material-symbols-outlined text-[15px] group-hover:translate-x-1 transition-transform duration-200">arrow_forward</span>
+                <span className="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform duration-200">arrow_forward</span>
               </button>
             </div>
           </div>
@@ -203,7 +203,7 @@ export default function Teams() {
         <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#0a192f] to-transparent" />
 
         <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16">
-          <p className="font-body font-bold text-[13px] tracking-[0.28em] uppercase text-[#e31e24] mb-6">
+          <p className="font-body font-bold text-[14px] tracking-[0.28em] uppercase text-[#e31e24] mb-6">
             Our People
           </p>
           <h1
@@ -212,23 +212,23 @@ export default function Teams() {
           >
             The minds behind every move
           </h1>
-          <p className="font-body text-white/45 text-[14px] sm:text-[15px] leading-relaxed mb-8 md:mb-10 max-w-[520px]">
+          <p className="font-body text-white/45 text-[15px] sm:text-[16px] leading-relaxed mb-8 md:mb-10 max-w-[520px]">
             A lean team of operators, strategists, and builders — who've built, scaled, and fixed businesses across industries.
           </p>
           <div className="flex flex-wrap gap-3">
             <a
               href="#team"
               onClick={e => { e.preventDefault(); document.getElementById('team')?.scrollIntoView({ behavior: 'smooth' }) }}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#0a192f] font-body font-semibold text-[13px] rounded-xl hover:bg-white/90 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 group"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#0a192f] font-body font-semibold text-[14px] rounded-xl hover:bg-white/90 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 group"
             >
               Meet the Team
-              <span className="material-symbols-outlined text-[15px] group-hover:translate-x-0.5 transition-transform duration-200">arrow_forward</span>
+              <span className="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform duration-200">arrow_forward</span>
             </a>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3 border border-white/20 text-white/80 font-body font-semibold text-[13px] rounded-xl hover:bg-white/8 hover:text-white hover:border-white/40 transition-all duration-200"
+              className="inline-flex items-center gap-2 px-6 py-3 border border-white/20 text-white/80 font-body font-semibold text-[14px] rounded-xl hover:bg-white/8 hover:text-white hover:border-white/40 transition-all duration-200"
             >
-              <span className="material-symbols-outlined text-[15px]">mail</span>
+              <span className="material-symbols-outlined text-[16px]">mail</span>
               Get in Touch
             </Link>
           </div>
@@ -238,7 +238,7 @@ export default function Teams() {
           onClick={e => e.currentTarget.closest('[data-hero]')?.nextElementSibling?.scrollIntoView({ behavior: 'smooth' })}
           className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1 group"
         >
-          <span className="font-body text-[9px] uppercase tracking-[0.2em] text-white/30 group-hover:text-white/60 transition-colors">Scroll</span>
+          <span className="font-body text-[10px] uppercase tracking-[0.2em] text-white/30 group-hover:text-white/60 transition-colors">Scroll</span>
           <span className="material-symbols-outlined animate-bounce text-white/40 group-hover:text-white/70 transition-colors" style={{ fontSize: '30px' }}>keyboard_arrow_down</span>
         </button>
       </div>

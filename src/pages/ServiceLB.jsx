@@ -96,7 +96,7 @@ export default function ServiceLB() {
             </p>
             <div className="mt-auto pt-6 border-t border-slate-100 flex justify-between items-center">
               <span className="font-body text-xs font-bold tracking-tight uppercase text-[#0a192f]">Branding Kit Included</span>
-              <span className="material-symbols-outlined text-[#0a192f] text-[18px]">arrow_forward</span>
+              <span className="material-symbols-outlined text-[#0a192f] text-[19px]">arrow_forward</span>
             </div>
           </div>
 
@@ -174,7 +174,7 @@ export default function ServiceLB() {
             className="whitespace-nowrap inline-flex items-center gap-2 bg-white text-[#0a192f] px-10 py-4 rounded-lg font-body font-bold text-sm uppercase tracking-widest hover:bg-[#f7f9fc] transition-colors group"
           >
             Let's Talk
-            <span className="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            <span className="material-symbols-outlined text-[19px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
           </Link>
         </div>
       </section>
