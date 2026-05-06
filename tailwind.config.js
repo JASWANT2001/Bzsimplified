@@ -49,12 +49,17 @@ export default {
         full:    '0.75rem',
       },
       animation: {
-        float: 'float 6s ease-in-out infinite',
+        float:   'float 6s ease-in-out infinite',
+        slideUp: 'slideUp 0.3s ease',
       },
       keyframes: {
         float: {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%':      { transform: 'translateY(-20px)' },
+        },
+        slideUp: {
+          '0%':   { opacity: '0', transform: 'translateY(-16px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
         },
       },
     },
