@@ -22,6 +22,9 @@ import BrandDetail from './pages/BrandDetail'
 import WallOfFame from './pages/WallOfFame'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import Terms from './pages/Terms'
+import AdminLogin from './pages/AdminLogin'
+import AdminPosts from './pages/AdminPosts'
+import AdminPostEditor from './pages/AdminPostEditor'
 import './index.css'
 
 const router = createBrowserRouter([
@@ -51,6 +54,11 @@ const router = createBrowserRouter([
       { path: 'terms-of-usage', element: <Terms />         },
     ],
   },
+  // Admin — no navbar/footer wrapper
+  { path: '/admin',                        element: <AdminLogin />      },
+  { path: '/admin/posts',                  element: <AdminPosts />      },
+  { path: '/admin/posts/new',              element: <AdminPostEditor /> },
+  { path: '/admin/posts/:slug/edit',       element: <AdminPostEditor /> },
 ])
 
 createRoot(document.getElementById('root')).render(
