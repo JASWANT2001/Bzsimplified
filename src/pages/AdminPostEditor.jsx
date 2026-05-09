@@ -59,6 +59,7 @@ export default function AdminPostEditor() {
   const [saving, setSaving] = useState(false)
   const [uploadingImg, setUploadingImg] = useState(false)
   const [toast, setToast] = useState(null) // { type: 'success'|'error'|'info', message: string }
+  const [fieldErrors, setFieldErrors] = useState({})
 
   const hasChanges = JSON.stringify(form) !== JSON.stringify(savedForm)
 
@@ -106,16 +107,23 @@ export default function AdminPostEditor() {
     setLoading(false)
   }
 
-  function set(field, value) { setForm(f => ({ ...f, [field]: value })) }
+  function clearErr(field) { setFieldErrors(f => ({ ...f, [field]: false })) }
+
+  function set(field, value) {
+    setForm(f => ({ ...f, [field]: value }))
+    clearErr(field)
+  }
 
   function handleTitleChange(e) {
     const title = e.target.value
     setForm(f => ({ ...f, title, slug: slugLocked ? f.slug : toSlug(title) }))
-      }
+    clearErr('title')
+  }
 
   function setBodyPara(i, value) {
     setForm(f => { const body = [...f.body]; body[i] = value; return { ...f, body } })
-      }
+    clearErr('body')
+  }
 
   function addPara() { setForm(f => ({ ...f, body: [...f.body, ''] })) }
 
@@ -137,7 +145,32 @@ export default function AdminPostEditor() {
   function removePara(i) { setForm(f => ({ ...f, body: f.body.filter((_, idx) => idx !== i) })) }
 
   async function handleSave(e) {
-    e.preventDefault()
+    e?.preventDefault()
+
+    // Validate required fields
+    const errs = {}
+    if (!form.title.trim())                          errs.title = true
+    if (!form.category.trim())                       errs.category = true
+    if (!form.slug.trim())                           errs.slug = true
+    if (!form.description.trim())                    errs.description = true
+    if (!form.img)                                   errs.img = true
+    if (!form.body.some(p => p.trim()))              errs.body = true
+    if (!form.author_name.trim())                    errs.author_name = true
+
+    if (Object.keys(errs).length > 0) {
+      setFieldErrors(errs)
+      const labels = {
+        title: 'Title', category: 'Category', slug: 'Slug',
+        description: 'Short Description', img: 'Cover Image',
+        body: 'Body Content', author_name: 'Author Name',
+      }
+      const missing = Object.keys(errs).map(k => labels[k]).join(', ')
+      showToast('error', `Missing required fields: ${missing}`)
+      return
+    }
+
+    setFieldErrors({})
+
     if (isEditing && !hasChanges) {
       showToast('info', 'No changes detected. Edit something first before updating.')
       return
@@ -157,7 +190,11 @@ export default function AdminPostEditor() {
       return
     }
     setSavedForm(form) // update baseline so hasChanges resets
-    showToast('success', isEditing ? 'Story updated successfully!' : 'Story published successfully!')
+    if (isEditing) {
+      showToast('success', 'Story updated successfully!')
+    } else {
+      navigate('/admin/posts', { state: { published: true, title: form.title } })
+    }
   }
 
   if (!isAuth) return null
@@ -176,37 +213,37 @@ export default function AdminPostEditor() {
 
       {/* ── Toast — top right */}
       {toast && (
-        <div className="fixed top-24 right-6 z-[100] w-[420px] max-w-[calc(100vw-3rem)]"
+        <div className="fixed top-20 left-3 right-3 sm:left-auto sm:right-6 sm:w-[400px] z-[100]"
           style={{ animation: 'slideIn 0.3s cubic-bezier(0.16,1,0.3,1) forwards' }}>
 
-          <div className="relative overflow-hidden rounded-2xl"
-            style={{ boxShadow: '0 32px 80px -12px rgba(10,25,47,0.28), 0 8px 24px -4px rgba(10,25,47,0.12)' }}>
+          <div className="relative overflow-hidden rounded-md"
+            style={{ boxShadow: '0 32px 80px -12px rgba(10,25,47,0.45), 0 8px 24px -4px rgba(10,25,47,0.25)' }}>
 
             {/* Coloured top accent bar */}
             <div className={`h-1 w-full ${
-              toast.type === 'success' ? 'bg-gradient-to-r from-green-400 to-green-600' :
-              toast.type === 'info'    ? 'bg-gradient-to-r from-[#0a192f] to-[#39475f]' :
-                                         'bg-gradient-to-r from-[#e31e24] to-red-700'
+              toast.type === 'success' ? 'bg-gradient-to-r from-green-400 to-green-500' :
+              toast.type === 'info'    ? 'bg-gradient-to-r from-slate-500 to-slate-400' :
+                                         'bg-gradient-to-r from-[#e31e24] to-red-500'
             }`} />
 
-            {/* Card body */}
-            <div className="bg-white px-5 pt-3.5 pb-3.5">
+            {/* Card body — dark navy */}
+            <div className="bg-[#0a192f] px-5 pt-3.5 pb-3.5">
 
               {/* Header row */}
               <div className="flex items-center justify-between gap-4 mb-1">
-                <p className="font-headline font-extrabold text-[#0a192f] text-sm tracking-tight leading-snug">
+                <p className="font-headline font-extrabold text-white text-sm tracking-tight leading-snug">
                   {toast.type === 'success' ? (isEditing ? 'Story Updated!' : 'Story Published!') :
                    toast.type === 'info'    ? 'No Changes Detected' :
                                               'Something went wrong'}
                 </p>
                 <button onClick={() => setToast(null)}
-                  className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-slate-300 hover:text-slate-500 hover:bg-slate-100 transition-colors">
+                  className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-white/30 hover:text-white/70 hover:bg-white/10 transition-colors">
                   <span className="material-symbols-outlined" style={{ fontSize: '13px' }}>close</span>
                 </button>
               </div>
 
               {/* Message */}
-              <p className="font-body text-[#75777e] text-xs leading-relaxed">
+              <p className="font-body text-white/50 text-xs leading-relaxed">
                 {toast.message}
               </p>
 
@@ -259,14 +296,14 @@ export default function AdminPostEditor() {
               type="button"
               onClick={handleSave}
               disabled={saving}
-              className="inline-flex items-center gap-2 border border-[#0a192f] bg-[#0a192f] text-white px-5 py-2 rounded-full font-body font-semibold text-[13px] hover:bg-transparent hover:text-[#0a192f] transition-all duration-200 disabled:opacity-50 group"
+              className="inline-flex items-center gap-1.5 sm:gap-2 border border-[#0a192f] bg-[#0a192f] text-white px-3 sm:px-5 py-2 rounded-full font-body font-semibold text-[13px] hover:bg-transparent hover:text-[#0a192f] transition-all duration-200 disabled:opacity-50 group"
             >
               {saving ? (
-                <><div className="w-3.5 h-3.5 border-2 border-white/40 border-t-white rounded-full animate-spin" />Saving…</>
+                <><div className="w-3.5 h-3.5 border-2 border-white/40 border-t-white rounded-full animate-spin" /><span className="hidden sm:inline">Saving…</span></>
               ) : (
                 <><span className="material-symbols-outlined text-[15px]">save</span>
-                {isEditing ? 'Update' : 'Publish'}
-                <span className="material-symbols-outlined text-[15px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span></>
+                <span className="hidden sm:inline">{isEditing ? 'Update' : 'Publish'}</span>
+                <span className="hidden sm:inline material-symbols-outlined text-[15px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span></>
               )}
             </button>
           </div>
@@ -276,7 +313,7 @@ export default function AdminPostEditor() {
       {/* ── Hero strip */}
       <section className="relative overflow-hidden bg-[#0a192f] pt-[82px]">
         <div className="absolute inset-0 bg-gradient-to-r from-[#0a192f] to-[#0a192f]/90" />
-        <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 py-10">
+        <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-6 md:px-10 lg:px-16 py-8 sm:py-10">
           <span className="font-body text-xs font-bold uppercase tracking-[0.3em] text-[#e31e24] block mb-3">
             {isEditing ? 'Editing Story' : 'New Story'}
           </span>
@@ -288,7 +325,7 @@ export default function AdminPostEditor() {
 
       {/* ── Form */}
       <form onSubmit={handleSave}>
-        <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 py-12 space-y-8">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-10 lg:px-16 py-8 md:py-12 space-y-6 md:space-y-8">
 
           <div className="grid grid-cols-1 lg:grid-cols-10 gap-8">
 
@@ -298,23 +335,28 @@ export default function AdminPostEditor() {
               {/* Basic info */}
               <Card label="Basic Info" icon="info">
                 <div className="space-y-5">
-                  <Field label="Title">
+                  <Field label={<RequiredLabel>Title</RequiredLabel>}>
                     <input type="text" value={form.title} onChange={handleTitleChange}
-                      placeholder="e.g. Streamlining Global Logistics" required className={inp} />
+                      placeholder="e.g. Streamlining Global Logistics"
+                      className={fieldErrors.title ? inpErr : inp} />
                   </Field>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                    <Field label="Category">
+                    <Field label={<RequiredLabel>Category</RequiredLabel>}>
                       <input type="text" value={form.category} onChange={e => set('category', e.target.value)}
-                        placeholder="e.g. Operations, Strategy" required className={inp} />
+                        placeholder="e.g. Operations, Strategy"
+                        className={fieldErrors.category ? inpErr : inp} />
                     </Field>
-                    <Field label={<span>Slug <span className="text-[#75777e] font-normal normal-case tracking-normal">(URL)</span></span>}>
-                      <div className="flex items-center border border-slate-200 rounded-lg overflow-hidden focus-within:border-[#0a192f] transition-colors">
-                        <span className="font-body text-xs text-[#75777e] bg-slate-50 px-3 py-3 border-r border-slate-200 whitespace-nowrap shrink-0">/brand-stories/</span>
+                    <Field label={<span><RequiredLabel>Slug</RequiredLabel> <span className="text-[#75777e] font-normal normal-case tracking-normal">(URL)</span></span>}>
+                      <div className={`flex items-center rounded-lg overflow-hidden transition-colors ${fieldErrors.slug ? 'border border-red-400 bg-red-50' : 'border border-slate-200 focus-within:border-[#0a192f]'}`}>
+                        <span className="font-body text-xs text-[#75777e] bg-slate-50 px-3 py-3 border-r border-slate-200 whitespace-nowrap shrink-0">
+                          <span className="hidden sm:inline">/brand-stories/</span>
+                          <span className="sm:hidden">/…/</span>
+                        </span>
                         <input type="text" value={form.slug}
                           onChange={e => { set('slug', e.target.value); setSlugLocked(true) }}
-                          placeholder="post-slug" required
-                          className="flex-1 px-3 py-3 font-body text-sm text-[#0a192f] placeholder-slate-300 focus:outline-none bg-white" />
+                          placeholder="post-slug"
+                          className={`flex-1 px-3 py-3 font-body text-sm text-[#0a192f] placeholder-slate-300 focus:outline-none ${fieldErrors.slug ? 'bg-red-50' : 'bg-white'}`} />
                         <button type="button" onClick={() => setSlugLocked(l => !l)}
                           className="px-3 text-[#75777e] hover:text-[#0a192f] transition-colors border-l border-slate-200 py-3">
                           <span className="material-symbols-outlined" style={{ fontSize: '14px' }}>{slugLocked ? 'lock' : 'lock_open'}</span>
@@ -323,10 +365,10 @@ export default function AdminPostEditor() {
                     </Field>
                   </div>
 
-                  <Field label="Short Description">
+                  <Field label={<RequiredLabel>Short Description</RequiredLabel>}>
                     <textarea value={form.description} onChange={e => set('description', e.target.value)}
                       placeholder="1–2 sentence summary shown on the brand stories listing page."
-                      rows={2} required className={`${inp} resize-none`} />
+                      rows={2} className={`${fieldErrors.description ? inpErr : inp} resize-none`} />
                   </Field>
 
                   {/* Published toggle */}
@@ -355,7 +397,9 @@ export default function AdminPostEditor() {
                   </Field>
                   <div>
                     <div className="flex items-center justify-between mb-1.5">
-                      <label className={lbl}>Body Paragraphs</label>
+                      <label className={`${lbl} ${fieldErrors.body ? 'text-red-500' : ''}`}>
+                        Body Paragraphs <span className="text-red-400 normal-case tracking-normal font-bold">*</span>
+                      </label>
                       <button type="button" onClick={addPara}
                         className="inline-flex items-center gap-1 font-body text-xs font-bold text-[#e31e24] hover:text-red-700 transition-colors uppercase tracking-[0.15em]">
                         <span className="material-symbols-outlined" style={{ fontSize: '14px' }}>add</span>
@@ -368,7 +412,7 @@ export default function AdminPostEditor() {
                           <span className="w-6 h-6 rounded-full bg-[#eceef1] flex items-center justify-center font-body text-[11px] font-bold text-[#75777e] mt-3 flex-shrink-0">{i + 1}</span>
                           <textarea value={para} onChange={e => setBodyPara(i, e.target.value)}
                             placeholder={`Paragraph ${i + 1}…`} rows={4}
-                            className={`${inp} flex-1 resize-none`} />
+                            className={`${fieldErrors.body && i === 0 ? inpErr : inp} flex-1 resize-none`} />
                           {form.body.length > 1 && (
                             <button type="button" onClick={() => removePara(i)}
                               className="mt-3 flex-shrink-0 text-slate-300 hover:text-[#e31e24] transition-colors">
@@ -392,7 +436,7 @@ export default function AdminPostEditor() {
             <aside className="lg:col-span-3 space-y-6">
 
               {/* Cover image */}
-              <Card label="Cover Image" icon="image">
+              <Card label={<RequiredLabel>Cover Image</RequiredLabel>} icon="image">
                 <input
                   type="file"
                   id="img-upload"
@@ -417,10 +461,11 @@ export default function AdminPostEditor() {
                   </div>
                 ) : (
                   <label htmlFor="img-upload"
-                    className="cursor-pointer flex flex-col items-center justify-center border-2 border-dashed border-slate-200 rounded-xl p-10 text-center hover:border-[#0a192f] transition-colors group">
-                    <span className="material-symbols-outlined text-slate-300 group-hover:text-[#0a192f] transition-colors mb-3" style={{ fontSize: '36px' }}>upload_file</span>
-                    <p className="font-body font-bold text-[#0a192f] text-sm mb-1">Click to upload cover image</p>
+                    className={`cursor-pointer flex flex-col items-center justify-center border-2 border-dashed rounded-xl p-10 text-center transition-colors group ${fieldErrors.img ? 'border-red-400 bg-red-50 hover:border-red-500' : 'border-slate-200 hover:border-[#0a192f]'}`}>
+                    <span className={`material-symbols-outlined transition-colors mb-3 ${fieldErrors.img ? 'text-red-300' : 'text-slate-300 group-hover:text-[#0a192f]'}`} style={{ fontSize: '36px' }}>upload_file</span>
+                    <p className={`font-body font-bold text-sm mb-1 ${fieldErrors.img ? 'text-red-500' : 'text-[#0a192f]'}`}>Click to upload cover image</p>
                     <p className="font-body text-[#75777e] text-xs">PNG, JPG, WEBP · max 5 MB</p>
+                    {fieldErrors.img && <p className="font-body text-red-400 text-xs mt-2 font-semibold">Cover image is required</p>}
                   </label>
                 )}
                 {uploadingImg && (
@@ -464,9 +509,9 @@ export default function AdminPostEditor() {
               {/* Author */}
               <Card label="Author" icon="person">
                 <div className="space-y-4">
-                  <Field label="Name">
+                  <Field label={<RequiredLabel>Name</RequiredLabel>}>
                     <input type="text" value={form.author_name} onChange={e => set('author_name', e.target.value)}
-                      placeholder="e.g. Kalyan" className={inp} />
+                      placeholder="e.g. Kalyan" className={fieldErrors.author_name ? inpErr : inp} />
                   </Field>
                   <Field label="Role / Title">
                     <input type="text" value={form.author_role} onChange={e => set('author_role', e.target.value)}
@@ -519,7 +564,7 @@ export default function AdminPostEditor() {
 
 function Card({ label, icon, children }) {
   return (
-    <div className="bg-white p-6 md:p-8 space-y-5">
+    <div className="bg-white p-4 sm:p-6 md:p-8 space-y-5">
       <div className="flex items-center gap-2 pb-4 border-b border-slate-100">
         <span className="material-symbols-outlined text-[#e31e24]" style={{ fontSize: '18px' }}>{icon}</span>
         <h2 className="font-headline font-extrabold text-[#0a192f] text-base tracking-tight">{label}</h2>
@@ -538,5 +583,12 @@ function Field({ label, children }) {
   )
 }
 
+function RequiredLabel({ children }) {
+  return (
+    <>{children} <span className="text-red-400 normal-case tracking-normal font-bold">*</span></>
+  )
+}
+
 const lbl = 'font-body text-[11px] font-bold uppercase tracking-[0.2em] text-[#75777e] block mb-1.5'
 const inp = 'w-full border border-slate-200 rounded-lg px-4 py-3 font-body text-sm text-[#0a192f] placeholder-slate-300 focus:outline-none focus:border-[#0a192f] transition-colors bg-white'
+const inpErr = 'w-full border border-red-400 rounded-lg px-4 py-3 font-body text-sm text-[#0a192f] placeholder-slate-300 focus:outline-none focus:border-red-500 transition-colors bg-red-50'

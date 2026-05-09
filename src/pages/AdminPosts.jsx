@@ -1,20 +1,35 @@
 import { useState, useEffect } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { supabase } from '../lib/supabase'
 import { useAdminAuth } from '../hooks/useAdminAuth'
 
 export default function AdminPosts() {
   const isAuth = useAdminAuth()
   const navigate = useNavigate()
+  const location = useLocation()
   const [posts, setPosts] = useState([])
   const [loading, setLoading] = useState(true)
   const [deletingSlug, setDeletingSlug] = useState(null)
   const [error, setError] = useState('')
   const [confirmDelete, setConfirmDelete] = useState(null) // { slug, title }
+  const [toast, setToast] = useState(null)
+
+  function showToast(type, title, message) {
+    setToast({ type, title, message })
+    setTimeout(() => setToast(null), 5000)
+  }
 
   useEffect(() => {
     if (isAuth) fetchPosts()
   }, [isAuth])
+
+  // Show publish success toast if redirected from editor
+  useEffect(() => {
+    if (location.state?.published) {
+      showToast('success', 'Story Published!', `"${location.state.title}" is now live on the website.`)
+      window.history.replaceState({}, '') // clear state so it doesn't re-fire on refresh
+    }
+  }, [])
 
   async function fetchPosts() {
     setLoading(true)
@@ -53,6 +68,28 @@ export default function AdminPosts() {
   return (
     <div className="min-h-screen bg-[#f7f9fc] text-[#191c1e]">
 
+      {/* ── Toast */}
+      {toast && (
+        <div className="fixed top-20 left-3 right-3 sm:left-auto sm:right-6 sm:w-[400px] z-[100]"
+          style={{ animation: 'slideIn 0.3s cubic-bezier(0.16,1,0.3,1) forwards' }}>
+          <div className="relative overflow-hidden rounded-md"
+            style={{ boxShadow: '0 32px 80px -12px rgba(10,25,47,0.45), 0 8px 24px -4px rgba(10,25,47,0.25)' }}>
+            <div className={`h-1 w-full ${toast.type === 'success' ? 'bg-gradient-to-r from-green-400 to-green-500' : 'bg-gradient-to-r from-[#e31e24] to-red-500'}`} />
+            <div className={`px-5 pt-3.5 pb-3.5 ${toast.type === 'success' ? 'bg-white' : 'bg-[#0a192f]'}`}>
+              <div className="flex items-center justify-between gap-4 mb-1">
+                <p className={`font-headline font-extrabold text-sm tracking-tight leading-snug ${toast.type === 'success' ? 'text-[#0a192f]' : 'text-white'}`}>{toast.title}</p>
+                <button onClick={() => setToast(null)}
+                  className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center transition-colors ${toast.type === 'success' ? 'text-slate-300 hover:text-slate-500 hover:bg-slate-100' : 'text-white/30 hover:text-white/70 hover:bg-white/10'}`}>
+                  <span className="material-symbols-outlined" style={{ fontSize: '13px' }}>close</span>
+                </button>
+              </div>
+              <p className={`font-body text-xs leading-relaxed ${toast.type === 'success' ? 'text-[#75777e]' : 'text-white/50'}`}>{toast.message}</p>
+            </div>
+          </div>
+        </div>
+      )}
+      <style>{`@keyframes slideIn { from { opacity:0; transform:translateX(24px); } to { opacity:1; transform:translateX(0); } }`}</style>
+
       {/* ── Navbar — same style as site */}
       <nav className="fixed top-0 left-0 w-full z-50 glass-nav border-b border-slate-200/60 shadow-sm">
         <div className="flex items-center justify-between px-6 md:px-10 lg:px-16 h-[82px] max-w-[1440px] mx-auto">
@@ -77,22 +114,22 @@ export default function AdminPosts() {
           </span>
 
           {/* Right actions */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 sm:gap-4">
             <a
               href="/brand-stories"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:inline-flex items-center gap-1.5 font-body font-medium text-[14px] text-slate-500 hover:text-[#0a192f] transition-colors"
+              className="hidden md:inline-flex items-center gap-1.5 font-body font-medium text-[14px] text-slate-500 hover:text-[#0a192f] transition-colors"
             >
               <span className="material-symbols-outlined" style={{ fontSize: '15px' }}>open_in_new</span>
               View Site
             </a>
             <button
               onClick={handleLogout}
-              className="inline-flex items-center gap-1.5 border border-[#0a192f] text-[#0a192f] px-4 py-2 rounded-full font-body font-semibold text-[13px] hover:bg-[#0a192f] hover:text-white transition-all duration-200"
+              className="inline-flex items-center gap-1.5 border border-[#0a192f] text-[#0a192f] px-3 sm:px-4 py-2 rounded-full font-body font-semibold text-[13px] hover:bg-[#0a192f] hover:text-white transition-all duration-200"
             >
               <span className="material-symbols-outlined" style={{ fontSize: '14px' }}>logout</span>
-              Logout
+              <span className="hidden sm:inline">Logout</span>
             </button>
           </div>
         </div>
@@ -108,7 +145,7 @@ export default function AdminPosts() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0a192f] via-[#0a192f]/88 to-[#0a192f]/60" />
         <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#0a192f] to-transparent" />
-        <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 w-full py-14 lg:py-20">
+        <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-6 md:px-10 lg:px-16 w-full py-10 sm:py-14 lg:py-20">
           <div className="mb-6">
             <span className="font-body text-xs font-bold uppercase tracking-[0.3em] text-[#e31e24]">Admin Console</span>
           </div>
@@ -125,26 +162,27 @@ export default function AdminPosts() {
       </section>
 
       {/* ── Content */}
-      <section className="bg-[#f2f4f7] py-14 md:py-20">
-        <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16">
+      <section className="bg-[#f2f4f7] py-10 md:py-20">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-10 lg:px-16">
 
           {/* Toolbar */}
-          <div className="flex items-center justify-between mb-10">
-            <div>
-              <h2 className="font-headline font-extrabold text-[#0a192f] text-xl tracking-tight">
+          <div className="flex items-center justify-between mb-8 md:mb-10 gap-4">
+            <div className="min-w-0">
+              <h2 className="font-headline font-extrabold text-[#0a192f] text-lg sm:text-xl tracking-tight">
                 {loading ? 'Loading…' : `${posts.length} ${posts.length === 1 ? 'Story' : 'Stories'}`}
               </h2>
-              <p className="font-body text-[#75777e] text-sm mt-0.5">
+              <p className="font-body text-[#75777e] text-xs sm:text-sm mt-0.5">
                 {loading ? '' : `${posts.filter(p => p.published).length} published · ${posts.filter(p => !p.published).length} draft`}
               </p>
             </div>
             <Link
               to="/admin/posts/new"
-              className="inline-flex items-center gap-2 border border-[#0a192f] bg-[#0a192f] text-white px-6 py-2.5 rounded-full font-body font-semibold text-[14px] hover:bg-transparent hover:text-[#0a192f] transition-all duration-200 group"
+              className="shrink-0 inline-flex items-center gap-1.5 sm:gap-2 border border-[#0a192f] bg-[#0a192f] text-white px-4 sm:px-6 py-2.5 rounded-full font-body font-semibold text-[13px] sm:text-[14px] hover:bg-transparent hover:text-[#0a192f] transition-all duration-200 group"
             >
               <span className="material-symbols-outlined text-[15px]">add</span>
-              New Story
-              <span className="material-symbols-outlined text-[15px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+              <span className="hidden xs:inline sm:inline">New Story</span>
+              <span className="inline xs:hidden sm:hidden">New</span>
+              <span className="hidden sm:inline material-symbols-outlined text-[15px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
             </Link>
           </div>
 
@@ -206,7 +244,7 @@ export default function AdminPosts() {
                   </div>
 
                   {/* Body */}
-                  <div className="p-8 flex-grow flex flex-col">
+                  <div className="p-5 sm:p-8 flex-grow flex flex-col">
                     <span className="font-body text-[#e31e24] font-bold text-[11px] tracking-[0.25em] uppercase mb-4 block">
                       {post.category || 'Uncategorised'}
                     </span>

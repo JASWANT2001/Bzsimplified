@@ -55,7 +55,7 @@ export default function BrandStories() {
             growth through precision consulting and strategic engineering.
           </p>
         </div>
-        {/* Admin login — top right */}
+        {/* Admin login — top right (commented out, uncomment when needed)
         <Link
           to="/admin"
           className="absolute top-6 right-6 md:right-10 lg:right-16 z-20 inline-flex items-center gap-2 font-body text-[11px] font-bold uppercase tracking-[0.2em] text-white/30 hover:text-white/70 transition-colors"
@@ -63,6 +63,7 @@ export default function BrandStories() {
           <span className="material-symbols-outlined" style={{ fontSize: '14px' }}>lock</span>
           Admin
         </Link>
+        */}
 
         <button
           aria-label="Scroll to content"
