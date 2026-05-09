@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Bold navy B -->
+  <text
+    x="4" y="57"
+    font-family="system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif"
+    font-weight="900"
+    font-size="58"
+    fill="#ffffff"
+  >B</text>
+
+  <!-- Red accent square — top-right of the B, matching navbar -->
+  <rect x="37" y="4" width="13" height="13" fill="#e31e24"/>
+</svg>
