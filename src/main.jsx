@@ -14,6 +14,7 @@ import ServiceEC from './pages/ServiceEC'
 import ServiceMO from './pages/ServiceMO'
 import ServiceET from './pages/ServiceET'
 import ServiceGB from './pages/ServiceGB'
+import ServiceVC from './pages/ServiceVC'
 import Teams from './pages/Teams'
 import Partners from './pages/Partners'
 import BrandStories from './pages/BrandStories'
@@ -43,6 +44,7 @@ const router = createBrowserRouter([
       { path: 'service/mo',   element: <ServiceMO />    },
       { path: 'service/et',   element: <ServiceET />    },
       { path: 'service/gb',   element: <ServiceGB />    },
+      { path: 'service/vc',   element: <ServiceVC />    },
       { path: 'service/:code',element: <Service />      },
       { path: 'teams',        element: <Teams />        },
       { path: 'partners',      element: <Partners />     },

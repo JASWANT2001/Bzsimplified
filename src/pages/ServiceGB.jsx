@@ -3,24 +3,44 @@ import FAQ from '../components/FAQ'
 
 const FAQS = [
   {
-    q: 'What does a market expansion engagement actually involve?',
-    a: 'We begin with a market opportunity assessment — identifying the highest-ROI geographies or customer segments to enter next. From there we build an entry playbook: positioning, pricing, distribution channel strategy, and a 90-day launch plan with milestones and owners.',
+    q: 'What does a Grow Your Business engagement typically include?',
+    a: 'Our engagements focus on growth strategy, operational scaling, market expansion, financial readiness, and execution frameworks. We work alongside founders to simplify complexity and build sustainable growth pathways.',
   },
   {
-    q: 'How do you help with capital for growth?',
-    a: 'We prepare your business for capital — financial model, investor narrative, data room, and pitch materials. We also help you identify the right type of capital (debt vs. equity, VC vs. strategic) based on your growth profile and the dilution you are willing to accept.',
+    q: 'How do you help businesses scale without losing efficiency?',
+    a: 'We assess existing systems, identify bottlenecks, and implement scalable processes that support growth while maintaining operational excellence and customer experience.',
   },
   {
-    q: 'We are already growing. Why do we need outside help?',
-    a: 'Unstructured growth is one of the most common causes of business failure. Revenue growing faster than your systems, team, or cash flow can support creates fragility. We build the infrastructure that lets growth compound rather than destabilise.',
+    q: 'Can you support market expansion into new regions or industries?',
+    a: 'Yes. We help businesses evaluate opportunities, understand market dynamics, develop entry strategies, and establish structures for successful expansion.',
   },
   {
-    q: 'Can you help us evaluate an acquisition or partnership opportunity?',
-    a: 'Yes. We conduct commercial due diligence, strategic fit analysis, and integration planning for M&A opportunities. For partnerships and distribution deals, we structure the commercial terms and governance framework to protect your interests.',
+    q: 'How do you help with capital and growth funding?',
+    a: 'We prepare your business for funding through financial restructuring, investor readiness, business narratives, financial models, and identifying suitable funding pathways aligned with your growth goals.',
   },
   {
-    q: 'How long does a Grow Your Business engagement typically take?',
-    a: 'The strategy and planning phase runs 3–4 weeks. Execution support — where we work alongside your team to implement the expansion plan — typically runs 3–6 months. The scope depends entirely on how many markets or growth vectors you are pursuing simultaneously.',
+    q: 'Our business is already growing. Why do we need external support?',
+    a: 'Growth often introduces complexity. External expertise provides strategic perspective, identifies blind spots, and ensures your business scales with stronger systems and sustainable foundations.',
+  },
+  {
+    q: 'Can you help evaluate acquisitions, partnerships, or expansion opportunities?',
+    a: 'Yes. We support strategic assessments, financial implications, operational fit, and long-term value creation before critical business decisions are made.',
+  },
+  {
+    q: 'How long does a Grow Your Business engagement usually take?',
+    a: 'Timelines vary based on objectives and complexity. Some engagements focus on short-term growth priorities, while others involve long-term scaling and transformation initiatives.',
+  },
+  {
+    q: 'Do you work with startups or only established businesses?',
+    a: 'We work with founders, startups, SMEs, and established organizations — adapting strategies to the stage, scale, and ambition of the business.',
+  },
+  {
+    q: 'What makes Business Simplified different?',
+    a: 'We combine strategy with execution. Our focus is not only on planning growth but also on simplifying operations and enabling businesses to scale with confidence.',
+  },
+  {
+    q: 'What outcomes can we expect?',
+    a: 'Depending on your goals, outcomes may include stronger systems, improved scalability, funding readiness, expansion strategies, operational efficiency, and sustainable growth frameworks.',
   },
 ]
 

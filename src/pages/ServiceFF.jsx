@@ -24,6 +24,54 @@ const FAQS = [
   },
 ]
 
+const SERVICES = [
+  {
+    icon: 'account_balance',
+    title: 'Financial Restructuring',
+    desc: 'Review and reorganize existing financial processes to improve accuracy, transparency, and control.',
+    dark: true,
+  },
+  {
+    icon: 'balance',
+    title: 'TB, P&L & Balance Sheet Alignment',
+    desc: 'Identify mismatches, inconsistencies, and gaps across your financial statements and align them into a reliable reporting structure.',
+    dark: false,
+  },
+  {
+    icon: 'monitoring',
+    title: 'Financial Health Study',
+    desc: 'Conduct a comprehensive analysis of your business performance, liabilities, profitability trends, and cash flow position.',
+    dark: false,
+  },
+  {
+    icon: 'bar_chart',
+    title: 'Reporting Standardization',
+    desc: 'Create clear formats, dashboards, and reporting systems for better visibility and faster decision-making.',
+    dark: true,
+  },
+  {
+    icon: 'verified',
+    title: 'Process & Compliance Readiness',
+    desc: 'Strengthen internal financial practices to support audits, fundraising, expansion, and governance requirements.',
+    dark: false,
+  },
+  {
+    icon: 'lightbulb',
+    title: 'Management Insights',
+    desc: 'Convert numbers into actionable insights to support growth, cost optimization, and long-term planning.',
+    dark: true,
+  },
+]
+
+const OUTCOMES = [
+  'Clear visibility of your financial position',
+  'Structured and reliable financial reporting',
+  'Better control over profitability and cash flow',
+  'Improved readiness for investors, lenders, and audits',
+  'Stronger decision-making backed by data',
+  'Confidence to scale sustainably',
+]
+
 export default function ServiceFF() {
   return (
     <main className="pt-[82px] bg-[#f7f9fc] text-[#191c1e] min-h-screen">
@@ -36,162 +84,124 @@ export default function ServiceFF() {
       </div>
 
       {/* ── Hero */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-20">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-end">
-          <div className="md:col-span-8">
-            <h1
-              className="font-headline font-extrabold tracking-tighter text-[#0a192f] leading-[0.95] mb-8"
-              style={{ fontSize: 'clamp(3rem, 7vw, 5.5rem)' }}
+      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-12 gap-8 items-end mb-12 md:mb-24">
+        <div className="col-span-12 lg:col-span-8">
+          <h1
+            className="font-headline font-extrabold leading-[1.1] tracking-tighter text-[#0a192f] mb-8"
+            style={{ fontSize: 'clamp(3rem, 6vw, 5rem)' }}
+          >
+            Restructure Your Finances.<br />
+            <span className="text-[#515f78]">Build Clarity. Scale with Confidence.</span>
+          </h1>
+          <p className="font-body text-xl text-[#5a5e6a] max-w-2xl leading-relaxed mb-4">
+            Financial confusion slows growth. We help businesses reorganize financial systems, align numbers with reality, and create structured visibility across every layer of operations.
+          </p>
+          <p className="font-body text-base font-semibold text-[#0a192f] max-w-2xl leading-relaxed">
+            Our Fix Your Finance framework brings together your Trial Balance (TB), Profit &amp; Loss (P&amp;L), Balance Sheet, and operational data into one clear financial story — so decisions are based on facts, not assumptions.
+          </p>
+        </div>
+        <div className="col-span-12 lg:col-span-4 flex flex-col">
+          <div className="w-full h-64 bg-[#eceef1] rounded-xl overflow-hidden">
+            <img
+              className="w-full h-full object-cover"
+              src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=80"
+              alt="Financial workspace"
+            />
+          </div>
+          <Link
+            to="/contact"
+            className="self-start inline-flex items-center gap-2 bg-[#0a192f] text-white px-8 py-4 rounded-lg font-body font-bold text-sm uppercase tracking-widest hover:bg-[#1a2f4f] transition-colors mt-4 group"
+          >
+            Let's Talk
+            <span className="material-symbols-outlined text-[19px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </Link>
+        </div>
+      </section>
+
+      {/* ── What We Do */}
+      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-16 md:mb-32">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
+          <h2
+            className="font-headline font-extrabold text-[#0a192f] tracking-tighter"
+            style={{ fontSize: 'clamp(1.8rem, 3vw, 2.6rem)' }}
+          >
+            What We Do
+          </h2>
+          <p className="font-body text-[#5a5e6a] text-base max-w-sm md:text-right leading-relaxed">
+            Six structured pillars to bring clarity to your financial ecosystem.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {SERVICES.map((s, i) => (
+            <div
+              key={s.title}
+              className={`relative rounded-xl p-8 lg:p-10 flex flex-col gap-4 overflow-hidden ${s.dark ? 'bg-[#0a192f]' : 'bg-white border border-slate-200'}`}
             >
-              Secure your <br />
-              <span className="text-[#515f78]">financial foundation.</span>
-            </h1>
-            <p className="font-body text-xl text-[#5a5e6a] font-light max-w-2xl leading-relaxed">
-              Fix Your Finances is a dedicated stabilisation initiative designed to identify leaks, restructure debt, and build a resilient capital framework for long-term growth.
+              {/* Watermark number */}
+              <span
+                className={`absolute top-3 right-5 font-headline font-black leading-none select-none pointer-events-none ${s.dark ? 'text-white/5' : 'text-[#0a192f]/5'}`}
+                style={{ fontSize: '5rem' }}
+              >
+                {String(i + 1).padStart(2, '0')}
+              </span>
+              <span
+                className={`material-symbols-outlined relative z-10 ${s.dark ? 'text-white/60' : 'text-[#0a192f]'}`}
+                style={{ fontSize: '30px' }}
+              >
+                {s.icon}
+              </span>
+              <h3 className={`font-headline text-xl font-bold relative z-10 ${s.dark ? 'text-white' : 'text-[#0a192f]'}`}>
+                {s.title}
+              </h3>
+              <p className={`font-body text-sm leading-relaxed relative z-10 ${s.dark ? 'text-[#b9c7e4]' : 'text-[#5a5e6a]'}`}>
+                {s.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── Outcomes */}
+      <section className="bg-[#0a192f] py-16 md:py-24 mb-16 md:mb-32 relative overflow-hidden">
+        <div className="absolute top-[-10%] right-[-5%] w-80 h-80 bg-[#e31e24]/10 blur-[120px] rounded-full pointer-events-none" />
+        <div className="absolute bottom-[-15%] left-[-5%] w-72 h-72 bg-white/5 blur-[100px] rounded-full pointer-events-none" />
+
+        <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 relative z-10">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
+            <h2
+              className="font-headline font-extrabold tracking-tighter text-white"
+              style={{ fontSize: 'clamp(1.8rem, 3vw, 2.6rem)' }}
+            >
+              Outcomes You Can Expect
+            </h2>
+            <p className="font-body text-white/40 text-sm max-w-sm md:text-right leading-relaxed">
+              Measurable results from every engagement.
             </p>
           </div>
-          <div className="md:col-span-4 flex justify-end">
-            <div className="w-full h-64 bg-[#e0e3e6] rounded-xl overflow-hidden group">
-              <img
-                className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 transition-all duration-700"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEd8zOKi6QBCYH7Lbk-WaLWKM_S5kPvFIN2mthVdVkVaxtDvIfCLq0dZqzNqbp0XEiMheq1mZrcs_YcGZyia2tSry0wi9nZnWFLHPvkW6BzxLWQhHndXgJ1JxsohrsLUo-HYHgDcIc0gH3Sdwu_MPR2Xi-m1AR1_vz7hUAR7j7z1z0PPQ5c5PtCGuQKsJHtC3JVPQDQ9heysBKU1FZx2uuiVGCGoI6beMf1fqfNq4hUoFSFMj63W8ChwLh3PxY-Bham-TZjqaB6qeh"
-                alt="Financial workspace"
-                onError={e => { e.target.style.display = 'none' }}
-              />
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* ── Asymmetric Content Grid */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-0">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-0 rounded-xl overflow-hidden shadow-sm">
-
-          {/* Left — phases */}
-          <div className="md:col-span-7 bg-white p-6 md:p-10 lg:p-16">
-
-            {/* Phase 1 */}
-            <div className="mb-16">
-              <span className="material-symbols-outlined text-[#0a192f] mb-6 block" style={{ fontSize: '36px' }}>
-                account_balance_wallet
-              </span>
-              <h2 className="font-headline text-3xl font-bold tracking-tight text-[#0a192f] mb-5">
-                Phase 1: Diagnostic Leak Detection
-              </h2>
-              <p className="font-body text-[#5a5e6a] leading-loose mb-8">
-                Most financial instability stems from invisible erosion. Our first protocol involves a deep-dive audit of operational expenditures and recurring liabilities. We look beyond the balance sheet to understand the behavioural patterns that affect your liquidity.
-              </p>
-              <ul className="space-y-3">
-                {[
-                  'Expense Rationalisation & Reduction',
-                  'Cash Flow Sensitivity Mapping',
-                  'Revenue Leakage Identification',
-                ].map(item => (
-                  <li key={item} className="flex items-center gap-4 font-body text-sm font-medium text-[#191c1e]">
-                    <span className="w-2 h-2 bg-[#0a192f] rounded-full flex-shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Phase 2 */}
-            <div>
-              <span className="material-symbols-outlined text-[#0a192f] mb-6 block" style={{ fontSize: '36px' }}>
-                trending_up
-              </span>
-              <h2 className="font-headline text-3xl font-bold tracking-tight text-[#0a192f] mb-5">
-                Phase 2: Structural Restructuring
-              </h2>
-              <p className="font-body text-[#5a5e6a] leading-loose mb-8">
-                Once the leaks are sealed, we focus on the architecture of your debt and assets. This is the stabilisation core — optimising interest rates, consolidating high-friction liabilities, and establishing an emergency capital buffer.
-              </p>
-              <div className="grid grid-cols-2 gap-6">
-                {[
-                  { stat: '40%',  label: 'Avg. Debt Reduction' },
-                  { stat: '12wk', label: 'Stabilisation Timeline' },
-                ].map(item => (
-                  <div key={item.label} className="bg-[#f7f9fc] p-6 rounded-xl">
-                    <div className="font-headline font-bold text-[#0a192f] mb-2" style={{ fontSize: '2.5rem' }}>
-                      {item.stat}
-                    </div>
-                    <div className="font-body text-xs uppercase tracking-widest text-[#5a5e6a] font-semibold">
-                      {item.label}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-          </div>
-
-          {/* Right — dark column */}
-          <div className="md:col-span-5 bg-[#0a192f] p-6 md:p-10 lg:p-16 text-white">
-            <h3 className="font-body text-xs font-bold uppercase tracking-[0.2em] mb-12 text-[#76849f]">
-              Strategic Focus
-            </h3>
-
-            <div className="space-y-10 mb-16">
-              {[
-                {
-                  title: 'Debt Consolidation',
-                  desc: 'Transforming fragmented, high-interest obligations into a single, manageable stream that aligns with your monthly cash flow cycles.',
-                },
-                {
-                  title: 'Capital Buffering',
-                  desc: 'Constructing a 6-month liquidity reserve designed to withstand market volatility and operational shocks without compromising core growth.',
-                },
-                {
-                  title: 'Credit Restoration',
-                  desc: 'A systematic approach to repairing and leveraging your credit identity to secure favourable terms for future expansion.',
-                },
-              ].map(item => (
-                <div key={item.title} className="border-l border-white/20 pl-8">
-                  <h4 className="font-headline text-lg font-bold text-white mb-3">{item.title}</h4>
-                  <p className="font-body text-[#b9c7e4] text-sm leading-relaxed">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-
-            <div className="relative h-64 w-full overflow-hidden rounded-xl">
-              <img
-                className="absolute inset-0 w-full h-full object-cover"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTe7-KvLSu-SVB6hoFbELGZcf25SaC3DlaT7hRGBdkqCxu84zj0YIuwpZ4-y9IuJCqrGvLGnAn5fl0dqZEU-N0aVYOPJRFhfjbCebQ_YANJEJwCP4TGc_OyJCO-MDI4NXojRqxCJahgj0zDnmQEIIq7uz8b2O-fgegckCWx_S1e3HjQtPst6-C8smqWGChOFgLE6eHFxiy9CaSZYlz64cJ-Zg2idXdhIJG9NxuQiSzIcVaW5haTeuLU7hsAw9QTAL31pxkXv39-CgX"
-                alt="Financial data"
-                onError={e => { e.target.style.display = 'none' }}
-              />
-              <div className="absolute inset-0 bg-[#0a192f]/30 rounded-xl" />
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      {/* ── Metrics */}
-      <section className="bg-[#eceef1] py-16 md:py-24 mt-0">
-        <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16">
-          <h2 className="font-headline text-4xl font-extrabold tracking-tight text-[#0a192f] text-center mb-16">
-            Measurable Restoration Outcomes
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { stat: '0%',   label: 'High-Interest Liability' },
-              { stat: '2.5×', label: 'Liquidity Ratio Growth' },
-              { stat: '100%', label: 'Transparency in Reporting' },
-            ].map(item => (
-              <div key={item.label} className="bg-white p-12 rounded-xl text-center shadow-sm">
-                <div
-                  className="font-headline font-bold text-[#0a192f] mb-3"
-                  style={{ fontSize: '3.5rem', lineHeight: 1 }}
-                >
-                  {item.stat}
-                </div>
-                <p className="font-body text-xs uppercase tracking-widest text-[#5a5e6a] font-semibold">
-                  {item.label}
-                </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {OUTCOMES.map((o, i) => (
+              <div key={o} className="flex items-start gap-4 bg-white/5 border border-white/10 rounded-xl p-6">
+                <span className="font-headline font-extrabold text-[#e31e24] leading-none shrink-0 mt-0.5" style={{ fontSize: '1.4rem' }}>
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <span className="font-body text-sm text-[#b9c7e4] leading-snug pt-1">{o}</span>
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── Tagline banner */}
+      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-16 md:mb-32">
+        <div className="bg-[#eceef1] rounded-2xl p-10 md:p-14 text-center">
+          <p className="font-headline font-extrabold text-[#0a192f] tracking-tighter mb-3" style={{ fontSize: 'clamp(1.4rem, 2.5vw, 2rem)' }}>
+            We simplify finance so your business can focus on growth.
+          </p>
+          <p className="font-body text-[#39475f] text-base">
+            Clarity in numbers. Confidence in decisions. Stability in growth.
+          </p>
         </div>
       </section>
 
@@ -206,9 +216,9 @@ export default function ServiceFF() {
               className="font-headline font-extrabold text-white tracking-tighter mb-2"
               style={{ fontSize: 'clamp(1.6rem, 3vw, 2.5rem)' }}
             >
-              Ready to build something lasting?
+              Ready to fix your finances?
             </h3>
-            <p className="font-body text-white/50 text-base">Transform your business with our consulting expertise.</p>
+            <p className="font-body text-white/50 text-base">Clarity in numbers. Confidence in decisions. Stability in growth.</p>
           </div>
           <Link
             to="/contact"

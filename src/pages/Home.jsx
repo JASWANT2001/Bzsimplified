@@ -58,15 +58,15 @@ const ARCH_CARDS = [
 ]
 
 const SERVICES = [
-  { stage: 'START',     code: 'LB', num: '01', icon: 'rocket_launch',   title: 'Launch Your Brand',      desc: 'Identity, positioning, and go-to-market.',          img: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=600&q=80' },
-  { stage: 'START',     code: 'BB', num: '02', icon: 'business_center', title: 'Build Your Business',    desc: 'Legal structure, ops, and funding systems.',        img: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80' },
-  { stage: 'START',     code: 'ST', num: '03', icon: 'devices',         title: 'Set Up Your Tech',       desc: 'Core stack to run and measure your business.',      img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80' },
-  { stage: 'STABILIZE', code: 'PB', num: '04', icon: 'shield',          title: 'Protect Your Brand',     desc: 'Trademarks, contracts, and brand governance.',      img: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=600&q=80' },
-  { stage: 'STABILIZE', code: 'FF', num: '05', icon: 'account_balance', title: 'Fix Your Finances',      desc: 'Books, cash flow, and profitability controls.',     img: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=600&q=80' },
-  { stage: 'STABILIZE', code: 'EC', num: '06', icon: 'gavel',           title: 'Ensure Compliance',      desc: 'Statutory, regulatory, and internal policy.',       img: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=600&q=80' },
-  { stage: 'SCALE',     code: 'MO', num: '07', icon: 'tune',            title: 'Manage Your Operations', desc: 'SOPs, KPIs, and daily rhythm of execution.',        img: 'https://images.unsplash.com/photo-1553484771-371a605b060b?auto=format&fit=crop&w=600&q=80' },
-  { stage: 'SCALE',     code: 'ET', num: '08', icon: 'groups',          title: 'Empower Your Team',      desc: 'Org design, hiring, and leadership cadence.',       img: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80' },
-  { stage: 'SCALE',     code: 'GB', num: '09', icon: 'trending_up',     title: 'Grow Your Business',     desc: 'Expansion strategy, capital, and new markets.',     img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80' },
+  { code: 'LB', num: '01', icon: 'rocket_launch',   title: 'Launch Your Brand',      desc: 'Identity, positioning, and go-to-market.',          img: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=600&q=80' },
+  { code: 'BB', num: '02', icon: 'business_center', title: 'Build Your Business',    desc: 'Legal structure, ops, and funding systems.',        img: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80' },
+  { code: 'ST', num: '03', icon: 'devices',         title: 'Set Up Your Tech',       desc: 'Core stack to run and measure your business.',      img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80' },
+  { code: 'PB', num: '04', icon: 'shield',          title: 'Protect Your Brand',     desc: 'Trademarks, contracts, and brand governance.',      img: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=600&q=80' },
+  { code: 'FF', num: '05', icon: 'account_balance', title: 'Fix Your Finances',      desc: 'Books, cash flow, and profitability controls.',     img: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=600&q=80' },
+  { code: 'EC', num: '06', icon: 'gavel',           title: 'Ensure Compliance',      desc: 'Statutory, regulatory, and internal policy.',       img: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=600&q=80' },
+  { code: 'MO', num: '07', icon: 'tune',            title: 'Manage Your Operations', desc: 'SOPs, KPIs, and daily rhythm of execution.',        img: 'https://images.unsplash.com/photo-1553484771-371a605b060b?auto=format&fit=crop&w=600&q=80' },
+  { code: 'ET', num: '08', icon: 'groups',          title: 'Empower Your Team',      desc: 'Org design, hiring, and leadership cadence.',       img: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80' },
+  { code: 'VC', num: '09', icon: 'account_tree',    title: 'Virtual COO',            desc: 'Operational systems, processes, and execution.',    img: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=600&q=80' },
 ]
 
 const WHY_US_ITEMS = [
@@ -761,46 +761,3 @@ export default function Home() {
   )
 }
 
-/* ─── StageCard sub-component ────────────────────────────────────────────── */
-
-function StageCard({ stage, title, items, featured }) {
-  if (featured) {
-    return (
-      <div className="bg-[#0a192f] rounded-xl p-8 shadow-2xl scale-105 z-10 hover:scale-[1.08] hover:shadow-[0_24px_56px_rgba(10,25,47,0.4)] transition-all duration-300 cursor-pointer group">
-        <div className="font-body text-[#76849f] font-bold mb-3 text-xs tracking-widest uppercase">
-          {stage}
-        </div>
-        <h3 className="text-2xl font-headline font-bold text-white mb-7">{title}</h3>
-        <ul className="space-y-4">
-          {items.map(item => (
-            <li key={item} className="flex items-start gap-3">
-              <span className="material-symbols-outlined text-white text-base mt-0.5 flex-shrink-0">check_circle</span>
-              <span className="font-body text-white/70 text-sm leading-snug group-hover:text-white transition-colors duration-200">
-                {item}
-              </span>
-            </li>
-          ))}
-        </ul>
-      </div>
-    )
-  }
-
-  return (
-    <div className="bg-[#f7f9fc] rounded-xl p-8 border border-slate-100 hover:scale-[1.03] hover:shadow-xl hover:bg-white transition-all duration-300 cursor-pointer group">
-      <div className="font-body text-slate-400 font-bold mb-3 text-xs tracking-widest uppercase group-hover:text-[#0a192f] transition-colors">
-        {stage}
-      </div>
-      <h3 className="text-2xl font-headline font-bold text-[#0a192f] mb-7">{title}</h3>
-      <ul className="space-y-4">
-        {items.map(item => (
-          <li key={item} className="flex items-start gap-3">
-            <span className="material-symbols-outlined text-[#0a192f]/40 text-base mt-0.5 flex-shrink-0">check_circle</span>
-            <span className="font-body text-slate-500 text-sm leading-snug group-hover:text-slate-800 transition-colors duration-200">
-              {item}
-            </span>
-          </li>
-        ))}
-      </ul>
-    </div>
-  )
-}

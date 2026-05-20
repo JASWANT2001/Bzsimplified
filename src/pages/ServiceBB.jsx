@@ -3,25 +3,128 @@ import FAQ from '../components/FAQ'
 
 const FAQS = [
   {
-    q: 'What legal structures do you advise on?',
-    a: 'We cover the full range — sole proprietorships, LLPs, private limited companies, and partnership structures. Our recommendations are based on your funding plans, liability preferences, tax efficiency, and long-term growth ambitions.',
+    q: 'Do I need an existing business?',
+    a: 'No. We support both new ventures and established businesses seeking growth or restructuring.',
   },
   {
-    q: 'Do I need existing revenue or funding to use this service?',
-    a: 'No. This service is designed for businesses at the pre-revenue or early-revenue stage. In fact, getting the structural foundation right before scale is exactly where the value is greatest — fixing it later is far more expensive.',
+    q: 'What industries do you work with?',
+    a: 'We work across sectors, adapting frameworks to your business needs.',
   },
   {
-    q: 'How long does the Build Your Business engagement take?',
-    a: 'Typically 3 to 5 weeks for the core deliverables. This includes the operational blueprint, governance setup, process documentation, and initial HR framework. Complex multi-entity structures may take longer.',
+    q: 'Do you assist with registrations and compliance?',
+    a: 'Yes. We guide and support foundational business setup and compliance requirements.',
   },
   {
-    q: 'Do you handle registrations and government filings directly?',
-    a: 'We provide guidance, documentation, and coordination support for registrations. Actual filings are done through empanelled legal and CA partners — we manage the process end-to-end so you don\'t have to navigate it alone.',
+    q: 'How long does engagement take?',
+    a: 'Timelines vary depending on complexity, scope, and growth objectives.',
   },
   {
-    q: 'What happens after the engagement ends?',
-    a: 'You receive a complete Operations Handbook — all documented processes, entity paperwork, governance policies, and a 90-day action plan. We also offer a 30-day post-engagement support window and optional ongoing advisory retainers.',
+    q: 'What happens after implementation?',
+    a: 'We can continue with advisory, optimization, and growth support.',
   },
+  {
+    q: 'What does a Grow Your Business engagement typically include?',
+    a: 'Our engagements focus on growth strategy, operational scaling, market expansion, financial readiness, and execution frameworks. We work alongside founders to simplify complexity and build sustainable growth pathways.',
+  },
+  {
+    q: 'How do you help businesses scale without losing efficiency?',
+    a: 'We assess existing systems, identify bottlenecks, and implement scalable processes that support growth while maintaining operational excellence and customer experience.',
+  },
+  {
+    q: 'Can you support market expansion into new regions or industries?',
+    a: 'Yes. We help businesses evaluate opportunities, understand market dynamics, develop entry strategies, and establish structures for successful expansion.',
+  },
+  {
+    q: 'How do you help with capital and growth funding?',
+    a: 'We prepare your business for funding through financial restructuring, investor readiness, business narratives, financial models, and identifying suitable funding pathways aligned with your growth goals.',
+  },
+  {
+    q: 'Our business is already growing. Why do we need external support?',
+    a: 'Growth often introduces complexity. External expertise provides strategic perspective, identifies blind spots, and ensures your business scales with stronger systems and sustainable foundations.',
+  },
+  {
+    q: 'Can you help evaluate acquisitions, partnerships, or expansion opportunities?',
+    a: 'Yes. We support strategic assessments, financial implications, operational fit, and long-term value creation before critical business decisions are made.',
+  },
+  {
+    q: 'How long does a Grow Your Business engagement usually take?',
+    a: 'Timelines vary based on objectives and complexity. Some engagements focus on short-term growth priorities, while others involve long-term scaling and transformation initiatives.',
+  },
+  {
+    q: 'Do you work with startups or only established businesses?',
+    a: 'We work with founders, startups, SMEs, and established organizations—adapting strategies to the stage, scale, and ambition of the business.',
+  },
+  {
+    q: 'What makes Business Simplified different?',
+    a: 'We combine strategy with execution. Our focus is not only on planning growth but also on simplifying operations and enabling businesses to scale with confidence.',
+  },
+  {
+    q: 'What outcomes can we expect?',
+    a: 'Depending on your goals, outcomes may include stronger systems, improved scalability, funding readiness, expansion strategies, operational efficiency, and sustainable growth frameworks.',
+  },
+]
+
+const STEPS = [
+  {
+    num: '01',
+    title: 'Business Foundation',
+    sub: 'Create the right structure for sustainable growth.',
+    points: ['Business model refinement', 'Entity & registration guidance', 'Strategic planning', 'Market positioning', 'Revenue model development'],
+  },
+  {
+    num: '02',
+    title: 'Operational Systems',
+    sub: 'Build systems that support growth.',
+    points: ['Process design', 'SOP creation', 'Workflow optimization', 'Team structure planning', 'Governance frameworks'],
+  },
+  {
+    num: '03',
+    title: 'Financial & Compliance Readiness',
+    sub: 'Strengthen your business backbone.',
+    points: ['Financial planning', 'Budget frameworks', 'Compliance support', 'Risk identification', 'Documentation systems'],
+  },
+  {
+    num: '04',
+    title: 'Brand & Market Integration',
+    sub: 'Align your operations with growth.',
+    points: ['Brand positioning', 'Marketing strategy', 'Customer experience design', 'Growth planning', 'Launch support'],
+  },
+]
+
+const WHY = [
+  {
+    icon: 'hub',
+    title: 'We simplify complexity.',
+    body: 'Business challenges often come from fragmented systems. We connect strategy, operations, finance, compliance, branding, and execution under one framework.',
+  },
+  {
+    icon: 'person_check',
+    title: 'Founder-first approach.',
+    body: 'Every business is different. Solutions are designed around your stage, industry, and ambition.',
+  },
+  {
+    icon: 'trending_up',
+    title: 'Built for long-term growth.',
+    body: "Our focus isn't short-term fixes. It's creating businesses capable of scaling with confidence.",
+  },
+]
+
+const WHO = [
+  'New Entrepreneurs',
+  'Growing Businesses',
+  'Family Businesses',
+  'Professionals Building Independent Ventures',
+  'Startups Preparing for Scale',
+  'SMEs Seeking Structure & Growth',
+]
+
+const OUTCOMES = [
+  'Greater operational clarity',
+  'Stronger decision-making frameworks',
+  'Improved execution systems',
+  'Reduced compliance gaps',
+  'Structured growth pathways',
+  'Better readiness for expansion',
 ]
 
 export default function ServiceBB() {
@@ -29,124 +132,200 @@ export default function ServiceBB() {
     <main className="pt-[82px] bg-[#f7f9fc] text-[#191c1e] min-h-screen pb-24">
 
       {/* ── Breadcrumb */}
-      <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mt-12 mb-12">
-        <span className="font-body text-xs tracking-widest uppercase text-[#44474d]/60 font-semibold">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mt-12 mb-8">
+        <span className="font-body text-xs tracking-[0.2em] uppercase font-bold text-[#39475f] bg-[#eceef1] px-3 py-1.5 rounded-lg">
           START / Build Your Business
         </span>
       </div>
 
       {/* ── Hero */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-12 md:mb-32">
-        <div className="grid grid-cols-12 gap-6 items-end">
-          <div className="col-span-12 lg:col-span-7">
-            <h1
-              className="font-headline font-extrabold tracking-tighter leading-[0.9] text-[#0a192f] mb-8"
-              style={{ fontSize: 'clamp(3.5rem, 9vw, 7rem)' }}
-            >
-              Build Your <br /> Business
-            </h1>
-            <p className="font-body text-xl text-[#44474d] max-w-xl leading-relaxed">
-              Transition from vision to operation. We provide the architectural blueprint for your commercial
-              success through precision-engineered strategy and structural excellence.
-            </p>
-          </div>
-          <div className="col-span-12 lg:col-span-5 flex flex-col justify-end items-start lg:items-end">
-            <div className="w-full h-80 bg-[#f2f4f7] overflow-hidden rounded-xl">
-              <img
-                alt="Professional Business Environment"
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80"
-              />
-            </div>
-          </div>
+      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-12 gap-8 items-end mb-12 md:mb-24">
+        <div className="col-span-12 lg:col-span-8">
+          <h1
+            className="font-headline font-extrabold tracking-tighter leading-[1.1] text-[#0a192f] mb-8"
+            style={{ fontSize: 'clamp(3rem, 6vw, 5rem)' }}
+          >
+            Build Beyond an Idea.<br />
+            <span className="text-[#515f78]">Build With Structure.</span>
+          </h1>
+          <p className="font-body text-xl text-[#5a5e6a] max-w-2xl leading-relaxed mb-4">
+            Every successful business begins with a vision. Sustainable businesses are built on systems, clarity, and execution.
+          </p>
+          <p className="font-body text-base text-[#5a5e6a] max-w-2xl leading-relaxed mb-6">
+            At Business Simplified, we work with founders, professionals, startups, and growing enterprises to transform ideas into structured, scalable businesses — with strategy, compliance, operations, branding, and growth working together from day one.
+          </p>
+          <p className="font-headline font-extrabold text-[#0a192f] leading-snug" style={{ fontSize: 'clamp(1.1rem, 2vw, 1.5rem)' }}>
+            We don't just help you start.<br />
+            <span className="text-[#e31e24]">We help you build businesses designed to last.</span>
+          </p>
         </div>
-      </section>
-
-      {/* ── Bento Grid */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-16 md:mb-32">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-          {/* Foundation Card */}
-          <div className="md:col-span-2 bg-white border border-slate-100 p-10 lg:p-12 rounded-xl flex flex-col justify-between group shadow-sm">
-            <div>
-              <span className="material-symbols-outlined text-[#0a192f] mb-8 block" style={{ fontSize: '36px' }}>architecture</span>
-              <h3 className="font-headline text-3xl font-bold mb-4 text-[#0a192f]">Strategic Foundation</h3>
-              <p className="font-body text-[#44474d] leading-relaxed max-w-lg">
-                We don't just launch businesses; we engineer market leaders. Our methodology begins with
-                deep-tissue market analysis and structural planning to ensure your business stands on an
-                unshakeable foundation of data and design.
-              </p>
-            </div>
-            <div className="mt-12 flex flex-wrap gap-3">
-              <span className="px-4 py-2 bg-[#eceef1] font-body text-xs font-bold rounded-full tracking-wider uppercase text-[#0a192f]">Market Analysis</span>
-              <span className="px-4 py-2 bg-[#eceef1] font-body text-xs font-bold rounded-full tracking-wider uppercase text-[#0a192f]">Structural Design</span>
-            </div>
-          </div>
-
-          {/* Accent Image Card */}
-          <div className="bg-[#0a192f] p-1 rounded-xl overflow-hidden relative group min-h-[280px]">
+        <div className="col-span-12 lg:col-span-4 flex flex-col">
+          <div className="w-full h-64 bg-[#eceef1] rounded-xl overflow-hidden">
             <img
-              alt="Architectural detail"
-              className="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700 absolute inset-0"
-              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80"
+              alt="Professional Business Environment"
+              className="w-full h-full object-cover"
+              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80"
             />
-            <div className="absolute bottom-8 left-8 z-10">
-              <p className="text-white font-headline text-2xl font-extrabold leading-tight">
-                Precision <br /> Engineering
-              </p>
-            </div>
           </div>
-
-          {/* Process Card */}
-          <div className="bg-[#f2f4f7] p-10 lg:p-12 rounded-xl flex flex-col justify-center">
-            <h4 className="font-headline font-bold text-[#0a192f]/10 mb-6" style={{ fontSize: '3rem' }}>01</h4>
-            <h3 className="font-headline text-xl font-bold mb-4 text-[#0a192f]">Operational Blueprint</h3>
-            <p className="font-body text-sm text-[#44474d] leading-relaxed">
-              Establishing the internal workflows, governance models, and technical stacks required
-              for seamless daily execution and rapid scalability.
-            </p>
-          </div>
-
-          {/* Growth Card */}
-          <div className="md:col-span-2 bg-white border border-slate-100 p-10 lg:p-12 rounded-xl flex flex-col md:flex-row gap-12 items-center shadow-sm">
-            <div className="flex-1">
-              <h4 className="font-headline font-bold text-[#0a192f]/10 mb-6" style={{ fontSize: '3rem' }}>02</h4>
-              <h3 className="font-headline text-xl font-bold mb-4 text-[#0a192f]">Growth Integration</h3>
-              <p className="font-body text-sm text-[#44474d] leading-relaxed">
-                Implementing high-performance marketing and sales frameworks that are natively integrated
-                into your core business operations.
-              </p>
-            </div>
-            <div className="w-full md:w-64 h-48 bg-[#eceef1] rounded-lg overflow-hidden flex-shrink-0">
-              <img
-                alt="Planning Workspace"
-                className="w-full h-full object-cover grayscale"
-                src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=600&q=80"
-              />
-            </div>
-          </div>
-
+          <Link
+            to="/contact"
+            className="self-start inline-flex items-center gap-2 bg-[#0a192f] text-white px-8 py-4 rounded-lg font-body font-bold text-sm uppercase tracking-widest hover:bg-[#1a2f4f] transition-colors mt-4 group"
+          >
+            Let's Talk
+            <span className="material-symbols-outlined text-[19px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </Link>
         </div>
       </section>
 
-      {/* ── Metrics */}
+      {/* ── From Vision to Execution */}
       <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-16 md:mb-32">
-        <div className="bg-[#0a192f] text-white p-8 md:p-12 lg:p-16 rounded-xl relative overflow-hidden">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 relative z-10">
-            <div>
-              <p className="font-headline font-extrabold tracking-tighter mb-2" style={{ fontSize: '3.5rem' }}>150+</p>
-              <p className="font-body text-xs tracking-widest uppercase opacity-60">Architectures Built</p>
+        {/* Header */}
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
+          <h2
+            className="font-headline font-extrabold text-[#0a192f] tracking-tighter"
+            style={{ fontSize: 'clamp(1.8rem, 3vw, 2.6rem)' }}
+          >
+            From Vision to Execution
+          </h2>
+          <p className="font-body text-[#5a5e6a] text-base max-w-md md:text-right leading-relaxed">
+            Starting or scaling a business can feel overwhelming. We simplify the process through a structured approach.
+          </p>
+        </div>
+
+        {/* Strips */}
+        <div className="space-y-3">
+          {STEPS.map((step, i) => {
+            const dark = i % 2 === 0
+            return (
+              <div
+                key={step.num}
+                className={`relative rounded-xl overflow-hidden ${dark ? 'bg-[#0a192f]' : 'bg-white border border-slate-200'}`}
+              >
+                {/* Watermark number */}
+                <span
+                  className={`absolute -top-6 -left-3 font-headline font-black leading-none select-none pointer-events-none ${dark ? 'text-white/5' : 'text-[#0a192f]/5'}`}
+                  style={{ fontSize: '11rem' }}
+                >
+                  {step.num}
+                </span>
+
+                <div className="relative z-10 p-7 md:p-8 lg:p-10 grid grid-cols-12 gap-6 items-center">
+
+                  {/* Step badge + title + sub */}
+                  <div className="col-span-12 lg:col-span-4 flex flex-col gap-2">
+                    <span
+                      className="font-headline font-extrabold leading-none text-[#e31e24]"
+                      style={{ fontSize: '2.2rem' }}
+                    >
+                      {step.num}
+                    </span>
+                    <h3 className={`font-headline text-xl font-bold ${dark ? 'text-white' : 'text-[#0a192f]'}`}>
+                      {step.title}
+                    </h3>
+                    <p className={`font-body text-sm leading-relaxed ${dark ? 'text-[#b9c7e4]' : 'text-[#5a5e6a]'}`}>
+                      {step.sub}
+                    </p>
+                  </div>
+
+                  {/* Divider */}
+                  <div className={`hidden lg:flex col-span-1 justify-center`}>
+                    <div className={`h-20 w-px ${dark ? 'bg-white/10' : 'bg-slate-200'}`} />
+                  </div>
+
+                  {/* Bullet tags */}
+                  <div className="col-span-12 lg:col-span-7 flex flex-wrap gap-2">
+                    {step.points.map(pt => (
+                      <span
+                        key={pt}
+                        className={`px-4 py-2 rounded-full font-body text-xs font-bold tracking-wide ${dark ? 'bg-white/10 text-[#b9c7e4]' : 'bg-[#f2f4f7] text-[#0a192f]'}`}
+                      >
+                        {pt}
+                      </span>
+                    ))}
+                  </div>
+
+                </div>
+              </div>
+            )
+          })}
+        </div>
+      </section>
+
+      {/* ── Why Business Simplified */}
+      <section className="bg-[#eceef1] py-16 md:py-24 mb-16 md:mb-32">
+        <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16">
+          <h2
+            className="font-headline font-extrabold text-[#0a192f] tracking-tighter mb-10"
+            style={{ fontSize: 'clamp(1.8rem, 3vw, 2.6rem)' }}
+          >
+            Why Business Simplified?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {WHY.map(w => (
+              <div key={w.title} className="bg-white rounded-xl p-8 flex flex-col border border-slate-200">
+                <span className="material-symbols-outlined text-[#0a192f] mb-5" style={{ fontSize: '32px' }}>{w.icon}</span>
+                <h4 className="font-headline text-lg font-bold text-[#0a192f] mb-3">{w.title}</h4>
+                <p className="font-body text-sm text-[#5a5e6a] leading-relaxed">{w.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Who We Work With + Engagement Outcomes */}
+      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-16 md:mb-32">
+
+        {/* Section label */}
+        <div className="flex items-center gap-4 mb-6">
+          <div className="flex gap-1">
+            <span className="block h-[3px] w-8 bg-[#e31e24] rounded-full" />
+            <span className="block h-[3px] w-4 bg-[#eceef1] rounded-full" />
+          </div>
+          <span className="font-body text-xs tracking-[0.2em] uppercase font-bold text-[#39475f]">Impact & Reach</span>
+        </div>
+
+        <div className="grid grid-cols-12 gap-4">
+
+          {/* Who We Work With — dark card */}
+          <div className="col-span-12 lg:col-span-5 bg-[#0a192f] rounded-xl p-8 lg:p-10 relative overflow-hidden flex flex-col">
+            {/* Watermark */}
+            <span className="absolute -bottom-6 -right-4 font-headline font-black text-white/5 select-none leading-none pointer-events-none" style={{ fontSize: '9rem' }}>WHO</span>
+
+            <h3 className="font-headline text-2xl font-bold text-white mb-2 relative z-10">Who We Work With</h3>
+            <p className="font-body text-[#b9c7e4] text-sm mb-8 relative z-10">Built for every stage of the business journey.</p>
+
+            {/* Chips */}
+            <div className="flex flex-wrap gap-2 relative z-10">
+              {WHO.map(w => (
+                <span
+                  key={w}
+                  className="px-4 py-2.5 rounded-full border border-white/15 bg-white/8 font-body text-sm text-white/80 hover:bg-white/15 hover:text-white transition-colors cursor-default"
+                >
+                  {w}
+                </span>
+              ))}
             </div>
-            <div>
-              <p className="font-headline font-extrabold tracking-tighter mb-2" style={{ fontSize: '3.5rem' }}>4.2B</p>
-              <p className="font-body text-xs tracking-widest uppercase opacity-60">Capital Optimized</p>
-            </div>
-            <div>
-              <p className="font-headline font-extrabold tracking-tighter mb-2" style={{ fontSize: '3.5rem' }}>12</p>
-              <p className="font-body text-xs tracking-widest uppercase opacity-60">Global Markets</p>
+
+            <div className="absolute bottom-[-15%] left-[-10%] w-56 h-56 bg-[#e31e24]/15 blur-[80px] rounded-full pointer-events-none" />
+          </div>
+
+          {/* Engagement Outcomes — grid of numbered cards */}
+          <div className="col-span-12 lg:col-span-7 bg-white border border-slate-200 rounded-xl p-8 lg:p-10">
+            <h3 className="font-headline text-2xl font-bold text-[#0a192f] mb-1">Engagement Outcomes</h3>
+            <p className="font-body text-sm text-[#5a5e6a] mb-8">Businesses we support gain:</p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {OUTCOMES.map((o, i) => (
+                <div key={o} className="flex items-start gap-4 bg-[#f7f9fc] rounded-xl p-4 border border-slate-100">
+                  <span className="font-headline font-extrabold text-[#0a192f]/15 leading-none shrink-0 mt-0.5" style={{ fontSize: '1.6rem' }}>
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <span className="font-body text-sm text-[#39475f] leading-snug pt-1">{o}</span>
+                </div>
+              ))}
             </div>
           </div>
-          <div className="absolute -right-20 -bottom-20 w-96 h-96 bg-white/5 rounded-full blur-3xl pointer-events-none" />
+
         </div>
       </section>
 
@@ -161,9 +340,9 @@ export default function ServiceBB() {
               className="font-headline font-extrabold text-white tracking-tighter mb-2"
               style={{ fontSize: 'clamp(1.6rem, 3vw, 2.5rem)' }}
             >
-              Ready to build something lasting?
+              Ready to Build Something That Lasts?
             </h3>
-            <p className="font-body text-white/50 text-base">Transform your business with our consulting expertise.</p>
+            <p className="font-body text-white/50 text-base">Build with clarity. Scale with confidence.</p>
           </div>
           <Link
             to="/contact"

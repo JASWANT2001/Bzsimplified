@@ -21,7 +21,7 @@ const SERVICES_B = [
   { label: 'Ensure Compliance',   href: '/service/ec' },
   { label: 'Manage Operations',   href: '/service/mo' },
   { label: 'Empower Your Team',   href: '/service/et' },
-  { label: 'Grow Your Business',  href: '/service/gb' },
+  { label: 'Virtual COO',         href: '/service/vc' },
 ]
 
 const CONTACT = [

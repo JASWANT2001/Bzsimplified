@@ -3,6 +3,14 @@ import FAQ from '../components/FAQ'
 
 const FAQS = [
   {
+    q: 'What does protecting our brand actually include?',
+    a: 'Brand protection includes governance frameworks, reputation safeguards, compliance structures, trademark registration coordination, and IP protection support to secure your business assets.',
+  },
+  {
+    q: 'Why should we secure trademarks early?',
+    a: 'Early trademark registration reduces risks of disputes, duplication, and loss of brand equity while strengthening your position during expansion and fundraising.',
+  },
+  {
     q: 'What does "protecting your brand" actually involve?',
     a: 'It covers four pillars: trademark registration, contract frameworks, brand governance policies, and crisis response protocols. Together these ensure no external party can dilute or misuse your identity, and your internal teams maintain consistent standards.',
   },
@@ -46,7 +54,7 @@ export default function ServicePB() {
             <span className="text-[#515f78]">Secure your legacy.</span>
           </h1>
           <p className="font-body text-xl text-[#5a5e6a] max-w-2xl leading-relaxed">
-            In a volatile market, brand stability is your most valuable asset. Our Protect Your Brand framework ensures your market positioning remains unshakeable against internal shifts and external pressures.
+            Your brand is more than a logo — it is reputation, trust, and commercial value. In an evolving market, protecting your intellectual assets is as critical as growing them. Our Protect Your Brand framework safeguards your identity against legal, competitive, and operational risks.
           </p>
         </div>
         <div className="col-span-12 lg:col-span-4 flex justify-end">
@@ -69,9 +77,9 @@ export default function ServicePB() {
           <div className="md:col-span-2 bg-white border border-slate-100 rounded-xl p-10 lg:p-12 flex flex-col justify-between min-h-[360px] shadow-sm">
             <div>
               <span className="material-symbols-outlined text-[#0a192f] mb-6 block" style={{ fontSize: '36px' }}>verified_user</span>
-              <h3 className="font-headline text-3xl font-bold mb-4 text-[#0a192f]">Risk Mitigation Strategy</h3>
+              <h3 className="font-headline text-3xl font-bold mb-4 text-[#0a192f]">Risk Mitigation &amp; Brand Protection</h3>
               <p className="font-body text-[#5a5e6a] leading-relaxed max-w-md">
-                Identify vulnerabilities in your brand architecture before they become liabilities. We develop comprehensive crisis response protocols and structural safeguards that keep your reputation pristine during market transitions.
+                Identify vulnerabilities before they become liabilities. We build safeguards that protect your reputation, strengthen governance, and preserve market trust during growth, expansion, or transition.
               </p>
             </div>
             <div className="flex flex-wrap gap-3 mt-8">
@@ -87,9 +95,9 @@ export default function ServicePB() {
           <div className="bg-[#0a192f] text-white rounded-xl p-10 flex flex-col justify-between relative overflow-hidden">
             <div className="relative z-10">
               <span className="material-symbols-outlined mb-6 block" style={{ fontSize: '32px' }}>monitoring</span>
-              <h4 className="font-headline text-xl font-bold mb-3">Market Sentiment Tracking</h4>
+              <h4 className="font-headline text-xl font-bold mb-3">Trademark &amp; Intellectual Property Protection</h4>
               <p className="font-body text-[#b9c7e4] text-sm leading-relaxed">
-                Real-time analysis of brand perception across markets to ensure alignment with core values.
+                Secure your Trademarks and IP across the Indian Subcontinent, ensuring your brand names, logos, and proprietary assets remain protected as your business scales. We coordinate with legal and registration partners — acting as the single bridge between your business and the ecosystem involved.
               </p>
             </div>
             <div className="pt-6 border-t border-white/10 mt-6 relative z-10">
@@ -97,7 +105,7 @@ export default function ServicePB() {
                 to="/contact"
                 className="inline-flex items-center gap-2 text-white text-xs font-body font-bold uppercase tracking-widest hover:gap-4 transition-all duration-200"
               >
-                Explore Metrics
+                Explore Protection
                 <span className="material-symbols-outlined text-sm">arrow_forward</span>
               </Link>
             </div>
@@ -110,7 +118,7 @@ export default function ServicePB() {
               <span className="material-symbols-outlined text-[#0a192f] mb-6 block" style={{ fontSize: '32px' }}>gavel</span>
               <h4 className="font-headline text-xl font-bold mb-3 text-[#0a192f]">Compliance &amp; Governance</h4>
               <p className="font-body text-[#5a5e6a] text-sm leading-relaxed">
-                Institutionalising brand standards through rigorous internal policy frameworks and governance models.
+                Institutionalising brand standards through robust policy frameworks and governance models that support long-term stability.
               </p>
             </div>
             <div className="pt-6 border-t border-slate-200 mt-6">
@@ -129,7 +137,7 @@ export default function ServicePB() {
             <div className="flex-1">
               <h3 className="font-headline text-2xl font-bold mb-4 text-[#0a192f]">Strategic Brand Insurance</h3>
               <p className="font-body text-[#5a5e6a] leading-relaxed text-sm">
-                Our proprietary stabilisation methodology ensures that even during rapid scaling or mergers, the core identity of your brand remains the central anchor of your business operations.
+                Our stabilisation methodology ensures that during scaling, restructuring, or partnerships, the core identity of your brand remains protected and commercially valuable.
               </p>
               <Link
                 to="/contact"
@@ -166,17 +174,17 @@ export default function ServicePB() {
                   {
                     num: '01',
                     title: 'Audit & Assessment',
-                    desc: 'Deep-dive analysis of current brand equity and identifying friction points in your market presence.',
+                    desc: 'Evaluate current brand equity, trademark exposure, IP vulnerabilities, and identify risks affecting long-term brand security.',
                   },
                   {
                     num: '02',
                     title: 'Framework Design',
-                    desc: 'Architecting the custom governance and protection layers specific to your industry vertical.',
+                    desc: 'Develop governance structures, protection protocols, and IP safeguarding strategies aligned with your industry and growth ambitions.',
                   },
                   {
                     num: '03',
                     title: 'Deployment & Integration',
-                    desc: 'Seamlessly embedding the stabilisation protocols into your existing corporate operational flow.',
+                    desc: 'Embed compliance, trademark coordination, and protection systems into your operational workflows for ongoing brand resilience.',
                   },
                 ].map(step => (
                   <div key={step.num} className="flex gap-6">
@@ -224,7 +232,7 @@ export default function ServicePB() {
 
       {/* ── Metrics */}
       <section className="bg-[#eceef1] py-16 md:py-24">
-        <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16">
+        <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="border-l-4 border-[#0a192f] pl-8">
             <div className="font-headline font-extrabold text-[#0a192f] mb-2" style={{ fontSize: '3.5rem' }}>200+</div>
             <div className="font-body text-xs font-bold uppercase tracking-[0.3em] text-[#39475f]">Brands Protected</div>
@@ -235,7 +243,11 @@ export default function ServicePB() {
           </div>
           <div className="border-l-4 border-[#0a192f] pl-8">
             <div className="font-headline font-extrabold text-[#0a192f] mb-2" style={{ fontSize: '3.5rem' }}>7d</div>
-            <div className="font-body text-xs font-bold uppercase tracking-[0.3em] text-[#39475f]">Average Filing Time</div>
+            <div className="font-body text-xs font-bold uppercase tracking-[0.3em] text-[#39475f]">Average Filing Initiation Time</div>
+          </div>
+          <div className="border-l-4 border-[#e31e24] pl-8">
+            <div className="font-headline font-extrabold text-[#0a192f] mb-2" style={{ fontSize: '3.5rem' }}>100%</div>
+            <div className="font-body text-xs font-bold uppercase tracking-[0.3em] text-[#39475f]">IP Coordination Support Across Registration Lifecycle</div>
           </div>
         </div>
       </section>
@@ -251,9 +263,9 @@ export default function ServicePB() {
               className="font-headline font-extrabold text-white tracking-tighter mb-2"
               style={{ fontSize: 'clamp(1.6rem, 3vw, 2.5rem)' }}
             >
-              Ready to build something lasting?
+              Secure your legacy. Protect what you've built.
             </h3>
-            <p className="font-body text-white/50 text-base">Transform your business with our consulting expertise.</p>
+            <p className="font-body text-white/50 text-base">Business Simplified ensures businesses do not just grow — they grow with protection, ownership, and long-term resilience.</p>
           </div>
           <Link
             to="/contact"

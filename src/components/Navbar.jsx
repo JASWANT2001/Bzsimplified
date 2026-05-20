@@ -12,18 +12,16 @@ const NAV_LINKS = [
 ]
 
 const SERVICES = [
-  { stage: 'START', code: 'LB', num: '01', title: 'Launch Your Brand', desc: 'Identity, positioning, and go-to-market.' },
-  { stage: 'START', code: 'BB', num: '02', title: 'Build Your Business', desc: 'Legal structure, ops, and funding systems.' },
-  { stage: 'START', code: 'ST', num: '03', title: 'Set Up Your Tech', desc: 'Core stack to run and measure your business.' },
-  { stage: 'STABILIZE', code: 'PB', num: '04', title: 'Protect Your Brand', desc: 'Trademarks, contracts, and brand governance.' },
-  { stage: 'STABILIZE', code: 'FF', num: '05', title: 'Fix Your Finances', desc: 'Books, cash flow, and profitability controls.' },
-  { stage: 'STABILIZE', code: 'EC', num: '06', title: 'Ensure Compliance', desc: 'Statutory, regulatory, and internal policy.' },
-  { stage: 'SCALE',     code: 'MO', num: '07', title: 'Manage Your Operations', desc: 'SOPs, KPIs, and daily rhythm of execution.' },
-  { stage: 'SCALE', code: 'ET', num: '08', title: 'Empower Your Team', desc: 'Org design, hiring, and leadership cadence.' },
-  { stage: 'SCALE', code: 'GB', num: '09', title: 'Grow Your Business', desc: 'Expansion strategy, capital, and new markets.' },
+  { code: 'LB', num: '01', title: 'Launch Your Brand',      desc: 'Identity, positioning, and go-to-market.' },
+  { code: 'BB', num: '02', title: 'Build Your Business',    desc: 'Legal structure, ops, and funding systems.' },
+  { code: 'ST', num: '03', title: 'Set Up Your Tech',       desc: 'Core stack to run and measure your business.' },
+  { code: 'PB', num: '04', title: 'Protect Your Brand',     desc: 'Trademarks, contracts, and brand governance.' },
+  { code: 'FF', num: '05', title: 'Fix Your Finances',      desc: 'Books, cash flow, and profitability controls.' },
+  { code: 'EC', num: '06', title: 'Ensure Compliance',      desc: 'Statutory, regulatory, and internal policy.' },
+  { code: 'MO', num: '07', title: 'Manage Your Operations', desc: 'SOPs, KPIs, and daily rhythm of execution.' },
+  { code: 'ET', num: '08', title: 'Empower Your Team',      desc: 'Org design, hiring, and leadership cadence.' },
+  { code: 'VC', num: '09', title: 'Virtual COO',            desc: 'Operational systems, processes, and execution.' },
 ]
-
-const STAGES = ['START', 'STABILIZE', 'SCALE']
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen]         = useState(false)
@@ -135,43 +133,24 @@ export default function Navbar() {
                 {/* Desktop Services Dropdown */}
                 {link.hasDropdown && (
                   <div onMouseEnter={showServices} onMouseLeave={hideServices} className={`fixed top-[82px] left-1/2 -translate-x-1/2 pt-4 bg-transparent transition-all duration-300 ${servicesHovered ? 'opacity-100 visible pointer-events-auto' : 'opacity-0 invisible pointer-events-none'}`}>
-                    <div className="p-8 min-w-[900px] bg-white rounded-2xl shadow-2xl border border-slate-100">
-                      <div className="grid grid-cols-3 gap-8">
-                        {STAGES.map(stage => {
-                          const stageServices = SERVICES.filter(s => s.stage === stage)
-                          return (
-                            <div key={stage}>
-                              <div className="flex items-center gap-2 mb-6">
-                                <div className="w-2 h-2 bg-[#0a192f] rounded-full" />
-                                <h4 className="font-headline font-bold text-[#0a192f] text-xs tracking-widest">{stage}</h4>
-                                <span className="text-slate-400 font-body text-xs ml-auto">{stageServices[0].num} — {stageServices[stageServices.length - 1].num}</span>
-                              </div>
-                              <div className="space-y-3">
-                                {stageServices.map(service => (
-                                  <Link
-                                    key={service.code}
-                                    to={`/service/${service.code.toLowerCase()}`}
-                                    onClick={() => setServicesHovered(false)}
-                                    className="group block p-3 rounded-lg hover:bg-slate-50 transition-all duration-200"
-                                  >
-                                    <div className="flex items-start gap-2">
-                                      <div className="flex items-center justify-center w-7 h-7 rounded-lg bg-slate-100 flex-shrink-0 group-hover:bg-[#0a192f] transition-colors duration-300">
-                                        <span className="font-headline font-bold text-[10px] text-[#0a192f] group-hover:text-white">{service.code}</span>
-                                      </div>
-                                      <div className="flex-1">
-                                        <p className="font-headline font-bold text-[#0a192f] text-[13px] group-hover:text-[#e31e24] transition-colors">{service.title}</p>
-                                        <p className="font-body text-slate-500 text-[11px] leading-tight mt-0.5">{service.desc}</p>
-                                      </div>
-                                      <span className="w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center flex-shrink-0 group-hover:bg-[#0a192f] transition-colors duration-200">
-                                        <span className="material-symbols-outlined text-[12px] text-slate-500 group-hover:text-white transition-colors">arrow_forward</span>
-                                      </span>
-                                    </div>
-                                  </Link>
-                                ))}
-                              </div>
+                    <div className="p-6 min-w-[860px] bg-white rounded-2xl shadow-2xl border border-slate-100">
+                      <div className="grid grid-cols-3 gap-2">
+                        {SERVICES.map(service => (
+                          <Link
+                            key={service.code}
+                            to={`/service/${service.code.toLowerCase()}`}
+                            onClick={() => setServicesHovered(false)}
+                            className="group flex items-start gap-3 p-4 rounded-xl hover:bg-slate-50 transition-all duration-200"
+                          >
+                            <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-slate-100 flex-shrink-0 group-hover:bg-[#0a192f] transition-colors duration-300">
+                              <span className="font-headline font-bold text-[11px] text-[#0a192f] group-hover:text-white">{service.code}</span>
                             </div>
-                          )
-                        })}
+                            <div className="flex-1 min-w-0">
+                              <p className="font-headline font-bold text-[#0a192f] text-[13px] group-hover:text-[#e31e24] transition-colors leading-snug">{service.title}</p>
+                              <p className="font-body text-slate-500 text-[11px] leading-tight mt-0.5">{service.desc}</p>
+                            </div>
+                          </Link>
+                        ))}
                       </div>
                     </div>
                   </div>
@@ -262,33 +241,24 @@ export default function Navbar() {
                       </span>
                     </button>
 
-                    {/* Expanded services — grouped by stage */}
+                    {/* Expanded services — flat list */}
                     <div className={`overflow-hidden transition-all duration-300 ease-in-out ${servicesExpanded ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'}`}>
                       <div className="ml-3 mt-1 mb-3 border-l-2 border-slate-100 pl-3">
-                        {STAGES.map(stage => (
-                          <div key={stage} className="mb-3">
-                            {/* Stage label */}
-                            <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#e31e24] px-2 py-1.5">
-                              {stage}
-                            </p>
-                            {/* Service links */}
-                            {SERVICES.filter(s => s.stage === stage).map(s => (
-                              <Link
-                                key={s.code}
-                                to={`/service/${s.code.toLowerCase()}`}
-                                onClick={close}
-                                className="flex items-center gap-3 px-2 py-2.5 rounded-lg hover:bg-slate-50 transition-colors group/item"
-                              >
-                                <span className="font-headline font-black text-[10px] text-slate-300 group-hover/item:text-[#0a192f] w-5 shrink-0 transition-colors">
-                                  {s.num}
-                                </span>
-                                <span className="font-body text-[14px] text-slate-600 group-hover/item:text-[#0a192f] transition-colors leading-snug flex-1">
-                                  {s.title}
-                                </span>
-                                <span className="material-symbols-outlined text-[16px] text-slate-300 group-hover/item:text-[#e31e24] transition-colors shrink-0">arrow_forward</span>
-                              </Link>
-                            ))}
-                          </div>
+                        {SERVICES.map(s => (
+                          <Link
+                            key={s.code}
+                            to={`/service/${s.code.toLowerCase()}`}
+                            onClick={close}
+                            className="flex items-center gap-3 px-2 py-2.5 rounded-lg hover:bg-slate-50 transition-colors group/item"
+                          >
+                            <span className="font-headline font-black text-[10px] text-slate-300 group-hover/item:text-[#0a192f] w-5 shrink-0 transition-colors">
+                              {s.num}
+                            </span>
+                            <span className="font-body text-[14px] text-slate-600 group-hover/item:text-[#0a192f] transition-colors leading-snug flex-1">
+                              {s.title}
+                            </span>
+                            <span className="material-symbols-outlined text-[16px] text-slate-300 group-hover/item:text-[#e31e24] transition-colors shrink-0">arrow_forward</span>
+                          </Link>
                         ))}
                       </div>
                     </div>

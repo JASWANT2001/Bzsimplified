@@ -28,7 +28,7 @@ const SERVICES_DATA = {
   lb: {
     code: 'LB',
     num: '01',
-    stage: 'START',
+
     title: 'Launch Your Brand',
     description: 'Identity, positioning, and go-to-market.',
     fullDescription: 'Establish a compelling brand identity that resonates with your target market. We guide you through positioning strategy, brand architecture, and creating a go-to-market plan that sets you up for rapid growth.',
@@ -43,7 +43,7 @@ const SERVICES_DATA = {
   bb: {
     code: 'BB',
     num: '02',
-    stage: 'START',
+
     title: 'Build Your Business',
     description: 'Legal structure, ops, and funding systems.',
     fullDescription: 'Establish the legal and operational foundations of your business. From entity structure and governance to initial process documentation, we ensure your business is built on solid ground.',
@@ -58,7 +58,7 @@ const SERVICES_DATA = {
   st: {
     code: 'ST',
     num: '03',
-    stage: 'START',
+
     title: 'Set Up Your Tech',
     description: 'Core stack to run and measure your business.',
     fullDescription: 'Build the technical foundation for scalable growth. We help you select and implement the core technology stack needed to operate efficiently and gather meaningful business intelligence.',
@@ -73,7 +73,7 @@ const SERVICES_DATA = {
   pb: {
     code: 'PB',
     num: '04',
-    stage: 'STABILIZE',
+
     title: 'Protect Your Brand',
     description: 'Trademarks, contracts, and brand governance.',
     fullDescription: 'Safeguard your intellectual property and brand assets. We establish comprehensive brand governance, secure necessary trademarks, and implement contract frameworks that protect your interests.',
@@ -88,7 +88,7 @@ const SERVICES_DATA = {
   ff: {
     code: 'FF',
     num: '05',
-    stage: 'STABILIZE',
+
     title: 'Fix Your Finances',
     description: 'Books, cash flow, and profitability controls.',
     fullDescription: 'Establish financial discipline and clarity. We implement accounting systems, cash flow management, and profitability controls that give you real-time visibility into your financial health.',
@@ -103,7 +103,7 @@ const SERVICES_DATA = {
   ec: {
     code: 'EC',
     num: '06',
-    stage: 'STABILIZE',
+
     title: 'Ensure Compliance',
     description: 'Statutory, regulatory, and internal policy.',
     fullDescription: 'Build a robust compliance framework that meets regulatory requirements and minimizes risk. We establish policies, procedures, and monitoring systems appropriate to your industry and jurisdiction.',
@@ -118,7 +118,7 @@ const SERVICES_DATA = {
   mo: {
     code: 'MO',
     num: '07',
-    stage: 'STABILIZE',
+
     title: 'Manage Your Operations',
     description: 'SOPs, KPIs, and daily rhythm of execution.',
     fullDescription: 'Establish operational excellence through systematic processes and performance metrics. We document SOPs, define KPIs, and create the daily rhythm that ensures consistent, high-quality execution.',
@@ -133,7 +133,7 @@ const SERVICES_DATA = {
   et: {
     code: 'ET',
     num: '08',
-    stage: 'SCALE',
+
     title: 'Empower Your Team',
     description: 'Org design, hiring, and leadership cadence.',
     fullDescription: 'Build a high-performance organization through strategic talent decisions. We design organizational structures, implement hiring frameworks, and establish leadership rhythms that scale with your growth.',
@@ -145,19 +145,19 @@ const SERVICES_DATA = {
       'Succession planning',
     ],
   },
-  gb: {
-    code: 'GB',
+  vc: {
+    code: 'VC',
     num: '09',
-    stage: 'SCALE',
-    title: 'Grow Your Business',
-    description: 'Expansion strategy, capital, and new markets.',
-    fullDescription: 'Execute scalable growth across new markets and customer segments. We develop expansion strategies, optimize capital allocation, and identify high-ROI opportunities for growth.',
+
+    title: 'Virtual COO',
+    description: 'Operational systems, processes, and execution.',
+    fullDescription: 'We function as your Virtual Chief Operating Officer — building the operational backbone, aligning teams, optimising workflows, and creating processes that enable people to perform at their best.',
     benefits: [
-      'Market expansion strategy',
-      'Product diversification roadmap',
-      'Capital allocation framework',
-      'M&A opportunity assessment',
-      'Growth metrics dashboard',
+      'Process architecture & SOPs',
+      'Workflow optimisation',
+      'Governance & performance tracking',
+      'Technology & vendor coordination',
+      'Risk mitigation & continuity planning',
     ],
   },
 }
@@ -210,7 +210,7 @@ export default function Service() {
                 </div>
                 <div>
                   <p className="font-body text-[12px] text-slate-500 uppercase tracking-widest">
-                    {service.stage} — Service {service.num}
+                    Service {service.num}
                   </p>
                 </div>
               </div>
