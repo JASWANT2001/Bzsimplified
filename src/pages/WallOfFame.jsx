@@ -3,60 +3,105 @@ import { Link, useNavigate } from 'react-router-dom'
 
 const CLIENTS = [
   {
-    id: 'jp-spine',
-    name: 'JP Spine and Neural',
-    category: 'Medical',
-    videoId: 'LXb3EKWsInQ',
-    img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuABFBag88KDWYrcqxiCl02SJCxMRD5zBkfgGhZP92RcjmgsUBcf4spoa-D5WDgL6OXA7yR3r4zCda2uh69p6RTBwkEoPAF-T7PKqnzl1rbpieahEiQmSA5CYj1obH7G_rTFTiFwloAWdgu0r4QQFvnE9g3wFR_92caFxTCB76PiO3ozaE9THNEmJ6FPRdu-B3dm1egkbiJrVpUPVKnQ_-nJsnlrz_ROz5aO5HhQkpA8t6xxRoZcI5Ymbf35cjIvWY1T0UmF1oSeHk4j',
-    summary: 'Pioneering precision in neurological care and skeletal health through structural optimization.',
-    quote: "A masterclass in operational structuralism. Bzsimplified didn't just consult; they re-architected our future.",
-    voice: "Partnering with Bzsimplified marked the turning point for JP Spine and Neural. We were at an inflection point where our medical breakthroughs were outpacing our operational foundations. The team brought an architectural precision to our workflow, transforming fragmented processes into a cohesive, scalable engine.",
-    pillars: [
-      { icon: 'visibility', title: 'Operational Clarity',     desc: 'Defining transparency in medical logistics through rigorous data mapping and structural hierarchy.' },
-      { icon: 'layers',     title: 'Scalable Infrastructure', desc: 'Implementing modular management systems designed to expand across regional care centers.' },
-    ],
-    metrics: [
-      { value: '40%',  label: 'Growth in Case Efficiency'     },
-      { value: '12M',  label: 'Months to Infrastructure Scale' },
-      { value: '100%', label: 'Brand Integrity Retained'       },
-    ],
-  },
-  {
-    id: 'palagarai',
-    name: 'Palagarai Kudai',
+    id: 'sathyam-grand',
+    name: 'Sathyam Grand Resort',
     category: 'Hospitality',
-    videoId: 'hY7m5jjJ9mM',
-    img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB62bq0DAT6NwWPwNALfJHQf6HhwUnZXzUbh8oQTBLqt8yY5HXmJ-DO04y3YLs7gsJfogKLkE2bGuqC5fk6eFTcIrsIqvrIphbo9SxGqx6ZYgtboh2m9sMj0cHfpbbaysf1bfQ4x6tHx0u1zdJQ99GxcgiRRmyVkkHLx7gquu_530B0upaNY3ubxZ3jOMxO8hBvuguYx2xvhtRMNyscEuPfdkOIWaXJVFk-zOloO_mgrbtmFkEmGWaC8k89SdjMEQBjVmeahznRSX_Q',
-    summary: 'Revitalizing legacy hospitality through editorial precision and cultural narrative-building.',
-    quote: "Revitalizing legacy hospitality through editorial precision. Bzsimplified captured the soul of our heritage.",
-    voice: "At Palagarai Kudai, we faced the challenge of scaling a heritage brand without losing its authentic cultural texture. Bzsimplified understood that our product wasn't just a room, but a narrative. They refined our internal workflows to ensure every guest touchpoint reflected our legacy.",
+    img: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80',
+    summary: 'Operational transformation through operations restructuring, food cost optimization, and process standardization — improving efficiency, reducing wastage, and strengthening profitability.',
+    voice: 'Business Simplified enabled operational transformation through operations restructuring, food cost optimization, and process standardization, improving efficiency, reducing wastage, and strengthening profitability through scalable business systems.',
     pillars: [
-      { icon: 'history_edu',  title: 'Cultural Stewardship', desc: 'Preserving architectural and traditional values through standardized service manuals.' },
-      { icon: 'auto_awesome', title: 'Service Excellence',   desc: 'Transforming guest experiences with a data-driven approach to bespoke luxury hospitality.' },
+      { icon: 'tune',           title: 'Operations Restructuring', desc: 'Redesigned operational workflows to eliminate inefficiencies and establish scalable processes across the resort.' },
+      { icon: 'savings',        title: 'Food Cost Optimization',   desc: 'Implemented structured purchase controls and wastage reduction systems to strengthen profitability.' },
     ],
     metrics: [
-      { value: '35%', label: 'Operational Efficiency Up'  },
-      { value: '18M', label: 'Months to Global Scale'     },
-      { value: '4.9', label: 'Global Satisfaction Rating' },
+      { value: 'F&B',   label: 'Cost Optimized'          },
+      { value: 'SOPs',  label: 'Standardized'            },
+      { value: 'Scale', label: 'Ready for Growth'        },
     ],
   },
   {
-    id: 'astra',
-    name: 'Astra Dynamics',
-    category: 'Engineering',
-    videoId: 'Wch3gJG2GJ4',
-    img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDahVPHQuppd39XdB0zw-ZuxI8YSmBhC5TZQ4rczgnBNkq31xFNQdYiCwlV8u01BRK3JXWoJpYZZAMk2b3JfbgI8txYA0Y-pP79NCsbs8ME7eNMBZEYoDI8ppMcKyDfB8hXUpW_haFXoXcGO7M-yoDUxm8mdgcRF3-sU5qIrexk3DECBbp1KH8KXw6PR0GEozbNz0T6J_SUJJoW26YSTRnEJJpDo2yAf-bsiGsZk1ImzR1jEtgkf5kRueS7PGgEuYKbnPrXbMCPED5d',
-    summary: 'Engineering the future of aerospace consultancy with streamlined logistical frameworks.',
-    quote: "Engineering the future of aerospace consultancy. Logistical complexity met its match.",
-    voice: "In the aerospace sector, engineering precision is the only currency. Astra Dynamics needed a partner that understood high-stakes logistical frameworks. Bzsimplified dismantled our legacy silos and rebuilt them into an integrated, real-time tracking framework.",
+    id: 'leader-mojo',
+    name: 'Leader Mojo',
+    category: 'Leadership & Consulting',
+    img: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80',
+    summary: 'GTM strategy and market positioning — strengthening market presence, refining messaging, and building a scalable approach to reach, engage, and transform leaders and teams.',
+    voice: 'Business Simplified partnered with Leader Mojo to drive Go-To-Market (GTM) strategy and positioning, helping strengthen market presence, refine messaging, and build a scalable approach to reach, engage, and transform leaders and teams effectively.',
     pillars: [
-      { icon: 'rocket_launch',           title: 'Strategic Logistics',    desc: 'Optimizing supply chain velocity for time-sensitive aerospace components and consulting.' },
-      { icon: 'precision_manufacturing', title: 'Framework Optimization', desc: 'Designing rigid yet adaptable management protocols for global engineering teams.' },
+      { icon: 'ads_click',     title: 'GTM Strategy',        desc: 'Developed a structured go-to-market approach to reach and engage leadership audiences at scale.' },
+      { icon: 'record_voice_over', title: 'Brand Positioning', desc: 'Refined messaging and positioning to clearly communicate the Leader Mojo value proposition.' },
     ],
     metrics: [
-      { value: '100%', label: 'Brand Integrity Maintained' },
-      { value: '30%',  label: 'Logistical Optimization'    },
-      { value: '$4M',  label: 'Annual Operational Savings'  },
+      { value: 'GTM',      label: 'Strategy Deployed'    },
+      { value: 'Brand',    label: 'Positioning Refined'  },
+      { value: 'Reach',    label: 'Scaled Effectively'   },
+    ],
+  },
+  {
+    id: 'palagara-koodai',
+    name: 'Palagara Koodai',
+    category: 'F&B',
+    img: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80',
+    summary: 'From Logo to Launch — a complete brand journey across all 7 service verticals, transforming a founder\'s vision into a structured, market-ready business.',
+    voice: 'What began as an idea from Akash, inspired by his Karaikudi roots and passion for authentic food experiences, evolved into a complete brand journey through Business Simplified. From Logo to Launch, we led the entire process across all 7 service verticals — spanning branding, strategy, operations, market positioning, systems, growth enablement, and launch execution — transforming a vision into a structured, market-ready business.',
+    pillars: [
+      { icon: 'rocket_launch', title: 'Logo to Launch',       desc: 'End-to-end brand creation and launch execution across all 7 Business Simplified service verticals.' },
+      { icon: 'storefront',    title: 'Market-Ready Systems', desc: 'Built operational foundations, market positioning, and growth systems to launch with confidence.' },
+    ],
+    metrics: [
+      { value: '7',        label: 'Service Verticals'    },
+      { value: 'Full',     label: 'Brand Journey'        },
+      { value: 'Launch',   label: 'Executed End-to-End'  },
+    ],
+  },
+  {
+    id: 'muttram',
+    name: 'Muttram – The Carnatic Canteen',
+    category: 'F&B',
+    img: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80',
+    summary: 'Menu engineering, food costing, and GTM strategy — optimizing profitability, refining pricing, and positioning the brand for sustainable growth while preserving authentic South Indian culinary identity.',
+    voice: 'Business Simplified drove the transformation of Muttram through focused work on menu engineering, food costing, and Go-To-Market (GTM) strategy — optimizing profitability, refining pricing structures, and positioning the brand for sustainable growth while preserving the authenticity of South Indian culinary experiences.',
+    pillars: [
+      { icon: 'restaurant_menu', title: 'Menu Engineering',    desc: 'Restructured the menu for profitability and guest experience while maintaining authentic culinary identity.' },
+      { icon: 'trending_up',     title: 'GTM & Pricing',       desc: 'Developed market positioning and refined pricing structures to drive sustainable growth.' },
+    ],
+    metrics: [
+      { value: 'F&B',       label: 'Cost Engineered'       },
+      { value: 'GTM',       label: 'Strategy Built'        },
+      { value: 'Brand',     label: 'Authentically Scaled'  },
+    ],
+  },
+  {
+    id: 'hibiscus-ecr',
+    name: 'Hibiscus on ECR',
+    category: 'Hospitality',
+    img: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=800&q=80',
+    summary: 'Full-spectrum operational support — rota management, payroll restructuring, food cost optimization, purchase systems, GTM strategy, and Virtual COO — building operational discipline and enabling scalable growth.',
+    voice: 'Business Simplified strengthened hospitality operations at Hibiscus on ECR through rota management, payroll restructuring, food cost optimization, purchase systems implementation, Go-To-Market (GTM) strategy, and virtual COO support — building operational discipline, improving profitability, and enabling scalable growth.',
+    pillars: [
+      { icon: 'account_tree', title: 'Virtual COO Support',    desc: 'Provided ongoing operational leadership across HR, finance, purchase, and systems as a virtual COO.' },
+      { icon: 'savings',      title: 'Operational Discipline', desc: 'Implemented rota management, payroll restructuring, and food cost controls to improve profitability.' },
+    ],
+    metrics: [
+      { value: 'COO',       label: 'Virtual Support'       },
+      { value: 'Payroll',   label: 'Restructured'          },
+      { value: 'Full',      label: 'Ops Transformation'    },
+    ],
+  },
+  {
+    id: 'jp-neuro-spine',
+    name: 'JP Neuro Spine Hospital',
+    category: 'Healthcare',
+    img: 'https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=800&q=80',
+    summary: 'Concept to launch — complete healthcare enterprise built from the ground up, covering brand, operations, compliance, recruitment, accounts, GTM, and ongoing Virtual COO support.',
+    voice: 'Business Simplified led the complete journey from concept to launch, working directly with the founder doctors to build the vision, brand, and operational foundation of the practice. From logo creation and brand positioning to end-to-end business setup, we executed every critical function — including purchase systems, employee recruitment, accounts management, process implementation, compliance, Go-To-Market (GTM) strategy, and ongoing Virtual COO support — creating a structured, scalable healthcare enterprise designed for sustainable growth.',
+    pillars: [
+      { icon: 'local_hospital', title: 'Concept to Launch',   desc: 'Led the full journey from vision to operational launch — brand, systems, compliance, and staffing.' },
+      { icon: 'account_tree',   title: 'Virtual COO Support', desc: 'Ongoing operational leadership covering accounts, processes, GTM, and enterprise management.' },
+    ],
+    metrics: [
+      { value: 'Full',      label: 'End-to-End Build'     },
+      { value: 'GTM',       label: 'Strategy Executed'    },
+      { value: 'COO',       label: 'Ongoing Support'      },
     ],
   },
 ]
@@ -177,7 +222,7 @@ export default function WallOfFame() {
                     <div className="flex items-center justify-between px-4 md:px-10 py-3.5 border-b border-slate-100">
                       <div className="flex items-center gap-2">
                         <span className="w-2 h-2 rounded-full bg-[#e31e24] shrink-0" />
-                        <span className="font-body font-bold text-[11px] uppercase tracking-[0.22em] text-slate-400">Video Testimonial</span>
+                        <span className="font-body font-bold text-[11px] uppercase tracking-[0.22em] text-slate-400">{client.videoId ? 'Video Testimonial' : 'Client Story'}</span>
                       </div>
                       <button
                         onClick={() => toggle(client.id)}
@@ -196,19 +241,30 @@ export default function WallOfFame() {
                       <h2 className="font-headline font-black text-[#0a192f] text-xl md:text-3xl tracking-tight">{client.name}</h2>
                     </div>
 
-                    {/* Video — full 16:9 on mobile, constrained on desktop */}
-                    <div className="px-0 md:px-10 lg:px-20 pb-6">
-                      <div className="relative w-full overflow-hidden bg-black md:rounded-2xl md:shadow-2xl aspect-video lg:max-w-[900px] lg:mx-auto">
-                        <iframe
-                          key={client.videoId}
-                          src={`https://www.youtube.com/embed/${client.videoId}?rel=0&modestbranding=1&playsinline=1&fs=1&color=white`}
-                          title={client.name}
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
-                          allowFullScreen
-                          className="absolute inset-0 w-full h-full border-0"
-                        />
+                    {/* Video — only shown when a videoId exists */}
+                    {client.videoId && (
+                      <div className="px-0 md:px-10 lg:px-20 pb-6">
+                        <div className="relative w-full overflow-hidden bg-black md:rounded-2xl md:shadow-2xl aspect-video lg:max-w-[900px] lg:mx-auto">
+                          <iframe
+                            key={client.videoId}
+                            src={`https://www.youtube.com/embed/${client.videoId}?rel=0&modestbranding=1&playsinline=1&fs=1&color=white`}
+                            title={client.name}
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+                            allowFullScreen
+                            className="absolute inset-0 w-full h-full border-0"
+                          />
+                        </div>
                       </div>
-                    </div>
+                    )}
+
+                    {/* Hero image when no video */}
+                    {!client.videoId && (
+                      <div className="px-0 md:px-10 lg:px-20 pb-6">
+                        <div className="w-full overflow-hidden md:rounded-2xl md:shadow-2xl lg:max-w-[900px] lg:mx-auto aspect-video">
+                          <img src={client.img} alt={client.name} className="w-full h-full object-cover" />
+                        </div>
+                      </div>
+                    )}
 
                     {/* Pull quote */}
                     <div className="px-4 md:px-16 lg:px-28 py-7 bg-[#f7f9fc] text-center">

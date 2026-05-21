@@ -5,38 +5,45 @@ const TEAM = [
   {
     id: '01',
     name: 'Kalyan',
-    role: 'Founder & Managing Director',
+    role: 'Founder & CEO',
     dept: 'Leadership',
-    bio: 'An alumnus of the Indian School of Business (ISB), Kalyan brings over 18 years of cross-functional expertise across Retail, Real Estate, Food & Beverage, and Technology. As a former CEO of a multi-million dollar business, he specialises in steering complex organisations through pivotal growth phases with architectural precision.',
-    expertise: ['Strategic Leadership', 'Business Transformation', 'Market Expansion'],
-    website: 'kalyan.com',
+    bio: 'Kalyan is a business growth consultant and strategic advisor with 25+ years of experience helping organizations simplify complexity, build scalable structures, and drive sustainable growth. Through Business Simplified, he partners with founders and leaders to turn ambition into execution and strategy into measurable outcomes. His expertise spans business strategy, operational excellence, retail ecosystems, organizational development, and leadership enablement — combining clarity with execution to deliver lasting impact.',
+    philosophy: 'Simplify operations. Strengthen execution. Scale with confidence.',
+    expertise: ['Business Strategy', 'Operational Excellence', 'Leadership Enablement'],
+    photo: 'https://ik.imagekit.io/ux5g9gl0h/kalyan%20029-01-20.jpg',
     flip: false,
   },
   {
     id: '02',
     name: 'Sunil Jose',
-    role: 'Director – Growth & Strategy',
-    dept: 'Strategy',
-    bio: 'With an MBA from a premier institute and over 15 years of experience across high-growth startups and established corporations, Sunil specialises in market-entry strategies and operational scaling. His editorial approach ensures every tactical move aligns with long-term brand integrity and sustainable profitability.',
-    expertise: ['GTM Strategy', 'Growth Hacking', 'Corporate Venture'],
+    role: 'Consultant – IP & Copyright',
+    dept: 'Legal & IP',
+    bio: 'Sunil is a strategic advisor on Intellectual Property (IP) Advisory at Business Simplified, helping founders and businesses protect brands, ideas, and creative assets through strategic trademark and copyright solutions. With expertise in IP law and legal advisory, he enables organizations to secure intellectual assets and strengthen long-term business value.',
+    philosophy: 'Protect ideas. Secure brands. Strengthen value.',
+    expertise: ['IP Advisory', 'Trademark & Copyright', 'Legal Advisory'],
+    photo: 'https://ik.imagekit.io/ux5g9gl0h/sunil%20jose.png',
     flip: true,
   },
   {
     id: '03',
-    name: 'Dinesh',
-    role: 'Head of Operations & Logistics',
-    dept: 'Operations',
-    bio: 'Dinesh is the operational anchor of Bzsimplified. With a deep background in supply chain management and lean operations, he has optimised logistics for national retail chains. His focus is on the "Sustainable" side of Sustainable Scale — ensuring backend infrastructure is as sophisticated as the front-end brand promise.',
-    expertise: ['Supply Chain', 'Operational Excellence', 'Efficiency Audit'],
+    name: 'Arunkumar Rajaram',
+    role: 'Learning & Training Excellence Lead',
+    dept: 'Learning & Development',
+    bio: 'Arun leads Training and Capability Development at Business Simplified, helping individuals and organizations build skills that drive performance, leadership, and long-term growth. Through practical, impact-focused learning, he enables teams to strengthen capabilities and translate learning into action.',
+    philosophy: 'Develop people. Strengthen capabilities. Enable growth.',
+    expertise: ['Training & Development', 'Capability Building', 'Leadership Development'],
+    photo: 'https://ik.imagekit.io/ux5g9gl0h/arun.png',
     flip: false,
   },
   {
     id: '04',
-    name: 'Sanal',
-    role: 'Lead – Technology & Integration',
-    dept: 'Technology',
-    bio: "Sanal bridges the gap between vision and execution through technology. With a background in software architecture and digital transformation, he ensures our clients' tech stacks are robust, scalable, and intuitive — approached with an editorial eye for simplicity and performance.",
-    expertise: ['Digital Transformation', 'SaaS Integration', 'Tech Roadmap'],
+    name: 'Dinesh',
+    role: 'Financial Strategy & Project Funding Lead',
+    dept: 'Finance',
+    bio: 'Dinesh leads Financial Restructuring and Project Funding Solutions at Business Simplified, helping businesses strengthen financial foundations, optimize structures, and unlock growth through strategic funding support. With expertise in financial planning, restructuring, and capital facilitation, he enables organizations to improve financial health, secure funding, and scale with confidence.',
+    philosophy: 'Strengthen finances. Unlock funding. Enable growth.',
+    expertise: ['Financial Restructuring', 'Project Funding', 'Capital Facilitation'],
+    photo: 'https://ik.imagekit.io/ux5g9gl0h/dinesh.png',
     flip: true,
   },
 ]
@@ -56,7 +63,7 @@ function useReveal() {
   }, [])
 }
 
-function PhotoCard({ flip }) {
+function PhotoCard({ flip, photo, name }) {
   return (
     <div className="relative h-full min-h-[240px] sm:min-h-[280px]">
       <div
@@ -64,10 +71,18 @@ function PhotoCard({ flip }) {
         style={{ transform: flip ? 'translate(-8px, 8px)' : 'translate(8px, 8px)' }}
       />
       <div className="relative h-full bg-gradient-to-br from-[#0a192f]/8 to-[#0a192f]/3 rounded-xl overflow-hidden border border-[#0a192f]/8">
+        {photo ? (
+          <img
+            src={photo}
+            alt={name}
+            className="w-full h-full object-cover object-top"
+          />
+        ) : (
+          <div className="absolute inset-0 flex items-center justify-center">
+            <span className="material-symbols-outlined text-[#0a192f]/10" style={{ fontSize: '72px' }}>person</span>
+          </div>
+        )}
         <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-[#0a192f]/15 to-transparent pointer-events-none" />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <span className="material-symbols-outlined text-[#0a192f]/10" style={{ fontSize: '72px' }}>person</span>
-        </div>
         <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-[#e31e24]" />
       </div>
     </div>
@@ -75,7 +90,7 @@ function PhotoCard({ flip }) {
 }
 
 function MemberSection({ member }) {
-  const { id, name, role, dept, bio, expertise, website, flip } = member
+  const { id, name, role, dept, bio, philosophy, expertise, photo, flip } = member
 
   return (
     <section className={`relative py-14 md:py-24 overflow-hidden reveal ${flip ? 'bg-white' : 'bg-slate-50/80'}`}>
@@ -100,9 +115,9 @@ function MemberSection({ member }) {
       <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16">
         <div className={`flex flex-col lg:flex-row items-stretch gap-12 lg:gap-16 ${flip ? 'lg:flex-row-reverse' : ''}`}>
 
-          {/* Photo — full width, height matches content */}
+          {/* Photo */}
           <div className="w-full lg:w-5/12">
-            <PhotoCard flip={flip} />
+            <PhotoCard flip={flip} photo={photo} name={name} />
           </div>
 
           {/* Content */}
@@ -124,11 +139,18 @@ function MemberSection({ member }) {
               {role}
             </p>
 
-            <p className="font-body text-slate-500 text-[16px] leading-[1.9] mb-9 max-w-[520px]">
+            <p className="font-body text-slate-500 text-[16px] leading-[1.9] mb-7 max-w-[520px]">
               {bio}
             </p>
 
-            {/* Expertise pills (rounded — different from reference's square chips) */}
+            {/* Philosophy / focus line */}
+            <div className="flex items-start gap-3 mb-8 pl-4 border-l-[3px] border-[#e31e24]">
+              <p className="font-body font-semibold text-[#0a192f] text-[14px] leading-relaxed italic">
+                {philosophy}
+              </p>
+            </div>
+
+            {/* Expertise pills */}
             <div className="flex flex-wrap gap-2 mb-9">
               {expertise.map(tag => (
                 <span
@@ -158,21 +180,6 @@ function MemberSection({ member }) {
                 <span className="material-symbols-outlined text-[16px]">call</span>
                 Call
               </a>
-              {website && (
-                <a
-                  href={`https://${website}`}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 text-[#0a192f] border border-slate-200 bg-white font-body font-semibold text-[14px] rounded-full hover:border-[#0a192f] hover:-translate-y-0.5 transition-all duration-200"
-                >
-                  <span className="material-symbols-outlined text-[16px]">language</span>
-                  {website}
-                </a>
-              )}
-              <button className="inline-flex items-center gap-1.5 px-3 py-2.5 text-[#0a192f] font-body font-bold text-[14px] group hover:text-[#e31e24] transition-colors duration-200">
-                Insights
-                <span className="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform duration-200">arrow_forward</span>
-              </button>
             </div>
           </div>
 

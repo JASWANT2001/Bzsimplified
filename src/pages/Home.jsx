@@ -139,7 +139,8 @@ export default function Home() {
                 </h1>
 
                 <p className="text-slate-300 text-base md:text-lg leading-relaxed mb-8 md:mb-16 font-body font-light max-w-2xl">
-                  Navigating scale requires more than ambition — it requires an architectural foundation. We help ambitious leaders transform operational complexity into sustainable competitive advantage through structural clarity and execution rigor.
+                Empowering businesses with structural clarity, operational discipline, and strategic momentum. 
+
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
@@ -150,10 +151,10 @@ export default function Home() {
                     <span className="material-symbols-outlined text-[19px] flex-shrink-0">arrow_forward</span>
                     Start Your Transformation
                   </Link>
-                  <button className="group inline-flex items-center justify-center gap-2.5 px-7 py-4 border border-white/30 text-white font-body font-medium text-[15px] rounded-full transition-all duration-300 hover:bg-white/[0.08] hover:border-white/50 hover:shadow-[0_8px_24px_rgba(255,255,255,0.1)]">
+                  {/* <button className="group inline-flex items-center justify-center gap-2.5 px-7 py-4 border border-white/30 text-white font-body font-medium text-[15px] rounded-full transition-all duration-300 hover:bg-white/[0.08] hover:border-white/50 hover:shadow-[0_8px_24px_rgba(255,255,255,0.1)]">
                     <span className="material-symbols-outlined text-[21px] group-hover:-translate-y-0.5 transition-transform">play_circle</span>
                     <span>See Our Approach</span>
-                  </button>
+                  </button> */}
                 </div>
 
               </div>
@@ -486,81 +487,18 @@ export default function Home() {
         {/* ═══════════════════════════════════════════════════════
             BRANDS
         ═══════════════════════════════════════════════════════ */}
-        <section className="py-16 md:py-24 bg-gradient-to-b from-white via-slate-50 to-slate-100" id="brands">
-          <div className="mx-auto px-6 md:px-10 lg:px-16 max-w-[1440px]">
-            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 mb-10 md:mb-16">
-              <div>
-                <p className="eyebrow">Brands We Represent</p>
-                <h2 className="font-headline font-extrabold text-[#0a192f] text-4xl md:text-5xl tracking-tight leading-tight">
-                  Premium brands in our portfolio
-                </h2>
-              </div>
-              <p className="font-body text-slate-500 text-[15px] leading-relaxed max-w-sm lg:text-right">
-                Each brand we carry is vetted for operator-readiness and measurable client impact.
-              </p>
-            </div>
-
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {BRANDS.map(brand => (
-                <Link
-                  key={brand.name}
-
-                  className="group relative bg-[#0a192f] border border-white/10 rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:border-[#e31e24] hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col"
-                >
-                  {/* Shine sweep */}
-                  <div className="absolute inset-0 -top-1/2 -right-1/2 w-1/2 h-full bg-white/5 rotate-45 group-hover:translate-x-full transition-transform duration-700 pointer-events-none" />
-
-                  {/* Top row — icon + arrow always visible */}
-                  <div className="relative z-10 flex items-start justify-between mb-6">
-                    <div className="w-12 h-12 bg-white/10 group-hover:bg-[#e31e24] flex items-center justify-center rounded-xl transition-all duration-300">
-                      <span className="material-symbols-outlined text-white text-[23px]">
-                        {brand.icon}
-                      </span>
-                    </div>
-                    {/* Arrow — always shown, animates on hover */}
-                    <div className="w-8 h-8 rounded-full border border-white/20 group-hover:border-[#e31e24] group-hover:bg-[#e31e24] flex items-center justify-center transition-all duration-300">
-                      <span className="material-symbols-outlined text-white/50 group-hover:text-white text-[16px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300">
-                        arrow_outward
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Body */}
-                  <div className="relative z-10 flex flex-col flex-1">
-                    <h3 className="font-headline font-bold text-white text-lg mb-3">
-                      {brand.name}
-                    </h3>
-                    <p className="font-body text-white/60 group-hover:text-white/80 text-[14px] leading-relaxed flex-1 transition-colors duration-300">
-                      {brand.desc}
-                    </p>
-
-                    {/* Explore link — looks and acts like a link */}
-                    <div className="flex items-center justify-between mt-6 pt-5 border-t border-white/10 group-hover:border-white/20 transition-colors duration-300">
-                      <span className="font-body font-semibold text-[#e31e24] text-[14px] underline underline-offset-4 decoration-[#e31e24]/40 group-hover:decoration-[#e31e24] transition-all duration-200">
-                        Explore Brand
-                      </span>
-                      <span className="material-symbols-outlined text-[17px] text-[#e31e24] group-hover:translate-x-1 group-hover:-translate-y-0.5 transition-transform duration-200">
-                        arrow_outward
-                      </span>
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* ═══════════════════════════════════════════════════════
             WALL OF FAME
         ═══════════════════════════════════════════════════════ */}
-        <section className="py-20 md:py-32 bg-[#0a192f] overflow-hidden" id="wall-of-fame">
+        <section className="py-20 md:py-32 bg-[#eceef1] overflow-hidden" id="wall-of-fame">
           <div className="mx-auto px-6 md:px-10 lg:px-16 max-w-[1440px]">
             {/* Header */}
             <div className="mb-10 md:mb-16">
               <p className="font-body font-bold text-[14px] tracking-[0.18em] uppercase text-[#e31e24] mb-5">
                 Wall of Fame
               </p>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-headline font-black text-white leading-[1.05]">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-headline font-black text-[#0a192f] leading-[1.05]">
                 Brands we've helped build.
               </h2>
             </div>
@@ -571,7 +509,7 @@ export default function Home() {
                 <Link
                   key={brand.slug}
                   to="/wall-of-fame"
-                  className="group relative bg-white/[0.04] border border-white/10 rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:border-[#e31e24]/50 hover:shadow-[0_24px_60px_rgba(0,0,0,0.5)] flex flex-col cursor-pointer"
+                  className="group relative bg-white border border-slate-200 rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:border-[#e31e24]/40 hover:shadow-xl flex flex-col cursor-pointer"
                 >
                   {/* Image area */}
                   <div className="relative w-full aspect-[16/9] overflow-hidden flex-shrink-0">
@@ -580,7 +518,6 @@ export default function Home() {
                       alt={brand.name}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     />
-                    {/* Overlay darkens more on hover */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent group-hover:from-black/80 transition-all duration-500" />
 
                     {/* Sector slides up on hover */}
@@ -599,25 +536,25 @@ export default function Home() {
 
                   <div className="relative z-10 p-7 flex flex-col flex-1">
                     {/* Brand name */}
-                    <h4 className="text-xl font-headline font-black text-white mb-3 leading-tight group-hover:text-[#e31e24] transition-colors duration-300">
+                    <h4 className="text-xl font-headline font-black text-[#0a192f] mb-3 leading-tight group-hover:text-[#e31e24] transition-colors duration-300">
                       {brand.name}
                     </h4>
 
                     {/* What we did */}
-                    <p className="font-body text-slate-400 group-hover:text-slate-300 text-sm leading-relaxed flex-1 mb-5 transition-colors duration-300">
+                    <p className="font-body text-slate-500 group-hover:text-slate-700 text-sm leading-relaxed flex-1 mb-5 transition-colors duration-300">
                       {brand.what}
                     </p>
 
                     {/* Outcome pill */}
-                    <div className="inline-flex items-center gap-2 bg-white/5 group-hover:bg-white/10 border border-white/10 rounded-full px-4 py-2 mb-6 self-start transition-colors duration-300">
+                    <div className="inline-flex items-center gap-2 bg-[#f7f9fc] group-hover:bg-[#eceef1] border border-slate-200 rounded-full px-4 py-2 mb-6 self-start transition-colors duration-300">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#e31e24] flex-shrink-0" />
-                      <span className="font-body text-white/60 group-hover:text-white/80 text-xs transition-colors duration-300">{brand.outcome}</span>
+                      <span className="font-body text-slate-600 group-hover:text-[#0a192f] text-xs transition-colors duration-300">{brand.outcome}</span>
                     </div>
 
                     {/* View Testimonial */}
                     <div className="inline-flex items-center gap-2 self-start">
-                      <span className="material-symbols-outlined text-[19px] text-white/25 group-hover:text-[#e31e24] transition-colors duration-300">format_quote</span>
-                      <span className="font-body text-[13px] text-white/35 group-hover:text-white/80 transition-colors duration-300 border-b border-transparent group-hover:border-white/30 pb-px">
+                      <span className="material-symbols-outlined text-[19px] text-slate-300 group-hover:text-[#e31e24] transition-colors duration-300">format_quote</span>
+                      <span className="font-body text-[13px] text-slate-400 group-hover:text-[#0a192f] transition-colors duration-300 border-b border-transparent group-hover:border-slate-300 pb-px">
                         View Testimonial
                       </span>
                     </div>

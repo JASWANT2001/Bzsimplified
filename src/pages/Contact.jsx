@@ -11,7 +11,7 @@ const SERVICES = [
   { value: 'other',    label: 'Other / Not Sure Yet'               },
 ]
 
-const EMPTY = { name: '', email: '', company: '', service: '', message: '' }
+const EMPTY = { name: '', email: '', phone: '', company: '', message: '' }
 
 function Toast({ message, onClose }) {
   useEffect(() => {
@@ -43,8 +43,12 @@ export default function Contact() {
   const submit = async (e) => {
     e.preventDefault()
 
-    if (!form.name || !form.email || !form.message) {
-      setToast('Please fill all required fields.')
+    if (!form.name) {
+      setToast('Please enter your name.')
+      return
+    }
+    if (!form.email && !form.phone) {
+      setToast('Please provide an email or phone number.')
       return
     }
 
@@ -56,10 +60,10 @@ export default function Contact() {
         'template_f944vxi',
         {
           name: form.name,
-          email: form.email,
-          company: form.company,
-          service: form.service || 'Not specified',
-          message: form.message,
+          email: form.email || 'Not provided',
+          phone: form.phone || 'Not provided',
+          company: form.company || 'Not provided',
+          message: form.message || 'No note left',
         },
         'ctepv1oGsrcCxPkH4'
       )
@@ -99,9 +103,9 @@ export default function Contact() {
             className="font-headline font-black text-white tracking-tight leading-[1.05] mb-6"
             style={{ fontSize: 'clamp(1.8rem, 4.5vw, 4.2rem)' }}
           >
-            Big moves begin with one conversation
+            Have a question, project, or challenge? 
           </h1>
-          <p className="font-body text-white/45 text-[15px] sm:text-[16px] leading-relaxed mb-8 md:mb-10 max-w-[520px]">
+          <p className="font-body text-white/45 text-[18px] sm:text-[20px] leading-relaxed mb-8 md:mb-10 max-w-[520px]">
             No sales pitch, no obligations — just a real conversation about your business.
           </p>
           <div className="flex flex-wrap gap-3">
@@ -141,16 +145,11 @@ export default function Contact() {
 
             {/* Left — dark info panel */}
             <div className="bg-[#0a192f] rounded-2xl p-7 md:p-8 lg:p-10 flex flex-col text-white">
-              <p className="font-body text-white/50 text-[14px] leading-relaxed mb-10">
-                We partner with ambitious leaders to turn operational complexity into competitive advantage.
-                Start a conversation — no sales pitch, no obligations.
-              </p>
-
               <div className="space-y-7 flex-1">
                 {[
                   { icon: 'mail_outline', label: 'Email',         val: 'hello@bzsimplified.com' },
-                  { icon: 'phone',        label: 'Phone',         val: '+1 (800) 000-0000'      },
-                  { icon: 'schedule',     label: 'Response time', val: 'Within 48 hours'        },
+                  { icon: 'phone',        label: 'Phone',         val: '+91-9841027220'          },
+                  { icon: 'schedule',     label: 'Response time', val: 'Within 2 hours'         },
                 ].map(item => (
                   <div key={item.label} className="flex items-center gap-4">
                     <div className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0">
@@ -180,42 +179,27 @@ export default function Contact() {
               <form onSubmit={submit} className="space-y-5">
 
                 <div className="grid sm:grid-cols-2 gap-4">
-                  <Field label="Full Name *"  name="name"  type="text"  placeholder="Jane Smith"        value={form.name}  onChange={set} required focused={focused} setFocused={setFocused} />
-                  <Field label="Work Email *" name="email" type="email" placeholder="jane@company.com"  value={form.email} onChange={set} required focused={focused} setFocused={setFocused} />
+                  <Field label="Full Name *" name="name" type="text" placeholder="Jane Smith" value={form.name} onChange={set} required focused={focused} setFocused={setFocused} />
+                  <Field label="Work Email" name="email" type="email" placeholder="jane@company.com" value={form.email} onChange={set} focused={focused} setFocused={setFocused} />
                 </div>
 
                 <div className="grid sm:grid-cols-2 gap-4">
+                  <Field label="Phone" name="phone" type="tel" placeholder="+91 98765 43210" value={form.phone} onChange={set} focused={focused} setFocused={setFocused} />
                   <Field label="Company" name="company" type="text" placeholder="Acme Corp" value={form.company} onChange={set} focused={focused} setFocused={setFocused} />
-
-                  <div>
-                    <label className="block font-body font-medium text-[#0a192f] text-[13px] mb-1.5">Area of Interest</label>
-                    <div className="relative">
-                      <select
-                        name="service"
-                        value={form.service}
-                        onChange={set}
-                        className="w-full bg-white border border-slate-200 rounded-lg px-4 py-2.5 font-body text-[14px] appearance-none focus:outline-none focus:border-slate-400 focus:ring-1 focus:ring-slate-200 transition-all duration-200 cursor-pointer"
-                        style={{ color: form.service ? '#0a192f' : '#94a3b8' }}
-                      >
-                        <option value="" disabled style={{ color: '#94a3b8' }}>Select a service…</option>
-                        {SERVICES.map(s => <option key={s.value} value={s.value}>{s.label}</option>)}
-                      </select>
-                      <span className="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-[18px] pointer-events-none">expand_more</span>
-                    </div>
-                  </div>
                 </div>
 
+                <p className="font-body text-slate-400 text-[12px] -mt-2">* Email or phone is required — at least one must be provided.</p>
+
                 <div>
-                  <label className="block font-body font-medium text-[#0a192f] text-[13px] mb-1.5">What's the challenge? *</label>
+                  <label className="block font-body font-medium text-[#0a192f] text-[13px] mb-1.5">Would you like to leave a note? If yes, please share below.</label>
                   <textarea
                     name="message"
                     rows={4}
                     value={form.message}
                     onChange={set}
-                    required
                     onFocus={() => setFocused('message')}
                     onBlur={() => setFocused('')}
-                    placeholder="Tell us where you are, what you want to achieve, and what's holding you back…"
+                    placeholder="Share anything you'd like us to know before we connect…"
                     className={`w-full bg-white border rounded-lg px-4 py-2.5 font-body text-[14px] text-[#0a192f] placeholder:text-slate-400 focus:outline-none transition-all duration-200 resize-none ${focused === 'message' ? 'border-slate-400 ring-1 ring-slate-200' : 'border-slate-200'}`}
                   />
                 </div>

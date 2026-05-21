@@ -110,14 +110,14 @@ export default function ServiceVC() {
       </div>
 
       {/* ── Hero */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-12 gap-8 items-end mb-12 md:mb-24">
+      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-12 gap-8 items-start mb-12 md:mb-24">
         <div className="col-span-12 lg:col-span-8">
           <h1
             className="font-headline font-extrabold tracking-tighter leading-[1.1] text-[#0a192f] mb-8"
             style={{ fontSize: 'clamp(3rem, 6vw, 5rem)' }}
           >
-            Your Virtual COO.<br />
-            <span className="text-[#515f78]">Because processes define performance — not people.</span>
+            Your Virtual COO.
+            <span className="block text-[#515f78] -mt-2">Because processes define performance — not people.</span>
           </h1>
           <p className="font-body text-xl text-[#5a5e6a] max-w-2xl leading-relaxed mb-4">
             Businesses don't fail because of people alone. They fail when processes are unclear, fragmented, or dependent on individuals.
@@ -131,10 +131,11 @@ export default function ServiceVC() {
           </p>
         </div>
         <div className="col-span-12 lg:col-span-4 flex flex-col gap-4">
-          <div className="w-full h-64 bg-[#eceef1] rounded-xl overflow-hidden">
+          <div className="w-full bg-[#eceef1] rounded-xl overflow-hidden" style={{ minHeight: '320px' }}>
             <img
               alt="Operations and systems"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-top"
+              style={{ minHeight: '320px' }}
               src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=900&q=80"
             />
           </div>

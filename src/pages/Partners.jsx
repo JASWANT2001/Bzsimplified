@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom'
 const PARTNERS = [
   {
     name: 'Equinox Labs',
-    category: 'Research & Quality',
+    category: 'Quality & Compliance',
     icon: 'science',
     accent: '#e31e24',
     description:
-      'Setting the gold standard in analytical excellence. Providing rigorous quality controls and specialised laboratory services that empower data-driven decision-making processes.',
+      'Driving confidence through science, compliance, and quality assurance. With over 20 years of expertise, Equinox Labs is among India\'s leading FSSAI-approved and NABL-accredited testing and auditing partners, delivering trusted solutions in food, water, air, and environmental safety. Their nationwide network of laboratories, auditors, and domain experts empowers organisations to uphold the highest standards of compliance, safety, and operational excellence.',
     cta: 'Explore Collaboration',
   },
   {
@@ -16,17 +16,26 @@ const PARTNERS = [
     icon: 'memory',
     accent: '#0a192f',
     description:
-      'Global scale IT AMC service provider. Optimising operational continuity through precision engineering in servers, networks, and enterprise storage across multiple continents.',
-    cta: 'Infrastructure Specs',
+      'Delivering dependable IT infrastructure and AMC solutions with precision and speed, Haboteck helps businesses minimise downtime, strengthen operational continuity, and optimise enterprise performance. Specialising in servers, networks, storage systems, and end-user computing support, they provide proactive IT management designed to keep organisations running seamlessly at scale.',
+    cta: 'Explore Collaboration',
   },
   {
-    name: 'Purple Infotech',
-    category: 'Digital Transformation',
-    icon: 'cloud_done',
+    name: 'Razorpay Payroll',
+    category: 'Payroll & Compliance',
+    icon: 'payments',
     accent: '#e31e24',
     description:
-      'A premier Salesforce and Odoo Gold Partner, catalysing enterprise-wide digital transformation through seamless ERP integration and specialised cloud consulting.',
-    cta: 'View Portfolio',
+      'Simplifying payroll, compliance, and workforce management through intelligent automation. Razorpay Payroll enables businesses to process salaries, automate statutory filings, manage attendance, reimbursements, and streamline employee operations — all from a unified platform. Designed for scale, it empowers organisations to reduce manual effort, stay compliant, and focus on growth with confidence.',
+    cta: 'Explore Collaboration',
+  },
+  {
+    name: 'Purple Chillies Solutions',
+    category: 'Digital Transformation',
+    icon: 'cloud_done',
+    accent: '#0a192f',
+    description:
+      'Purple Chillies Solutions is a technology-driven consulting firm with over 5 years of proven expertise in delivering smart, scalable, and business-ready solutions. Specialising in platforms like Odoo, Salesforce, Microsoft Power Platform, E-Commerce, and Full-Stack Software Development, empowering organizations to digitally transform and achieve long-term customer success.',
+    cta: 'Explore Collaboration',
   },
 ]
 
@@ -122,7 +131,7 @@ export default function Partners() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {PARTNERS.map(p => (
               <div key={p.name} className="group bg-white border border-slate-200 rounded-xl p-7 md:p-10 flex flex-col transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 relative overflow-hidden"
                 style={{ borderTop: `4px solid ${p.accent}` }}
@@ -159,7 +168,7 @@ export default function Partners() {
       </section>
 
       {/* ── Partner Selection Standards */}
-      <section className="bg-[#0a192f] py-16 md:py-24 relative overflow-hidden">
+      {/* <section className="bg-[#0a192f] py-16 md:py-24 relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-[0.07] pointer-events-none"
           style={{ backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(227,30,36,0.1) 10px, rgba(227,30,36,0.1) 20px)' }}
@@ -168,7 +177,7 @@ export default function Partners() {
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-start">
 
-            {/* Header column */}
+     
             <div className="lg:col-span-4 flex flex-col justify-center">
               <div className="flex items-center gap-4 mb-4">
                 <div className="h-[2px] w-10 bg-[#e31e24]" />
@@ -186,10 +195,10 @@ export default function Partners() {
               </p>
             </div>
 
-            {/* Standards cards */}
+      
             <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-5">
 
-              {/* Domain Expertise — tall */}
+   
               <div className="group md:row-span-2 p-10 bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/[0.08] transition-all duration-500 flex flex-col justify-between relative">
                 <div className="absolute -top-10 -left-10 w-40 h-40 bg-[#e31e24]/10 rounded-full blur-3xl group-hover:bg-[#e31e24]/20 transition-all pointer-events-none" />
                 <div className="relative z-10">
@@ -204,7 +213,7 @@ export default function Partners() {
                 <span className="material-symbols-outlined text-white/5 mt-8 group-hover:text-white/10 transition-colors" style={{ fontSize: '56px' }}>verified</span>
               </div>
 
-              {/* Operational Rigor */}
+          
               <div className="group p-8 bg-white/5 border-l-4 border-l-[#e31e24] border-y border-r border-white/10 rounded-xl hover:bg-white/[0.08] transition-all">
                 <div className="flex items-start gap-5">
                   <div className="p-3 bg-white/10 rounded-lg shrink-0">
@@ -219,7 +228,7 @@ export default function Partners() {
                 </div>
               </div>
 
-              {/* Integration Synergy */}
+     
               <div className="group p-8 bg-white/5 border border-white/10 rounded-xl hover:bg-white/[0.08] transition-all relative overflow-hidden">
                 <span className="material-symbols-outlined absolute top-3 right-3 text-white/5" style={{ fontSize: '52px' }}>hub</span>
                 <div className="relative z-10">
@@ -233,7 +242,7 @@ export default function Partners() {
                 </div>
               </div>
 
-              {/* Strategic Alignment — wide */}
+
               <div className="md:col-span-2 group p-8 bg-white/5 border border-white/10 rounded-2xl flex flex-col md:flex-row items-center gap-6 hover:bg-white/[0.08] transition-all">
                 <div className="shrink-0 w-16 h-16 bg-[#e31e24]/10 rounded-full flex items-center justify-center border border-[#e31e24]/20 group-hover:scale-110 transition-transform">
                   <span className="material-symbols-outlined text-[#e31e24]" style={{ fontSize: '32px' }}>groups_3</span>
@@ -249,7 +258,7 @@ export default function Partners() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ── CTA */}
       <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 py-16">

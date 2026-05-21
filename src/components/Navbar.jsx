@@ -6,7 +6,7 @@ const NAV_LINKS = [
   { label: 'Services',      hasDropdown: true },
   { label: 'Teams',         href: '/teams', isLink: true },
   { label: 'Partners',      href: '/partners', isLink: true },
-  { label: 'Brands',        href: '/#brands'        },
+  // { label: 'Brands',        href: '/#brands'        },
   { label: 'Wall of Fame',  href: '/wall-of-fame', isLink: true },
   { label: 'Brand Stories', href: '/brand-stories', isLink: true },
 ]

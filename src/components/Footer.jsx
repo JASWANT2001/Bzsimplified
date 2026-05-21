@@ -76,7 +76,8 @@ export default function Footer() {
             </Link>
 
             <p className="font-body text-white/40 text-[13px] leading-relaxed max-w-[210px]">
-              Structural clarity for ambitious growth. We partner with founders to simplify operations and scale with confidence.
+  We help founders simplify operations and scale with purpose. 
+
             </p>
 
             <div>
@@ -98,11 +99,11 @@ export default function Footer() {
                 </a>
 
                 {/* X / Twitter */}
-                <a href="#" title="X (Twitter)" className="w-8 h-8 rounded-lg bg-white/8 hover:bg-white/15 border border-white/10 flex items-center justify-center transition-colors duration-200 group">
+                {/* <a href="#" title="X (Twitter)" className="w-8 h-8 rounded-lg bg-white/8 hover:bg-white/15 border border-white/10 flex items-center justify-center transition-colors duration-200 group">
                   <svg className="w-3.5 h-3.5 fill-white/50 group-hover:fill-white transition-colors duration-200" viewBox="0 0 24 24">
                     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                   </svg>
-                </a>
+                </a> */}
 
                 {/* Facebook */}
                 <a href="#" title="Facebook" className="w-8 h-8 rounded-lg bg-white/8 hover:bg-[#1877f2]/20 border border-white/10 flex items-center justify-center transition-colors duration-200 group">
@@ -112,11 +113,11 @@ export default function Footer() {
                 </a>
 
                 {/* YouTube */}
-                <a href="#" title="YouTube" className="w-8 h-8 rounded-lg bg-white/8 hover:bg-[#ff0000]/20 border border-white/10 flex items-center justify-center transition-colors duration-200 group">
+                {/* <a href="#" title="YouTube" className="w-8 h-8 rounded-lg bg-white/8 hover:bg-[#ff0000]/20 border border-white/10 flex items-center justify-center transition-colors duration-200 group">
                   <svg className="w-3.5 h-3.5 fill-white/50 group-hover:fill-[#ff0000] transition-colors duration-200" viewBox="0 0 24 24">
                     <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                   </svg>
-                </a>
+                </a> */}
 
               </div>
             </div>
