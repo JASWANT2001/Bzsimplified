@@ -102,7 +102,7 @@ export default function Contact() {
           <h1
             className="font-headline font-black text-white tracking-tight leading-[1.05] mb-6"
           >
-            Have a question, project, or challenge?
+            Have a question / project / challenge?
           </h1>
           <p className="font-body text-white/45 text-[18px] sm:text-[20px] leading-relaxed mb-8 md:mb-10 max-w-[520px]">
             No sales pitch, no obligations. Just a real conversation about your business.
@@ -144,7 +144,9 @@ export default function Contact() {
 
             {/* Left — dark info panel */}
             <div className="bg-[#0a192f] rounded-2xl p-7 md:p-8 lg:p-10 flex flex-col text-white">
-              <div className="space-y-7 flex-1">
+
+              {/* Contact details */}
+              <div className="space-y-6">
                 {[
                   { icon: 'mail_outline', label: 'Email',         val: 'hello@bzsimplified.com' },
                   { icon: 'phone',        label: 'Phone',         val: '+91-9841027220'          },
@@ -162,7 +164,37 @@ export default function Contact() {
                 ))}
               </div>
 
-              <div className="mt-12 pt-8 border-t border-white/10">
+              {/* Divider */}
+              <div className="my-8 border-t border-white/10" />
+
+              {/* What happens next */}
+              <div className="flex-1">
+                <p className="text-white/35 text-[11px] uppercase tracking-[0.25em] font-bold mb-5">What happens next</p>
+                <div className="space-y-5">
+                  {[
+                    { step: '01', icon: 'edit_note',       title: 'Submit your details',   desc: 'Fill the form and tell us what you need.' },
+                    { step: '02', icon: 'support_agent',   title: 'We reach out',           desc: 'Our team contacts you within 2 hours.' },
+                    { step: '03', icon: 'handshake',       title: 'Discovery call',         desc: 'A focused 30-min session to understand your goals.' },
+                    { step: '04', icon: 'rocket_launch',   title: 'We get to work',         desc: 'Tailored plan built and execution begins.' },
+                  ].map((s, i, arr) => (
+                    <div key={s.step} className="flex gap-4">
+                      <div className="flex flex-col items-center">
+                        <div className="w-8 h-8 rounded-full bg-[#e31e24]/15 border border-[#e31e24]/30 flex items-center justify-center flex-shrink-0">
+                          <span className="material-symbols-outlined text-[#e31e24] text-[15px]">{s.icon}</span>
+                        </div>
+                        {i < arr.length - 1 && <div className="w-px flex-1 bg-white/10 my-1" />}
+                      </div>
+                      <div className="pb-1">
+                        <p className="text-white text-[13px] font-semibold leading-tight">{s.title}</p>
+                        <p className="text-white/35 text-[12px] leading-relaxed mt-0.5">{s.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Footer note */}
+              <div className="mt-8 pt-6 border-t border-white/10">
                 <div className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#e31e24]" />
                   <p className="text-white/30 text-[12px] font-body">Strictly confidential. Real people.</p>

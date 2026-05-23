@@ -4,28 +4,52 @@ import { Link } from 'react-router-dom'
 
 const WALL_OF_FAME = [
   {
-    slug: 'brand-alpha',
-    name: 'Brand Alpha',
-    sector: 'F&B',
-    what: 'End-to-end franchise system design, SOPs, training manuals, and outlet rollout playbook.',
-    outcome: '12 outlets launched in 8 months',
-    img: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80',
+    slug: 'sathyam-grand',
+    name: 'Sathyam Grand Resort',
+    sector: 'Hospitality',
+    what: 'Operational transformation through operations restructuring, food cost optimization, and process standardization, improving efficiency, reducing wastage, and strengthening profitability.',
+    outcome: 'F&B Cost Optimized · SOPs Standardized',
+    img: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80',
   },
   {
-    slug: 'brand-beta',
-    name: 'Brand Beta',
-    sector: 'Retail',
-    what: 'Full brand identity overhaul and go-to-market strategy for Pan-India expansion.',
-    outcome: '3× revenue growth in Year 1',
-    img: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80',
+    slug: 'leader-mojo',
+    name: 'Leader Mojo',
+    sector: 'Leadership & Consulting',
+    what: 'GTM strategy and market positioning, strengthening market presence, refining messaging, and building a scalable approach to reach, engage, and transform leaders and teams.',
+    outcome: 'GTM Strategy Deployed · Brand Positioning Refined',
+    img: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80',
   },
   {
-    slug: 'brand-gamma',
-    name: 'Brand Gamma',
+    slug: 'palagara-koodai',
+    name: 'Palagara Koodai',
     sector: 'F&B',
-    what: 'Operational restructuring, cost-control systems, and supply chain standardisation.',
-    outcome: '28% reduction in operational cost',
+    what: 'From Logo to Launch, a complete brand journey across all 7 service verticals, transforming a founder\'s vision into a structured, market-ready business.',
+    outcome: '7 Service Verticals · Full Brand Journey',
     img: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    slug: 'muttram',
+    name: 'Muttram – The Carnatic Canteen',
+    sector: 'F&B',
+    what: 'Menu engineering, food costing, and GTM strategy, optimizing profitability, refining pricing, and positioning the brand for sustainable growth.',
+    outcome: 'F&B Cost Engineered · GTM Strategy Built',
+    img: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    slug: 'hibiscus-ecr',
+    name: 'Hibiscus on ECR',
+    sector: 'Hospitality',
+    what: 'Full-spectrum operational support, rota management, payroll restructuring, food cost optimization, purchase systems, GTM strategy, and Virtual COO.',
+    outcome: 'Virtual COO Support · Full Ops Transformation',
+    img: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    slug: 'jp-neuro-spine',
+    name: 'JP Neuro Spine Hospital',
+    sector: 'Healthcare',
+    what: 'Concept to launch, complete healthcare enterprise built from the ground up, covering brand, operations, compliance, recruitment, accounts, GTM, and ongoing Virtual COO support.',
+    outcome: 'Full End-to-End Build · GTM Strategy Executed',
+    img: 'https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=800&q=80',
   },
 ]
 
@@ -76,12 +100,10 @@ const WHY_US_ITEMS = [
 ]
 
 const PARTNERS = [
-  { name: 'Accel Advisory'        },
-  { name: 'NorthStar Capital'     },
-  { name: 'Peak Growth Partners'  },
-  { name: 'Meridian Consulting'   },
-  { name: 'Atlas Ventures'        },
-  { name: 'Summit Advisory Group' },
+  { name: 'Equinox Labs',           logo: 'https://ik.imagekit.io/ux5g9gl0h/eq.png',       category: 'Quality & Compliance'    },
+  { name: 'Haboteck',               logo: 'https://ik.imagekit.io/ux5g9gl0h/haboteck.png', category: 'IT Infrastructure'       },
+  { name: 'Razorpay Payroll',       logo: 'https://ik.imagekit.io/ux5g9gl0h/Razorpay.png', category: 'Payroll & Compliance'    },
+  { name: 'Purple Chillies Solutions', logo: 'https://ik.imagekit.io/ux5g9gl0h/purple.png', category: 'Digital Transformation' },
 ]
 
 const BRANDS = [
@@ -397,10 +419,10 @@ export default function Home() {
               {/* 4 members, each flex-1 so they share the full width equally */}
               <div className="flex flex-col sm:flex-row sm:justify-between gap-6">
                 {[
-                  { img: 'https://ik.imagekit.io/ux5g9gl0h/kalyan%20029-01-20.jpg',  name: 'Kalyan',            role: 'Founder & CEO'                        },
+                  { img: 'https://ik.imagekit.io/ux5g9gl0h/kalyan%20029-01-20.jpg',  name: 'Kalyan',            role: 'Founder & CEO',                            fit: 'object-cover', pos: '35% 40%' },
                   { img: 'https://ik.imagekit.io/ux5g9gl0h/sunil%20jose.png',        name: 'Sunil Jose',        role: 'Consultant – IP & Copyright'          },
                   { img: 'https://ik.imagekit.io/ux5g9gl0h/arun.png',               name: 'Arunkumar Rajaram', role: 'Learning & Training Excellence Lead'   },
-                  { img: 'https://ik.imagekit.io/ux5g9gl0h/dinesh.png',             name: 'Dinesh',            role: 'Financial Strategy & Project Funding Lead' },
+                  { img: 'https://ik.imagekit.io/ux5g9gl0h/dinesh.png',             name: 'Dinesh',            role: 'Financial Strategy & Project Funding Lead', fit: 'object-cover object-top' },
                 ].map(member => (
                   <Link
                     key={member.name}
@@ -412,7 +434,8 @@ export default function Home() {
                       <img
                         src={member.img}
                         alt={member.name}
-                        className="w-full h-full object-contain object-bottom group-hover:scale-105 transition-transform duration-500"
+                        className={`w-full h-full ${member.fit ?? 'object-contain object-bottom'} group-hover:scale-105 transition-transform duration-500`}
+                        style={member.pos ? { objectPosition: member.pos } : undefined}
                       />
                     </div>
 
@@ -456,22 +479,23 @@ export default function Home() {
             </div>
 
             {/* Partner cards */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
               {PARTNERS.map(p => (
                 <Link
                   key={p.name}
-                  to=""
+                  to="/partners"
                   className="group relative bg-white/[0.05] border border-white/10 rounded-xl px-5 py-8 flex flex-col items-center justify-center gap-4 hover:bg-white/[0.10] hover:border-[#e31e24]/50 hover:shadow-[0_8px_30px_rgba(0,0,0,0.4)] hover:-translate-y-1 transition-all duration-300"
                 >
-                  {/* Icon placeholder */}
-                  <div className="w-9 h-9 rounded-lg bg-white/10 group-hover:bg-[#e31e24]/20 flex items-center justify-center transition-colors duration-300">
-                    <span className="material-symbols-outlined text-[19px] text-white/70 group-hover:text-white transition-colors duration-300">handshake</span>
+                  {/* Logo */}
+                  <div className="h-12 w-32 flex items-center justify-center">
+                    <img src={p.logo} alt={p.name} className="h-full w-full object-contain" />
                   </div>
 
                   {/* Name */}
                   <p className="font-headline font-bold text-white text-[13px] tracking-wide text-center leading-snug">
                     {p.name}
                   </p>
+                  <p className="font-body text-white/35 text-[11px] uppercase tracking-widest text-center">{p.category}</p>
 
                   {/* Arrow */}
                   <span className="material-symbols-outlined text-[15px] text-white/30 group-hover:text-[#e31e24] group-hover:translate-x-0.5 transition-all duration-300">
@@ -540,24 +564,12 @@ export default function Home() {
                       {brand.name}
                     </h4>
 
-                    {/* What we did */}
-                    <p className="font-body text-slate-500 group-hover:text-slate-700 text-sm leading-relaxed flex-1 mb-5 transition-colors duration-300">
-                      {brand.what}
-                    </p>
-
                     {/* Outcome pill */}
                     <div className="inline-flex items-center gap-2 bg-[#f7f9fc] group-hover:bg-[#eceef1] border border-slate-200 rounded-full px-4 py-2 mb-6 self-start transition-colors duration-300">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#e31e24] flex-shrink-0" />
                       <span className="font-body text-slate-600 group-hover:text-[#0a192f] text-xs transition-colors duration-300">{brand.outcome}</span>
                     </div>
 
-                    {/* View Testimonial */}
-                    <div className="inline-flex items-center gap-2 self-start">
-                      <span className="material-symbols-outlined text-[19px] text-slate-300 group-hover:text-[#e31e24] transition-colors duration-300">format_quote</span>
-                      <span className="font-body text-[13px] text-slate-400 group-hover:text-[#0a192f] transition-colors duration-300 border-b border-transparent group-hover:border-slate-300 pb-px">
-                        View Testimonial
-                      </span>
-                    </div>
                   </div>
                 </Link>
               ))}

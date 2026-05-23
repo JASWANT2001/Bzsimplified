@@ -11,6 +11,7 @@ const TEAM = [
     philosophy: 'Simplify operations. Strengthen execution. Scale with confidence.',
     expertise: ['Business Strategy', 'Operational Excellence', 'Leadership Enablement'],
     photo: 'https://ik.imagekit.io/ux5g9gl0h/kalyan%20029-01-20.jpg',
+    photoPosition: 'center calc(35% + 10px)',
     flip: false,
   },
   {
@@ -63,9 +64,9 @@ function useReveal() {
   }, [])
 }
 
-function PhotoCard({ flip, photo, name }) {
+function PhotoCard({ flip, photo, name, photoPosition = 'center top' }) {
   return (
-    <div className="relative h-full min-h-[240px] sm:min-h-[280px]">
+    <div className="relative h-[380px] sm:h-[440px] lg:h-[480px]">
       <div
         className="absolute inset-0 bg-[#e31e24]/8 rounded-xl"
         style={{ transform: flip ? 'translate(-8px, 8px)' : 'translate(8px, 8px)' }}
@@ -75,7 +76,8 @@ function PhotoCard({ flip, photo, name }) {
           <img
             src={photo}
             alt={name}
-            className="w-full h-full object-contain object-bottom"
+            className="w-full h-full object-cover"
+            style={{ objectPosition: photoPosition }}
           />
         ) : (
           <div className="absolute inset-0 flex items-center justify-center">
@@ -90,7 +92,7 @@ function PhotoCard({ flip, photo, name }) {
 }
 
 function MemberSection({ member }) {
-  const { id, name, role, dept, bio, philosophy, expertise, photo, flip } = member
+  const { id, name, role, dept, bio, philosophy, expertise, photo, photoPosition, flip } = member
 
   return (
     <section className={`relative py-14 md:py-24 overflow-hidden reveal ${flip ? 'bg-white' : 'bg-slate-50/80'}`}>
@@ -117,7 +119,7 @@ function MemberSection({ member }) {
 
           {/* Photo */}
           <div className="w-full lg:w-5/12">
-            <PhotoCard flip={flip} photo={photo} name={name} />
+            <PhotoCard flip={flip} photo={photo} name={name} photoPosition={photoPosition} />
           </div>
 
           {/* Content */}

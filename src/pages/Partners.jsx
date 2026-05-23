@@ -5,6 +5,7 @@ const PARTNERS = [
     name: 'Equinox Labs',
     category: 'Quality & Compliance',
     icon: 'science',
+    logo: 'https://ik.imagekit.io/ux5g9gl0h/eq.png',
     accent: '#e31e24',
     description:
       'Driving confidence through science, compliance, and quality assurance. With over 20 years of expertise, Equinox Labs is among India\'s leading FSSAI-approved and NABL-accredited testing and auditing partners, delivering trusted solutions in food, water, air, and environmental safety. Their nationwide network of laboratories, auditors, and domain experts empowers organisations to uphold the highest standards of compliance, safety, and operational excellence.',
@@ -14,6 +15,7 @@ const PARTNERS = [
     name: 'Haboteck',
     category: 'IT Infrastructure',
     icon: 'memory',
+    logo: 'https://ik.imagekit.io/ux5g9gl0h/haboteck.png',
     accent: '#0a192f',
     description:
       'Delivering dependable IT infrastructure and AMC solutions with precision and speed, Haboteck helps businesses minimise downtime, strengthen operational continuity, and optimise enterprise performance. Specialising in servers, networks, storage systems, and end-user computing support, they provide proactive IT management designed to keep organisations running seamlessly at scale.',
@@ -23,6 +25,7 @@ const PARTNERS = [
     name: 'Razorpay Payroll',
     category: 'Payroll & Compliance',
     icon: 'payments',
+    logo: 'https://ik.imagekit.io/ux5g9gl0h/Razorpay.png',
     accent: '#e31e24',
     description:
       'Simplifying payroll, compliance, and workforce management through intelligent automation. Razorpay Payroll enables businesses to process salaries, automate statutory filings, manage attendance, reimbursements, and streamline employee operations, all from a unified platform. Designed for scale, it empowers organisations to reduce manual effort, stay compliant, and focus on growth with confidence.',
@@ -32,6 +35,7 @@ const PARTNERS = [
     name: 'Purple Chillies Solutions',
     category: 'Digital Transformation',
     icon: 'cloud_done',
+    logo: 'https://ik.imagekit.io/ux5g9gl0h/purple.png',
     accent: '#0a192f',
     description:
       'Purple Chillies Solutions is a technology-driven consulting firm with over 5 years of proven expertise in delivering smart, scalable, and business-ready solutions. Specialising in platforms like Odoo, Salesforce, Microsoft Power Platform, E-Commerce, and Full-Stack Software Development, empowering organizations to digitally transform and achieve long-term customer success.',
@@ -139,10 +143,11 @@ export default function Partners() {
                   style={{ background: `${p.accent}08` }}
                 />
                 <div className="flex justify-between items-start mb-10">
-                  <div className="p-4 bg-[#f2f4f7] rounded-xl">
-                    <span className="material-symbols-outlined" style={{ fontSize: '40px', color: p.accent, fontVariationSettings: "'FILL' 1" }}>
-                      {p.icon}
-                    </span>
+                  <div className="p-3 bg-[#f2f4f7] rounded-xl flex items-center justify-center h-20 w-44">
+                    {p.logo
+                      ? <img src={p.logo} alt={p.name} className="h-full w-full object-contain" />
+                      : <span className="material-symbols-outlined" style={{ fontSize: '40px', color: p.accent, fontVariationSettings: "'FILL' 1" }}>{p.icon}</span>
+                    }
                   </div>
                   <span className="font-body text-[11px] font-black text-[#75777e] uppercase tracking-[0.35em] pt-2">{p.category}</span>
                 </div>

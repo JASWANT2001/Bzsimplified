@@ -108,8 +108,20 @@ const CLIENTS = [
 
 export default function WallOfFame() {
   const [expandedId, setExpandedId] = useState(null)
-  const toggle = id => setExpandedId(prev => (prev === id ? null : id))
   const navigate = useNavigate()
+
+  const toggle = id => setExpandedId(prev => (prev === id ? null : id))
+
+  const handleReadStory = id => {
+    toggle(id)
+    setTimeout(() => {
+      const hero = document.querySelector('[data-hero="true"]')
+      if (hero) {
+        const top = hero.getBoundingClientRect().bottom + window.scrollY
+        window.scrollTo({ top, behavior: 'smooth' })
+      }
+    }, 50)
+  }
 
   return (
     <main className="pt-[82px] min-h-screen bg-[#f2f4f7]">
@@ -167,6 +179,7 @@ export default function WallOfFame() {
             return (
               <article
                 key={client.id}
+                id={`story-${client.id}`}
                 className={`flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm transition-all duration-500 ${
                   isExpanded ? 'md:col-span-3 order-first shadow-xl' : 'order-last hover:-translate-y-1 hover:shadow-md cursor-pointer'
                 }`}
@@ -201,7 +214,7 @@ export default function WallOfFame() {
                     <div className="flex items-center justify-between pt-4 border-t border-slate-100">
                       <span className="text-[11px] font-bold tracking-[0.2em] text-[#e31e24] uppercase">{client.category}</span>
                       <button
-                        onClick={() => toggle(client.id)}
+                        onClick={() => handleReadStory(client.id)}
                         className="flex items-center gap-1.5 text-[13px] font-body font-semibold text-[#0a192f] hover:text-[#e31e24] transition-colors group"
                       >
                         Read Story
