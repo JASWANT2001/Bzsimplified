@@ -100,157 +100,110 @@ const DASHBOARD_ITEMS = [
 
 export default function ServiceVC() {
   return (
-    <main className="pt-[82px] bg-[#f7f9fc] text-[#191c1e] min-h-screen pb-24">
-
-      {/* ── Breadcrumb */}
-      <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mt-12 mb-8">
-        <span className="font-body text-xs tracking-[0.2em] uppercase font-bold text-[#39475f] bg-[#eceef1] px-3 py-1.5 rounded-lg">
-          OPERATE / Virtual COO
-        </span>
-      </div>
+    <main className="pt-[82px] bg-[#f7f9fc] text-[#191c1e] min-h-screen">
 
       {/* ── Hero */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-12 gap-8 items-start mb-12 md:mb-24">
-        <div className="col-span-12 lg:col-span-8">
-          <h1
-            className="font-headline font-extrabold tracking-tighter leading-[1.1] text-[#0a192f] mb-8"
-            style={{ fontSize: 'clamp(3rem, 6vw, 5rem)' }}
-          >
-            Your Virtual COO.
-            <span className="block text-[#515f78] -mt-2">Because processes define performance — not people.</span>
+      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-12 gap-8 items-stretch mt-10 md:mt-16 mb-12 md:mb-24">
+        <div className="col-span-12 lg:col-span-7 flex flex-col justify-center">
+          <h1 className="font-headline font-extrabold tracking-tighter leading-[1.1] text-[#0a192f] mb-8">
+            <span className="block text-[#0a192f]">Your Virtual COO.</span>
+            <span className="block text-[#515f78]">Because processes define performance,</span>
+            <span className="block text-[#515f78]">not people.</span>
           </h1>
-          <p className="font-body text-xl text-[#5a5e6a] max-w-2xl leading-relaxed mb-4">
-            Businesses don't fail because of people alone. They fail when processes are unclear, fragmented, or dependent on individuals.
-          </p>
           <p className="font-body text-base text-[#5a5e6a] max-w-2xl leading-relaxed mb-6">
-            At Business Simplified, we function as your Virtual Chief Operating Officer — building the operational backbone, aligning teams, optimising workflows, and creating processes that enable people to perform at their best.
+            Businesses don't fail because of people alone. They fail when processes are unclear, fragmented, or dependent on individuals. At Business Simplified, we function as your Virtual Chief Operating Officer, building the operational backbone, aligning teams, optimising workflows, and creating processes that enable people to perform at their best.
           </p>
-          <p className="font-headline font-extrabold text-[#0a192f] leading-snug" style={{ fontSize: 'clamp(1.1rem, 2vw, 1.5rem)' }}>
-            We don't just manage operations.<br />
-            <span className="text-[#e31e24]">We design businesses that run with clarity, resilience, and precision.</span>
-          </p>
+          <div className="border-l-2 border-[#e31e24] pl-4 mt-2 self-start">
+            <p className="font-body text-[#5a5e6a] text-sm leading-relaxed">We don't just manage operations.</p>
+            <p className="font-headline font-extrabold text-[#0a192f] text-base leading-snug mt-1">We design businesses that run with clarity, resilience, and precision.</p>
+          </div>
         </div>
-        <div className="col-span-12 lg:col-span-4 flex flex-col gap-4">
-          <div className="w-full bg-[#eceef1] rounded-xl overflow-hidden" style={{ minHeight: '320px' }}>
+        <div className="col-span-12 lg:col-span-5 flex justify-end">
+          <div className="w-full min-h-[300px] h-full bg-[#eceef1] rounded-xl overflow-hidden">
             <img
               alt="Operations and systems"
               className="w-full h-full object-cover object-top"
-              style={{ minHeight: '320px' }}
               src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=900&q=80"
             />
-          </div>
-          <div className="flex gap-3">
-            <Link
-              to="/contact"
-              className="flex-1 inline-flex items-center justify-center gap-2 bg-[#0a192f] text-white px-6 py-4 rounded-lg font-body font-bold text-sm uppercase tracking-widest hover:bg-[#1a2f4f] transition-colors group"
-            >
-              Consult Our Experts
-              <span className="material-symbols-outlined text-[19px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
-            </Link>
-            <Link
-              to="/services"
-              className="inline-flex items-center justify-center gap-2 border border-[#0a192f] text-[#0a192f] px-6 py-4 rounded-lg font-body font-bold text-sm uppercase tracking-widest hover:bg-[#eceef1] transition-colors"
-            >
-              All Services
-            </Link>
           </div>
         </div>
       </section>
 
       {/* ── Social proof stat */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-16 md:mb-32">
-        <div className="bg-[#0a192f] rounded-xl p-8 md:p-12 grid grid-cols-12 gap-8 items-center relative overflow-hidden">
-          <span className="absolute -right-8 -top-8 font-headline font-black text-white/5 select-none leading-none pointer-events-none" style={{ fontSize: '14rem' }}>COO</span>
-
-          <div className="col-span-12 lg:col-span-4 relative z-10">
-            <span
-              className="font-headline font-extrabold text-white tracking-tighter block leading-none mb-2"
-              style={{ fontSize: 'clamp(3rem, 6vw, 5rem)' }}
-            >
-              99.8%
-            </span>
-            <span className="font-body text-xs font-bold uppercase tracking-[0.2em] text-[#b9c7e4]">
-              Operational Continuity Delivered
-            </span>
+      <section className="bg-white py-12 md:py-16">
+        <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16">
+          <div className="bg-[#0a192f] rounded-xl p-8 md:p-12 grid grid-cols-12 gap-8 items-center relative overflow-hidden">
+            <span className="absolute -right-8 -top-8 font-headline font-black text-white/5 select-none leading-none pointer-events-none" style={{ fontSize: '14rem' }}>COO</span>
+            <div className="col-span-12 lg:col-span-4 relative z-10">
+              <span className="font-headline font-extrabold text-white tracking-tighter block leading-none mb-2" style={{ fontSize: 'clamp(3rem, 6vw, 5rem)' }}>
+                99.8%
+              </span>
+              <span className="font-body text-xs font-bold uppercase tracking-[0.2em] text-[#b9c7e4]">
+                Operational Continuity Delivered
+              </span>
+            </div>
+            <div className="col-span-12 lg:col-span-1 hidden lg:flex justify-center">
+              <div className="h-24 w-px bg-white/10" />
+            </div>
+            <div className="col-span-12 lg:col-span-7 relative z-10">
+              <span className="material-symbols-outlined text-[#e31e24] mb-4 block" style={{ fontSize: '28px' }}>format_quote</span>
+              <p className="font-body text-white/80 text-base leading-relaxed italic">
+                "The difference was not better people, it was better processes. Business Simplified helped us build systems that sustained growth without chaos."
+              </p>
+            </div>
+            <div className="absolute bottom-[-15%] left-[-5%] w-64 h-64 bg-[#e31e24]/10 blur-[100px] rounded-full pointer-events-none" />
           </div>
-
-          <div className="col-span-12 lg:col-span-1 hidden lg:flex justify-center">
-            <div className="h-24 w-px bg-white/10" />
-          </div>
-
-          <div className="col-span-12 lg:col-span-7 relative z-10">
-            <span className="material-symbols-outlined text-[#e31e24] mb-4 block" style={{ fontSize: '28px' }}>format_quote</span>
-            <p className="font-body text-white/80 text-lg leading-relaxed italic">
-              "The difference was not better people — it was better processes. Business Simplified helped us build systems that sustained growth without chaos."
-            </p>
-          </div>
-
-          <div className="absolute bottom-[-15%] left-[-5%] w-64 h-64 bg-[#e31e24]/10 blur-[100px] rounded-full pointer-events-none" />
         </div>
       </section>
 
       {/* ── Core Capabilities */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-16 md:mb-32">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
-          <div>
-            <span className="font-body text-xs tracking-[0.2em] uppercase font-bold text-[#e31e24] block mb-3">Core Capability</span>
-            <h2
-              className="font-headline font-extrabold text-[#0a192f] tracking-tighter"
-              style={{ fontSize: 'clamp(1.8rem, 3vw, 2.6rem)' }}
-            >
+      <section className="bg-white py-16 md:py-24">
+        <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
+            <h2 className="font-headline font-extrabold text-[#0a192f] tracking-tighter">
               Acting as Your Virtual COO
             </h2>
-          </div>
-          <Link
-            to="/contact"
-            className="self-start inline-flex items-center gap-2 border border-[#0a192f] text-[#0a192f] px-6 py-3 rounded-lg font-body font-bold text-xs uppercase tracking-widest hover:bg-[#eceef1] transition-colors group"
-          >
-            View Methodology
-            <span className="material-symbols-outlined text-[17px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
-          </Link>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {CAPABILITIES.map((cap, i) => (
-            <div
-              key={cap.title}
-              className={`rounded-xl p-8 flex flex-col gap-4 ${i === 0 ? 'bg-[#0a192f]' : 'bg-white border border-slate-200'}`}
+            <Link
+              to="/contact"
+              className="self-start inline-flex items-center gap-2 border border-[#0a192f] text-[#0a192f] px-6 py-3 rounded-lg font-headline font-semibold text-xs tracking-widest transition-colors duration-200 hover:bg-[#0a192f] hover:text-white group"
             >
-              <span
-                className={`material-symbols-outlined ${i === 0 ? 'text-[#e31e24]' : 'text-[#0a192f]'}`}
-                style={{ fontSize: '30px' }}
+              View Methodology
+              <span className="material-symbols-outlined text-[17px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {CAPABILITIES.map((cap, i) => (
+              <div
+                key={cap.title}
+                className={`rounded-xl p-8 flex flex-col gap-4 ${i === 0 ? 'bg-[#0a192f]' : 'bg-[#f2f4f7]'}`}
               >
-                {cap.icon}
-              </span>
-              <h4 className={`font-headline text-base font-bold leading-snug ${i === 0 ? 'text-white' : 'text-[#0a192f]'}`}>
-                {cap.title}
-              </h4>
-              <p className={`font-body text-sm leading-relaxed ${i === 0 ? 'text-[#b9c7e4]' : 'text-[#5a5e6a]'}`}>
-                {cap.desc}
-              </p>
-            </div>
-          ))}
+                <span className={`material-symbols-outlined ${i === 0 ? 'text-[#e31e24]' : 'text-[#0a192f]'}`} style={{ fontSize: '30px' }}>
+                  {cap.icon}
+                </span>
+                <h4 className={`font-headline text-base font-bold leading-snug ${i === 0 ? 'text-white' : 'text-[#0a192f]'}`}>
+                  {cap.title}
+                </h4>
+                <p className={`font-body text-sm leading-relaxed ${i === 0 ? 'text-[#b9c7e4]' : 'text-[#5a5e6a]'}`}>
+                  {cap.desc}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* ── Philosophy */}
-      <section className="bg-[#0a192f] py-16 md:py-24 mb-16 md:mb-32">
+      <section className="bg-[#0a192f] py-16 md:py-24">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-12 gap-8 items-center">
-
           <div className="col-span-12 lg:col-span-5">
             <span className="font-body text-xs tracking-[0.2em] uppercase font-bold text-[#e31e24] block mb-4">Our Philosophy</span>
-            <h2
-              className="font-headline font-extrabold text-white tracking-tighter leading-tight"
-              style={{ fontSize: 'clamp(1.8rem, 3vw, 2.6rem)' }}
-            >
+            <h2 className="font-headline font-extrabold text-white tracking-tighter leading-tight">
               Only processes can define people.
             </h2>
           </div>
-
           <div className="col-span-12 lg:col-span-1 hidden lg:flex justify-center">
             <div className="h-40 w-px bg-white/10" />
           </div>
-
           <div className="col-span-12 lg:col-span-6 space-y-4">
             {PHILOSOPHY.map((line, i) => (
               <div key={i} className="flex items-start gap-3">
@@ -259,79 +212,58 @@ export default function ServiceVC() {
               </div>
             ))}
           </div>
-
         </div>
       </section>
 
       {/* ── How We Operate */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-16 md:mb-32">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
-          <h2
-            className="font-headline font-extrabold text-[#0a192f] tracking-tighter"
-            style={{ fontSize: 'clamp(1.8rem, 3vw, 2.6rem)' }}
-          >
-            How We Operate as Your Virtual COO
-          </h2>
-          <p className="font-body text-[#5a5e6a] text-base max-w-md md:text-right leading-relaxed">
-            A structured engagement that transforms how your business operates from the inside out.
-          </p>
-        </div>
-
-        <div className="space-y-3">
-          {STEPS.map((step, i) => {
-            const dark = i % 2 === 0
-            return (
+      <section className="bg-[#eceef1] py-16 md:py-24">
+        <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
+            <h2 className="font-headline font-extrabold text-[#0a192f] tracking-tighter">
+              How We Operate as Your Virtual COO
+            </h2>
+            <p className="font-body text-[#5a5e6a] text-base max-w-md md:text-right leading-relaxed">
+              A structured engagement that transforms how your business operates from the inside out.
+            </p>
+          </div>
+          <div className="space-y-3">
+            {STEPS.map((step) => (
               <div
                 key={step.num}
-                className={`relative rounded-xl overflow-hidden ${dark ? 'bg-[#0a192f]' : 'bg-white border border-slate-200'}`}
+                className="rounded-xl bg-white border border-slate-200"
               >
-                <span
-                  className={`absolute -top-6 -left-3 font-headline font-black leading-none select-none pointer-events-none ${dark ? 'text-white/5' : 'text-[#0a192f]/5'}`}
-                  style={{ fontSize: '11rem' }}
-                >
-                  {step.num}
-                </span>
-
-                <div className="relative z-10 p-7 md:p-10 flex flex-col md:flex-row md:items-center gap-6">
-                  <span
-                    className="font-headline font-extrabold leading-none text-[#e31e24] shrink-0"
-                    style={{ fontSize: '2.2rem' }}
-                  >
+                <div className="p-7 md:p-10 flex flex-col md:flex-row md:items-center gap-6">
+                  <span className="font-headline font-extrabold leading-none text-[#e31e24] shrink-0" style={{ fontSize: '2.2rem' }}>
                     {step.num}
                   </span>
-                  <div className={`hidden md:block h-12 w-px shrink-0 ${dark ? 'bg-white/10' : 'bg-slate-200'}`} />
+                  <div className="hidden md:block h-12 w-px shrink-0 bg-slate-200" />
                   <div>
-                    <h3 className={`font-headline text-xl font-bold mb-1 ${dark ? 'text-white' : 'text-[#0a192f]'}`}>
+                    <h3 className="font-headline text-xl font-bold mb-1 text-[#0a192f]">
                       {step.title}
                     </h3>
-                    <p className={`font-body text-sm leading-relaxed ${dark ? 'text-[#b9c7e4]' : 'text-[#5a5e6a]'}`}>
+                    <p className="font-body text-sm leading-relaxed text-[#5a5e6a]">
                       {step.sub}
                     </p>
                   </div>
                 </div>
               </div>
-            )
-          })}
+            ))}
+          </div>
         </div>
       </section>
 
       {/* ── Virtual COO Dashboard */}
-      <section className="bg-[#eceef1] py-16 md:py-24 mb-16 md:mb-32">
+      <section className="bg-[#eceef1] py-16 md:py-24">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-12 gap-8 items-center">
-
           <div className="col-span-12 lg:col-span-5">
             <span className="font-body text-xs tracking-[0.2em] uppercase font-bold text-[#e31e24] block mb-4">Virtual COO Dashboard</span>
-            <h2
-              className="font-headline font-extrabold text-[#0a192f] tracking-tighter mb-4"
-              style={{ fontSize: 'clamp(1.8rem, 3vw, 2.6rem)' }}
-            >
+            <h2 className="font-headline font-extrabold text-[#0a192f] tracking-tighter mb-4">
               Gain visibility into what matters.
             </h2>
             <p className="font-body text-[#5a5e6a] leading-relaxed">
-              One operational view across every function of your business — built for decision-makers who need clarity, not noise.
+              One operational view across every function of your business, built for decision-makers who need clarity, not noise.
             </p>
           </div>
-
           <div className="col-span-12 lg:col-span-7">
             <div className="bg-[#0a192f] rounded-xl p-8 relative overflow-hidden">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -348,7 +280,6 @@ export default function ServiceVC() {
               <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-[#e31e24]/10 blur-[80px] rounded-full pointer-events-none" />
             </div>
           </div>
-
         </div>
       </section>
 
@@ -356,26 +287,25 @@ export default function ServiceVC() {
       <FAQ items={FAQS} />
 
       {/* ── CTA */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 py-16">
-        <div className="bg-[#0a192f] rounded-2xl p-8 md:p-12 flex flex-col lg:flex-row justify-between items-center gap-8 relative overflow-hidden">
-          <div className="text-center lg:text-left relative z-10">
-            <h3
-              className="font-headline font-extrabold text-white tracking-tighter mb-2"
-              style={{ fontSize: 'clamp(1.6rem, 3vw, 2.5rem)' }}
+      <section className="bg-white py-16">
+        <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16">
+          <div className="bg-[#0a192f] rounded-2xl p-8 md:p-12 flex flex-col lg:flex-row justify-between items-center gap-8 relative overflow-hidden">
+            <div className="text-center lg:text-left relative z-10">
+              <h3 className="font-headline font-extrabold text-white tracking-tighter mb-2 text-2xl md:text-3xl">
+                Ready to build a business that runs beyond individuals?
+              </h3>
+              <p className="font-body text-white/50 text-base">Create systems. Align execution. Scale with confidence.</p>
+              <p className="font-body text-white/40 text-sm mt-1">Partner with Business Simplified as your Virtual COO.</p>
+            </div>
+            <Link
+              to="/contact"
+              className="whitespace-nowrap inline-flex items-center gap-2 bg-white text-[#0a192f] px-10 py-4 rounded-lg font-headline font-semibold text-sm tracking-wide border-2 border-white transition-colors duration-200 hover:bg-transparent hover:text-white group relative z-10"
             >
-              Ready to build a business that runs beyond individuals?
-            </h3>
-            <p className="font-body text-white/50 text-base">Create systems. Align execution. Scale with confidence.</p>
-            <p className="font-body text-white/40 text-sm mt-1">Partner with Business Simplified as your Virtual COO.</p>
+              Let's Talk
+              <span className="material-symbols-outlined text-[19px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </Link>
+            <div className="absolute -right-16 -bottom-16 w-72 h-72 bg-[#e31e24]/10 blur-[120px] rounded-full pointer-events-none" />
           </div>
-          <Link
-            to="/contact"
-            className="whitespace-nowrap inline-flex items-center gap-2 bg-white text-[#0a192f] px-10 py-4 rounded-lg font-body font-bold text-sm uppercase tracking-widest hover:bg-[#f7f9fc] transition-colors group relative z-10"
-          >
-            Let's Talk
-            <span className="material-symbols-outlined text-[19px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
-          </Link>
-          <div className="absolute -right-16 -bottom-16 w-72 h-72 bg-[#e31e24]/10 blur-[120px] rounded-full pointer-events-none" />
         </div>
       </section>
 

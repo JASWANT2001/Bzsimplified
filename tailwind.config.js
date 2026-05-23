@@ -42,6 +42,14 @@ export default {
         body:     ['"DM Sans"', 'sans-serif'],
         label:    ['"DM Sans"', 'sans-serif'],
       },
+      fontSize: {
+        'fs-hero':    ['clamp(2.8rem, 5.5vw, 4.5rem)', { lineHeight: '1.05', letterSpacing: '-0.025em' }],
+        'fs-h2':      ['clamp(1.8rem, 3vw, 2.6rem)',   { lineHeight: '1.1',  letterSpacing: '-0.02em'  }],
+        'fs-h3':      ['clamp(1.3rem, 2vw, 1.75rem)',  { lineHeight: '1.15'                            }],
+        'fs-lead':    ['19px',                          { lineHeight: '1.65'                            }],
+        'fs-body':    ['16px',                          { lineHeight: '1.65'                            }],
+        'fs-caption': ['12px',                          { lineHeight: '1.5',  letterSpacing: '0.08em'   }],
+      },
       borderRadius: {
         DEFAULT: '0.125rem',
         lg:      '0.25rem',

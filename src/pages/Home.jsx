@@ -7,7 +7,7 @@ const WALL_OF_FAME = [
     slug: 'brand-alpha',
     name: 'Brand Alpha',
     sector: 'F&B',
-    what: 'End-to-end franchise system design — SOPs, training manuals, and outlet rollout playbook.',
+    what: 'End-to-end franchise system design, SOPs, training manuals, and outlet rollout playbook.',
     outcome: '12 outlets launched in 8 months',
     img: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80',
   },
@@ -138,7 +138,7 @@ export default function Home() {
                   </div>
                 </h1>
 
-                <p className="text-slate-300 text-base md:text-lg leading-relaxed mb-8 md:mb-16 font-body font-light max-w-2xl">
+                <p className="text-slate-300 text-base md:text-fs-body leading-relaxed mb-8 md:mb-16 font-body font-light max-w-2xl">
                 Empowering businesses with structural clarity, operational discipline, and strategic momentum. 
 
                 </p>
@@ -146,7 +146,7 @@ export default function Home() {
                 <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
                   <Link
                     to="/contact"
-                    className="group inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-white text-[#0a192f] font-body font-semibold text-[15px] tracking-[0.04em] rounded-full transition-all duration-300 hover:shadow-[0_16px_48px_rgba(255,255,255,0.2)] hover:-translate-y-1 hover:scale-[1.02] active:scale-95 whitespace-nowrap"
+                    className="group inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-white text-[#0a192f] font-body font-semibold text-[15px] tracking-[0.04em] rounded-full border-2 border-white transition-all duration-200 hover:bg-transparent hover:text-white active:scale-95 whitespace-nowrap"
                   >
                     <span className="material-symbols-outlined text-[19px] flex-shrink-0">arrow_forward</span>
                     Start Your Transformation
@@ -159,7 +159,7 @@ export default function Home() {
 
               </div>
 
-              {/* Right floating card — desktop only */}
+              {/* Right floating card, desktop only */}
               <div className="lg:col-span-5 xl:col-span-5 relative hidden lg:flex items-center justify-center">
                 <div className="relative w-full max-w-xl">
                   <div className="relative w-full aspect-[5/4] group">
@@ -394,13 +394,13 @@ export default function Home() {
                 </Link>
               </div>
 
-              {/* 4 members — each flex-1 so they share the full width equally */}
+              {/* 4 members, each flex-1 so they share the full width equally */}
               <div className="flex flex-col sm:flex-row sm:justify-between gap-6">
                 {[
-                  { img: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80', name: 'Kalyan',    role: 'Founder & Managing Director'     },
-                  { img: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=800&q=80', name: 'Sunil Jose', role: 'Director – Growth & Strategy'    },
-                  { img: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80', name: 'Dinesh',     role: 'Head of Operations & Logistics'  },
-                  { img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80', name: 'Sanal',      role: 'Lead – Technology & Integration' },
+                  { img: 'https://ik.imagekit.io/ux5g9gl0h/kalyan%20029-01-20.jpg',  name: 'Kalyan',            role: 'Founder & CEO'                        },
+                  { img: 'https://ik.imagekit.io/ux5g9gl0h/sunil%20jose.png',        name: 'Sunil Jose',        role: 'Consultant – IP & Copyright'          },
+                  { img: 'https://ik.imagekit.io/ux5g9gl0h/arun.png',               name: 'Arunkumar Rajaram', role: 'Learning & Training Excellence Lead'   },
+                  { img: 'https://ik.imagekit.io/ux5g9gl0h/dinesh.png',             name: 'Dinesh',            role: 'Financial Strategy & Project Funding Lead' },
                 ].map(member => (
                   <Link
                     key={member.name}
@@ -408,11 +408,11 @@ export default function Home() {
                     className="group w-full sm:w-[22%] flex flex-col text-left"
                   >
                     {/* Full-width image from top edge to bottom, portrait ratio */}
-                    <div className="w-full aspect-square overflow-hidden rounded-xl shadow-md group-hover:shadow-xl transition-shadow duration-300">
+                    <div className="w-full aspect-square overflow-hidden rounded-xl shadow-md group-hover:shadow-xl transition-shadow duration-300 bg-white">
                       <img
                         src={member.img}
                         alt={member.name}
-                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                        className="w-full h-full object-contain object-bottom group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>
 
@@ -576,7 +576,7 @@ export default function Home() {
                 <h2 className="text-4xl font-headline font-bold text-[#0a192f]">Brand Stories</h2>
               </div>
               <Link
-                to="/brand-stories"
+                to="/wall-of-fame"
                 className="btn-link text-[#0a192f] underline underline-offset-8 hover:opacity-60 transition-opacity"
               >
                 View All Brand Stories →
@@ -585,7 +585,7 @@ export default function Home() {
 
             <div className="grid md:grid-cols-3 gap-8">
               {BLOG_POSTS.map(post => (
-                <Link key={post.id} to="/brand-stories">
+                <Link key={post.id} to="/wall-of-fame">
                 <article className="group cursor-pointer bg-white rounded-2xl overflow-hidden border border-slate-100 hover:border-[#0a192f]/20 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300">
                   {/* Image */}
                   <div className="aspect-[16/10] overflow-hidden relative">
@@ -645,14 +645,14 @@ export default function Home() {
               <div className="relative z-10 flex flex-col sm:flex-row gap-4 flex-shrink-0">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-white text-[#0a192f] font-body font-semibold text-[15px] tracking-[0.04em] rounded-full transition-all duration-300 hover:bg-slate-100 hover:shadow-[0_12px_32px_rgba(255,255,255,0.15)] hover:-translate-y-0.5 whitespace-nowrap"
+                  className="inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-white text-[#0a192f] font-body font-semibold text-[15px] tracking-[0.04em] rounded-full border-2 border-white transition-all duration-200 hover:bg-transparent hover:text-white whitespace-nowrap"
                 >
                   <span className="material-symbols-outlined text-[19px]">mail</span>
                   Get in Touch
                 </Link>
                 <Link
                   to="/contact"
-                  className="inline-flex items-center justify-center gap-2.5 px-8 py-4 border border-white/20 text-white font-body font-medium text-[15px] rounded-full transition-all duration-300 hover:bg-white/[0.08] hover:border-white/40 whitespace-nowrap"
+                  className="inline-flex items-center justify-center gap-2.5 px-8 py-4 border border-white text-white font-body font-medium text-[15px] rounded-full transition-all duration-200 hover:bg-transparent hover:text-white whitespace-nowrap"
                 >
                   <span className="material-symbols-outlined text-[19px]">phone_in_talk</span>
                   Schedule a Call

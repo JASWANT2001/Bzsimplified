@@ -25,7 +25,7 @@ const PARTNERS = [
     icon: 'payments',
     accent: '#e31e24',
     description:
-      'Simplifying payroll, compliance, and workforce management through intelligent automation. Razorpay Payroll enables businesses to process salaries, automate statutory filings, manage attendance, reimbursements, and streamline employee operations — all from a unified platform. Designed for scale, it empowers organisations to reduce manual effort, stay compliant, and focus on growth with confidence.',
+      'Simplifying payroll, compliance, and workforce management through intelligent automation. Razorpay Payroll enables businesses to process salaries, automate statutory filings, manage attendance, reimbursements, and streamline employee operations, all from a unified platform. Designed for scale, it empowers organisations to reduce manual effort, stay compliant, and focus on growth with confidence.',
     cta: 'Explore Collaboration',
   },
   {
@@ -90,12 +90,11 @@ export default function Partners() {
         <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 w-full">
           <h1
             className="font-headline font-extrabold tracking-tighter leading-[1.05] text-white mb-6"
-            style={{ fontSize: 'clamp(2.5rem, 7vw, 5.5rem)' }}
           >
             Collaborating<br />
             <span className="text-[#b9c7e4]">for Excellence.</span>
           </h1>
-          <p className="font-body text-white/60 text-base sm:text-xl max-w-xl leading-relaxed">
+          <p className="font-body text-white/60 text-base sm:text-fs-lead max-w-xl leading-relaxed">
             Forging powerful connections with industry leaders to deliver unprecedented value
             and transformative solutions across the global consulting landscape.
           </p>
@@ -125,7 +124,6 @@ export default function Partners() {
             </div>
             <h2
               className="font-headline font-extrabold tracking-tighter text-[#0a192f]"
-              style={{ fontSize: 'clamp(2.5rem, 5vw, 3.5rem)' }}
             >
               Our Strategic Domain Partners
             </h2>
@@ -267,7 +265,6 @@ export default function Partners() {
           <div className="relative z-10">
             <h2
               className="font-headline font-extrabold tracking-tighter mb-3 text-white"
-              style={{ fontSize: 'clamp(2rem, 4vw, 2.75rem)' }}
             >
               Ready to scale your influence?
             </h2>
@@ -277,13 +274,13 @@ export default function Partners() {
             <div className="flex flex-wrap justify-center gap-3">
               <Link
                 to="/contact"
-                className="bg-white text-[#0a192f] px-8 py-3 rounded-lg font-body font-bold text-sm uppercase tracking-widest hover:bg-[#f7f9fc] transition-colors"
+                className="bg-white text-[#0a192f] px-8 py-3 rounded-lg font-body font-bold text-sm uppercase tracking-widest border-2 border-white transition-colors duration-200 hover:bg-transparent hover:text-white"
               >
                 Become a Partner
               </Link>
               <Link
                 to="/#partners"
-                className="border border-white/30 text-white px-8 py-3 rounded-lg font-body font-bold text-sm uppercase tracking-widest hover:bg-white/10 transition-colors"
+                className="border border-white text-white px-8 py-3 rounded-lg font-body font-bold text-sm uppercase tracking-widest transition-colors duration-200 hover:bg-transparent hover:text-white"
               >
                 View Requirements
               </Link>

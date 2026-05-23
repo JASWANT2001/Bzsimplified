@@ -26,9 +26,9 @@ const SERVICES_B = [
 
 const CONTACT = [
   { icon: 'mail_outline', val: 'hello@bzsimplified.com'  },
-  { icon: 'phone',        val: '+1 (800) 000-0000'       },
-  { icon: 'schedule',     val: 'Response within 48 hrs'  },
-  { icon: 'location_on',  val: 'Dubai · Mumbai · London' },
+  { icon: 'phone',        val: '+91 9841027220'           },
+  { icon: 'schedule',     val: 'Response within 2 hrs'   },
+  { icon: 'location_on',  val: 'India · Qatar'           },
 ]
 
 function ColHeader({ children }) {

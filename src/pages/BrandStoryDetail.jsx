@@ -67,7 +67,6 @@ export default function BrandStoryDetail() {
             </div>
             <h1
               className="font-headline font-extrabold text-[#0a192f] leading-tight tracking-tighter mb-6"
-              style={{ fontSize: 'clamp(2.2rem, 5vw, 3.8rem)' }}
             >
               {story.title}
             </h1>
@@ -190,7 +189,7 @@ export default function BrandStoryDetail() {
                 <p className="font-body text-white/50 text-xs mb-6 leading-relaxed">{story.connect}</p>
                 <Link
                   to="/contact"
-                  className="block w-full bg-[#e31e24] text-white py-3 rounded-lg font-body font-bold text-xs uppercase tracking-widest text-center hover:bg-red-700 transition-colors"
+                  className="block w-full bg-[#e31e24] text-white py-3 rounded-lg font-body font-bold text-xs uppercase tracking-widest text-center border border-[#e31e24] transition-colors duration-200 hover:bg-transparent hover:text-[#e31e24]"
                 >
                   Contact Us
                 </Link>
@@ -202,14 +201,14 @@ export default function BrandStoryDetail() {
         {/* ── Bottom CTA */}
         <div className="mt-16 bg-[#0a192f] rounded-2xl p-8 md:p-12 flex flex-col lg:flex-row justify-between items-center gap-8">
           <div className="text-center lg:text-left">
-            <h3 className="font-headline font-extrabold text-white tracking-tighter mb-2" style={{ fontSize: 'clamp(1.6rem, 3vw, 2.5rem)' }}>
+            <h3 className="font-headline font-extrabold text-white tracking-tighter mb-2 text-2xl md:text-3xl">
               Ready to build something lasting?
             </h3>
             <p className="font-body text-white/50 text-base">Transform your business with our consulting expertise.</p>
           </div>
           <Link
             to="/contact"
-            className="whitespace-nowrap inline-flex items-center gap-2 bg-white text-[#0a192f] px-10 py-4 rounded-lg font-body font-bold text-sm uppercase tracking-widest hover:bg-[#f7f9fc] transition-colors group"
+            className="whitespace-nowrap inline-flex items-center gap-2 bg-white text-[#0a192f] px-10 py-4 rounded-lg font-body font-bold text-sm uppercase tracking-widest border-2 border-white transition-colors duration-200 hover:bg-transparent hover:text-white group"
           >
             Let's Talk
             <span className="material-symbols-outlined text-[19px] group-hover:translate-x-1 transition-transform">arrow_forward</span>

@@ -121,7 +121,6 @@ export default function PrivacyPolicy() {
           </p>
           <h1
             className="font-headline font-black text-white tracking-tight leading-[1.05] mb-4"
-            style={{ fontSize: 'clamp(1.8rem, 4vw, 3.5rem)' }}
           >
             Privacy Policy
           </h1>

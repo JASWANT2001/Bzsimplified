@@ -101,25 +101,24 @@ export default function Contact() {
           </p>
           <h1
             className="font-headline font-black text-white tracking-tight leading-[1.05] mb-6"
-            style={{ fontSize: 'clamp(1.8rem, 4.5vw, 4.2rem)' }}
           >
-            Have a question, project, or challenge? 
+            Have a question, project, or challenge?
           </h1>
           <p className="font-body text-white/45 text-[18px] sm:text-[20px] leading-relaxed mb-8 md:mb-10 max-w-[520px]">
-            No sales pitch, no obligations — just a real conversation about your business.
+            No sales pitch, no obligations. Just a real conversation about your business.
           </p>
           <div className="flex flex-wrap gap-3">
             <a
               href="#contact-form"
               onClick={e => { e.preventDefault(); document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' }) }}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#0a192f] font-body font-semibold text-[14px] rounded-xl hover:bg-white/90 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 group"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#0a192f] font-body font-semibold text-[14px] rounded-xl border border-white transition-all duration-200 hover:bg-transparent hover:text-white group"
             >
               Start the Conversation
               <span className="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform duration-200">arrow_forward</span>
             </a>
             <a
               href="mailto:hello@bzsimplified.com"
-              className="inline-flex items-center gap-2 px-6 py-3 border border-white/20 text-white/80 font-body font-semibold text-[14px] rounded-xl hover:bg-white/8 hover:text-white hover:border-white/40 transition-all duration-200"
+              className="inline-flex items-center gap-2 px-6 py-3 border border-white text-white font-body font-semibold text-[14px] rounded-xl transition-all duration-200 hover:bg-transparent hover:text-white"
             >
               <span className="material-symbols-outlined text-[16px]">mail</span>
               Email Us
@@ -188,7 +187,7 @@ export default function Contact() {
                   <Field label="Company" name="company" type="text" placeholder="Acme Corp" value={form.company} onChange={set} focused={focused} setFocused={setFocused} />
                 </div>
 
-                <p className="font-body text-slate-400 text-[12px] -mt-2">* Email or phone is required — at least one must be provided.</p>
+                <p className="font-body text-slate-400 text-[12px] -mt-2">* Email or phone is required. At least one must be provided.</p>
 
                 <div>
                   <label className="block font-body font-medium text-[#0a192f] text-[13px] mb-1.5">Would you like to leave a note? If yes, please share below.</label>
@@ -209,7 +208,7 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full sm:w-auto group inline-flex items-center justify-center gap-2 px-7 py-2.5 bg-[#0a192f] text-white font-body font-semibold text-[14px] rounded-lg transition-all duration-200 hover:shadow-[0_8px_28px_rgba(10,25,47,0.22)] hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full sm:w-auto group inline-flex items-center justify-center gap-2 px-7 py-2.5 bg-[#0a192f] text-white font-body font-semibold text-[14px] rounded-lg border border-[#0a192f] transition-all duration-200 hover:bg-transparent hover:text-[#0a192f] disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {loading ? (
                       <>

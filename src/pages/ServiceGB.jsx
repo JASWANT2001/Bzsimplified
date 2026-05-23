@@ -32,7 +32,7 @@ const FAQS = [
   },
   {
     q: 'Do you work with startups or only established businesses?',
-    a: 'We work with founders, startups, SMEs, and established organizations — adapting strategies to the stage, scale, and ambition of the business.',
+    a: 'We work with founders, startups, SMEs, and established organizations, adapting strategies to the stage, scale, and ambition of the business.',
   },
   {
     q: 'What makes Business Simplified different?',
@@ -61,14 +61,13 @@ export default function ServiceGB() {
           <div className="col-span-12 lg:col-span-8">
             <h1
               className="font-headline font-extrabold leading-[1.05] tracking-tight text-[#0a192f] mb-12"
-              style={{ fontSize: 'clamp(3rem, 8vw, 5.5rem)' }}
             >
               Expansion Without<br />
               <span className="text-[#515f78]">Complication.</span>
             </h1>
           </div>
           <div className="col-span-12 lg:col-span-4 pb-4">
-            <p className="font-body text-xl text-[#5a5e6a] leading-relaxed max-w-sm">
+            <p className="font-body text-fs-lead text-[#5a5e6a] leading-relaxed max-w-sm">
               Strategic frameworks designed to amplify your market presence while maintaining the operational integrity of your brand.
             </p>
           </div>
@@ -128,7 +127,6 @@ export default function ServiceGB() {
             <div className="col-span-12 lg:col-span-5">
               <h2
                 className="font-headline font-extrabold text-[#0a192f] mb-10 leading-tight"
-                style={{ fontSize: 'clamp(1.8rem, 3vw, 2.5rem)' }}
               >
                 Quantifiable Growth Benchmarks
               </h2>
@@ -175,7 +173,7 @@ export default function ServiceGB() {
           {/* Light card */}
           <div className="bg-white p-8 md:p-12 rounded-xl flex flex-col justify-between min-h-[280px] md:h-[360px] group hover:shadow-xl transition-all duration-300 border border-slate-100">
             <h3 className="font-headline text-3xl font-extrabold text-[#0a192f]">Grow Your Portfolio</h3>
-            <p className="font-body text-[#5a5e6a] text-lg leading-relaxed">
+            <p className="font-body text-[#5a5e6a] text-fs-body leading-relaxed">
               Diversify your assets and market reach with our proprietary investment and expansion frameworks.
             </p>
             <Link
@@ -190,7 +188,7 @@ export default function ServiceGB() {
           {/* Dark card */}
           <div className="bg-[#0a192f] p-8 md:p-12 rounded-xl flex flex-col justify-between min-h-[280px] md:h-[360px] group relative overflow-hidden">
             <h3 className="font-headline text-3xl font-extrabold text-white">Scale Your Impact</h3>
-            <p className="font-body text-[#76849f] text-lg leading-relaxed">
+            <p className="font-body text-[#76849f] text-fs-body leading-relaxed">
               Measure and amplify your corporate social responsibility and market influence on a global scale.
             </p>
             <Link
@@ -214,8 +212,7 @@ export default function ServiceGB() {
         <div className="bg-[#0a192f] rounded-2xl p-8 md:p-12 flex flex-col lg:flex-row justify-between items-center gap-8">
           <div className="text-center lg:text-left">
             <h3
-              className="font-headline font-extrabold text-white tracking-tighter mb-2"
-              style={{ fontSize: 'clamp(1.6rem, 3vw, 2.5rem)' }}
+              className="font-headline font-extrabold text-white tracking-tighter mb-2 text-2xl md:text-3xl"
             >
               Ready to build something lasting?
             </h3>
@@ -223,7 +220,7 @@ export default function ServiceGB() {
           </div>
           <Link
             to="/contact"
-            className="whitespace-nowrap inline-flex items-center gap-2 bg-white text-[#0a192f] px-10 py-4 rounded-lg font-body font-bold text-sm uppercase tracking-widest hover:bg-[#f7f9fc] transition-colors group"
+            className="whitespace-nowrap inline-flex items-center gap-2 bg-white text-[#0a192f] px-10 py-4 rounded-lg font-body font-bold text-sm uppercase tracking-widest border-2 border-white transition-colors duration-200 hover:bg-transparent hover:text-white group"
           >
             Let's Talk
             <span className="material-symbols-outlined text-[19px] group-hover:translate-x-1 transition-transform">arrow_forward</span>

@@ -52,7 +52,7 @@ const FAQS = [
   },
   {
     q: 'Do you work with startups or only established businesses?',
-    a: 'We work with founders, startups, SMEs, and established organizations—adapting strategies to the stage, scale, and ambition of the business.',
+    a: 'We work with founders, startups, SMEs, and established organizations, adapting strategies to the stage, scale, and ambition of the business.',
   },
   {
     q: 'What makes Business Simplified different?',
@@ -129,142 +129,102 @@ const OUTCOMES = [
 
 export default function ServiceBB() {
   return (
-    <main className="pt-[82px] bg-[#f7f9fc] text-[#191c1e] min-h-screen pb-24">
-
-      {/* ── Breadcrumb */}
-      <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mt-12 mb-8">
-        <span className="font-body text-xs tracking-[0.2em] uppercase font-bold text-[#39475f] bg-[#eceef1] px-3 py-1.5 rounded-lg">
-          START / Build Your Business
-        </span>
-      </div>
+    <main className="pt-[82px] bg-[#f7f9fc] text-[#191c1e] min-h-screen">
 
       {/* ── Hero */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-12 gap-8 items-end mb-12 md:mb-24">
-        <div className="col-span-12 lg:col-span-8">
-          <h1
-            className="font-headline font-extrabold tracking-tighter leading-[1.1] text-[#0a192f] mb-8"
-            style={{ fontSize: 'clamp(3rem, 6vw, 5rem)' }}
-          >
-            Build Beyond an Idea.<br />
-            <span className="text-[#515f78]">Build With Structure.</span>
+      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-12 gap-8 items-stretch mt-10 md:mt-16 mb-12 md:mb-24">
+        <div className="col-span-12 lg:col-span-7 flex flex-col justify-center">
+          <h1 className="font-headline font-extrabold leading-[1.1] tracking-tighter text-[#0a192f] mb-8">
+            <span className="block text-[#0a192f]">Build Beyond an Idea.</span>
+            <span className="block text-[#515f78]">Build With Structure.</span>
           </h1>
-          <p className="font-body text-xl text-[#5a5e6a] max-w-2xl leading-relaxed mb-4">
-            Every successful business begins with a vision. Sustainable businesses are built on systems, clarity, and execution.
-          </p>
           <p className="font-body text-base text-[#5a5e6a] max-w-2xl leading-relaxed mb-6">
-            At Business Simplified, we work with founders, professionals, startups, and growing enterprises to transform ideas into structured, scalable businesses — with strategy, compliance, operations, branding, and growth working together from day one.
+            At Business Simplified, we work with founders, professionals, startups, and growing enterprises to transform ideas into structured, scalable businesses with strategy, compliance, operations, branding, and growth working together from day one.
           </p>
-          <p className="font-headline font-extrabold text-[#0a192f] leading-snug" style={{ fontSize: 'clamp(1.1rem, 2vw, 1.5rem)' }}>
-            We don't just help you start.<br />
-            <span className="text-[#e31e24]">We help you build businesses designed to last.</span>
-          </p>
+          <div className="border-l-2 border-[#e31e24] pl-4 mt-2">
+            <p className="font-body text-[#5a5e6a] text-sm leading-relaxed">We don't just help you start.</p>
+            <p className="font-headline font-extrabold text-[#0a192f] text-base leading-snug mt-1">We help you build businesses designed to last.</p>
+          </div>
         </div>
-        <div className="col-span-12 lg:col-span-4 flex flex-col">
-          <div className="w-full h-64 bg-[#eceef1] rounded-xl overflow-hidden">
+        <div className="col-span-12 lg:col-span-5 flex justify-end">
+          <div className="w-full min-h-[300px] h-full bg-[#eceef1] rounded-xl overflow-hidden">
             <img
-              alt="Professional Business Environment"
+              alt="Business planning and strategy"
               className="w-full h-full object-cover"
-              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80"
+              src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80"
             />
           </div>
-          <Link
-            to="/contact"
-            className="self-start inline-flex items-center gap-2 bg-[#0a192f] text-white px-8 py-4 rounded-lg font-body font-bold text-sm uppercase tracking-widest hover:bg-[#1a2f4f] transition-colors mt-4 group"
-          >
-            Let's Talk
-            <span className="material-symbols-outlined text-[19px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
-          </Link>
         </div>
       </section>
 
       {/* ── From Vision to Execution */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-16 md:mb-32">
+      <section className="bg-white py-16 md:py-24">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16">
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
-          <h2
-            className="font-headline font-extrabold text-[#0a192f] tracking-tighter"
-            style={{ fontSize: 'clamp(1.8rem, 3vw, 2.6rem)' }}
-          >
+        <div className="mb-10">
+          <h2 className="font-headline font-extrabold text-[#0a192f] tracking-tighter">
             From Vision to Execution
           </h2>
-          <p className="font-body text-[#5a5e6a] text-base max-w-md md:text-right leading-relaxed">
-            Starting or scaling a business can feel overwhelming. We simplify the process through a structured approach.
-          </p>
         </div>
 
         {/* Strips */}
         <div className="space-y-3">
-          {STEPS.map((step, i) => {
-            const dark = i % 2 === 0
-            return (
-              <div
-                key={step.num}
-                className={`relative rounded-xl overflow-hidden ${dark ? 'bg-[#0a192f]' : 'bg-white border border-slate-200'}`}
+          {STEPS.map((step) => (
+            <div
+              key={step.num}
+              className="relative rounded-xl overflow-hidden bg-[#0a192f]"
+            >
+              <span
+                className="absolute -top-6 -left-3 font-headline font-black leading-none select-none pointer-events-none text-white/5"
+                style={{ fontSize: '11rem' }}
               >
-                {/* Watermark number */}
-                <span
-                  className={`absolute -top-6 -left-3 font-headline font-black leading-none select-none pointer-events-none ${dark ? 'text-white/5' : 'text-[#0a192f]/5'}`}
-                  style={{ fontSize: '11rem' }}
-                >
-                  {step.num}
-                </span>
+                {step.num}
+              </span>
 
-                <div className="relative z-10 p-7 md:p-8 lg:p-10 grid grid-cols-12 gap-6 items-center">
+              <div className="relative z-10 p-7 md:p-8 lg:p-10 grid grid-cols-12 gap-6 items-center">
 
-                  {/* Step badge + title + sub */}
-                  <div className="col-span-12 lg:col-span-4 flex flex-col gap-2">
-                    <span
-                      className="font-headline font-extrabold leading-none text-[#e31e24]"
-                      style={{ fontSize: '2.2rem' }}
-                    >
-                      {step.num}
-                    </span>
-                    <h3 className={`font-headline text-xl font-bold ${dark ? 'text-white' : 'text-[#0a192f]'}`}>
-                      {step.title}
-                    </h3>
-                    <p className={`font-body text-sm leading-relaxed ${dark ? 'text-[#b9c7e4]' : 'text-[#5a5e6a]'}`}>
-                      {step.sub}
-                    </p>
-                  </div>
-
-                  {/* Divider */}
-                  <div className={`hidden lg:flex col-span-1 justify-center`}>
-                    <div className={`h-20 w-px ${dark ? 'bg-white/10' : 'bg-slate-200'}`} />
-                  </div>
-
-                  {/* Bullet tags */}
-                  <div className="col-span-12 lg:col-span-7 flex flex-wrap gap-2">
-                    {step.points.map(pt => (
-                      <span
-                        key={pt}
-                        className={`px-4 py-2 rounded-full font-body text-xs font-bold tracking-wide ${dark ? 'bg-white/10 text-[#b9c7e4]' : 'bg-[#f2f4f7] text-[#0a192f]'}`}
-                      >
-                        {pt}
-                      </span>
-                    ))}
-                  </div>
-
+                <div className="col-span-12 lg:col-span-4 flex flex-col gap-2">
+                  <span className="font-headline font-extrabold leading-none text-[#e31e24]" style={{ fontSize: '2.2rem' }}>
+                    {step.num}
+                  </span>
+                  <h3 className="font-headline text-xl font-bold text-white">{step.title}</h3>
+                  <p className="font-body text-sm leading-relaxed text-[#b9c7e4]">{step.sub}</p>
                 </div>
+
+                <div className="hidden lg:flex col-span-1 justify-center">
+                  <div className="h-20 w-px bg-white/10" />
+                </div>
+
+                <div className="col-span-12 lg:col-span-7 flex flex-wrap gap-2">
+                  {step.points.map(pt => (
+                    <span key={pt} className="px-4 py-2 rounded-full font-body text-xs font-bold tracking-wide bg-white/10 text-[#b9c7e4]">
+                      {pt}
+                    </span>
+                  ))}
+                </div>
+
               </div>
-            )
-          })}
+            </div>
+          ))}
         </div>
+      </div>
       </section>
 
       {/* ── Why Business Simplified */}
-      <section className="bg-[#eceef1] py-16 md:py-24 mb-16 md:mb-32">
+      <section className="bg-[#eceef1] py-16 md:py-24">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16">
-          <h2
-            className="font-headline font-extrabold text-[#0a192f] tracking-tighter mb-10"
-            style={{ fontSize: 'clamp(1.8rem, 3vw, 2.6rem)' }}
-          >
+          <p className="font-body font-bold text-[13px] tracking-[0.25em] uppercase text-[#e31e24] mb-4">Our Difference</p>
+          <h2 className="font-headline font-extrabold text-[#0a192f] tracking-tighter mb-12">
             Why Business Simplified?
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {WHY.map(w => (
-              <div key={w.title} className="bg-white rounded-xl p-8 flex flex-col border border-slate-200">
-                <span className="material-symbols-outlined text-[#0a192f] mb-5" style={{ fontSize: '32px' }}>{w.icon}</span>
-                <h4 className="font-headline text-lg font-bold text-[#0a192f] mb-3">{w.title}</h4>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {WHY.map((w, i) => (
+              <div key={w.title} className="relative bg-white border border-slate-200 rounded-2xl p-8 flex flex-col overflow-hidden">
+                <span className="absolute top-5 right-6 font-headline font-black text-[#0a192f]/5 leading-none select-none" style={{ fontSize: '5rem' }}>
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <span className="material-symbols-outlined text-[#e31e24] mb-6" style={{ fontSize: '36px' }}>{w.icon}</span>
+                <h4 className="font-headline text-xl font-bold text-[#0a192f] mb-3">{w.title}</h4>
                 <p className="font-body text-sm text-[#5a5e6a] leading-relaxed">{w.body}</p>
               </div>
             ))}
@@ -273,7 +233,8 @@ export default function ServiceBB() {
       </section>
 
       {/* ── Who We Work With + Engagement Outcomes */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-16 md:mb-32">
+      <section className="bg-white py-16 md:py-24">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16">
 
         {/* Section label */}
         <div className="flex items-center gap-4 mb-6">
@@ -286,7 +247,7 @@ export default function ServiceBB() {
 
         <div className="grid grid-cols-12 gap-4">
 
-          {/* Who We Work With — dark card */}
+          {/* Who We Work With - dark card */}
           <div className="col-span-12 lg:col-span-5 bg-[#0a192f] rounded-xl p-8 lg:p-10 relative overflow-hidden flex flex-col">
             {/* Watermark */}
             <span className="absolute -bottom-6 -right-4 font-headline font-black text-white/5 select-none leading-none pointer-events-none" style={{ fontSize: '9rem' }}>WHO</span>
@@ -309,7 +270,7 @@ export default function ServiceBB() {
             <div className="absolute bottom-[-15%] left-[-10%] w-56 h-56 bg-[#e31e24]/15 blur-[80px] rounded-full pointer-events-none" />
           </div>
 
-          {/* Engagement Outcomes — grid of numbered cards */}
+          {/* Engagement Outcomes - grid of numbered cards */}
           <div className="col-span-12 lg:col-span-7 bg-white border border-slate-200 rounded-xl p-8 lg:p-10">
             <h3 className="font-headline text-2xl font-bold text-[#0a192f] mb-1">Engagement Outcomes</h3>
             <p className="font-body text-sm text-[#5a5e6a] mb-8">Businesses we support gain:</p>
@@ -327,18 +288,19 @@ export default function ServiceBB() {
           </div>
 
         </div>
+      </div>
       </section>
 
       {/* ── FAQ */}
       <FAQ items={FAQS} />
 
       {/* ── CTA */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 py-16">
+      <section className="bg-white py-16">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16">
         <div className="bg-[#0a192f] rounded-2xl p-8 md:p-12 flex flex-col lg:flex-row justify-between items-center gap-8">
           <div className="text-center lg:text-left">
             <h3
-              className="font-headline font-extrabold text-white tracking-tighter mb-2"
-              style={{ fontSize: 'clamp(1.6rem, 3vw, 2.5rem)' }}
+              className="font-headline font-extrabold text-white tracking-tighter mb-2 text-2xl md:text-3xl"
             >
               Ready to Build Something That Lasts?
             </h3>
@@ -346,12 +308,13 @@ export default function ServiceBB() {
           </div>
           <Link
             to="/contact"
-            className="whitespace-nowrap inline-flex items-center gap-2 bg-white text-[#0a192f] px-10 py-4 rounded-lg font-body font-bold text-sm uppercase tracking-widest hover:bg-[#f7f9fc] transition-colors group"
+            className="whitespace-nowrap inline-flex items-center gap-2 bg-white text-[#0a192f] px-10 py-4 rounded-lg font-headline font-semibold text-sm tracking-wide border-2 border-white transition-colors duration-200 hover:bg-transparent hover:text-white group"
           >
             Let's Talk
             <span className="material-symbols-outlined text-[19px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
           </Link>
         </div>
+      </div>
       </section>
 
     </main>

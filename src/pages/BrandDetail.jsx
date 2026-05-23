@@ -31,7 +31,7 @@ export default function BrandDetail() {
           <h1 className="text-5xl md:text-7xl font-headline font-black text-white leading-tight mb-6">
             {name}
           </h1>
-          <p className="font-body text-slate-400 text-lg max-w-2xl leading-relaxed">
+          <p className="font-body text-slate-400 text-fs-body max-w-2xl leading-relaxed">
             Full case study coming soon. Our team is putting together the complete story — challenges, strategy, execution, and results.
           </p>
         </div>

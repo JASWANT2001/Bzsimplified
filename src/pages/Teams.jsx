@@ -7,7 +7,7 @@ const TEAM = [
     name: 'Kalyan',
     role: 'Founder & CEO',
     dept: 'Leadership',
-    bio: 'Kalyan is a business growth consultant and strategic advisor with 25+ years of experience helping organizations simplify complexity, build scalable structures, and drive sustainable growth. Through Business Simplified, he partners with founders and leaders to turn ambition into execution and strategy into measurable outcomes. His expertise spans business strategy, operational excellence, retail ecosystems, organizational development, and leadership enablement — combining clarity with execution to deliver lasting impact.',
+    bio: 'Kalyan is a business growth consultant and strategic advisor with 25+ years of experience helping organizations simplify complexity, build scalable structures, and drive sustainable growth. Through Business Simplified, he partners with founders and leaders to turn ambition into execution and strategy into measurable outcomes. His expertise spans business strategy, operational excellence, retail ecosystems, organizational development, and leadership enablement, combining clarity with execution to deliver lasting impact.',
     philosophy: 'Simplify operations. Strengthen execution. Scale with confidence.',
     expertise: ['Business Strategy', 'Operational Excellence', 'Leadership Enablement'],
     photo: 'https://ik.imagekit.io/ux5g9gl0h/kalyan%20029-01-20.jpg',
@@ -70,12 +70,12 @@ function PhotoCard({ flip, photo, name }) {
         className="absolute inset-0 bg-[#e31e24]/8 rounded-xl"
         style={{ transform: flip ? 'translate(-8px, 8px)' : 'translate(8px, 8px)' }}
       />
-      <div className="relative h-full bg-gradient-to-br from-[#0a192f]/8 to-[#0a192f]/3 rounded-xl overflow-hidden border border-[#0a192f]/8">
+      <div className="relative h-full bg-white rounded-xl overflow-hidden border border-[#0a192f]/8">
         {photo ? (
           <img
             src={photo}
             alt={name}
-            className="w-full h-full object-cover object-top"
+            className="w-full h-full object-contain object-bottom"
           />
         ) : (
           <div className="absolute inset-0 flex items-center justify-center">
@@ -131,7 +131,6 @@ function MemberSection({ member }) {
 
             <h2
               className="font-headline font-black text-[#0a192f] tracking-tight leading-none mb-3"
-              style={{ fontSize: 'clamp(2.6rem, 5vw, 4rem)' }}
             >
               {name}
             </h2>
@@ -168,14 +167,14 @@ function MemberSection({ member }) {
                 href="https://wa.me/910000000000"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-2.5 bg-[#0a192f] text-white font-body font-semibold text-[14px] rounded-full border-l-[3px] border-[#e31e24] hover:shadow-[0_8px_28px_rgba(10,25,47,0.28)] hover:-translate-y-0.5 transition-all duration-200"
+                className="inline-flex items-center gap-2 px-6 py-2.5 bg-[#0a192f] text-white font-body font-semibold text-[14px] rounded-full border border-[#0a192f] transition-all duration-200 hover:bg-transparent hover:text-[#0a192f]"
               >
                 <span className="material-symbols-outlined text-[16px]">chat</span>
                 WhatsApp
               </a>
               <a
-                href="tel:+910000000000"
-                className="inline-flex items-center gap-2 px-6 py-2.5 bg-white text-[#0a192f] border border-slate-200 font-body font-semibold text-[14px] rounded-full hover:border-[#0a192f] hover:-translate-y-0.5 transition-all duration-200"
+                href="tel:+919841027220"
+                className="inline-flex items-center gap-2 px-6 py-2.5 bg-white text-[#0a192f] border border-[#0a192f] font-body font-semibold text-[14px] rounded-full transition-all duration-200 hover:bg-transparent hover:text-[#0a192f]"
               >
                 <span className="material-symbols-outlined text-[16px]">call</span>
                 Call
@@ -204,7 +203,7 @@ export default function Teams() {
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
-        {/* Dark gradient overlay — keeps text readable */}
+        {/* Dark gradient overlay, keeps text readable */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#0a192f] via-[#0a192f]/88 to-[#0a192f]/60" />
         {/* Subtle bottom fade */}
         <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#0a192f] to-transparent" />
@@ -215,25 +214,24 @@ export default function Teams() {
           </p>
           <h1
             className="font-headline font-black text-white tracking-tight leading-[1.05] mb-6"
-            style={{ fontSize: 'clamp(1.8rem, 4.5vw, 4.2rem)' }}
           >
             The minds behind every move
           </h1>
           <p className="font-body text-white/45 text-[15px] sm:text-[16px] leading-relaxed mb-8 md:mb-10 max-w-[520px]">
-            A lean team of operators, strategists, and builders — who've built, scaled, and fixed businesses across industries.
+            A lean team of operators, strategists, and builders, who've built, scaled, and fixed businesses across industries.
           </p>
           <div className="flex flex-wrap gap-3">
             <a
               href="#team"
               onClick={e => { e.preventDefault(); document.getElementById('team')?.scrollIntoView({ behavior: 'smooth' }) }}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#0a192f] font-body font-semibold text-[14px] rounded-xl hover:bg-white/90 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 group"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#0a192f] font-body font-semibold text-[14px] rounded-xl border border-white transition-all duration-200 hover:bg-transparent hover:text-white group"
             >
               Meet the Team
               <span className="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform duration-200">arrow_forward</span>
             </a>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3 border border-white/20 text-white/80 font-body font-semibold text-[14px] rounded-xl hover:bg-white/8 hover:text-white hover:border-white/40 transition-all duration-200"
+              className="inline-flex items-center gap-2 px-6 py-3 border border-white text-white font-body font-semibold text-[14px] rounded-xl transition-all duration-200 hover:bg-transparent hover:text-white"
             >
               <span className="material-symbols-outlined text-[16px]">mail</span>
               Get in Touch

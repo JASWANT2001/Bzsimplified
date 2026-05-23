@@ -46,11 +46,10 @@ export default function BrandStories() {
           </div>
           <h1
             className="font-headline font-extrabold tracking-tighter leading-[1.1] text-white mb-6 max-w-3xl"
-            style={{ fontSize: 'clamp(2.5rem, 7vw, 5.5rem)' }}
           >
             Brand Stories
           </h1>
-          <p className="font-body text-white/60 text-base sm:text-xl max-w-2xl leading-relaxed">
+          <p className="font-body text-white/60 text-base sm:text-fs-lead max-w-2xl leading-relaxed">
             Celebrating the visionary organisations and leadership teams that achieved transformative
             growth through precision consulting and strategic engineering.
           </p>

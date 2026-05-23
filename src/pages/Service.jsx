@@ -8,11 +8,11 @@ const GENERIC_FAQS = [
   },
   {
     q: 'Do I need to prepare anything before we start?',
-    a: 'A brief onboarding call is all we need to begin. We then run a structured discovery process to gather what\'s needed — you won\'t be handed a long questionnaire to fill out on your own.',
+    a: 'A brief onboarding call is all we need to begin. We then run a structured discovery process to gather what\'s needed, you won\'t be handed a long questionnaire to fill out on your own.',
   },
   {
     q: 'How are deliverables handed over?',
-    a: 'All work is delivered in a structured format — documented, editable, and built to be owned by your team. We don\'t create black-box outputs that only we can interpret.',
+    a: 'All work is delivered in a structured format, documented, editable, and built to be owned by your team. We don\'t create black-box outputs that only we can interpret.',
   },
   {
     q: 'Can services be combined or run in parallel?',
@@ -151,7 +151,7 @@ const SERVICES_DATA = {
 
     title: 'Virtual COO',
     description: 'Operational systems, processes, and execution.',
-    fullDescription: 'We function as your Virtual Chief Operating Officer — building the operational backbone, aligning teams, optimising workflows, and creating processes that enable people to perform at their best.',
+    fullDescription: 'We function as your Virtual Chief Operating Officer, building the operational backbone, aligning teams, optimising workflows, and creating processes that enable people to perform at their best.',
     benefits: [
       'Process architecture & SOPs',
       'Workflow optimisation',
@@ -215,11 +215,11 @@ export default function Service() {
                 </div>
               </div>
 
-              <h1 className="font-headline font-black text-[#0a192f] mb-6 leading-tight" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}>
+              <h1 className="font-headline font-black text-[#0a192f] mb-6 leading-tight">
                 {service.title}
               </h1>
 
-              <p className="font-body font-light text-slate-600 text-lg leading-relaxed max-w-2xl mb-10">
+              <p className="font-body font-light text-slate-600 text-fs-body leading-relaxed max-w-2xl mb-10">
                 {service.fullDescription}
               </p>
 
@@ -258,10 +258,10 @@ export default function Service() {
         <section className="py-24 bg-gradient-to-r from-[#0a192f] to-[#0f2240]">
           <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 text-center">
             <h2 className="font-headline font-bold text-white text-4xl mb-6">Ready to get started?</h2>
-            <p className="font-body text-white/70 text-lg mb-10 max-w-2xl mx-auto">
+            <p className="font-body text-white/70 text-fs-body mb-10 max-w-2xl mx-auto">
               Let's discuss how {service.title.toLowerCase()} can drive growth and efficiency for your business.
             </p>
-            <Link to="/contact" className="group inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-white text-[#0a192f] font-body font-semibold text-[15px] rounded-full transition-all duration-300 hover:shadow-[0_16px_48px_rgba(255,255,255,0.2)] hover:-translate-y-1">
+            <Link to="/contact" className="group inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-white text-[#0a192f] font-body font-semibold text-[15px] rounded-full border-2 border-white transition-all duration-200 hover:bg-transparent hover:text-white">
               Let's Talk
               <span className="material-symbols-outlined text-[19px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
             </Link>
