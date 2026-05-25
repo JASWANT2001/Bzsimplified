@@ -419,10 +419,10 @@ export default function Home() {
               {/* 4 members, each flex-1 so they share the full width equally */}
               <div className="flex flex-col sm:flex-row sm:justify-between gap-6">
                 {[
-                  { img: 'https://ik.imagekit.io/ux5g9gl0h/kalyan%20029-01-20.jpg',  name: 'Kalyan',            role: 'Founder & CEO',                            fit: 'object-cover', pos: '35% 40%' },
+                  { img: 'https://ik.imagekit.io/ux5g9gl0h/bottom_left.png',         name: 'Kalyan',            role: 'Founder & CEO',                            fit: 'object-cover', pos: '35% 40%' },
                   { img: 'https://ik.imagekit.io/ux5g9gl0h/sunil%20jose.png',        name: 'Sunil Jose',        role: 'Consultant – IP & Copyright'          },
-                  { img: 'https://ik.imagekit.io/ux5g9gl0h/arun.png',               name: 'Arunkumar Rajaram', role: 'Learning & Training Excellence Lead'   },
-                  { img: 'https://ik.imagekit.io/ux5g9gl0h/dinesh.png',             name: 'Dinesh',            role: 'Financial Strategy & Project Funding Lead', fit: 'object-cover object-top' },
+                  { img: 'https://ik.imagekit.io/ux5g9gl0h/top_left.png',           name: 'Arunkumar Rajaram', role: 'Learning & Training Excellence Lead',   fit: 'object-cover', pos: 'center top' },
+                  { img: 'https://ik.imagekit.io/ux5g9gl0h/top_right.png',         name: 'Dinesh',            role: 'Financial Strategy & Project Funding Lead', fit: 'object-cover object-top', pos: '30% top' },
                 ].map(member => (
                   <Link
                     key={member.name}
@@ -479,28 +479,14 @@ export default function Home() {
             </div>
 
             {/* Partner cards */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
               {PARTNERS.map(p => (
                 <Link
                   key={p.name}
                   to="/partners"
-                  className="group relative bg-white/[0.05] border border-white/10 rounded-xl px-5 py-8 flex flex-col items-center justify-center gap-4 hover:bg-white/[0.10] hover:border-[#e31e24]/50 hover:shadow-[0_8px_30px_rgba(0,0,0,0.4)] hover:-translate-y-1 transition-all duration-300"
+                  className="group flex items-center justify-center py-4"
                 >
-                  {/* Logo */}
-                  <div className="h-12 w-32 flex items-center justify-center">
-                    <img src={p.logo} alt={p.name} className="h-full w-full object-contain" />
-                  </div>
-
-                  {/* Name */}
-                  <p className="font-headline font-bold text-white text-[13px] tracking-wide text-center leading-snug">
-                    {p.name}
-                  </p>
-                  <p className="font-body text-white/35 text-[11px] uppercase tracking-widest text-center">{p.category}</p>
-
-                  {/* Arrow */}
-                  <span className="material-symbols-outlined text-[15px] text-white/30 group-hover:text-[#e31e24] group-hover:translate-x-0.5 transition-all duration-300">
-                    arrow_forward
-                  </span>
+                  <img src={p.logo} alt={p.name} className="h-20 w-auto object-contain" />
                 </Link>
               ))}
             </div>

@@ -10,7 +10,7 @@ const TEAM = [
     bio: 'Kalyan is a business growth consultant and strategic advisor with 25+ years of experience helping organizations simplify complexity, build scalable structures, and drive sustainable growth. Through Business Simplified, he partners with founders and leaders to turn ambition into execution and strategy into measurable outcomes. His expertise spans business strategy, operational excellence, retail ecosystems, organizational development, and leadership enablement, combining clarity with execution to deliver lasting impact.',
     philosophy: 'Simplify operations. Strengthen execution. Scale with confidence.',
     expertise: ['Business Strategy', 'Operational Excellence', 'Leadership Enablement'],
-    photo: 'https://ik.imagekit.io/ux5g9gl0h/kalyan%20029-01-20.jpg',
+    photo: 'https://ik.imagekit.io/ux5g9gl0h/bottom_left.png',
     photoPosition: 'center calc(35% + 10px)',
     flip: false,
   },
@@ -33,7 +33,8 @@ const TEAM = [
     bio: 'Arun leads Training and Capability Development at Business Simplified, helping individuals and organizations build skills that drive performance, leadership, and long-term growth. Through practical, impact-focused learning, he enables teams to strengthen capabilities and translate learning into action.',
     philosophy: 'Develop people. Strengthen capabilities. Enable growth.',
     expertise: ['Training & Development', 'Capability Building', 'Leadership Development'],
-    photo: 'https://ik.imagekit.io/ux5g9gl0h/arun.png',
+    photo: 'https://ik.imagekit.io/ux5g9gl0h/top_left.png',
+    photoPosition: 'center top',
     flip: false,
   },
   {
@@ -44,7 +45,8 @@ const TEAM = [
     bio: 'Dinesh leads Financial Restructuring and Project Funding Solutions at Business Simplified, helping businesses strengthen financial foundations, optimize structures, and unlock growth through strategic funding support. With expertise in financial planning, restructuring, and capital facilitation, he enables organizations to improve financial health, secure funding, and scale with confidence.',
     philosophy: 'Strengthen finances. Unlock funding. Enable growth.',
     expertise: ['Financial Restructuring', 'Project Funding', 'Capital Facilitation'],
-    photo: 'https://ik.imagekit.io/ux5g9gl0h/dinesh.png',
+    photo: 'https://ik.imagekit.io/ux5g9gl0h/top_right.png',
+    photoPosition: '30% top',
     flip: true,
   },
 ]
