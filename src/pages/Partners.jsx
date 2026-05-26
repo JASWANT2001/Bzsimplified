@@ -5,7 +5,7 @@ const PARTNERS = [
     name: 'Equinox Labs',
     category: 'Quality & Compliance',
     icon: 'science',
-    logo: 'https://ik.imagekit.io/ux5g9gl0h/eq.png',
+    logo: 'https://ik.imagekit.io/ux5g9gl0h/eq-removebg-preview.png',
     accent: '#e31e24',
     description:
       'Driving confidence through science, compliance, and quality assurance. With over 20 years of expertise, Equinox Labs is among India\'s leading FSSAI-approved and NABL-accredited testing and auditing partners, delivering trusted solutions in food, water, air, and environmental safety. Their nationwide network of laboratories, auditors, and domain experts empowers organisations to uphold the highest standards of compliance, safety, and operational excellence.',
@@ -15,7 +15,7 @@ const PARTNERS = [
     name: 'Haboteck',
     category: 'IT Infrastructure',
     icon: 'memory',
-    logo: 'https://ik.imagekit.io/ux5g9gl0h/haboteck.png',
+    logo: 'https://ik.imagekit.io/ux5g9gl0h/haboteck-removebg-preview.png',
     accent: '#0a192f',
     description:
       'Delivering dependable IT infrastructure and AMC solutions with precision and speed, Haboteck helps businesses minimise downtime, strengthen operational continuity, and optimise enterprise performance. Specialising in servers, networks, storage systems, and end-user computing support, they provide proactive IT management designed to keep organisations running seamlessly at scale.',
@@ -25,7 +25,7 @@ const PARTNERS = [
     name: 'Razorpay Payroll',
     category: 'Payroll & Compliance',
     icon: 'payments',
-    logo: 'https://ik.imagekit.io/ux5g9gl0h/Razorpay.png',
+    logo: 'https://ik.imagekit.io/ux5g9gl0h/Razorpay-removebg-preview.png',
     accent: '#e31e24',
     description:
       'Simplifying payroll, compliance, and workforce management through intelligent automation. Razorpay Payroll enables businesses to process salaries, automate statutory filings, manage attendance, reimbursements, and streamline employee operations, all from a unified platform. Designed for scale, it empowers organisations to reduce manual effort, stay compliant, and focus on growth with confidence.',
@@ -35,7 +35,7 @@ const PARTNERS = [
     name: 'Purple Chillies Solutions',
     category: 'Digital Transformation',
     icon: 'cloud_done',
-    logo: 'https://ik.imagekit.io/ux5g9gl0h/purple.png',
+    logo: 'https://ik.imagekit.io/ux5g9gl0h/purple-removebg-preview.png',
     accent: '#0a192f',
     description:
       'Purple Chillies Solutions is a technology-driven consulting firm with over 5 years of proven expertise in delivering smart, scalable, and business-ready solutions. Specialising in platforms like Odoo, Salesforce, Microsoft Power Platform, E-Commerce, and Full-Stack Software Development, empowering organizations to digitally transform and achieve long-term customer success.',

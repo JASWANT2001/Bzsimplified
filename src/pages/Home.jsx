@@ -100,10 +100,10 @@ const WHY_US_ITEMS = [
 ]
 
 const PARTNERS = [
-  { name: 'Equinox Labs',           logo: 'https://ik.imagekit.io/ux5g9gl0h/eq.png',       category: 'Quality & Compliance'    },
-  { name: 'Haboteck',               logo: 'https://ik.imagekit.io/ux5g9gl0h/haboteck.png', category: 'IT Infrastructure'       },
-  { name: 'Razorpay Payroll',       logo: 'https://ik.imagekit.io/ux5g9gl0h/Razorpay.png', category: 'Payroll & Compliance'    },
-  { name: 'Purple Chillies Solutions', logo: 'https://ik.imagekit.io/ux5g9gl0h/purple.png', category: 'Digital Transformation' },
+  { name: 'Equinox Labs',           logo: 'https://ik.imagekit.io/ux5g9gl0h/eq-removebg-preview.png',       category: 'Quality & Compliance'    },
+  { name: 'Haboteck',               logo: 'https://ik.imagekit.io/ux5g9gl0h/haboteck-removebg-preview.png', category: 'IT Infrastructure'       },
+  { name: 'Razorpay Payroll',       logo: 'https://ik.imagekit.io/ux5g9gl0h/Razorpay-removebg-preview.png', category: 'Payroll & Compliance'    },
+  { name: 'Purple Chillies Solutions', logo: 'https://ik.imagekit.io/ux5g9gl0h/purple-removebg-preview.png', category: 'Digital Transformation' },
 ]
 
 const BRANDS = [
@@ -394,7 +394,7 @@ export default function Home() {
         {/* ═══════════════════════════════════════════════════════
             TEAM PREVIEW
         ═══════════════════════════════════════════════════════ */}
-        <section className="pt-10 md:pt-14 pb-16 md:pb-20 bg-white" id="team-preview">
+        <section className="pt-10 md:pt-14 pb-16 md:pb-20 bg-[#0a192f]" id="team-preview">
           <div className="mx-auto px-6 md:px-10 lg:px-16 max-w-[1440px]">
 
             {/* Header + grid share the same width so all edges align perfectly */}
@@ -404,13 +404,13 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 md:mb-14">
                 <div>
                   <p className="eyebrow">Our People</p>
-                  <h2 className="text-3xl md:text-4xl font-headline font-bold text-[#0a192f] leading-tight">
+                  <h2 className="text-3xl md:text-4xl font-headline font-bold text-white leading-tight">
                     The team that executes.
                   </h2>
                 </div>
                 <Link
                   to="/teams"
-                  className="btn-link text-[#0a192f] underline underline-offset-8 hover:opacity-60 transition-opacity flex-shrink-0"
+                  className="btn-link text-white/70 underline underline-offset-8 hover:text-white hover:opacity-80 transition-all flex-shrink-0"
                 >
                   View Full Team →
                 </Link>
@@ -429,8 +429,7 @@ export default function Home() {
                     to="/teams"
                     className="group w-full sm:w-[22%] flex flex-col text-left"
                   >
-                    {/* Full-width image from top edge to bottom, portrait ratio */}
-                    <div className="w-full aspect-square overflow-hidden rounded-xl shadow-md group-hover:shadow-xl transition-shadow duration-300 bg-white">
+                    <div className="w-full aspect-square overflow-hidden rounded-xl shadow-md group-hover:shadow-2xl group-hover:shadow-black/40 transition-shadow duration-300 bg-[#0e2340]">
                       <img
                         src={member.img}
                         alt={member.name}
@@ -440,10 +439,10 @@ export default function Home() {
                     </div>
 
                     <div className="pt-5">
-                      <h3 className="font-headline font-bold text-[#0a192f] text-[18px] leading-tight mb-1 group-hover:text-[#e31e24] transition-colors duration-300">
+                      <h3 className="font-headline font-bold text-white text-[18px] leading-tight mb-1 group-hover:text-[#e31e24] transition-colors duration-300">
                         {member.name}
                       </h3>
-                      <p className="font-body font-semibold text-[11px] tracking-[0.14em] uppercase text-slate-400 leading-snug">
+                      <p className="font-body font-semibold text-[11px] tracking-[0.14em] uppercase text-white/35 leading-snug">
                         {member.role}
                       </p>
                     </div>
@@ -458,35 +457,48 @@ export default function Home() {
         {/* ═══════════════════════════════════════════════════════
             PARTNERS
         ═══════════════════════════════════════════════════════ */}
-        <section className="py-14 md:py-20 bg-[#0a192f]" id="partners">
+        <section className="py-16 md:py-20 bg-white border-y border-slate-100" id="partners">
           <div className="mx-auto px-6 md:px-10 lg:px-16 max-w-[1440px]">
 
             {/* Header */}
-            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-8 md:mb-12">
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 md:mb-12">
               <div>
-                <p className="font-body font-bold text-[14px] tracking-[0.18em] uppercase text-[#e31e24] mb-3">Our Partners</p>
-                <h2 className="font-headline font-bold text-white text-3xl md:text-4xl tracking-tight">
+                <p className="eyebrow">Our Partners</p>
+                <h2 className="text-3xl md:text-4xl font-headline font-bold text-[#0a192f] leading-tight">
                   Backed by trusted alliances.
                 </h2>
               </div>
               <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 font-body font-semibold text-sm text-white/70 hover:text-white group flex-shrink-0 transition-colors duration-200"
+                to="/partners"
+                className="btn-link text-[#0a192f] underline underline-offset-8 hover:opacity-60 transition-opacity flex-shrink-0"
               >
-                Become a Partner
-                <span className="material-symbols-outlined text-[17px] group-hover:translate-x-1 transition-transform duration-200">arrow_forward</span>
+                View All Partners →
               </Link>
             </div>
 
-            {/* Partner cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+            {/* Single-line partner strip */}
+            <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-slate-100 border border-slate-100 rounded-2xl overflow-hidden">
               {PARTNERS.map(p => (
                 <Link
                   key={p.name}
                   to="/partners"
-                  className="group flex items-center justify-center py-4"
+                  className="group flex flex-col items-center justify-center gap-4 px-6 py-10 bg-white hover:bg-[#f7f9fc] transition-colors duration-300"
                 >
-                  <img src={p.logo} alt={p.name} className="h-20 w-auto object-contain" />
+                  <div className="h-12 w-36 flex items-center justify-center">
+                    <img
+                      src={p.logo}
+                      alt={p.name}
+                      className="h-full w-full object-contain opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
+                    />
+                  </div>
+                  <div className="text-center">
+                    <p className="font-headline font-bold text-[#0a192f] text-[14px] leading-tight group-hover:text-[#e31e24] transition-colors duration-300">
+                      {p.name}
+                    </p>
+                    <p className="font-body text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-400 mt-1">
+                      {p.category}
+                    </p>
+                  </div>
                 </Link>
               ))}
             </div>
@@ -574,7 +586,7 @@ export default function Home() {
                 <h2 className="text-4xl font-headline font-bold text-[#0a192f]">Brand Stories</h2>
               </div>
               <Link
-                to="/wall-of-fame"
+                to="/brand-stories"
                 className="btn-link text-[#0a192f] underline underline-offset-8 hover:opacity-60 transition-opacity"
               >
                 View All Brand Stories →
@@ -583,7 +595,7 @@ export default function Home() {
 
             <div className="grid md:grid-cols-3 gap-8">
               {BLOG_POSTS.map(post => (
-                <Link key={post.id} to="/wall-of-fame">
+                <Link key={post.id} to="/brand-stories">
                 <article className="group cursor-pointer bg-white rounded-2xl overflow-hidden border border-slate-100 hover:border-[#0a192f]/20 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300">
                   {/* Image */}
                   <div className="aspect-[16/10] overflow-hidden relative">
