@@ -100,10 +100,10 @@ const WHY_US_ITEMS = [
 ]
 
 const PARTNERS = [
-  { name: 'Equinox Labs',           logo: 'https://ik.imagekit.io/ux5g9gl0h/eq-removebg-preview.png',       category: 'Quality & Compliance'    },
-  { name: 'Haboteck',               logo: 'https://ik.imagekit.io/ux5g9gl0h/haboteck-removebg-preview.png', category: 'IT Infrastructure'       },
-  { name: 'Razorpay Payroll',       logo: 'https://ik.imagekit.io/ux5g9gl0h/Razorpay-removebg-preview.png', category: 'Payroll & Compliance'    },
-  { name: 'Purple Chillies Solutions', logo: 'https://ik.imagekit.io/ux5g9gl0h/purple-removebg-preview.png', category: 'Digital Transformation' },
+  { name: 'Equinox Labs',           logo: 'https://ik.imagekit.io/ux5g9gl0h/eq.png',       category: 'Quality & Compliance'    },
+  { name: 'Haboteck',               logo: 'https://ik.imagekit.io/ux5g9gl0h/haboteck.png', category: 'IT Infrastructure'       },
+  { name: 'Razorpay Payroll',       logo: 'https://ik.imagekit.io/ux5g9gl0h/Razorpay.png', category: 'Payroll & Compliance'    },
+  { name: 'Purple Chillies Solutions', logo: 'https://ik.imagekit.io/ux5g9gl0h/purple.png', category: 'Digital Transformation' },
 ]
 
 const BRANDS = [
@@ -161,8 +161,8 @@ export default function Home() {
                 </h1>
 
                 <p className="text-slate-300 text-base md:text-fs-body leading-relaxed mb-8 md:mb-16 font-body font-light max-w-2xl">
-                Empowering businesses with structural clarity, operational discipline, and strategic momentum. 
-
+                  We work with founders and leadership teams to bring structure to complexity, discipline to operations, and momentum to growth.
+                  From concept to scale, we simplify the hard parts of building a business — so you can focus on what matters most.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
@@ -394,7 +394,7 @@ export default function Home() {
         {/* ═══════════════════════════════════════════════════════
             TEAM PREVIEW
         ═══════════════════════════════════════════════════════ */}
-        <section className="pt-10 md:pt-14 pb-16 md:pb-20 bg-[#0a192f]" id="team-preview">
+        <section className="pt-10 md:pt-14 pb-16 md:pb-20 bg-white" id="team-preview">
           <div className="mx-auto px-6 md:px-10 lg:px-16 max-w-[1440px]">
 
             {/* Header + grid share the same width so all edges align perfectly */}
@@ -404,13 +404,13 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 md:mb-14">
                 <div>
                   <p className="eyebrow">Our People</p>
-                  <h2 className="text-3xl md:text-4xl font-headline font-bold text-white leading-tight">
+                  <h2 className="text-3xl md:text-4xl font-headline font-bold text-[#0a192f] leading-tight">
                     The team that executes.
                   </h2>
                 </div>
                 <Link
                   to="/teams"
-                  className="btn-link text-white/70 underline underline-offset-8 hover:text-white hover:opacity-80 transition-all flex-shrink-0"
+                  className="btn-link text-[#0a192f] underline underline-offset-8 hover:opacity-60 transition-opacity flex-shrink-0"
                 >
                   View Full Team →
                 </Link>
@@ -429,7 +429,8 @@ export default function Home() {
                     to="/teams"
                     className="group w-full sm:w-[22%] flex flex-col text-left"
                   >
-                    <div className="w-full aspect-square overflow-hidden rounded-xl shadow-md group-hover:shadow-2xl group-hover:shadow-black/40 transition-shadow duration-300 bg-[#0e2340]">
+                    {/* Full-width image from top edge to bottom, portrait ratio */}
+                    <div className="w-full aspect-square overflow-hidden rounded-xl shadow-md group-hover:shadow-xl transition-shadow duration-300 bg-white">
                       <img
                         src={member.img}
                         alt={member.name}
@@ -439,10 +440,10 @@ export default function Home() {
                     </div>
 
                     <div className="pt-5">
-                      <h3 className="font-headline font-bold text-white text-[18px] leading-tight mb-1 group-hover:text-[#e31e24] transition-colors duration-300">
+                      <h3 className="font-headline font-bold text-[#0a192f] text-[18px] leading-tight mb-1 group-hover:text-[#e31e24] transition-colors duration-300">
                         {member.name}
                       </h3>
-                      <p className="font-body font-semibold text-[11px] tracking-[0.14em] uppercase text-white/35 leading-snug">
+                      <p className="font-body font-semibold text-[11px] tracking-[0.14em] uppercase text-slate-400 leading-snug">
                         {member.role}
                       </p>
                     </div>
@@ -457,48 +458,35 @@ export default function Home() {
         {/* ═══════════════════════════════════════════════════════
             PARTNERS
         ═══════════════════════════════════════════════════════ */}
-        <section className="py-16 md:py-20 bg-white border-y border-slate-100" id="partners">
+        <section className="py-14 md:py-20 bg-[#0a192f]" id="partners">
           <div className="mx-auto px-6 md:px-10 lg:px-16 max-w-[1440px]">
 
             {/* Header */}
-            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 md:mb-12">
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-8 md:mb-12">
               <div>
-                <p className="eyebrow">Our Partners</p>
-                <h2 className="text-3xl md:text-4xl font-headline font-bold text-[#0a192f] leading-tight">
+                <p className="font-body font-bold text-[14px] tracking-[0.18em] uppercase text-[#e31e24] mb-3">Our Partners</p>
+                <h2 className="font-headline font-bold text-white text-3xl md:text-4xl tracking-tight">
                   Backed by trusted alliances.
                 </h2>
               </div>
               <Link
-                to="/partners"
-                className="btn-link text-[#0a192f] underline underline-offset-8 hover:opacity-60 transition-opacity flex-shrink-0"
+                to="/contact"
+                className="inline-flex items-center gap-2 font-body font-semibold text-sm text-white/70 hover:text-white group flex-shrink-0 transition-colors duration-200"
               >
-                View All Partners →
+                Become a Partner
+                <span className="material-symbols-outlined text-[17px] group-hover:translate-x-1 transition-transform duration-200">arrow_forward</span>
               </Link>
             </div>
 
-            {/* Single-line partner strip */}
-            <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-slate-100 border border-slate-100 rounded-2xl overflow-hidden">
+            {/* Partner cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
               {PARTNERS.map(p => (
                 <Link
                   key={p.name}
                   to="/partners"
-                  className="group flex flex-col items-center justify-center gap-4 px-6 py-10 bg-white hover:bg-[#f7f9fc] transition-colors duration-300"
+                  className="group flex items-center justify-center py-4"
                 >
-                  <div className="h-12 w-36 flex items-center justify-center">
-                    <img
-                      src={p.logo}
-                      alt={p.name}
-                      className="h-full w-full object-contain opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
-                    />
-                  </div>
-                  <div className="text-center">
-                    <p className="font-headline font-bold text-[#0a192f] text-[14px] leading-tight group-hover:text-[#e31e24] transition-colors duration-300">
-                      {p.name}
-                    </p>
-                    <p className="font-body text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-400 mt-1">
-                      {p.category}
-                    </p>
-                  </div>
+                  <img src={p.logo} alt={p.name} className="h-20 w-auto object-contain" />
                 </Link>
               ))}
             </div>
@@ -586,7 +574,7 @@ export default function Home() {
                 <h2 className="text-4xl font-headline font-bold text-[#0a192f]">Brand Stories</h2>
               </div>
               <Link
-                to="/brand-stories"
+                to="/wall-of-fame"
                 className="btn-link text-[#0a192f] underline underline-offset-8 hover:opacity-60 transition-opacity"
               >
                 View All Brand Stories →
@@ -594,16 +582,19 @@ export default function Home() {
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
-              {BLOG_POSTS.map(post => (
-                <Link key={post.id} to="/brand-stories">
+              {WALL_OF_FAME.slice(0, 3).map(client => (
+                <Link key={client.slug} to="/wall-of-fame" state={{ expandId: client.slug }}>
                 <article className="group cursor-pointer bg-white rounded-2xl overflow-hidden border border-slate-100 hover:border-[#0a192f]/20 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300">
                   {/* Image */}
                   <div className="aspect-[16/10] overflow-hidden relative">
                     <img
-                      src={post.img}
-                      alt={post.title}
+                      src={client.img}
+                      alt={client.name}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
+                    <span className="absolute top-4 left-4 bg-white/15 backdrop-blur-sm text-white font-body font-bold text-[11px] tracking-[0.18em] uppercase px-3 py-1 rounded-full border border-white/20">
+                      {client.sector}
+                    </span>
                     {/* Read indicator appears on hover */}
                     <div className="absolute inset-0 bg-[#0a192f]/0 group-hover:bg-[#0a192f]/20 transition-all duration-300 flex items-center justify-center">
                       <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-300 shadow-lg">
@@ -615,12 +606,12 @@ export default function Home() {
                   {/* Content */}
                   <div className="p-6">
                     <h3 className="text-[17px] font-headline font-bold mb-3 leading-snug text-[#0a192f]">
-                      {post.title}
+                      {client.name}
                     </h3>
-                    <p className="font-body text-slate-500 text-sm leading-relaxed line-clamp-2 mb-5">{post.excerpt}</p>
+                    <p className="font-body text-slate-500 text-sm leading-relaxed line-clamp-2 mb-5">{client.what}</p>
                     <div className="flex items-center justify-between pt-4 border-t border-slate-100">
-                      <span className="font-body font-semibold text-[13px] text-[#0a192f] uppercase tracking-widest">
-                        Read Story
+                      <span className="font-body font-semibold text-[13px] text-[#e31e24] uppercase tracking-widest">
+                        {client.outcome}
                       </span>
                       <div className="w-7 h-7 rounded-full bg-slate-100 group-hover:bg-[#0a192f] flex items-center justify-center transition-colors duration-300 group-hover:translate-x-0.5 transition-transform">
                         <span className="material-symbols-outlined text-[15px] text-[#0a192f] group-hover:text-white transition-colors duration-300">arrow_forward</span>
