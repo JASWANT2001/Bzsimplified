@@ -44,11 +44,15 @@ export default function Contact() {
     e.preventDefault()
 
     if (!form.name) {
-      setToast('Please enter your name.')
+      setToast('Please enter your full name.')
       return
     }
-    if (!form.email && !form.phone) {
-      setToast('Please provide an email or phone number.')
+    if (!form.phone) {
+      setToast('Please enter your phone number.')
+      return
+    }
+    if (!form.message) {
+      setToast('Please leave a note before submitting.')
       return
     }
 
@@ -100,24 +104,24 @@ export default function Contact() {
             Get in Touch
           </p>
           <h1
-            className="font-headline font-black text-white tracking-tight leading-[1.05] mb-6"
+            className="font-headline font-black text-white tracking-tight leading-[1.05] mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
           >
-            Have a question / project / challenge?
+            Looking for clarity, structure, or growth?
           </h1>
-          <p className="font-body text-white/45 text-[18px] sm:text-[20px] leading-relaxed mb-8 md:mb-10 max-w-[520px]">
+          <p className="font-body text-white/45 text-base sm:text-[18px] leading-relaxed mb-8 md:mb-10 max-w-[520px]">
             No sales pitch, no obligations. Just a real conversation about your business.
           </p>
           <div className="flex flex-wrap gap-3">
             <a
               href="#contact-form"
-              onClick={e => { e.preventDefault(); document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' }) }}
+              onClick={e => { e.preventDefault(); const el = document.getElementById('contact-form'); if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 90, behavior: 'smooth' }) }}
               className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#0a192f] font-body font-semibold text-[14px] rounded-xl border border-white transition-all duration-200 hover:bg-transparent hover:text-white group"
             >
               Start the Conversation
               <span className="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform duration-200">arrow_forward</span>
             </a>
             <a
-              href="mailto:hello@bzsimplified.com"
+              href="https://mail.google.com/mail/?view=cm&to=hello@bzsimplified.com"
               className="inline-flex items-center gap-2 px-6 py-3 border border-white text-white font-body font-semibold text-[14px] rounded-xl transition-all duration-200 hover:bg-transparent hover:text-white"
             >
               <span className="material-symbols-outlined text-[16px]">mail</span>
@@ -128,7 +132,7 @@ export default function Contact() {
         <button
           aria-label="Scroll to content"
           onClick={e => e.currentTarget.closest('[data-hero]')?.nextElementSibling?.scrollIntoView({ behavior: 'smooth' })}
-          className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1 group"
+          className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 hidden sm:flex flex-col items-center gap-1 group"
         >
           <span className="font-body text-[10px] uppercase tracking-[0.2em] text-white/30 group-hover:text-white/60 transition-colors">Scroll</span>
           <span className="material-symbols-outlined animate-bounce text-white/40 group-hover:text-white/70 transition-colors" style={{ fontSize: '30px' }}>keyboard_arrow_down</span>
@@ -143,7 +147,7 @@ export default function Contact() {
           <div className="grid lg:grid-cols-[380px_1fr] gap-6">
 
             {/* Left — dark info panel */}
-            <div className="bg-[#0a192f] rounded-2xl p-7 md:p-8 lg:p-10 flex flex-col text-white">
+            <div className="order-2 lg:order-1 bg-[#0a192f] rounded-2xl p-7 md:p-8 lg:p-10 flex flex-col text-white">
 
               {/* Contact details */}
               <div className="space-y-6">
@@ -172,17 +176,15 @@ export default function Contact() {
                 <p className="text-white/35 text-[11px] uppercase tracking-[0.25em] font-bold mb-5">What happens next</p>
                 <div className="space-y-5">
                   {[
-                    { step: '01', icon: 'edit_note',       title: 'Submit your details',   desc: 'Fill the form and tell us what you need.' },
-                    { step: '02', icon: 'support_agent',   title: 'We reach out',           desc: 'Our team contacts you within 2 hours.' },
-                    { step: '03', icon: 'handshake',       title: 'Discovery call',         desc: 'A focused 30-min session to understand your goals.' },
-                    { step: '04', icon: 'rocket_launch',   title: 'We get to work',         desc: 'Tailored plan built and execution begins.' },
+                    { step: '01', icon: 'edit_note',     title: 'Submit your details', desc: 'Fill the form and tell us what you need.' },
+                    { step: '02', icon: 'handshake',     title: 'Discovery call',      desc: 'A focused 30-min session to understand your goals.' },
+                    { step: '03', icon: 'rocket_launch', title: 'We get to work',      desc: 'Tailored plan built and execution begins.' },
                   ].map((s, i, arr) => (
                     <div key={s.step} className="flex gap-4">
                       <div className="flex flex-col items-center">
                         <div className="w-8 h-8 rounded-full bg-[#e31e24]/15 border border-[#e31e24]/30 flex items-center justify-center flex-shrink-0">
                           <span className="material-symbols-outlined text-[#e31e24] text-[15px]">{s.icon}</span>
                         </div>
-                        {i < arr.length - 1 && <div className="w-px flex-1 bg-white/10 my-1" />}
                       </div>
                       <div className="pb-1">
                         <p className="text-white text-[13px] font-semibold leading-tight">{s.title}</p>
@@ -193,36 +195,27 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Footer note */}
-              <div className="mt-8 pt-6 border-t border-white/10">
-                <div className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#e31e24]" />
-                  <p className="text-white/30 text-[12px] font-body">Strictly confidential. Real people.</p>
-                </div>
-              </div>
             </div>
 
             {/* Right — form panel */}
-            <div className="bg-white rounded-2xl border border-slate-100 shadow-[0_8px_40px_rgba(0,0,0,0.05)] p-6 md:p-8 lg:p-10">
+            <div className="order-1 lg:order-2 bg-white rounded-2xl border border-slate-100 shadow-[0_8px_40px_rgba(0,0,0,0.05)] p-6 md:p-8 lg:p-10">
               <h2 className="font-headline font-bold text-[#0a192f] text-xl mb-1">Tell us your story</h2>
               <p className="font-body text-slate-400 text-[14px] mb-8">Share your challenge and we'll connect you with the right solution.</p>
 
               <form onSubmit={submit} className="space-y-5">
 
                 <div className="grid sm:grid-cols-2 gap-4">
-                  <Field label="Full Name *" name="name" type="text" placeholder="Jane Smith" value={form.name} onChange={set} required focused={focused} setFocused={setFocused} />
-                  <Field label="Work Email" name="email" type="email" placeholder="jane@company.com" value={form.email} onChange={set} focused={focused} setFocused={setFocused} />
+                  <Field label="Full Name *" name="name" type="text" placeholder="" value={form.name} onChange={set} required focused={focused} setFocused={setFocused} />
+                  <Field label="Work Email" name="email" type="email" placeholder="" value={form.email} onChange={set} focused={focused} setFocused={setFocused} />
                 </div>
 
                 <div className="grid sm:grid-cols-2 gap-4">
-                  <Field label="Phone" name="phone" type="tel" placeholder="+91 98765 43210" value={form.phone} onChange={set} focused={focused} setFocused={setFocused} />
-                  <Field label="Company" name="company" type="text" placeholder="Acme Corp" value={form.company} onChange={set} focused={focused} setFocused={setFocused} />
+                  <Field label="Phone *" name="phone" type="tel" placeholder="" value={form.phone} onChange={set} required focused={focused} setFocused={setFocused} />
+                  <Field label="Company" name="company" type="text" placeholder="" value={form.company} onChange={set} focused={focused} setFocused={setFocused} />
                 </div>
 
-                <p className="font-body text-slate-400 text-[12px] -mt-2">* Email or phone is required. At least one must be provided.</p>
-
                 <div>
-                  <label className="block font-body font-medium text-[#0a192f] text-[13px] mb-1.5">Would you like to leave a note? If yes, please share below.</label>
+                  <label className="block font-body font-medium text-[#0a192f] text-[13px] mb-1.5">Your message *</label>
                   <textarea
                     name="message"
                     rows={4}
@@ -230,7 +223,8 @@ export default function Contact() {
                     onChange={set}
                     onFocus={() => setFocused('message')}
                     onBlur={() => setFocused('')}
-                    placeholder="Share anything you'd like us to know before we connect…"
+                    placeholder=""
+                    required
                     className={`w-full bg-white border rounded-lg px-4 py-2.5 font-body text-[14px] text-[#0a192f] placeholder:text-slate-400 focus:outline-none transition-all duration-200 resize-none ${focused === 'message' ? 'border-slate-400 ring-1 ring-slate-200' : 'border-slate-200'}`}
                   />
                 </div>

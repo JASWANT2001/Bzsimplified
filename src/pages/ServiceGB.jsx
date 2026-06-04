@@ -60,14 +60,14 @@ export default function ServiceGB() {
         <div className="grid grid-cols-12 gap-8 lg:gap-12 items-end">
           <div className="col-span-12 lg:col-span-8">
             <h1
-              className="font-headline font-extrabold leading-[1.05] tracking-tight text-[#0a192f] mb-12"
+              className="font-headline font-extrabold leading-[1.05] tracking-tight text-[#0a192f] mb-5 md:mb-8 lg:mb-12 text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
             >
               Expansion Without<br />
               <span className="text-[#515f78]">Complication.</span>
             </h1>
           </div>
           <div className="col-span-12 lg:col-span-4 pb-4">
-            <p className="font-body text-fs-lead text-[#5a5e6a] leading-relaxed max-w-sm">
+            <p className="font-body text-base md:text-fs-lead text-[#5a5e6a] leading-relaxed max-w-sm">
               Strategic frameworks designed to amplify your market presence while maintaining the operational integrity of your brand.
             </p>
           </div>
@@ -120,13 +120,13 @@ export default function ServiceGB() {
 
       {/* ── Growth benchmarks */}
       <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 mb-16 md:mb-32">
-        <div className="bg-[#eceef1] rounded-xl p-8 md:p-12 lg:p-16">
+        <div className="bg-[#eceef1] rounded-xl p-6 sm:p-8 md:p-12 lg:p-16">
           <div className="grid grid-cols-12 gap-12 items-center">
 
             {/* Stats */}
             <div className="col-span-12 lg:col-span-5">
               <h2
-                className="font-headline font-extrabold text-[#0a192f] mb-10 leading-tight"
+                className="font-headline font-extrabold text-[#0a192f] mb-10 leading-tight text-2xl sm:text-3xl md:text-4xl"
               >
                 Quantifiable Growth Benchmarks
               </h2>
@@ -137,8 +137,8 @@ export default function ServiceGB() {
                 ].map(item => (
                   <div key={item.label}>
                     <span
-                      className="font-headline font-extrabold text-[#0a192f] tracking-tighter block mb-1"
-                      style={{ fontSize: '3.5rem', lineHeight: 1 }}
+                      className="font-headline font-extrabold text-[#0a192f] tracking-tighter block mb-1 text-3xl md:text-4xl"
+                      style={{ lineHeight: 1 }}
                     >
                       {item.stat}
                     </span>
@@ -171,8 +171,8 @@ export default function ServiceGB() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
           {/* Light card */}
-          <div className="bg-white p-8 md:p-12 rounded-xl flex flex-col justify-between min-h-[280px] md:h-[360px] group hover:shadow-xl transition-all duration-300 border border-slate-100">
-            <h3 className="font-headline text-3xl font-extrabold text-[#0a192f]">Grow Your Portfolio</h3>
+          <div className="bg-white p-6 md:p-12 rounded-xl flex flex-col justify-between min-h-[280px] md:h-[360px] group hover:shadow-xl transition-all duration-300 border border-slate-100">
+            <h3 className="font-headline text-2xl md:text-3xl font-extrabold text-[#0a192f]">Grow Your Portfolio</h3>
             <p className="font-body text-[#5a5e6a] text-fs-body leading-relaxed">
               Diversify your assets and market reach with our proprietary investment and expansion frameworks.
             </p>
@@ -186,8 +186,8 @@ export default function ServiceGB() {
           </div>
 
           {/* Dark card */}
-          <div className="bg-[#0a192f] p-8 md:p-12 rounded-xl flex flex-col justify-between min-h-[280px] md:h-[360px] group relative overflow-hidden">
-            <h3 className="font-headline text-3xl font-extrabold text-white">Scale Your Impact</h3>
+          <div className="bg-[#0a192f] p-6 md:p-12 rounded-xl flex flex-col justify-between min-h-[280px] md:h-[360px] group relative overflow-hidden">
+            <h3 className="font-headline text-2xl md:text-3xl font-extrabold text-white">Scale Your Impact</h3>
             <p className="font-body text-[#76849f] text-fs-body leading-relaxed">
               Measure and amplify your corporate social responsibility and market influence on a global scale.
             </p>
@@ -209,20 +209,22 @@ export default function ServiceGB() {
 
       {/* ── CTA */}
       <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 py-16">
-        <div className="bg-[#0a192f] rounded-2xl p-8 md:p-12 flex flex-col lg:flex-row justify-between items-center gap-8">
-          <div className="text-center lg:text-left">
+        <div className="bg-[#0a192f] rounded-2xl p-6 sm:p-8 md:p-12 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 lg:gap-8 relative overflow-hidden">
+            <div className="absolute -top-10 -right-10 w-52 h-52 bg-[#e31e24]/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute -bottom-10 left-1/4 w-40 h-40 bg-white/5 rounded-full blur-3xl pointer-events-none" />
+          <div className="text-left relative z-10">
             <h3
-              className="font-headline font-extrabold text-white tracking-tighter mb-2 text-2xl md:text-3xl"
+              className="font-headline font-extrabold text-white tracking-tighter mb-2 text-xl sm:text-2xl md:text-3xl"
             >
               Ready to build something lasting?
             </h3>
-            <p className="font-body text-white/50 text-base">Transform your business with our consulting expertise.</p>
+            <p className="font-body text-white/50 text-sm sm:text-base">Transform your business with our consulting expertise.</p>
           </div>
           <Link
             to="/contact"
-            className="whitespace-nowrap inline-flex items-center gap-2 bg-white text-[#0a192f] px-10 py-4 rounded-lg font-body font-bold text-sm uppercase tracking-widest border-2 border-white transition-colors duration-200 hover:bg-transparent hover:text-white group"
+            className="relative z-10 w-full sm:w-auto whitespace-nowrap inline-flex items-center justify-center gap-2 bg-white text-[#0a192f] px-8 py-4 rounded-full font-body font-bold text-sm uppercase tracking-widest border-2 border-white transition-colors duration-200 hover:bg-transparent hover:text-white group"
           >
-            Let's Talk
+            Let's Discuss
             <span className="material-symbols-outlined text-[19px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
           </Link>
         </div>

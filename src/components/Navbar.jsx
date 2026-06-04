@@ -8,7 +8,6 @@ const NAV_LINKS = [
   { label: 'Partners',      href: '/partners', isLink: true },
   // { label: 'Brands',        href: '/#brands'        },
   { label: 'Wall of Fame',  href: '/wall-of-fame', isLink: true },
-  { label: 'Brand Stories', href: '/brand-stories', isLink: true },
 ]
 
 const SERVICES = [
@@ -36,7 +35,7 @@ export default function Navbar() {
 
   const light = scrolled || pathname === '/contact' || pathname === '/teams' || pathname === '/partners'
     || pathname === '/wall-of-fame' || pathname === '/privacy-policy' || pathname === '/terms-of-usage'
-    || pathname.startsWith('/brand-stories') || pathname.startsWith('/service')
+    || pathname.startsWith('/service')
 
   /* ── close panel on route change */
   useEffect(() => {
@@ -83,18 +82,10 @@ export default function Navbar() {
         <div className="flex items-center justify-between px-6 md:px-10 lg:px-16 h-[82px] max-w-[1440px] mx-auto">
 
           {/* ── Logo */}
-          <Link to="/" className="flex items-center gap-3 shrink-0" onClick={close}>
-            <div className="relative flex items-end leading-none">
-              <span className={`font-headline font-black tracking-tighter transition-colors duration-300 select-none ${
-                light ? 'text-[#0a192f]' : 'text-white'
-              }`} style={{ fontSize: '2.4rem', lineHeight: 1 }}>B</span>
-              <span className="absolute bg-[#e31e24]" style={{ width: 10, height: 10, top: 2, right: -3 }} />
-            </div>
-            <div className={`w-px self-stretch my-1 transition-colors duration-300 ${light ? 'bg-slate-300' : 'bg-white/30'}`} />
-            <div className="flex flex-col justify-center gap-0.5">
-              <span className={`font-headline font-extrabold text-[14px] tracking-tight leading-none transition-colors duration-300 ${light ? 'text-[#0a192f]' : 'text-white'}`}>Business</span>
-              <span className={`font-headline font-extrabold text-[14px] tracking-tight leading-none transition-colors duration-300 ${light ? 'text-[#0a192f]' : 'text-white'}`}>Simplified</span>
-            </div>
+          <Link to="/" className="shrink-0 flex items-center gap-2" onClick={close}>
+            <img src="/logo-brandmark-final.png" alt="" className="h-14 w-auto object-contain" />
+            <div className={`w-px h-9 transition-colors duration-300 ${light ? 'bg-slate-200' : 'bg-white/25'}`} />
+            <img src="/logo-wordmark-final.png" alt="Business Simplified" className="h-32 w-auto object-contain -ml-6" />
           </Link>
 
           {/* ── Desktop links */}
@@ -143,7 +134,7 @@ export default function Navbar() {
                             className="group flex items-start gap-3 p-4 rounded-xl hover:bg-slate-50 transition-all duration-200"
                           >
                             <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-slate-100 flex-shrink-0 group-hover:bg-[#0a192f] transition-colors duration-300">
-                              <span className="font-headline font-bold text-[11px] text-[#0a192f] group-hover:text-white">{service.code}</span>
+                              <span className="font-headline font-bold text-[11px] text-[#0a192f] group-hover:text-white">{service.num}</span>
                             </div>
                             <div className="flex-1 min-w-0">
                               <p className="font-headline font-bold text-[#0a192f] text-[13px] group-hover:text-[#e31e24] transition-colors leading-snug">{service.title}</p>
@@ -169,7 +160,7 @@ export default function Navbar() {
                   : 'border-white/70 bg-transparent text-white hover:bg-white hover:text-[#0a192f] hover:border-white'
               }`}
             >
-              Let's Talk
+              Let's Discuss
               <span className="material-symbols-outlined text-[15px] group-hover:translate-x-0.5 transition-transform duration-200">arrow_forward</span>
             </Link>
 
@@ -203,13 +194,10 @@ export default function Navbar() {
 
         {/* Panel header */}
         <div className="flex items-center justify-between px-6 h-[82px] border-b border-slate-100 shrink-0">
-          <div className="flex items-center gap-2.5">
-            <div className="relative flex items-end leading-none">
-              <span className="font-headline font-black tracking-tighter text-[#0a192f] select-none" style={{ fontSize: '1.6rem', lineHeight: 1 }}>B</span>
-              <span className="absolute bg-[#e31e24]" style={{ width: 7, height: 7, top: 1, right: -2 }} />
-            </div>
-            <div className="w-px h-4 bg-slate-200" />
-            <span className="font-headline font-extrabold text-[12px] tracking-tight text-[#0a192f] leading-tight">Business<br />Simplified</span>
+          <div className="flex items-center gap-2">
+            <img src="/logo-brandmark-final.png" alt="" className="h-11 w-auto object-contain" />
+            <div className="w-px h-7 bg-slate-200" />
+            <img src="/logo-wordmark-final.png" alt="Business Simplified" className="h-24 w-auto object-contain -ml-6" />
           </div>
           <button
             onClick={close}
@@ -249,7 +237,7 @@ export default function Navbar() {
                             key={s.code}
                             to={`/service/${s.code.toLowerCase()}`}
                             onClick={close}
-                            className="flex items-center gap-3 px-2 py-2.5 rounded-lg hover:bg-slate-50 transition-colors group/item"
+                            className="flex items-center gap-2 px-2 py-2.5 rounded-lg hover:bg-slate-50 transition-colors group/item"
                           >
                             <span className="font-headline font-black text-[10px] text-slate-300 group-hover/item:text-[#0a192f] w-5 shrink-0 transition-colors">
                               {s.num}
@@ -300,7 +288,7 @@ export default function Navbar() {
             className="flex items-center justify-center gap-2 w-full bg-[#0a192f] text-white px-6 py-3.5 rounded-xl font-body font-semibold text-[15px] hover:bg-[#0e2340] transition-colors"
           >
             <span className="w-2 h-2 rounded-full bg-[#e31e24] shrink-0" />
-            Let's Talk
+            Let's Discuss
             <span className="material-symbols-outlined text-[17px]">arrow_forward</span>
           </Link>
         </div>

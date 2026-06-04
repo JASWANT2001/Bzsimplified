@@ -4,12 +4,14 @@ import { Link } from 'react-router-dom'
 
 const WALL_OF_FAME = [
   {
-    slug: 'sathyam-grand',
-    name: 'Sathyam Grand Resort',
-    sector: 'Hospitality',
-    what: 'Operational transformation through operations restructuring, food cost optimization, and process standardization, improving efficiency, reducing wastage, and strengthening profitability.',
-    outcome: 'F&B Cost Optimized · SOPs Standardized',
-    img: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80',
+    slug: 'palagara-koodai',
+    name: 'Palagara Koodai',
+    sector: 'F&B',
+    what: 'From Logo to Launch, a complete brand journey across all 7 service verticals, transforming a founder\'s vision into a structured, market-ready business.',
+    outcome: '7 Service Verticals · Full Brand Journey',
+    img: '/palagara-koodai.png',
+    isLogo: true,
+    logoShrink: true,
   },
   {
     slug: 'leader-mojo',
@@ -17,23 +19,17 @@ const WALL_OF_FAME = [
     sector: 'Leadership & Consulting',
     what: 'GTM strategy and market positioning, strengthening market presence, refining messaging, and building a scalable approach to reach, engage, and transform leaders and teams.',
     outcome: 'GTM Strategy Deployed · Brand Positioning Refined',
-    img: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80',
+    img: '/leader-mojo.png',
+    isLogo: true,
+    logoZoom: true,
   },
   {
-    slug: 'palagara-koodai',
-    name: 'Palagara Koodai',
-    sector: 'F&B',
-    what: 'From Logo to Launch, a complete brand journey across all 7 service verticals, transforming a founder\'s vision into a structured, market-ready business.',
-    outcome: '7 Service Verticals · Full Brand Journey',
-    img: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80',
-  },
-  {
-    slug: 'muttram',
-    name: 'Muttram – The Carnatic Canteen',
-    sector: 'F&B',
-    what: 'Menu engineering, food costing, and GTM strategy, optimizing profitability, refining pricing, and positioning the brand for sustainable growth.',
-    outcome: 'F&B Cost Engineered · GTM Strategy Built',
-    img: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80',
+    slug: 'sathyam-grand',
+    name: 'Sathyam Grand Resort',
+    sector: 'Hospitality',
+    what: 'Operational transformation through operations restructuring, food cost optimization, and process standardization, improving efficiency, reducing wastage, and strengthening profitability.',
+    outcome: 'F&B Cost Optimized · SOPs Standardized',
+    img: '/sathyam_HD.png',
   },
   {
     slug: 'hibiscus-ecr',
@@ -41,15 +37,25 @@ const WALL_OF_FAME = [
     sector: 'Hospitality',
     what: 'Full-spectrum operational support, rota management, payroll restructuring, food cost optimization, purchase systems, GTM strategy, and Virtual COO.',
     outcome: 'Virtual COO Support · Full Ops Transformation',
-    img: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=800&q=80',
+    img: '/hibiscus-cafe.png',
+  },
+  {
+    slug: 'muttram',
+    name: 'Muttram – The Carnatic Canteen',
+    sector: 'F&B',
+    what: 'Menu engineering, food costing, and GTM strategy, optimizing profitability, refining pricing, and positioning the brand for sustainable growth.',
+    outcome: 'F&B Cost Engineered · GTM Strategy Built',
+    img: '/muttram.png',
   },
   {
     slug: 'jp-neuro-spine',
-    name: 'JP Neuro Spine Hospital',
+    name: 'JP Neuro Spine Hospital and Pain Management Centre',
     sector: 'Healthcare',
     what: 'Concept to launch, complete healthcare enterprise built from the ground up, covering brand, operations, compliance, recruitment, accounts, GTM, and ongoing Virtual COO support.',
     outcome: 'Full End-to-End Build · GTM Strategy Executed',
-    img: 'https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=800&q=80',
+    img: '/361EA7E6-5570-4979-84E1-A800FE77BD27_1_105_c.jpeg',
+    isLogo: true,
+    logoZoom: true,
   },
 ]
 
@@ -129,7 +135,7 @@ export default function Home() {
         {/* ═══════════════════════════════════════════════════════
             HERO
         ═══════════════════════════════════════════════════════ */}
-        <section data-hero="true" className="relative min-h-screen flex items-center pt-24 pb-16 md:pt-36 md:pb-28 overflow-hidden bg-[#0a192f]">
+        <section data-hero="true" className="relative min-h-screen flex items-center pt-24 pb-14 sm:pt-28 sm:pb-18 md:pt-36 md:pb-28 overflow-hidden bg-[#0a192f]">
 
           {/* Background photo */}
           <div className="absolute right-0 top-0 w-full lg:w-2/3 h-full z-0 overflow-hidden">
@@ -141,15 +147,15 @@ export default function Home() {
             />
           </div>
 
-          <div className="w-full mx-auto px-6 md:px-10 lg:px-16 relative z-20 max-w-[1440px]">
+          <div className="w-full mx-auto px-5 sm:px-8 md:px-10 lg:px-16 relative z-20 max-w-[1440px]">
             <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-center">
 
               {/* Left copy */}
               <div className="lg:col-span-7 xl:col-span-7">
-                <h1 className="font-headline leading-[1.0] tracking-tight mb-8 md:mb-14 text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+                <h1 className="font-headline leading-[1.05] tracking-tight mb-6 sm:mb-8 md:mb-14 text-[2.4rem] sm:text-5xl md:text-6xl lg:text-7xl">
                   {/* Line 1: outline ghost */}
                   <div
-                    className="block mb-2 font-black"
+                    className="block mb-1 sm:mb-2 font-black"
                     style={{ color: 'transparent', WebkitTextStroke: '1.5px rgba(255,255,255,0.45)' }}
                   >
                     Bringing Structure
@@ -160,17 +166,16 @@ export default function Home() {
                   </div>
                 </h1>
 
-                <p className="text-slate-300 text-base md:text-fs-body leading-relaxed mb-8 md:mb-16 font-body font-light max-w-2xl">
-                Empowering businesses with structural clarity, operational discipline, and strategic momentum. 
-
+                <p className="text-slate-300 text-sm sm:text-base md:text-fs-body leading-relaxed mb-7 sm:mb-10 md:mb-16 font-body font-light max-w-xl sm:max-w-2xl">
+                  Empowering businesses with structural clarity, operational discipline, and strategic momentum.
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+                <div className="flex flex-col xs:flex-row gap-3 sm:gap-4 items-start sm:items-center">
                   <Link
                     to="/contact"
-                    className="group inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-white text-[#0a192f] font-body font-semibold text-[15px] tracking-[0.04em] rounded-full border-2 border-white transition-all duration-200 hover:bg-transparent hover:text-white active:scale-95 whitespace-nowrap"
+                    className="group inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 bg-white text-[#0a192f] font-body font-semibold text-[14px] sm:text-[15px] tracking-[0.04em] rounded-full border-2 border-white transition-all duration-200 hover:bg-transparent hover:text-white active:scale-95 whitespace-nowrap"
                   >
-                    <span className="material-symbols-outlined text-[19px] flex-shrink-0">arrow_forward</span>
+                    <span className="material-symbols-outlined text-[18px] sm:text-[19px] flex-shrink-0">arrow_forward</span>
                     Start Your Transformation
                   </Link>
                   {/* <button className="group inline-flex items-center justify-center gap-2.5 px-7 py-4 border border-white/30 text-white font-body font-medium text-[15px] rounded-full transition-all duration-300 hover:bg-white/[0.08] hover:border-white/50 hover:shadow-[0_8px_24px_rgba(255,255,255,0.1)]">
@@ -319,22 +324,21 @@ export default function Home() {
         {/* ═══════════════════════════════════════════════════════
             SERVICES NAVIGATION
         ═══════════════════════════════════════════════════════ */}
-        <section className="pt-16 md:pt-20 pb-10 md:pb-14 bg-[#f7f9fc]" id="services">
-          <div className="mx-auto px-6 md:px-10 lg:px-16 max-w-[1440px]">
+        <section className="pt-14 md:pt-20 pb-10 md:pb-14 bg-[#f7f9fc]" id="services">
+          <div className="mx-auto px-5 sm:px-8 md:px-10 lg:px-16 max-w-[1440px]">
 
             {/* Header */}
-            <div className="mb-8 md:mb-12">
-              <p className="eyebrow">Our Services</p>
-              <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-                <h2 className="text-3xl md:text-4xl font-headline font-bold text-[#0a192f] leading-tight">
+            <div className="mb-7 md:mb-12">
+              <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 sm:gap-4">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-headline font-bold text-[#0a192f] leading-tight">
                   Everything your business needs to scale.
                 </h2>
-                <p className="font-body text-slate-400 text-sm shrink-0">Click any service to explore →</p>
+                <p className="font-body text-slate-400 text-sm shrink-0 hidden sm:block">Click any service to explore →</p>
               </div>
             </div>
 
             {/* 9-card flat grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
               {SERVICES.map(service => (
                 <Link
                   key={service.code}
@@ -352,7 +356,7 @@ export default function Home() {
                     />
                   </div>
 
-                  <div className="p-7 flex flex-col flex-1">
+                  <div className="p-5 sm:p-7 flex flex-col flex-1">
                     {/* Top row: icon + number */}
                     <div className="flex items-start justify-between mb-5">
                       <div className="w-11 h-11 bg-slate-100 group-hover:bg-[#0a192f] rounded-xl flex items-center justify-center transition-colors duration-300 flex-shrink-0">
@@ -394,30 +398,29 @@ export default function Home() {
         {/* ═══════════════════════════════════════════════════════
             TEAM PREVIEW
         ═══════════════════════════════════════════════════════ */}
-        <section className="pt-10 md:pt-14 pb-16 md:pb-20 bg-[#0a192f]" id="team-preview">
-          <div className="mx-auto px-6 md:px-10 lg:px-16 max-w-[1440px]">
+        <section className="pt-10 md:pt-14 pb-14 md:pb-20 bg-[#0a192f]" id="team-preview">
+          <div className="mx-auto px-5 sm:px-8 md:px-10 lg:px-16 max-w-[1440px]">
 
-            {/* Header + grid share the same width so all edges align perfectly */}
             <div className="w-full">
 
               {/* Header */}
-              <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 md:mb-14">
+              <div className="flex sm:flex-row sm:items-end justify-between gap-3 sm:gap-4 mb-8 md:mb-14">
                 <div>
                   <p className="eyebrow">Our People</p>
-                  <h2 className="text-3xl md:text-4xl font-headline font-bold text-white leading-tight">
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-headline font-bold text-white leading-tight">
                     The team that executes.
                   </h2>
                 </div>
                 <Link
                   to="/teams"
-                  className="btn-link text-white/70 underline underline-offset-8 hover:text-white hover:opacity-80 transition-all flex-shrink-0"
+                  className="hidden sm:block btn-link text-white/70 underline underline-offset-8 hover:text-white hover:opacity-80 transition-all flex-shrink-0"
                 >
                   View Full Team →
                 </Link>
               </div>
 
-              {/* 4 members, each flex-1 so they share the full width equally */}
-              <div className="flex flex-col sm:flex-row sm:justify-between gap-6">
+              {/* 2×2 on mobile/tablet, 4-across on desktop */}
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
                 {[
                   { img: 'https://ik.imagekit.io/ux5g9gl0h/bottom_left.png',         name: 'Kalyan',            role: 'Founder & CEO',                            fit: 'object-cover', pos: '35% 40%' },
                   { img: 'https://ik.imagekit.io/ux5g9gl0h/sunil%20jose.png',        name: 'Sunil Jose',        role: 'Consultant – IP & Copyright'          },
@@ -427,7 +430,7 @@ export default function Home() {
                   <Link
                     key={member.name}
                     to="/teams"
-                    className="group w-full sm:w-[22%] flex flex-col text-left"
+                    className="group flex flex-col text-left"
                   >
                     <div className="w-full aspect-square overflow-hidden rounded-xl shadow-md group-hover:shadow-2xl group-hover:shadow-black/40 transition-shadow duration-300 bg-[#0e2340]">
                       <img
@@ -438,16 +441,27 @@ export default function Home() {
                       />
                     </div>
 
-                    <div className="pt-5">
-                      <h3 className="font-headline font-bold text-white text-[18px] leading-tight mb-1 group-hover:text-[#e31e24] transition-colors duration-300">
+                    <div className="pt-3 sm:pt-5">
+                      <h3 className="font-headline font-bold text-white text-[15px] sm:text-[18px] leading-tight mb-1 group-hover:text-[#e31e24] transition-colors duration-300">
                         {member.name}
                       </h3>
-                      <p className="font-body font-semibold text-[11px] tracking-[0.14em] uppercase text-white/35 leading-snug">
+                      <p className="font-body font-semibold text-[10px] sm:text-[11px] tracking-[0.12em] sm:tracking-[0.14em] uppercase text-white/35 leading-snug">
                         {member.role}
                       </p>
                     </div>
                   </Link>
                 ))}
+              </div>
+
+              {/* View Full Team — below grid, mobile only */}
+              <div className="mt-10 flex justify-center sm:hidden">
+                <Link
+                  to="/teams"
+                  className="inline-flex items-center gap-2 font-body font-semibold text-[14px] text-white/60 hover:text-white border border-white/20 hover:border-white/50 px-6 py-3 rounded-full transition-all duration-200 group"
+                >
+                  View Full Team
+                  <span className="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform duration-200">arrow_forward</span>
+                </Link>
               </div>
 
             </div>
@@ -457,50 +471,74 @@ export default function Home() {
         {/* ═══════════════════════════════════════════════════════
             PARTNERS
         ═══════════════════════════════════════════════════════ */}
-        <section className="py-16 md:py-20 bg-white border-y border-slate-100" id="partners">
-          <div className="mx-auto px-6 md:px-10 lg:px-16 max-w-[1440px]">
+        <section className="py-14 md:py-24 bg-white" id="partners">
+          <div className="mx-auto px-5 sm:px-8 md:px-10 lg:px-16 max-w-[1440px]">
 
             {/* Header */}
-            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 md:mb-12">
+            <div className="flex sm:flex-row sm:items-end justify-between gap-3 sm:gap-4 mb-8 md:mb-14">
               <div>
-                <p className="eyebrow">Our Partners</p>
-                <h2 className="text-3xl md:text-4xl font-headline font-bold text-[#0a192f] leading-tight">
-                  Backed by trusted alliances.
+                <p className="font-body font-bold text-[12px] tracking-[0.28em] uppercase text-[#e31e24] mb-3">Our Partners</p>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-headline font-bold text-[#0a192f] leading-tight">
+                  Trusted alliances.
                 </h2>
               </div>
               <Link
                 to="/partners"
-                className="btn-link text-[#0a192f] underline underline-offset-8 hover:opacity-60 transition-opacity flex-shrink-0"
+                className="hidden sm:inline-flex items-center gap-2 font-body font-semibold text-[14px] text-[#0a192f] hover:text-[#e31e24] underline underline-offset-8 transition-colors duration-200 flex-shrink-0"
               >
                 View All Partners →
               </Link>
             </div>
 
-            {/* Single-line partner strip */}
-            <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-slate-100 border border-slate-100 rounded-2xl overflow-hidden">
-              {PARTNERS.map(p => (
+            {/* 4 flip-on-hover cards */}
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+              {PARTNERS.map((p, i) => (
                 <Link
                   key={p.name}
                   to="/partners"
-                  className="group flex flex-col items-center justify-center gap-4 px-6 py-10 bg-white hover:bg-[#f7f9fc] transition-colors duration-300"
+                  className="group relative bg-[#f7f9fc] rounded-lg p-5 sm:p-8 flex flex-col gap-4 sm:gap-5 overflow-hidden border border-slate-100 hover:border-transparent hover:bg-[#0a192f] transition-all duration-300 cursor-pointer"
                 >
-                  <div className="h-12 w-36 flex items-center justify-center">
+                  {/* Category eyebrow */}
+                  <p className="font-body text-[10px] font-bold uppercase tracking-[0.22em] text-slate-400 group-hover:text-white/40 transition-colors duration-300 relative z-10">
+                    {p.category}
+                  </p>
+
+                  {/* Logo */}
+                  <div className="flex items-center justify-center h-16 relative z-10">
                     <img
                       src={p.logo}
                       alt={p.name}
-                      className="h-full w-full object-contain opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
+                      className="h-full w-full object-contain opacity-60 group-hover:opacity-100 group-hover:brightness-0 group-hover:invert group-hover:scale-105 transition-all duration-300"
                     />
                   </div>
-                  <div className="text-center">
-                    <p className="font-headline font-bold text-[#0a192f] text-[14px] leading-tight group-hover:text-[#e31e24] transition-colors duration-300">
+
+                  {/* Name + arrow */}
+                  <div className="flex items-center justify-between mt-auto relative z-10">
+                    <p className="font-headline font-bold text-[#0a192f] text-[15px] leading-tight group-hover:text-white transition-colors duration-300">
                       {p.name}
                     </p>
-                    <p className="font-body text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-400 mt-1">
-                      {p.category}
-                    </p>
+                    <span className="material-symbols-outlined text-[16px] text-slate-300 group-hover:text-white/50 group-hover:translate-x-0.5 transition-all duration-200">
+                      arrow_forward
+                    </span>
                   </div>
+
+                  {/* Watermark number */}
+                  <span className="absolute -right-1 -bottom-4 font-headline font-black leading-none text-slate-100 group-hover:text-white/[0.04] transition-colors duration-300 select-none pointer-events-none" style={{ fontSize: '5.5rem' }}>
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
                 </Link>
               ))}
+            </div>
+
+            {/* View All Partners — below grid, mobile only */}
+            <div className="mt-10 flex justify-center sm:hidden">
+              <Link
+                to="/partners"
+                className="inline-flex items-center gap-2 font-body font-semibold text-[14px] text-[#0a192f]/60 hover:text-[#0a192f] border border-slate-300 hover:border-slate-400 px-6 py-3 rounded-full transition-all duration-200 group"
+              >
+                View All Partners
+                <span className="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform duration-200">arrow_forward</span>
+              </Link>
             </div>
 
           </div>
@@ -513,59 +551,68 @@ export default function Home() {
         {/* ═══════════════════════════════════════════════════════
             WALL OF FAME
         ═══════════════════════════════════════════════════════ */}
-        <section className="py-20 md:py-32 bg-[#eceef1] overflow-hidden" id="wall-of-fame">
-          <div className="mx-auto px-6 md:px-10 lg:px-16 max-w-[1440px]">
+        <section className="py-14 sm:py-20 md:py-32 bg-[#eceef1] overflow-hidden" id="wall-of-fame">
+          <div className="mx-auto px-5 sm:px-8 md:px-10 lg:px-16 max-w-[1440px]">
             {/* Header */}
-            <div className="mb-10 md:mb-16">
-              <p className="font-body font-bold text-[14px] tracking-[0.18em] uppercase text-[#e31e24] mb-5">
+            <div className="mb-8 md:mb-16">
+              <p className="font-body font-bold text-[12px] sm:text-[14px] tracking-[0.18em] uppercase text-[#e31e24] mb-3 sm:mb-5">
                 Wall of Fame
               </p>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-headline font-black text-[#0a192f] leading-[1.05]">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-headline font-black text-[#0a192f] leading-[1.05]">
                 Brands we've helped build.
               </h2>
             </div>
 
-            {/* Cards grid */}
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-6">
+            {/* Cards grid — pt so the badge has room to float above */}
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10 sm:gap-5 md:gap-6 pt-5">
               {WALL_OF_FAME.map(brand => (
                 <Link
                   key={brand.slug}
                   to="/wall-of-fame"
-                  className="group relative bg-white border border-slate-200 rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:border-[#e31e24]/40 hover:shadow-xl flex flex-col cursor-pointer"
+                  className="group relative bg-white border border-slate-200 rounded-2xl transition-all duration-500 hover:-translate-y-2 hover:border-[#e31e24]/40 hover:shadow-xl flex flex-col cursor-pointer"
                 >
+                  {/* Success Story badge — straddles top edge */}
+                  <div className="absolute top-0 left-4 sm:left-5 -translate-y-1/2 z-20">
+                    <div className="inline-flex items-center gap-1.5 bg-[#0a192f] border border-[#0a192f] text-white font-body font-semibold text-[10px] sm:text-[11px] tracking-[0.12em] uppercase px-3 py-1.5 rounded-full shadow-lg">
+                      <span className="material-symbols-outlined text-amber-400 text-[13px] sm:text-[14px]">emoji_events</span>
+                      Success Story
+                    </div>
+                  </div>
+
                   {/* Image area */}
-                  <div className="relative w-full aspect-[16/9] overflow-hidden flex-shrink-0">
+                  <div className="relative w-full aspect-[16/9] overflow-hidden flex-shrink-0 rounded-t-2xl">
                     <img
                       src={brand.img}
                       alt={brand.name}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                      className={`w-full h-full transition-transform duration-700 group-hover:scale-110 ${brand.isLogo ? `object-contain bg-white ${brand.logoShrink ? 'p-12' : brand.logoZoom ? 'p-2' : 'p-6'}` : 'object-cover'}`}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent group-hover:from-black/80 transition-all duration-500" />
 
                     {/* Sector slides up on hover */}
                     <span className="absolute bottom-4 left-4 bg-[#e31e24] text-white font-body font-bold text-[11px] tracking-[0.15em] uppercase px-3 py-1 rounded-full translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                       {brand.sector}
                     </span>
-
-                    {/* Success Story badge */}
-                    <div className="absolute top-4 left-4">
-                      <span className="inline-flex items-center gap-1.5 bg-emerald-500/90 text-white font-body font-semibold text-[11px] tracking-[0.1em] uppercase px-2.5 py-1 rounded-full backdrop-blur-sm">
-                        <span className="material-symbols-outlined text-[14px]">check_circle</span>
-                        Success Story
-                      </span>
-                    </div>
                   </div>
 
-                  <div className="relative z-10 p-7 flex flex-col flex-1">
+                  <div className="h-px bg-slate-200" />
+
+                  <div className="relative z-10 p-4 sm:p-6 md:p-7 flex flex-col flex-1">
                     {/* Brand name */}
-                    <h4 className="text-xl font-headline font-black text-[#0a192f] mb-3 leading-tight group-hover:text-[#e31e24] transition-colors duration-300">
+                    <h4 className="text-[15px] sm:text-lg md:text-xl font-headline font-black text-[#0a192f] mb-2 sm:mb-3 leading-tight group-hover:text-[#e31e24] transition-colors duration-300">
                       {brand.name}
                     </h4>
 
                     {/* Outcome pill */}
-                    <div className="inline-flex items-center gap-2 bg-[#f7f9fc] group-hover:bg-[#eceef1] border border-slate-200 rounded-full px-4 py-2 mb-6 self-start transition-colors duration-300">
+                    <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-[#f7f9fc] group-hover:bg-[#eceef1] border border-slate-200 rounded-full px-3 sm:px-4 py-1.5 sm:py-2 self-start transition-colors duration-300">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#e31e24] flex-shrink-0" />
-                      <span className="font-body text-slate-600 group-hover:text-[#0a192f] text-xs transition-colors duration-300">{brand.outcome}</span>
+                      <span className="font-body text-slate-600 group-hover:text-[#0a192f] text-[10px] sm:text-xs transition-colors duration-300">{brand.outcome}</span>
+                    </div>
+
+                    {/* Bottom row */}
+                    <div className="mt-auto pt-3 sm:pt-4 border-t border-slate-100 group-hover:border-slate-200 flex items-center justify-between transition-colors duration-300">
+                      <span className="font-body font-bold text-[10px] sm:text-[11px] tracking-[0.18em] uppercase text-[#e31e24]">{brand.sector}</span>
+                      <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-100 group-hover:bg-[#0a192f] flex items-center justify-center transition-all duration-300 group-hover:translate-x-1 flex-shrink-0">
+                        <span className="material-symbols-outlined text-[15px] text-slate-500 group-hover:text-white transition-colors duration-300">arrow_forward</span>
+                      </div>
                     </div>
 
                   </div>
@@ -576,9 +623,9 @@ export default function Home() {
         </section>
 
         {/* ═══════════════════════════════════════════════════════
-            BRAND STORIES
+            BRAND STORIES — HIDDEN FOR NOW
         ═══════════════════════════════════════════════════════ */}
-        <section className="py-16 md:py-24 bg-white" id="brand-stories">
+        {false && <section className="py-16 md:py-24 bg-white" id="brand-stories">
           <div className="mx-auto px-6 md:px-10 lg:px-16 max-w-[1440px]">
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-6 mb-8 md:mb-14">
               <div>
@@ -671,7 +718,7 @@ export default function Home() {
             </div>
 
           </div>
-        </section>
+        </section>}
 
         {/* ═══════════════════════════════════════════════════════
             WHY US - HIDDEN FOR NOW

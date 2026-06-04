@@ -72,7 +72,7 @@ export default function ServiceET() {
       {/* ── Hero */}
       <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-12 gap-8 items-stretch mt-10 md:mt-16 mb-12 md:mb-24">
         <div className="col-span-12 lg:col-span-7 flex flex-col justify-center">
-          <h1 className="font-headline font-extrabold leading-[1.1] tracking-tighter text-[#0a192f] mb-8">
+          <h1 className="font-headline font-extrabold leading-[1.1] tracking-tighter text-[#0a192f] mb-5 md:mb-8 text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
             <span className="block text-[#0a192f]">Empowered Teams.</span>
             <span className="block text-[#515f78]">Stronger Execution.</span>
           </h1>
@@ -85,7 +85,7 @@ export default function ServiceET() {
           </div>
         </div>
         <div className="col-span-12 lg:col-span-5 flex justify-end">
-          <div className="w-full min-h-[300px] h-full bg-[#eceef1] rounded-xl overflow-hidden">
+          <div className="w-full min-h-[220px] md:min-h-[300px] h-full mt-6 lg:mt-0 bg-[#eceef1] rounded-xl overflow-hidden">
             <img
               alt="Team empowerment"
               className="w-full h-full object-cover"
@@ -98,14 +98,14 @@ export default function ServiceET() {
       {/* ── Capability Pillars */}
       <section className="bg-white py-16 md:py-24">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16">
-          <h2 className="font-headline font-extrabold text-[#0a192f] tracking-tighter mb-10">
+          <h2 className="font-headline font-extrabold text-[#0a192f] tracking-tighter mb-10 text-2xl sm:text-3xl md:text-4xl">
             Capability Pillars
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {PILLARS.map(pillar => (
               <div
                 key={pillar.title}
-                className="group bg-[#f2f4f7] p-8 rounded-xl hover:bg-white transition-all duration-300 border border-transparent hover:border-slate-200 hover:shadow-md"
+                className="group bg-[#f2f4f7] p-6 md:p-8 rounded-xl hover:bg-white transition-all duration-300 border border-transparent hover:border-slate-200 hover:shadow-md"
               >
                 <div className="w-12 h-12 bg-[#0a192f] text-white flex items-center justify-center rounded-xl mb-6 group-hover:bg-[#e31e24] transition-colors duration-300">
                   <span className="material-symbols-outlined text-[23px]">{pillar.icon}</span>
@@ -124,7 +124,7 @@ export default function ServiceET() {
           <div className="grid grid-cols-1 lg:grid-cols-2 overflow-hidden rounded-2xl">
             <div className="bg-[#0a192f] text-white p-8 md:p-12 lg:p-16 relative overflow-hidden">
               <div className="relative z-10">
-                <h2 className="font-headline text-3xl font-bold text-white mb-6">
+                <h2 className="font-headline text-2xl sm:text-3xl font-bold text-white mb-6">
                   Let's assess your team's growth potential.
                 </h2>
                 <p className="font-body text-[#b9c7e4] mb-10 text-base max-w-md leading-relaxed">
@@ -144,7 +144,7 @@ export default function ServiceET() {
               <div className="space-y-10">
                 {METRICS.map(m => (
                   <div key={m.label} className="flex items-end gap-6">
-                    <span className="font-headline font-black text-[#0a192f] tracking-tighter leading-none" style={{ fontSize: '3.5rem' }}>
+                    <span className="font-headline font-black text-[#0a192f] tracking-tighter leading-none text-3xl md:text-4xl">
                       {m.stat}
                     </span>
                     <div className="pb-1">
@@ -165,7 +165,7 @@ export default function ServiceET() {
           <div className="rounded-2xl overflow-hidden h-[280px] sm:h-[360px] md:h-[420px] relative">
             <img
               alt="Team empowerment"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-[center_30%]"
               src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1400&q=80"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0a192f]/90 via-[#0a192f]/40 to-transparent" />
@@ -185,18 +185,20 @@ export default function ServiceET() {
       {/* ── CTA */}
       <section className="bg-white py-16">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16">
-          <div className="bg-[#0a192f] rounded-2xl p-8 md:p-12 flex flex-col lg:flex-row justify-between items-center gap-8">
-            <div className="text-center lg:text-left">
-              <h3 className="font-headline font-extrabold text-white tracking-tighter mb-2 text-2xl md:text-3xl">
+          <div className="bg-[#0a192f] rounded-2xl p-6 sm:p-8 md:p-12 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 lg:gap-8 relative overflow-hidden">
+            <div className="absolute -top-10 -right-10 w-52 h-52 bg-[#e31e24]/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute -bottom-10 left-1/4 w-40 h-40 bg-white/5 rounded-full blur-3xl pointer-events-none" />
+            <div className="text-left relative z-10">
+              <h3 className="font-headline font-extrabold text-white tracking-tighter mb-2 text-xl sm:text-2xl md:text-3xl">
                 Ready to build teams that perform and grow?
               </h3>
-              <p className="font-body text-white/50 text-base">Transform capability into confidence. Strengthen execution. Empower lasting growth.</p>
+              <p className="font-body text-white/50 text-sm sm:text-base">Transform capability into confidence. Strengthen execution. Empower lasting growth.</p>
             </div>
             <Link
               to="/contact"
-              className="whitespace-nowrap inline-flex items-center gap-2 bg-white text-[#0a192f] px-10 py-4 rounded-lg font-headline font-semibold text-sm tracking-wide border-2 border-white transition-colors duration-200 hover:bg-transparent hover:text-white group"
+              className="relative z-10 w-full sm:w-auto whitespace-nowrap inline-flex items-center justify-center gap-2 bg-white text-[#0a192f] px-8 py-4 rounded-full font-headline font-semibold text-sm tracking-wide border-2 border-white transition-colors duration-200 hover:bg-transparent hover:text-white group"
             >
-              Let's Talk
+              Let's Discuss
               <span className="material-symbols-outlined text-[19px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
             </Link>
           </div>

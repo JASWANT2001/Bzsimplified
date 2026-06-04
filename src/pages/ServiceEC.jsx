@@ -76,8 +76,8 @@ export default function ServiceEC() {
       {/* ── Hero */}
       <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-12 gap-8 items-stretch mt-10 md:mt-16 mb-12 md:mb-24">
         <div className="col-span-12 lg:col-span-8 flex flex-col justify-center">
-          <h1 className="font-headline font-extrabold leading-[1.1] tracking-tighter text-[#0a192f] mb-8">
-            <span className="block text-[#0a192f] whitespace-nowrap">Compliance That Goes</span>
+          <h1 className="font-headline font-extrabold leading-[1.1] tracking-tighter text-[#0a192f] mb-5 md:mb-8 text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+            <span className="block text-[#0a192f]">Compliance That Goes</span>
             <span className="block text-[#515f78]">Beyond Filing.</span>
           </h1>
           <p className="font-body text-base text-[#5a5e6a] max-w-2xl leading-relaxed mb-6">
@@ -89,7 +89,7 @@ export default function ServiceEC() {
           </div>
         </div>
         <div className="col-span-12 lg:col-span-4 flex justify-end">
-          <div className="w-full min-h-[300px] h-full bg-[#eceef1] rounded-xl overflow-hidden">
+          <div className="w-full min-h-[220px] md:min-h-[300px] h-full mt-6 lg:mt-0 bg-[#eceef1] rounded-xl overflow-hidden">
             <img
               alt="Financial Compliance"
               className="w-full h-full object-cover"
@@ -102,7 +102,7 @@ export default function ServiceEC() {
       {/* ── Services */}
       <section className="bg-white py-16 md:py-24">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16">
-          <h2 className="font-headline font-extrabold text-[#0a192f] tracking-tighter mb-10">
+          <h2 className="font-headline font-extrabold text-[#0a192f] tracking-tighter mb-10 text-2xl sm:text-3xl md:text-4xl">
             GST & Statutory Compliance
           </h2>
           <div className="space-y-3">
@@ -136,7 +136,7 @@ export default function ServiceEC() {
             <div className="col-span-12 lg:col-span-4 bg-[#0a192f] rounded-xl p-8 lg:p-10 flex flex-col justify-between relative overflow-hidden">
               <div className="relative z-10">
                 <span className="font-body text-[#b9c7e4] text-xs uppercase tracking-widest mb-4 block">Framework Planning</span>
-                <h2 className="font-headline font-extrabold text-white tracking-tighter mb-4">
+                <h2 className="font-headline font-extrabold text-white tracking-tighter mb-4 text-xl sm:text-2xl md:text-3xl">
                   The Foundation of Financial Discipline
                 </h2>
                 <p className="font-body text-[#b9c7e4] text-sm leading-relaxed">
@@ -160,13 +160,13 @@ export default function ServiceEC() {
 
       {/* ── Metrics */}
       <section className="bg-white py-10 md:py-14">
-        <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
-          <div className="border-l-4 border-[#0a192f] pl-8">
-            <div className="font-headline font-extrabold text-[#0a192f] mb-2" style={{ fontSize: '3.5rem' }}>500+</div>
+        <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-16">
+          <div className="border-l-4 border-[#0a192f] pl-8 pb-6 border-b border-slate-200 last:border-b-0 md:border-b-0 md:pb-0">
+            <div className="font-headline font-extrabold text-[#0a192f] mb-2 text-3xl md:text-4xl">500+</div>
             <div className="font-body text-xs font-bold uppercase tracking-[0.3em] text-[#39475f]">Businesses Supported</div>
           </div>
-          <div className="border-l-4 border-[#e31e24] pl-8">
-            <div className="font-headline font-extrabold text-[#0a192f] mb-2" style={{ fontSize: '3.5rem' }}>0</div>
+          <div className="border-l-4 border-[#e31e24] pl-8 pb-6 border-b border-slate-200 last:border-b-0 md:border-b-0 md:pb-0">
+            <div className="font-headline font-extrabold text-[#0a192f] mb-2 text-3xl md:text-4xl">0</div>
             <div className="font-body text-xs font-bold uppercase tracking-[0.3em] text-[#39475f]">Missed Critical Compliance Deadlines</div>
           </div>
         </div>
@@ -178,18 +178,20 @@ export default function ServiceEC() {
       {/* ── CTA */}
       <section className="bg-white py-16">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16">
-          <div className="bg-[#0a192f] rounded-2xl p-8 md:p-12 flex flex-col lg:flex-row justify-between items-center gap-8">
-            <div className="text-center lg:text-left">
-              <h3 className="font-headline font-extrabold text-white tracking-tighter mb-2 text-2xl md:text-3xl">
+          <div className="bg-[#0a192f] rounded-2xl p-6 sm:p-8 md:p-12 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 lg:gap-8 relative overflow-hidden">
+            <div className="absolute -top-10 -right-10 w-52 h-52 bg-[#e31e24]/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute -bottom-10 left-1/4 w-40 h-40 bg-white/5 rounded-full blur-3xl pointer-events-none" />
+            <div className="text-left relative z-10">
+              <h3 className="font-headline font-extrabold text-white tracking-tighter mb-2 text-xl sm:text-2xl md:text-3xl">
                 Ready to build something lasting?
               </h3>
-              <p className="font-body text-white/50 text-base">Transform your business with financial clarity, structured compliance, and strategic guidance.</p>
+              <p className="font-body text-white/50 text-sm sm:text-base">Transform your business with financial clarity, structured compliance, and strategic guidance.</p>
             </div>
             <Link
               to="/contact"
-              className="whitespace-nowrap inline-flex items-center gap-2 bg-white text-[#0a192f] px-10 py-4 rounded-lg font-headline font-semibold text-sm tracking-wide border-2 border-white transition-colors duration-200 hover:bg-transparent hover:text-white group"
+              className="relative z-10 w-full sm:w-auto whitespace-nowrap inline-flex items-center justify-center gap-2 bg-white text-[#0a192f] px-8 py-4 rounded-full font-headline font-semibold text-sm tracking-wide border-2 border-white transition-colors duration-200 hover:bg-transparent hover:text-white group"
             >
-              Let's Talk
+              Let's Discuss
               <span className="material-symbols-outlined text-[19px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
             </Link>
           </div>

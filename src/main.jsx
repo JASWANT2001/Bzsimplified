@@ -17,8 +17,6 @@ import ServiceGB from './pages/ServiceGB'
 import ServiceVC from './pages/ServiceVC'
 import Teams from './pages/Teams'
 import Partners from './pages/Partners'
-import BrandStories from './pages/BrandStories'
-import BrandStoryDetail from './pages/BrandStoryDetail'
 import BrandDetail from './pages/BrandDetail'
 import WallOfFame from './pages/WallOfFame'
 import PrivacyPolicy from './pages/PrivacyPolicy'
@@ -48,8 +46,6 @@ const router = createBrowserRouter([
       { path: 'service/:code',element: <Service />      },
       { path: 'teams',        element: <Teams />        },
       { path: 'partners',      element: <Partners />     },
-      { path: 'brand-stories',       element: <BrandStories />     },
-      { path: 'brand-stories/:slug', element: <BrandStoryDetail /> },
       { path: 'brand/:slug',   element: <BrandDetail />  },
       { path: 'wall-of-fame',   element: <WallOfFame />    },
       { path: 'privacy-policy', element: <PrivacyPolicy /> },

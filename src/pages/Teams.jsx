@@ -7,8 +7,8 @@ const TEAM = [
     name: 'Kalyan',
     role: 'Founder & CEO',
     dept: 'Leadership',
-    bio: 'Kalyan is a business growth consultant and strategic advisor with 25+ years of experience helping organizations simplify complexity, build scalable structures, and drive sustainable growth. Through Business Simplified, he partners with founders and leaders to turn ambition into execution and strategy into measurable outcomes. His expertise spans business strategy, operational excellence, retail ecosystems, organizational development, and leadership enablement, combining clarity with execution to deliver lasting impact.',
-    philosophy: 'Simplify operations. Strengthen execution. Scale with confidence.',
+    bio: 'Kalyan is a Business Consultant, Growth & Operations Strategist, and Subject Matter Expert with over 25 years of leadership experience across technology, healthcare, hospitality, retail, education, and international business.\n\nFormer Director of Ascend Trading WLL, Qatar, he led operations across India and Qatar and is the Product Owner of Ascend on Cloud ERP, a business management platform implemented across 2,000+ locations in India and the Middle East.\n\nThrough Business Simplified, he helps organizations achieve sustainable growth through strategy, structure, and execution.',
+    philosophy: 'Sustainable growth is built on clarity of vision, strong systems, operational discipline, and consistent execution.',
     expertise: ['Business Strategy', 'Operational Excellence', 'Leadership Enablement'],
     photo: 'https://ik.imagekit.io/ux5g9gl0h/bottom_left.png',
     photoPosition: 'center calc(35% + 10px)',
@@ -36,6 +36,7 @@ const TEAM = [
     photo: 'https://ik.imagekit.io/ux5g9gl0h/top_left.png',
     photoPosition: 'center top',
     flip: false,
+    phone: '919884542028',
   },
   {
     id: '04',
@@ -68,7 +69,7 @@ function useReveal() {
 
 function PhotoCard({ flip, photo, name, photoPosition = 'center top' }) {
   return (
-    <div className="relative h-[380px] sm:h-[440px] lg:h-[480px]">
+    <div className="relative h-[380px] sm:h-[440px] lg:h-full lg:min-h-[480px]">
       <div
         className="absolute inset-0 bg-[#e31e24]/8 rounded-xl"
         style={{ transform: flip ? 'translate(-8px, 8px)' : 'translate(8px, 8px)' }}
@@ -94,7 +95,7 @@ function PhotoCard({ flip, photo, name, photoPosition = 'center top' }) {
 }
 
 function MemberSection({ member }) {
-  const { id, name, role, dept, bio, philosophy, expertise, photo, photoPosition, flip } = member
+  const { id, name, role, dept, bio, philosophy, expertise, photo, photoPosition, flip, phone = '919841027220' } = member
 
   return (
     <section className={`relative py-14 md:py-24 overflow-hidden reveal ${flip ? 'bg-white' : 'bg-slate-50/80'}`}>
@@ -120,7 +121,7 @@ function MemberSection({ member }) {
         <div className={`flex flex-col lg:flex-row items-stretch gap-12 lg:gap-16 ${flip ? 'lg:flex-row-reverse' : ''}`}>
 
           {/* Photo */}
-          <div className="w-full lg:w-5/12">
+          <div className="w-full lg:w-5/12 flex flex-col">
             <PhotoCard flip={flip} photo={photo} name={name} photoPosition={photoPosition} />
           </div>
 
@@ -134,7 +135,7 @@ function MemberSection({ member }) {
             </div>
 
             <h2
-              className="font-headline font-black text-[#0a192f] tracking-tight leading-none mb-3"
+              className="font-headline font-black text-[#0a192f] tracking-tight leading-none mb-3 text-2xl sm:text-3xl md:text-4xl"
             >
               {name}
             </h2>
@@ -142,9 +143,11 @@ function MemberSection({ member }) {
               {role}
             </p>
 
-            <p className="font-body text-slate-500 text-[16px] leading-[1.9] mb-7 max-w-[520px]">
-              {bio}
-            </p>
+            <div className="font-body text-slate-500 text-[16px] leading-[1.9] mb-7 max-w-[520px] space-y-4">
+              {bio.split('\n\n').map((para, i) => (
+                <p key={i}>{para}</p>
+              ))}
+            </div>
 
             {/* Philosophy / focus line */}
             <div className="flex items-start gap-3 mb-8 pl-4 border-l-[3px] border-[#e31e24]">
@@ -168,7 +171,7 @@ function MemberSection({ member }) {
             {/* Action buttons */}
             <div className="flex flex-wrap items-center gap-3">
               <a
-                href="https://wa.me/910000000000"
+                href={`https://wa.me/${phone}`}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-2.5 bg-[#0a192f] text-white font-body font-semibold text-[14px] rounded-full border border-[#0a192f] transition-all duration-200 hover:bg-transparent hover:text-[#0a192f]"
@@ -177,7 +180,7 @@ function MemberSection({ member }) {
                 WhatsApp
               </a>
               <a
-                href="tel:+919841027220"
+                href={`tel:+${phone}`}
                 className="inline-flex items-center gap-2 px-6 py-2.5 bg-white text-[#0a192f] border border-[#0a192f] font-body font-semibold text-[14px] rounded-full transition-all duration-200 hover:bg-transparent hover:text-[#0a192f]"
               >
                 <span className="material-symbols-outlined text-[16px]">call</span>
@@ -217,7 +220,7 @@ export default function Teams() {
             Our People
           </p>
           <h1
-            className="font-headline font-black text-white tracking-tight leading-[1.05] mb-6"
+            className="font-headline font-black text-white tracking-tight leading-[1.05] mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
           >
             The minds behind every move
           </h1>
@@ -245,7 +248,7 @@ export default function Teams() {
         <button
           aria-label="Scroll to content"
           onClick={e => e.currentTarget.closest('[data-hero]')?.nextElementSibling?.scrollIntoView({ behavior: 'smooth' })}
-          className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1 group"
+          className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 hidden sm:flex flex-col items-center gap-1 group"
         >
           <span className="font-body text-[10px] uppercase tracking-[0.2em] text-white/30 group-hover:text-white/60 transition-colors">Scroll</span>
           <span className="material-symbols-outlined animate-bounce text-white/40 group-hover:text-white/70 transition-colors" style={{ fontSize: '30px' }}>keyboard_arrow_down</span>

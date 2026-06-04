@@ -105,7 +105,7 @@ export default function ServiceVC() {
       {/* ── Hero */}
       <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-12 gap-8 items-stretch mt-10 md:mt-16 mb-12 md:mb-24">
         <div className="col-span-12 lg:col-span-7 flex flex-col justify-center">
-          <h1 className="font-headline font-extrabold tracking-tighter leading-[1.1] text-[#0a192f] mb-8">
+          <h1 className="font-headline font-extrabold tracking-tighter leading-[1.1] text-[#0a192f] mb-5 md:mb-8 text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
             <span className="block text-[#0a192f]">Your Virtual COO.</span>
             <span className="block text-[#515f78]">Because processes define performance,</span>
             <span className="block text-[#515f78]">not people.</span>
@@ -119,7 +119,7 @@ export default function ServiceVC() {
           </div>
         </div>
         <div className="col-span-12 lg:col-span-5 flex justify-end">
-          <div className="w-full min-h-[300px] h-full bg-[#eceef1] rounded-xl overflow-hidden">
+          <div className="w-full min-h-[220px] md:min-h-[300px] h-full mt-6 lg:mt-0 bg-[#eceef1] rounded-xl overflow-hidden">
             <img
               alt="Operations and systems"
               className="w-full h-full object-cover object-top"
@@ -160,7 +160,7 @@ export default function ServiceVC() {
       <section className="bg-white py-16 md:py-24">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
-            <h2 className="font-headline font-extrabold text-[#0a192f] tracking-tighter">
+            <h2 className="font-headline font-extrabold text-[#0a192f] tracking-tighter text-2xl sm:text-3xl md:text-4xl">
               Acting as Your Virtual COO
             </h2>
             <Link
@@ -175,7 +175,7 @@ export default function ServiceVC() {
             {CAPABILITIES.map((cap, i) => (
               <div
                 key={cap.title}
-                className={`rounded-xl p-8 flex flex-col gap-4 ${i === 0 ? 'bg-[#0a192f]' : 'bg-[#f2f4f7]'}`}
+                className={`rounded-xl p-6 md:p-8 flex flex-col gap-4 ${i === 0 ? 'bg-[#0a192f]' : 'bg-[#f2f4f7]'}`}
               >
                 <span className={`material-symbols-outlined ${i === 0 ? 'text-[#e31e24]' : 'text-[#0a192f]'}`} style={{ fontSize: '30px' }}>
                   {cap.icon}
@@ -197,7 +197,7 @@ export default function ServiceVC() {
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-12 gap-8 items-center">
           <div className="col-span-12 lg:col-span-5">
             <span className="font-body text-xs tracking-[0.2em] uppercase font-bold text-[#e31e24] block mb-4">Our Philosophy</span>
-            <h2 className="font-headline font-extrabold text-white tracking-tighter leading-tight">
+            <h2 className="font-headline font-extrabold text-white tracking-tighter leading-tight text-2xl sm:text-3xl md:text-4xl">
               Only processes can define people.
             </h2>
           </div>
@@ -219,7 +219,7 @@ export default function ServiceVC() {
       <section className="bg-[#eceef1] py-16 md:py-24">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
-            <h2 className="font-headline font-extrabold text-[#0a192f] tracking-tighter">
+            <h2 className="font-headline font-extrabold text-[#0a192f] tracking-tighter text-2xl sm:text-3xl md:text-4xl">
               How We Operate as Your Virtual COO
             </h2>
             <p className="font-body text-[#5a5e6a] text-base max-w-md md:text-right leading-relaxed">
@@ -257,7 +257,7 @@ export default function ServiceVC() {
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-12 gap-8 items-center">
           <div className="col-span-12 lg:col-span-5">
             <span className="font-body text-xs tracking-[0.2em] uppercase font-bold text-[#e31e24] block mb-4">Virtual COO Dashboard</span>
-            <h2 className="font-headline font-extrabold text-[#0a192f] tracking-tighter mb-4">
+            <h2 className="font-headline font-extrabold text-[#0a192f] tracking-tighter mb-4 text-2xl sm:text-3xl md:text-4xl">
               Gain visibility into what matters.
             </h2>
             <p className="font-body text-[#5a5e6a] leading-relaxed">
@@ -289,19 +289,19 @@ export default function ServiceVC() {
       {/* ── CTA */}
       <section className="bg-white py-16">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16">
-          <div className="bg-[#0a192f] rounded-2xl p-8 md:p-12 flex flex-col lg:flex-row justify-between items-center gap-8 relative overflow-hidden">
+          <div className="bg-[#0a192f] rounded-2xl p-6 sm:p-8 md:p-12 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 lg:gap-8 relative overflow-hidden relative overflow-hidden">
             <div className="text-center lg:text-left relative z-10">
-              <h3 className="font-headline font-extrabold text-white tracking-tighter mb-2 text-2xl md:text-3xl">
+              <h3 className="font-headline font-extrabold text-white tracking-tighter mb-2 text-xl sm:text-2xl md:text-3xl">
                 Ready to build a business that runs beyond individuals?
               </h3>
-              <p className="font-body text-white/50 text-base">Create systems. Align execution. Scale with confidence.</p>
+              <p className="font-body text-white/50 text-sm sm:text-base">Create systems. Align execution. Scale with confidence.</p>
               <p className="font-body text-white/40 text-sm mt-1">Partner with Business Simplified as your Virtual COO.</p>
             </div>
             <Link
               to="/contact"
-              className="whitespace-nowrap inline-flex items-center gap-2 bg-white text-[#0a192f] px-10 py-4 rounded-lg font-headline font-semibold text-sm tracking-wide border-2 border-white transition-colors duration-200 hover:bg-transparent hover:text-white group relative z-10"
+              className="relative z-10 w-full sm:w-auto whitespace-nowrap inline-flex items-center justify-center gap-2 bg-white text-[#0a192f] px-8 py-4 rounded-full font-headline font-semibold text-sm tracking-wide border-2 border-white transition-colors duration-200 hover:bg-transparent hover:text-white group relative z-10"
             >
-              Let's Talk
+              Let's Discuss
               <span className="material-symbols-outlined text-[19px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
             </Link>
             <div className="absolute -right-16 -bottom-16 w-72 h-72 bg-[#e31e24]/10 blur-[120px] rounded-full pointer-events-none" />

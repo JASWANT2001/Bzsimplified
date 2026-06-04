@@ -5,7 +5,6 @@ const QUICK_LINKS = [
   { label: 'Teams',         href: '/teams',          isLink: true },
   { label: 'Partners',      href: '/partners',       isLink: true },
   { label: 'Wall of Fame',  href: '/wall-of-fame',   isLink: true },
-  { label: 'Brand Stories', href: '/brand-stories',  isLink: true },
   { label: 'Contact',       href: '/contact',        isLink: true },
 ]
 
@@ -25,10 +24,10 @@ const SERVICES_B = [
 ]
 
 const CONTACT = [
-  { icon: 'mail_outline', val: 'hello@bzsimplified.com'  },
-  { icon: 'phone',        val: '+91 9841027220'           },
-  { icon: 'schedule',     val: 'Response within 2 hrs'   },
-  { icon: 'location_on',  val: 'India · Qatar'           },
+  { icon: 'mail_outline', val: 'hello@bzsimplified.com', href: 'https://mail.google.com/mail/?view=cm&to=hello@bzsimplified.com' },
+  { icon: 'phone',        val: '+91 98410 27220',         href: 'tel:+919841027220' },
+  { icon: 'schedule',     val: 'Response within 2 hrs',   href: null },
+  { icon: 'location_on',  val: 'India · Qatar',           href: null },
 ]
 
 function ColHeader({ children }) {
@@ -63,21 +62,8 @@ export default function Footer() {
 
           {/* Col 1 — Brand + Follow Us */}
           <div className="flex flex-col gap-7">
-            <Link to="/" className="inline-flex items-center gap-4">
-              <div className="relative flex items-end leading-none">
-                <span className="font-headline font-black tracking-tighter text-white select-none" style={{ fontSize: '2.8rem', lineHeight: 1 }}>B</span>
-                <span className="absolute bg-[#e31e24]" style={{ width: 10, height: 10, top: 3, right: -3 }} />
-              </div>
-              <div className="w-px h-8 bg-white/25" />
-              <div className="flex flex-col gap-1">
-                <span className="font-headline font-extrabold text-[16px] tracking-tight leading-none text-white">Business</span>
-                <span className="font-headline font-extrabold text-[16px] tracking-tight leading-none text-white">Simplified</span>
-              </div>
-            </Link>
-
             <p className="font-body text-white/40 text-[13px] leading-relaxed max-w-[210px]">
-  We help founders simplify operations and scale with purpose. 
-
+              We help founders simplify operations and scale with purpose.
             </p>
 
             <div>
@@ -85,7 +71,7 @@ export default function Footer() {
               <div className="flex items-center gap-2">
 
                 {/* LinkedIn */}
-                <a href="#" title="LinkedIn" className="w-8 h-8 rounded-lg bg-white/8 hover:bg-[#0077b5]/30 border border-white/10 flex items-center justify-center transition-colors duration-200 group">
+                <a href="https://www.linkedin.com/company/bzsimplified/?viewAsMember=true" target="_blank" rel="noreferrer" title="LinkedIn" className="w-8 h-8 rounded-lg bg-white/8 hover:bg-[#0077b5]/30 border border-white/10 flex items-center justify-center transition-colors duration-200 group">
                   <svg className="w-3.5 h-3.5 fill-white/50 group-hover:fill-[#0077b5] transition-colors duration-200" viewBox="0 0 24 24">
                     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                   </svg>
@@ -168,10 +154,17 @@ export default function Footer() {
             <ColHeader>Contact Info</ColHeader>
             <div className="space-y-3">
               {CONTACT.map(item => (
-                <div key={item.val} className="flex items-center gap-2">
-                  <span className="material-symbols-outlined text-[#e31e24] text-[14px] shrink-0">{item.icon}</span>
-                  <span className="font-body text-white/50 text-[13px]">{item.val}</span>
-                </div>
+                item.href ? (
+                  <a key={item.val} href={item.href} target={item.href.startsWith('http') ? '_blank' : undefined} rel="noreferrer" className="flex items-center gap-2 group">
+                    <span className="material-symbols-outlined text-[#e31e24] text-[14px] shrink-0">{item.icon}</span>
+                    <span className="font-body text-white/50 text-[13px] group-hover:text-white/80 transition-colors duration-200">{item.val}</span>
+                  </a>
+                ) : (
+                  <div key={item.val} className="flex items-center gap-2">
+                    <span className="material-symbols-outlined text-[#e31e24] text-[14px] shrink-0">{item.icon}</span>
+                    <span className="font-body text-white/50 text-[13px]">{item.val}</span>
+                  </div>
+                )
               ))}
             </div>
           </div>
@@ -183,11 +176,6 @@ export default function Footer() {
       <div className="border-t border-white/8">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
           <p className="font-body text-white/25 text-[12px]">© {year} Bzsimplified. All rights reserved.</p>
-          <div className="flex items-center gap-4">
-            <Link to="/privacy-policy" className="font-body text-white/25 text-[12px] hover:text-white/50 transition-colors duration-200">Privacy Policy</Link>
-            <span className="w-px h-3 bg-white/15" />
-            <Link to="/terms-of-usage" className="font-body text-white/25 text-[12px] hover:text-white/50 transition-colors duration-200">Terms of Usage</Link>
-          </div>
         </div>
       </div>
 

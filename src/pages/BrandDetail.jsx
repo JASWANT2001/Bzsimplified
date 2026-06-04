@@ -28,7 +28,7 @@ export default function BrandDetail() {
             </span>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-headline font-black text-white leading-tight mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-headline font-black text-white leading-tight mb-6">
             {name}
           </h1>
           <p className="font-body text-slate-400 text-fs-body max-w-2xl leading-relaxed">
@@ -83,7 +83,7 @@ export default function BrandDetail() {
                   to="/contact"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-[#0a192f] text-white font-body font-semibold text-xs rounded-full hover:bg-[#0f2240] transition-colors duration-200"
                 >
-                  Let's Talk
+                  Let's Discuss
                   <span className="material-symbols-outlined text-sm">arrow_forward</span>
                 </Link>
               </div>

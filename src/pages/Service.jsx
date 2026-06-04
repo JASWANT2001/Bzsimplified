@@ -183,7 +183,7 @@ export default function Service() {
   return (
     <main>
         {/* Hero Section */}
-        <section className="relative pt-32 pb-24 bg-gradient-to-b from-[#f7f9fc] to-white overflow-hidden">
+        <section className="relative pt-24 pb-14 md:pt-32 md:pb-24 bg-gradient-to-b from-[#f7f9fc] to-white overflow-hidden">
           {/* Decorative gradient orbs */}
           <div className="absolute top-20 right-1/4 w-96 h-96 bg-blue-100 rounded-full blur-3xl opacity-20 pointer-events-none" />
           <div className="absolute -bottom-32 left-1/4 w-80 h-80 bg-slate-100 rounded-full blur-3xl opacity-40 pointer-events-none" />
@@ -215,7 +215,7 @@ export default function Service() {
                 </div>
               </div>
 
-              <h1 className="font-headline font-black text-[#0a192f] mb-6 leading-tight">
+              <h1 className="font-headline font-black text-[#0a192f] mb-5 md:mb-6 leading-tight text-3xl sm:text-4xl md:text-5xl">
                 {service.title}
               </h1>
 
@@ -232,13 +232,13 @@ export default function Service() {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-24 bg-white">
+        <section className="py-14 md:py-24 bg-white">
           <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16">
-            <h2 className="font-headline font-bold text-[#0a192f] text-3xl mb-16">What You'll Get</h2>
+            <h2 className="font-headline font-bold text-[#0a192f] text-2xl sm:text-3xl mb-8 md:mb-16">What You'll Get</h2>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
               {service.benefits.map((benefit, idx) => (
-                <div key={idx} className="group bg-gradient-to-br from-slate-50 to-white border border-slate-200 rounded-2xl p-8 hover:border-[#0a192f] hover:shadow-md transition-all duration-300">
+                <div key={idx} className="group bg-gradient-to-br from-slate-50 to-white border border-slate-200 rounded-2xl p-5 md:p-8 hover:border-[#0a192f] hover:shadow-md transition-all duration-300">
                   <div className="flex items-start gap-4">
                     <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-[#0a192f] flex-shrink-0 mt-1">
                       <span className="material-symbols-outlined text-white text-[19px]">check_circle</span>
@@ -255,14 +255,14 @@ export default function Service() {
         <FAQ items={GENERIC_FAQS} />
 
         {/* CTA Section */}
-        <section className="py-24 bg-gradient-to-r from-[#0a192f] to-[#0f2240]">
+        <section className="py-14 md:py-24 bg-gradient-to-r from-[#0a192f] to-[#0f2240]">
           <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 text-center">
-            <h2 className="font-headline font-bold text-white text-4xl mb-6">Ready to get started?</h2>
-            <p className="font-body text-white/70 text-fs-body mb-10 max-w-2xl mx-auto">
+            <h2 className="font-headline font-bold text-white text-2xl sm:text-3xl md:text-4xl mb-6">Ready to get started?</h2>
+            <p className="font-body text-white/70 text-sm sm:text-base mb-10 max-w-2xl mx-auto">
               Let's discuss how {service.title.toLowerCase()} can drive growth and efficiency for your business.
             </p>
-            <Link to="/contact" className="group inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-white text-[#0a192f] font-body font-semibold text-[15px] rounded-full border-2 border-white transition-all duration-200 hover:bg-transparent hover:text-white">
-              Let's Talk
+            <Link to="/contact" className="group inline-flex items-center justify-center gap-2.5 w-full sm:w-auto px-8 py-4 bg-white text-[#0a192f] font-body font-semibold text-[15px] rounded-full border-2 border-white transition-all duration-200 hover:bg-transparent hover:text-white">
+              Let's Discuss
               <span className="material-symbols-outlined text-[19px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
             </Link>
           </div>

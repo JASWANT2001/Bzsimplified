@@ -74,7 +74,7 @@ export default function ServiceST() {
       {/* ── Hero */}
       <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-12 gap-8 items-stretch mt-10 md:mt-16 mb-12 md:mb-24">
         <div className="col-span-12 lg:col-span-7 flex flex-col justify-center">
-          <h1 className="font-headline font-extrabold leading-[1.1] tracking-tighter text-[#0a192f] mb-8">
+          <h1 className="font-headline font-extrabold leading-[1.1] tracking-tighter text-[#0a192f] mb-5 md:mb-8 text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
             <span className="block text-[#0a192f]">Set Up Your Tech.</span>
             <span className="block text-[#515f78]">With Clarity. With Confidence.</span>
           </h1>
@@ -87,7 +87,7 @@ export default function ServiceST() {
           </div>
         </div>
         <div className="col-span-12 lg:col-span-5 flex justify-end">
-          <div className="w-full min-h-[300px] h-full bg-[#eceef1] rounded-xl overflow-hidden">
+          <div className="w-full min-h-[220px] md:min-h-[300px] h-full mt-6 lg:mt-0 bg-[#eceef1] rounded-xl overflow-hidden">
             <img
               className="w-full h-full object-cover"
               src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=80"
@@ -100,7 +100,7 @@ export default function ServiceST() {
       {/* ── Services */}
       <section className="bg-white py-16 md:py-24">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16">
-          <h2 className="font-headline font-extrabold text-[#0a192f] tracking-tighter mb-10">
+          <h2 className="font-headline font-extrabold text-[#0a192f] tracking-tighter mb-10 text-2xl sm:text-3xl md:text-4xl">
             What We Help You Set Up
           </h2>
           <div className="space-y-3">
@@ -148,7 +148,7 @@ export default function ServiceST() {
       {/* ── Why Our Tech Setup Is Different */}
       <section className="bg-[#eceef1] py-16 md:py-24">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16">
-          <h2 className="font-headline font-extrabold text-[#0a192f] tracking-tighter mb-12">
+          <h2 className="font-headline font-extrabold text-[#0a192f] tracking-tighter mb-12 text-2xl sm:text-3xl md:text-4xl">
             Why Our Tech Setup Is Different
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -173,17 +173,17 @@ export default function ServiceST() {
 
       {/* ── Metrics */}
       <section className="bg-white py-10 md:py-14">
-        <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16">
-          <div className="border-l-4 border-[#0a192f] pl-8">
-            <div className="font-headline font-extrabold text-[#0a192f] mb-2" style={{ fontSize: '3.5rem' }}>1500+</div>
+        <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-16">
+          <div className="border-l-4 border-[#0a192f] pl-8 pb-6 border-b border-slate-200 last:border-b-0 md:border-b-0 md:pb-0">
+            <div className="font-headline font-extrabold text-[#0a192f] mb-2 text-3xl md:text-4xl">1500+</div>
             <div className="font-body text-xs font-bold uppercase tracking-[0.3em] text-[#39475f]">Business Systems Reviewed</div>
           </div>
-          <div className="border-l-4 border-[#e31e24] pl-8">
-            <div className="font-headline font-extrabold text-[#0a192f] mb-2" style={{ fontSize: '3.5rem' }}>Multi</div>
+          <div className="border-l-4 border-[#e31e24] pl-8 pb-6 border-b border-slate-200 last:border-b-0 md:border-b-0 md:pb-0">
+            <div className="font-headline font-extrabold text-[#0a192f] mb-2 text-3xl md:text-4xl">Multi</div>
             <div className="font-body text-xs font-bold uppercase tracking-[0.3em] text-[#39475f]">Vendor Implementations Coordinated</div>
           </div>
-          <div className="border-l-4 border-[#0a192f] pl-8">
-            <div className="font-headline font-extrabold text-[#0a192f] mb-2" style={{ fontSize: '3.5rem' }}>1 Goal</div>
+          <div className="border-l-4 border-[#0a192f] pl-8 pb-6 border-b border-slate-200 last:border-b-0 md:border-b-0 md:pb-0">
+            <div className="font-headline font-extrabold text-[#0a192f] mb-2 text-3xl md:text-4xl">1 Goal</div>
             <div className="font-body text-xs font-bold uppercase tracking-[0.3em] text-[#39475f]">Technology That Works For Your Business</div>
           </div>
         </div>
@@ -195,18 +195,20 @@ export default function ServiceST() {
       {/* ── CTA */}
       <section className="bg-white py-16">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16">
-          <div className="bg-[#0a192f] rounded-2xl p-8 md:p-12 flex flex-col lg:flex-row justify-between items-center gap-8">
-            <div className="text-center lg:text-left">
-              <h3 className="font-headline font-extrabold text-white tracking-tighter mb-2 text-2xl md:text-3xl">
+          <div className="bg-[#0a192f] rounded-2xl p-6 sm:p-8 md:p-12 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 lg:gap-8 relative overflow-hidden">
+            <div className="absolute -top-10 -right-10 w-52 h-52 bg-[#e31e24]/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute -bottom-10 left-1/4 w-40 h-40 bg-white/5 rounded-full blur-3xl pointer-events-none" />
+            <div className="text-left relative z-10">
+              <h3 className="font-headline font-extrabold text-white tracking-tighter mb-2 text-xl sm:text-2xl md:text-3xl">
                 Ready to simplify your technology ecosystem?
               </h3>
-              <p className="font-body text-white/50 text-base">Identify the right tools. Coordinate the right partners. Build systems that scale with confidence.</p>
+              <p className="font-body text-white/50 text-sm sm:text-base">Identify the right tools. Coordinate the right partners. Build systems that scale with confidence.</p>
             </div>
             <Link
               to="/contact"
-              className="whitespace-nowrap inline-flex items-center gap-2 bg-white text-[#0a192f] px-10 py-4 rounded-lg font-headline font-semibold text-sm tracking-wide border-2 border-white transition-colors duration-200 hover:bg-transparent hover:text-white group"
+              className="relative z-10 w-full sm:w-auto whitespace-nowrap inline-flex items-center justify-center gap-2 bg-white text-[#0a192f] px-8 py-4 rounded-full font-headline font-semibold text-sm tracking-wide border-2 border-white transition-colors duration-200 hover:bg-transparent hover:text-white group"
             >
-              Let's Talk
+              Let's Discuss
               <span className="material-symbols-outlined text-[19px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
             </Link>
           </div>

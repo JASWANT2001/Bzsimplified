@@ -49,7 +49,7 @@ export default function ServiceMO() {
       {/* ── Hero */}
       <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-12 gap-8 items-stretch mt-10 md:mt-16 mb-12 md:mb-24">
         <div className="col-span-12 lg:col-span-7 flex flex-col justify-center">
-          <h1 className="font-headline font-extrabold leading-[1.1] tracking-tighter text-[#0a192f] mb-8">
+          <h1 className="font-headline font-extrabold leading-[1.1] tracking-tighter text-[#0a192f] mb-5 md:mb-8 text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
             <span className="block text-[#0a192f]">Precision Control</span>
             <span className="block text-[#515f78]">for Modern Assets.</span>
           </h1>
@@ -62,7 +62,7 @@ export default function ServiceMO() {
           </div>
         </div>
         <div className="col-span-12 lg:col-span-5 flex justify-end">
-          <div className="w-full min-h-[300px] h-full bg-[#eceef1] rounded-xl overflow-hidden">
+          <div className="w-full min-h-[220px] md:min-h-[300px] h-full mt-6 lg:mt-0 bg-[#eceef1] rounded-xl overflow-hidden">
             <img
               className="w-full h-full object-cover"
               src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=900&q=80"
@@ -75,16 +75,16 @@ export default function ServiceMO() {
       {/* ── Bento Grid */}
       <section className="bg-white py-16 md:py-24">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16">
-          <h2 className="font-headline font-extrabold text-[#0a192f] tracking-tighter mb-10">
+          <h2 className="font-headline font-extrabold text-[#0a192f] tracking-tighter mb-10 text-2xl sm:text-3xl md:text-4xl">
             How We Manage Your Operations
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
 
             {/* Large card */}
-            <div className="md:col-span-2 bg-[#0a192f] rounded-xl p-10 lg:p-12 flex flex-col justify-between relative overflow-hidden min-h-[320px]">
+            <div className="md:col-span-2 bg-[#0a192f] rounded-xl p-6 md:p-10 lg:p-12 flex flex-col justify-between relative overflow-hidden min-h-[320px]">
               <div className="relative z-10">
                 <span className="font-body text-[#b9c7e4] text-xs uppercase tracking-widest mb-4 block">Core Competency</span>
-                <h3 className="font-headline text-white text-3xl lg:text-4xl font-bold mb-4">
+                <h3 className="font-headline text-white text-xl sm:text-2xl lg:text-4xl font-bold mb-4">
                   Infrastructure Rationalisation
                 </h3>
                 <p className="font-body text-[#b9c7e4] text-sm leading-relaxed max-w-lg">
@@ -104,7 +104,7 @@ export default function ServiceMO() {
             </div>
 
             {/* Process Blueprinting */}
-            <div className="bg-[#f2f4f7] rounded-xl p-10 flex flex-col justify-between">
+            <div className="bg-[#f2f4f7] rounded-xl p-6 md:p-10 flex flex-col justify-between">
               <div>
                 <span className="material-symbols-outlined text-[#0a192f] mb-6 block" style={{ fontSize: '36px' }}>architecture</span>
                 <h4 className="font-headline text-xl font-bold text-[#0a192f] mb-3">Process Blueprinting</h4>
@@ -112,14 +112,14 @@ export default function ServiceMO() {
                   We document and refine every touchpoint of your operation, creating a scalable manual for growth.
                 </p>
               </div>
-              <div className="mt-auto pt-6 border-t border-slate-200 flex justify-between items-center">
-                <span className="font-body text-xs font-bold tracking-tight uppercase text-[#0a192f]">View Methodology</span>
-                <span className="material-symbols-outlined text-[#0a192f] text-[19px]">arrow_forward</span>
-              </div>
+              <Link to="/contact" className="group mt-auto pt-6 border-t border-slate-200 flex justify-between items-center">
+                <span className="font-body text-xs font-bold tracking-tight uppercase text-[#0a192f] group-hover:text-[#e31e24] transition-colors duration-200">View Methodology</span>
+                <span className="material-symbols-outlined text-[#0a192f] text-[19px] group-hover:text-[#e31e24] group-hover:translate-x-1 transition-all duration-200">arrow_forward</span>
+              </Link>
             </div>
 
             {/* Risk Mitigation */}
-            <div className="bg-[#f2f4f7] rounded-xl p-10 flex flex-col justify-between">
+            <div className="bg-[#f2f4f7] rounded-xl p-6 md:p-10 flex flex-col justify-between">
               <div>
                 <span className="material-symbols-outlined text-[#0a192f] mb-6 block" style={{ fontSize: '36px' }}>security</span>
                 <h4 className="font-headline text-xl font-bold text-[#0a192f] mb-3">Risk Mitigation</h4>
@@ -130,7 +130,7 @@ export default function ServiceMO() {
             </div>
 
             {/* Stat card */}
-            <div className="md:col-span-2 bg-[#0a192f] rounded-xl p-10 lg:p-12 flex flex-col justify-between relative overflow-hidden min-h-[200px]">
+            <div className="md:col-span-2 bg-[#0a192f] rounded-xl p-6 md:p-10 lg:p-12 flex flex-col justify-between relative overflow-hidden min-h-[200px]">
               <div className="relative z-10">
                 <span className="font-body text-[#b9c7e4] text-xs uppercase tracking-widest mb-4 block">Operations Hub</span>
                 <p className="font-body text-[#b9c7e4] text-sm leading-relaxed max-w-lg">
@@ -139,7 +139,7 @@ export default function ServiceMO() {
               </div>
               <div className="relative z-10 mt-8 flex items-end gap-10">
                 <div>
-                  <div className="font-headline font-extrabold text-white" style={{ fontSize: '3.5rem' }}>99.8%</div>
+                  <div className="font-headline font-extrabold text-white text-3xl md:text-4xl">99.8%</div>
                   <div className="font-body text-xs font-bold uppercase tracking-[0.3em] text-[#b9c7e4]">Operational Uptime</div>
                 </div>
               </div>
@@ -153,7 +153,7 @@ export default function ServiceMO() {
       {/* ── How We Stabilise */}
       <section className="bg-[#eceef1] py-16 md:py-24">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16">
-          <h2 className="font-headline font-extrabold tracking-tighter text-[#0a192f] mb-10">
+          <h2 className="font-headline font-extrabold tracking-tighter text-[#0a192f] mb-10 text-2xl sm:text-3xl md:text-4xl">
             How We Stabilise Your Future.
           </h2>
           <div className="space-y-3">
@@ -185,18 +185,20 @@ export default function ServiceMO() {
       {/* ── CTA */}
       <section className="bg-white py-16">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16">
-          <div className="bg-[#0a192f] rounded-2xl p-8 md:p-12 flex flex-col lg:flex-row justify-between items-center gap-8">
-            <div className="text-center lg:text-left">
-              <h3 className="font-headline font-extrabold text-white tracking-tighter mb-2 text-2xl md:text-3xl">
+          <div className="bg-[#0a192f] rounded-2xl p-6 sm:p-8 md:p-12 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 lg:gap-8 relative overflow-hidden">
+            <div className="absolute -top-10 -right-10 w-52 h-52 bg-[#e31e24]/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute -bottom-10 left-1/4 w-40 h-40 bg-white/5 rounded-full blur-3xl pointer-events-none" />
+            <div className="text-left relative z-10">
+              <h3 className="font-headline font-extrabold text-white tracking-tighter mb-2 text-xl sm:text-2xl md:text-3xl">
                 Ready to build something lasting?
               </h3>
-              <p className="font-body text-white/50 text-base">Transform your business with our consulting expertise.</p>
+              <p className="font-body text-white/50 text-sm sm:text-base">Transform your business with our consulting expertise.</p>
             </div>
             <Link
               to="/contact"
-              className="whitespace-nowrap inline-flex items-center gap-2 bg-white text-[#0a192f] px-10 py-4 rounded-lg font-headline font-semibold text-sm tracking-wide border-2 border-white transition-colors duration-200 hover:bg-transparent hover:text-white group"
+              className="relative z-10 w-full sm:w-auto whitespace-nowrap inline-flex items-center justify-center gap-2 bg-white text-[#0a192f] px-8 py-4 rounded-full font-headline font-semibold text-sm tracking-wide border-2 border-white transition-colors duration-200 hover:bg-transparent hover:text-white group"
             >
-              Let's Talk
+              Let's Discuss
               <span className="material-symbols-outlined text-[19px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
             </Link>
           </div>

@@ -93,7 +93,7 @@ export default function Partners() {
 
         <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 w-full">
           <h1
-            className="font-headline font-extrabold tracking-tighter leading-[1.05] text-white mb-6"
+            className="font-headline font-extrabold tracking-tighter leading-[1.05] text-white mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
           >
             Collaborating<br />
             <span className="text-[#b9c7e4]">for Excellence.</span>
@@ -127,7 +127,7 @@ export default function Partners() {
               <span className="font-body text-xs font-bold uppercase tracking-[0.3em] text-[#39475f]">Network Ecosystem</span>
             </div>
             <h2
-              className="font-headline font-extrabold tracking-tighter text-[#0a192f]"
+              className="font-headline font-extrabold tracking-tighter text-[#0a192f] text-2xl sm:text-3xl md:text-4xl"
             >
               Our Strategic Domain Partners
             </h2>
@@ -158,10 +158,10 @@ export default function Partners() {
                 <div className="mt-10 pt-6 border-t border-slate-100">
                   <Link
                     to="/contact"
-                    className="inline-flex items-center gap-2 font-body font-bold text-sm text-[#0a192f] hover:gap-3 transition-all duration-200"
+                    className="group/cta inline-flex items-center gap-2 font-body font-bold text-sm text-[#0a192f] hover:text-[#e31e24] transition-colors duration-200"
                   >
                     {p.cta}
-                    <span className="material-symbols-outlined text-[19px]">arrow_forward</span>
+                    <span className="material-symbols-outlined text-[19px] group-hover/cta:translate-x-1 transition-transform duration-200">arrow_forward</span>
                   </Link>
                 </div>
               </div>
@@ -269,7 +269,7 @@ export default function Partners() {
           <div className="absolute bottom-[-20%] right-[-5%] w-80 h-80 bg-[#e31e24]/15 blur-[120px] rounded-full pointer-events-none" />
           <div className="relative z-10">
             <h2
-              className="font-headline font-extrabold tracking-tighter mb-3 text-white"
+              className="font-headline font-extrabold tracking-tighter mb-3 text-white text-2xl sm:text-3xl md:text-4xl"
             >
               Ready to scale your influence?
             </h2>
@@ -279,15 +279,10 @@ export default function Partners() {
             <div className="flex flex-wrap justify-center gap-3">
               <Link
                 to="/contact"
-                className="bg-white text-[#0a192f] px-8 py-3 rounded-lg font-body font-bold text-sm uppercase tracking-widest border-2 border-white transition-colors duration-200 hover:bg-transparent hover:text-white"
+                className="group inline-flex items-center gap-2 bg-white text-[#0a192f] px-8 py-3 rounded-lg font-headline font-semibold text-sm tracking-wide border-2 border-white transition-colors duration-200 hover:bg-transparent hover:text-white"
               >
                 Become a Partner
-              </Link>
-              <Link
-                to="/#partners"
-                className="border border-white text-white px-8 py-3 rounded-lg font-body font-bold text-sm uppercase tracking-widest transition-colors duration-200 hover:bg-transparent hover:text-white"
-              >
-                View Requirements
+                <span className="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform duration-200">arrow_forward</span>
               </Link>
             </div>
           </div>
