@@ -170,7 +170,7 @@ export default function Home() {
                   Empowering businesses with structural clarity, operational discipline, and strategic momentum.
                 </p>
 
-                <div className="flex flex-col xs:flex-row gap-3 sm:gap-4 items-start sm:items-center">
+                <div className="flex flex-col gap-3 sm:gap-4 items-start">
                   <Link
                     to="/contact"
                     className="group inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 bg-white text-[#0a192f] font-body font-semibold text-[14px] sm:text-[15px] tracking-[0.04em] rounded-full border-2 border-white transition-all duration-200 hover:bg-transparent hover:text-white active:scale-95 whitespace-nowrap"
