@@ -142,14 +142,14 @@ export default function Partners() {
                   className="absolute -right-12 -top-12 w-48 h-48 rounded-full blur-3xl transition-colors duration-500 pointer-events-none"
                   style={{ background: `${p.accent}08` }}
                 />
-                <div className="flex justify-between items-start mb-10">
-                  <div className="p-3 bg-[#f2f4f7] rounded-xl flex items-center justify-center h-20 w-44">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3 mb-10">
+                  <div className="p-3 bg-[#f2f4f7] rounded-xl flex items-center justify-center h-14 w-36 md:h-20 md:w-44">
                     {p.logo
                       ? <img src={p.logo} alt={p.name} className="h-full w-full object-contain" />
                       : <span className="material-symbols-outlined" style={{ fontSize: '40px', color: p.accent, fontVariationSettings: "'FILL' 1" }}>{p.icon}</span>
                     }
                   </div>
-                  <span className="font-body text-[11px] font-black text-[#75777e] uppercase tracking-[0.35em] pt-2">{p.category}</span>
+                  <span className="font-body text-[11px] font-black text-[#75777e] uppercase tracking-[0.2em] sm:tracking-[0.35em] sm:pt-2">{p.category}</span>
                 </div>
                 <div className="flex-grow">
                   <h3 className="font-headline font-extrabold text-[#0a192f] text-2xl mb-4 tracking-tighter">{p.name}</h3>

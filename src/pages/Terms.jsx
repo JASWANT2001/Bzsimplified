@@ -184,7 +184,7 @@ export default function Terms() {
           <div className="space-y-10 md:space-y-14">
 
             {/* Intro */}
-            <div className="bg-white rounded-2xl p-7 md:p-10 border border-slate-100 shadow-sm">
+            <div className="bg-white rounded-2xl p-4 md:p-7 lg:p-10 border border-slate-100 shadow-sm">
               <p className="font-body text-slate-600 text-[15px] md:text-[16px] leading-[1.9]">
                 Welcome to <span className="font-semibold text-[#0a192f]">Bzsimplified</span>. These Terms of Usage govern your access to and use of our website and consulting services. Please read these terms carefully before using our platform.
               </p>
@@ -202,7 +202,7 @@ export default function Terms() {
                 </div>
                 <div className="space-y-5">
                   {section.content.map(block => (
-                    <div key={block.subtitle} className="bg-white rounded-xl p-6 md:p-8 border border-slate-100">
+                    <div key={block.subtitle} className="bg-white rounded-xl p-4 md:p-6 lg:p-8 border border-slate-100">
                       <h3 className="font-headline font-bold text-[#0a192f] text-[15px] mb-3 flex items-center gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-[#e31e24] shrink-0" />
                         {block.subtitle}

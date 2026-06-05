@@ -60,7 +60,7 @@ const CLIENTS = [
   {
     id: 'hibiscus-ecr',
     name: 'Hibiscus on ECR',
-    category: 'Hospitality',
+    category: 'Cafe',
     img: '/hibiscus-cafe.png',
     summary: 'Full-spectrum operational support, rota management, payroll restructuring, food cost optimization, purchase systems, GTM strategy, and Virtual COO, building operational discipline and enabling scalable growth.',
     voice: 'Business Simplified strengthened hospitality operations at Hibiscus on ECR through rota management, payroll restructuring, food cost optimization, purchase systems implementation, Go-To-Market (GTM) strategy, and virtual COO support, building operational discipline, improving profitability, and enabling scalable growth.',
@@ -184,7 +184,7 @@ export default function WallOfFame() {
 
       {/* ── Cards */}
       <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 py-8 md:py-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 items-stretch">
           {CLIENTS.map((client, i) => {
             const isExpanded = expandedId === client.id
             return (
@@ -199,7 +199,7 @@ export default function WallOfFame() {
                 {/* ── Collapsed image */}
                 {!isExpanded && (
                   <div
-                    className="relative h-[220px] overflow-hidden cursor-pointer"
+                    className="relative h-[180px] sm:h-[220px] overflow-hidden cursor-pointer"
                     onClick={() => toggle(client.id)}
                   >
                     <img
@@ -207,7 +207,7 @@ export default function WallOfFame() {
                       alt={client.name}
                       className={`w-full h-full transition-all duration-700 ${client.isLogo ? `object-contain bg-white ${client.logoZoom ? 'p-2 scale-125' : client.logoShrink ? 'p-10' : 'p-6'}` : 'object-cover brightness-90 hover:brightness-100 hover:scale-105'}`}
                     />
-                    <span className="absolute top-4 left-4 bg-white/15 backdrop-blur-sm text-white font-body font-bold text-[11px] tracking-[0.18em] uppercase px-3 py-1 rounded-full border border-white/20">
+                    <span className="hidden absolute top-4 left-4 bg-[#0a192f]/80 backdrop-blur-sm text-white font-body font-bold text-[11px] tracking-[0.18em] uppercase px-3 py-1 rounded-full border border-white/10">
                       {client.category}
                     </span>
                     <span className="absolute top-4 right-4 font-headline font-black text-white/20 text-5xl leading-none select-none">
@@ -346,7 +346,7 @@ export default function WallOfFame() {
                     {/* CTA footer */}
                     <div className="px-4 md:px-10 py-7 bg-[#0a192f] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                       <div>
-                        <p className="font-headline font-bold text-white text-[16px] mb-1">Want results like these?</p>
+                        <p className="font-headline font-bold text-white text-[16px] mb-1">Are you ready?</p>
                         <p className="font-body text-white/40 text-[13px]">Let's talk about your business goals.</p>
                       </div>
                       <Link
@@ -373,7 +373,7 @@ export default function WallOfFame() {
             <h2 className="font-headline font-black text-white text-xl md:text-2xl tracking-tight mb-1">
               Ready to build your legacy?
             </h2>
-            <p className="font-body text-white/40 text-[14px]">Join the brands that trusted us to transform their operations.</p>
+            <p className="font-body text-white text-[14px]">Join the brands that trusted us to transform their operations.</p>
           </div>
           <Link
             to="/contact"

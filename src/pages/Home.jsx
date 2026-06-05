@@ -34,7 +34,7 @@ const WALL_OF_FAME = [
   {
     slug: 'hibiscus-ecr',
     name: 'Hibiscus on ECR',
-    sector: 'Hospitality',
+    sector: 'Cafe',
     what: 'Full-spectrum operational support, rota management, payroll restructuring, food cost optimization, purchase systems, GTM strategy, and Virtual COO.',
     outcome: 'Virtual COO Support · Full Ops Transformation',
     img: '/hibiscus-cafe.png',
@@ -88,15 +88,15 @@ const ARCH_CARDS = [
 ]
 
 const SERVICES = [
-  { code: 'LB', num: '01', icon: 'rocket_launch',   title: 'Launch Your Brand',      desc: 'Identity, positioning, and go-to-market.',          img: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=600&q=80' },
-  { code: 'BB', num: '02', icon: 'business_center', title: 'Build Your Business',    desc: 'Legal structure, ops, and funding systems.',        img: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80' },
+  { code: 'LB', num: '01', icon: 'rocket_launch',   title: 'Launch Your Brand',      desc: 'Identity, positioning, and go-to-market.',          img: 'https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?auto=format&fit=crop&w=600&q=80' },
+  { code: 'BB', num: '02', icon: 'business_center', title: 'Build Your Business',    desc: 'Legal structure, ops, and funding systems.',        img: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80' },
   { code: 'ST', num: '03', icon: 'devices',         title: 'Set Up Your Tech',       desc: 'Core stack to run and measure your business.',      img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80' },
-  { code: 'PB', num: '04', icon: 'shield',          title: 'Protect Your Brand',     desc: 'Trademarks, contracts, and brand governance.',      img: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=600&q=80' },
+  { code: 'PB', num: '04', icon: 'shield',          title: 'Protect Your Brand',     desc: 'Trademarks, contracts, and brand governance.',      img: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=600&q=80' },
   { code: 'FF', num: '05', icon: 'account_balance', title: 'Fix Your Finances',      desc: 'Books, cash flow, and profitability controls.',     img: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=600&q=80' },
-  { code: 'EC', num: '06', icon: 'gavel',           title: 'Ensure Compliance',      desc: 'Statutory, regulatory, and internal policy.',       img: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=600&q=80' },
+  { code: 'EC', num: '06', icon: 'gavel',           title: 'Ensure Compliance',      desc: 'Statutory, regulatory, and internal policy.',       img: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=600&q=80' },
   { code: 'MO', num: '07', icon: 'tune',            title: 'Manage Your Operations', desc: 'SOPs, KPIs, and daily rhythm of execution.',        img: 'https://images.unsplash.com/photo-1553484771-371a605b060b?auto=format&fit=crop&w=600&q=80' },
-  { code: 'ET', num: '08', icon: 'groups',          title: 'Empower Your Team',      desc: 'Org design, hiring, and leadership cadence.',       img: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80' },
-  { code: 'VC', num: '09', icon: 'account_tree',    title: 'Virtual COO',            desc: 'Operational systems, processes, and execution.',    img: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=600&q=80' },
+  { code: 'ET', num: '08', icon: 'groups',          title: 'Empower Your Team',      desc: 'Org design, hiring, and leadership cadence.',       img: 'https://images.unsplash.com/photo-1606857521015-7f9fcf423740?auto=format&fit=crop&w=600&q=80' },
+  { code: 'VC', num: '09', icon: 'account_tree',    title: 'Virtual COO',            desc: 'Operational systems, processes, and execution.',    img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80' },
 ]
 
 const WHY_US_ITEMS = [
@@ -554,30 +554,31 @@ export default function Home() {
         <section className="py-14 sm:py-20 md:py-32 bg-[#eceef1] overflow-hidden" id="wall-of-fame">
           <div className="mx-auto px-5 sm:px-8 md:px-10 lg:px-16 max-w-[1440px]">
             {/* Header */}
-            <div className="mb-8 md:mb-16">
-              <p className="font-body font-bold text-[12px] sm:text-[14px] tracking-[0.18em] uppercase text-[#e31e24] mb-3 sm:mb-5">
-                Wall of Fame
-              </p>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-headline font-black text-[#0a192f] leading-[1.05]">
-                Brands we've helped build.
-              </h2>
+            <div className="flex sm:flex-row sm:items-end justify-between gap-3 sm:gap-4 mb-8 md:mb-14">
+              <div>
+                <p className="font-body font-bold text-[12px] tracking-[0.28em] uppercase text-[#e31e24] mb-3">
+                  Wall of Fame
+                </p>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-headline font-bold text-[#0a192f] leading-tight">
+                  From Vision to Brand: Our Success Stories
+                </h2>
+              </div>
+              <Link
+                to="/wall-of-fame"
+                className="hidden sm:inline-flex items-center gap-2 font-body font-semibold text-[14px] text-[#0a192f] hover:text-[#e31e24] underline underline-offset-8 transition-colors duration-200 flex-shrink-0"
+              >
+                View All Stories →
+              </Link>
             </div>
 
-            {/* Cards grid — pt so the badge has room to float above */}
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10 sm:gap-5 md:gap-6 pt-5">
+            {/* Cards grid */}
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
               {WALL_OF_FAME.map(brand => (
                 <Link
                   key={brand.slug}
                   to="/wall-of-fame"
-                  className="group relative bg-white border border-slate-200 rounded-2xl transition-all duration-500 hover:-translate-y-2 hover:border-[#e31e24]/40 hover:shadow-xl flex flex-col cursor-pointer"
+                  className="group relative bg-white border border-slate-200 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-md flex flex-col cursor-pointer"
                 >
-                  {/* Success Story badge — straddles top edge */}
-                  <div className="absolute top-0 left-4 sm:left-5 -translate-y-1/2 z-20">
-                    <div className="inline-flex items-center gap-1.5 bg-[#0a192f] border border-[#0a192f] text-white font-body font-semibold text-[10px] sm:text-[11px] tracking-[0.12em] uppercase px-3 py-1.5 rounded-full shadow-lg">
-                      <span className="material-symbols-outlined text-amber-400 text-[13px] sm:text-[14px]">emoji_events</span>
-                      Success Story
-                    </div>
-                  </div>
 
                   {/* Image area */}
                   <div className="relative w-full aspect-[16/9] overflow-hidden flex-shrink-0 rounded-t-2xl">
@@ -587,17 +588,13 @@ export default function Home() {
                       className={`w-full h-full transition-transform duration-700 group-hover:scale-110 ${brand.isLogo ? `object-contain bg-white ${brand.logoShrink ? 'p-12' : brand.logoZoom ? 'p-2' : 'p-6'}` : 'object-cover'}`}
                     />
 
-                    {/* Sector slides up on hover */}
-                    <span className="absolute bottom-4 left-4 bg-[#e31e24] text-white font-body font-bold text-[11px] tracking-[0.15em] uppercase px-3 py-1 rounded-full translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                      {brand.sector}
-                    </span>
                   </div>
 
                   <div className="h-px bg-slate-200" />
 
                   <div className="relative z-10 p-4 sm:p-6 md:p-7 flex flex-col flex-1">
                     {/* Brand name */}
-                    <h4 className="text-[15px] sm:text-lg md:text-xl font-headline font-black text-[#0a192f] mb-2 sm:mb-3 leading-tight group-hover:text-[#e31e24] transition-colors duration-300">
+                    <h4 className="text-[15px] sm:text-lg md:text-xl font-headline font-black text-[#0a192f] mb-2 sm:mb-3 leading-tight">
                       {brand.name}
                     </h4>
 
@@ -619,6 +616,18 @@ export default function Home() {
                 </Link>
               ))}
             </div>
+
+            {/* Mobile pill button */}
+            <div className="sm:hidden flex justify-center mt-8">
+              <Link
+                to="/wall-of-fame"
+                className="inline-flex items-center gap-2 bg-[#0a192f] text-white font-body font-semibold text-[14px] px-6 py-3 rounded-full hover:bg-[#0e2340] transition-colors duration-200"
+              >
+                View All Stories
+                <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </Link>
+            </div>
+
           </div>
         </section>
 

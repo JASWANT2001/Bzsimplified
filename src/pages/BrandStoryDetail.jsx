@@ -133,7 +133,7 @@ export default function BrandStoryDetail() {
           <div className="lg:col-span-7 space-y-10">
             {/* Quote */}
             {story.quote && (
-              <div className="bg-[#f2f4f7] border-l-4 border-[#e31e24] p-8 relative overflow-hidden">
+              <div className="bg-[#f2f4f7] border-l-4 border-[#e31e24] p-4 md:p-8 relative overflow-hidden">
                 <span className="material-symbols-outlined absolute -top-3 -left-3 text-[#e31e24]/10 select-none" style={{ fontSize: '64px', fontVariationSettings: "'FILL' 1" }}>format_quote</span>
                 <blockquote className="font-headline font-bold text-[#0a192f] text-lg md:text-2xl lg:text-3xl italic leading-snug relative z-10">
                   {story.quote}
@@ -204,7 +204,7 @@ export default function BrandStoryDetail() {
             <h3 className="font-headline font-extrabold text-white tracking-tighter mb-2 text-2xl md:text-3xl">
               Ready to build something lasting?
             </h3>
-            <p className="font-body text-white/50 text-base">Transform your business with our consulting expertise.</p>
+            <p className="font-body text-white text-base">Transform your business with our consulting expertise.</p>
           </div>
           <Link
             to="/contact"

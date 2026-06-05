@@ -33,26 +33,75 @@ function Toast({ message, onClose }) {
 }
 
 export default function Contact() {
-  const [form, setForm]     = useState(EMPTY)
+  const [form, setForm]       = useState(EMPTY)
+  const [errors, setErrors]   = useState({})
+  const [touched, setTouched] = useState({})
   const [loading, setLoading] = useState(false)
   const [focused, setFocused] = useState('')
-  const [toast, setToast]   = useState(null)
+  const [toast, setToast]     = useState(null)
 
-  const set = e => setForm(p => ({ ...p, [e.target.name]: e.target.value }))
+  const validateField = (name, value) => {
+    switch (name) {
+      case 'name':
+        if (!value.trim())                              return 'Full name is required.'
+        if (value.trim().length < 2)                   return 'Name must be at least 2 characters.'
+        if (!/^[a-zA-Z\s.'-]+$/.test(value.trim()))   return 'Name can only contain letters and spaces.'
+        return ''
+      case 'email':
+        if (value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim()))
+                                                        return 'Please enter a valid email address.'
+        return ''
+      case 'phone':
+        if (!value.trim())                              return 'Phone number is required.'
+        if (!/^[+\d][\d\s\-().]{7,}$/.test(value.trim()))
+                                                        return 'Enter a valid phone number (e.g. +91 98410 27220).'
+        return ''
+      case 'message':
+        if (!value.trim())                              return 'Please tell us about your challenge.'
+        if (value.trim().length < 10)                  return 'Message must be at least 10 characters.'
+        return ''
+      default: return ''
+    }
+  }
+
+  const set = e => {
+    const { name, value } = e.target
+
+    // Restrict phone to digits, +, -, (, ), spaces only
+    if (name === 'phone' && /[^0-9+\-() ]/.test(value)) return
+
+    // Restrict name to letters, spaces, dots, apostrophes, hyphens only
+    if (name === 'name' && value && /[^a-zA-Z\s.'-]/.test(value)) return
+
+    setForm(p => ({ ...p, [name]: value }))
+
+    // Validate live only if field has been touched
+    if (touched[name]) {
+      setErrors(p => ({ ...p, [name]: validateField(name, value) }))
+    }
+  }
+
+  const handleBlur = e => {
+    const { name, value } = e.target
+    setFocused('')
+    setTouched(p => ({ ...p, [name]: true }))
+    setErrors(p => ({ ...p, [name]: validateField(name, value) }))
+  }
+
+  const validate = () => {
+    const e = {}
+    Object.keys(EMPTY).forEach(name => {
+      const err = validateField(name, form[name])
+      if (err) e[name] = err
+    })
+    return e
+  }
 
   const submit = async (e) => {
     e.preventDefault()
-
-    if (!form.name) {
-      setToast('Please enter your full name.')
-      return
-    }
-    if (!form.phone) {
-      setToast('Please enter your phone number.')
-      return
-    }
-    if (!form.message) {
-      setToast('Please leave a note before submitting.')
+    const errs = validate()
+    if (Object.keys(errs).length) {
+      setErrors(errs)
       return
     }
 
@@ -73,6 +122,7 @@ export default function Contact() {
       )
 
       setForm(EMPTY)
+      setErrors({})
       setToast('Message submitted successfully!')
 
     } catch (error) {
@@ -106,7 +156,7 @@ export default function Contact() {
           <h1
             className="font-headline font-black text-white tracking-tight leading-[1.05] mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
           >
-            Looking for clarity, structure, or growth?
+            Looking for Clarity? Structure? Growth?
           </h1>
           <p className="font-body text-white/45 text-base sm:text-[18px] leading-relaxed mb-8 md:mb-10 max-w-[520px]">
             No sales pitch, no obligations. Just a real conversation about your business.
@@ -147,14 +197,14 @@ export default function Contact() {
           <div className="grid lg:grid-cols-[380px_1fr] gap-6">
 
             {/* Left — dark info panel */}
-            <div className="order-2 lg:order-1 bg-[#0a192f] rounded-2xl p-7 md:p-8 lg:p-10 flex flex-col text-white">
+            <div className="order-2 lg:order-1 bg-[#0a192f] rounded-2xl p-5 md:p-7 lg:p-10 flex flex-col text-white">
 
               {/* Contact details */}
               <div className="space-y-6">
                 {[
-                  { icon: 'mail_outline', label: 'Email',         val: 'hello@bzsimplified.com' },
-                  { icon: 'phone',        label: 'Phone',         val: '+91-9841027220'          },
-                  { icon: 'schedule',     label: 'Response time', val: 'Within 2 hours'         },
+                  { icon: 'mail_outline', label: 'Email',         val: 'hello@bzsimplified.com', href: 'https://mail.google.com/mail/?view=cm&to=hello@bzsimplified.com' },
+                  { icon: 'phone',        label: 'Phone',         val: '+91-9841027220',          href: 'tel:+919841027220' },
+                  { icon: 'schedule',     label: 'Response time', val: 'Within 2 hours',         href: null },
                 ].map(item => (
                   <div key={item.label} className="flex items-center gap-4">
                     <div className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0">
@@ -162,7 +212,10 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className="text-white/35 text-[11px] uppercase tracking-widest font-semibold mb-0.5">{item.label}</p>
-                      <p className="text-white text-[14px] font-medium">{item.val}</p>
+                      {item.href
+                        ? <a href={item.href} target={item.href.startsWith('http') ? '_blank' : undefined} rel="noreferrer" className="text-white text-[14px] font-medium hover:text-white/70 transition-colors duration-200">{item.val}</a>
+                        : <p className="text-white text-[14px] font-medium">{item.val}</p>
+                      }
                     </div>
                   </div>
                 ))}
@@ -200,18 +253,18 @@ export default function Contact() {
             {/* Right — form panel */}
             <div className="order-1 lg:order-2 bg-white rounded-2xl border border-slate-100 shadow-[0_8px_40px_rgba(0,0,0,0.05)] p-6 md:p-8 lg:p-10">
               <h2 className="font-headline font-bold text-[#0a192f] text-xl mb-1">Tell us your story</h2>
-              <p className="font-body text-slate-400 text-[14px] mb-8">Share your challenge and we'll connect you with the right solution.</p>
+              <p className="font-body text-slate-600 text-[14px] mb-8">Share your challenge and we'll connect you with the right solution.</p>
 
               <form onSubmit={submit} className="space-y-5">
 
                 <div className="grid sm:grid-cols-2 gap-4">
-                  <Field label="Full Name *" name="name" type="text" placeholder="" value={form.name} onChange={set} required focused={focused} setFocused={setFocused} />
-                  <Field label="Work Email" name="email" type="email" placeholder="" value={form.email} onChange={set} focused={focused} setFocused={setFocused} />
+                  <Field label="Full Name *" name="name" type="text" value={form.name} onChange={set} onBlur={handleBlur} focused={focused} setFocused={setFocused} error={errors.name} />
+                  <Field label="Work Email" name="email" type="email" value={form.email} onChange={set} onBlur={handleBlur} focused={focused} setFocused={setFocused} error={errors.email} />
                 </div>
 
                 <div className="grid sm:grid-cols-2 gap-4">
-                  <Field label="Phone *" name="phone" type="tel" placeholder="" value={form.phone} onChange={set} required focused={focused} setFocused={setFocused} />
-                  <Field label="Company" name="company" type="text" placeholder="" value={form.company} onChange={set} focused={focused} setFocused={setFocused} />
+                  <Field label="Phone *" name="phone" type="tel" value={form.phone} onChange={set} onBlur={handleBlur} focused={focused} setFocused={setFocused} error={errors.phone} />
+                  <Field label="Company" name="company" type="text" value={form.company} onChange={set} onBlur={handleBlur} focused={focused} setFocused={setFocused} />
                 </div>
 
                 <div>
@@ -222,15 +275,20 @@ export default function Contact() {
                     value={form.message}
                     onChange={set}
                     onFocus={() => setFocused('message')}
-                    onBlur={() => setFocused('')}
-                    placeholder=""
-                    required
-                    className={`w-full bg-white border rounded-lg px-4 py-2.5 font-body text-[14px] text-[#0a192f] placeholder:text-slate-400 focus:outline-none transition-all duration-200 resize-none ${focused === 'message' ? 'border-slate-400 ring-1 ring-slate-200' : 'border-slate-200'}`}
+                    onBlur={handleBlur}
+                    className={`w-full bg-white border rounded-lg px-4 py-2.5 font-body text-[14px] text-[#0a192f] placeholder:text-slate-400 focus:outline-none transition-all duration-200 resize-none ${errors.message ? 'border-red-400 ring-1 ring-red-100' : focused === 'message' ? 'border-slate-400 ring-1 ring-slate-200' : 'border-slate-200'}`}
                   />
+                  <div className="flex justify-between mt-1">
+                    {errors.message
+                      ? <p className="text-[12px] text-red-500 font-body">{errors.message}</p>
+                      : <span />
+                    }
+                    <p className="text-[12px] text-slate-400 font-body">{form.message.length} chars</p>
+                  </div>
                 </div>
 
                 <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-2">
-                  <p className="font-body text-slate-400 text-[13px]">No spam. No obligations.</p>
+                  <p className="font-body text-slate-600 text-[13px]">No spam. No obligations.</p>
                   <button
                     type="submit"
                     disabled={loading}
@@ -260,7 +318,7 @@ export default function Contact() {
 
 /* ─── Field ──────────────────────────────────────────────────────────────── */
 
-function Field({ label, name, type, placeholder, value, onChange, required, focused, setFocused }) {
+function Field({ label, name, type, value, onChange, onBlur, focused, setFocused, error, hint }) {
   return (
     <div>
       <label className="block font-body font-medium text-[#0a192f] text-[13px] mb-1.5">{label}</label>
@@ -269,12 +327,16 @@ function Field({ label, name, type, placeholder, value, onChange, required, focu
         name={name}
         value={value}
         onChange={onChange}
-        placeholder={placeholder}
-        required={required}
         onFocus={() => setFocused(name)}
-        onBlur={() => setFocused('')}
-        className={`w-full bg-white border rounded-lg px-4 py-2.5 font-body text-[14px] text-[#0a192f] placeholder:text-slate-400 focus:outline-none transition-all duration-200 ${focused === name ? 'border-slate-400 ring-1 ring-slate-200' : 'border-slate-200'}`}
+        onBlur={onBlur}
+        className={`w-full bg-white border rounded-lg px-4 py-2.5 font-body text-[14px] text-[#0a192f] placeholder:text-slate-400 focus:outline-none transition-all duration-200 ${
+          error ? 'border-red-400 ring-1 ring-red-100' : focused === name ? 'border-slate-400 ring-1 ring-slate-200' : 'border-slate-200'
+        }`}
       />
+      {error
+        ? <p className="mt-1 text-[12px] text-red-500 font-body">{error}</p>
+        : hint && <p className="mt-1 text-[12px] text-slate-400 font-body">{hint}</p>
+      }
     </div>
   )
 }

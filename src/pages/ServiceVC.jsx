@@ -103,7 +103,7 @@ export default function ServiceVC() {
     <main className="pt-[82px] bg-[#f7f9fc] text-[#191c1e] min-h-screen">
 
       {/* ── Hero */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-12 gap-8 items-stretch mt-10 md:mt-16 mb-12 md:mb-24">
+      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-12 gap-4 md:gap-8 items-stretch mt-8 md:mt-16 mb-10 md:mb-24">
         <div className="col-span-12 lg:col-span-7 flex flex-col justify-center">
           <h1 className="font-headline font-extrabold tracking-tighter leading-[1.1] text-[#0a192f] mb-5 md:mb-8 text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
             <span className="block text-[#0a192f]">Your Virtual COO.</span>
@@ -119,11 +119,11 @@ export default function ServiceVC() {
           </div>
         </div>
         <div className="col-span-12 lg:col-span-5 flex justify-end">
-          <div className="w-full min-h-[220px] md:min-h-[300px] h-full mt-6 lg:mt-0 bg-[#eceef1] rounded-xl overflow-hidden">
+          <div className="w-full h-[220px] sm:h-[280px] md:h-[340px] lg:h-full lg:min-h-[420px] mt-6 lg:mt-0 bg-[#eceef1] rounded-xl overflow-hidden">
             <img
               alt="Operations and systems"
               className="w-full h-full object-cover object-top"
-              src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=900&q=80"
+              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80"
             />
           </div>
         </div>
@@ -289,13 +289,13 @@ export default function ServiceVC() {
       {/* ── CTA */}
       <section className="bg-white py-16">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16">
-          <div className="bg-[#0a192f] rounded-2xl p-6 sm:p-8 md:p-12 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 lg:gap-8 relative overflow-hidden relative overflow-hidden">
+          <div className="bg-[#0a192f] rounded-2xl p-6 sm:p-8 md:p-12 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 lg:gap-8 relative overflow-hidden">
             <div className="text-center lg:text-left relative z-10">
               <h3 className="font-headline font-extrabold text-white tracking-tighter mb-2 text-xl sm:text-2xl md:text-3xl">
                 Ready to build a business that runs beyond individuals?
               </h3>
-              <p className="font-body text-white/50 text-sm sm:text-base">Create systems. Align execution. Scale with confidence.</p>
-              <p className="font-body text-white/40 text-sm mt-1">Partner with Business Simplified as your Virtual COO.</p>
+              <p className="font-body text-white text-sm sm:text-base">Create systems. Align execution. Scale with confidence.</p>
+              <p className="font-body text-white text-sm mt-1">Partner with Business Simplified as your Virtual COO.</p>
             </div>
             <Link
               to="/contact"

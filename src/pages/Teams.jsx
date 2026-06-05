@@ -118,7 +118,7 @@ function MemberSection({ member }) {
       />
 
       <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16">
-        <div className={`flex flex-col lg:flex-row items-stretch gap-12 lg:gap-16 ${flip ? 'lg:flex-row-reverse' : ''}`}>
+        <div className={`flex flex-col lg:flex-row items-stretch gap-8 lg:gap-12 ${flip ? 'lg:flex-row-reverse' : ''}`}>
 
           {/* Photo */}
           <div className="w-full lg:w-5/12 flex flex-col">

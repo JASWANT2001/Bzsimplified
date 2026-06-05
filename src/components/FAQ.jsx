@@ -25,7 +25,7 @@ export default function FAQ({ items }) {
                 className="bg-white border border-slate-200 rounded-xl overflow-hidden transition-shadow duration-200 hover:shadow-sm"
               >
                 <button
-                  className="w-full flex items-center justify-between gap-4 px-8 py-6 text-left"
+                  className="w-full flex items-center justify-between gap-4 px-4 md:px-8 py-4 md:py-6 text-left"
                   onClick={() => setOpen(open === idx ? null : idx)}
                 >
                   <span className="font-headline font-bold text-[#0a192f] text-[16px] leading-snug">
@@ -41,7 +41,7 @@ export default function FAQ({ items }) {
                 <div
                   className={`overflow-hidden transition-all duration-300 ${open === idx ? 'max-h-96' : 'max-h-0'}`}
                 >
-                  <p className="font-body text-[#5a5e6a] text-sm leading-relaxed px-8 pb-6">
+                  <p className="font-body text-[#5a5e6a] text-sm leading-relaxed px-4 md:px-8 pb-4 md:pb-6">
                     {item.a}
                   </p>
                 </div>

@@ -55,7 +55,7 @@ export default function ServicePB() {
     <main className="pt-[82px] bg-[#f7f9fc] text-[#191c1e] min-h-screen">
 
       {/* ── Hero */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-12 gap-8 items-stretch mt-10 md:mt-16 mb-12 md:mb-24">
+      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-12 gap-4 md:gap-8 items-stretch mt-8 md:mt-16 mb-10 md:mb-24">
         <div className="col-span-12 lg:col-span-8 flex flex-col justify-center">
           <h1 className="font-headline font-extrabold leading-[1.1] tracking-tighter text-[#0a192f] mb-5 md:mb-8 text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
             <span className="block text-[#0a192f]">Preserve your identity.</span>
@@ -70,7 +70,7 @@ export default function ServicePB() {
           </div>
         </div>
         <div className="col-span-12 lg:col-span-4 flex justify-end">
-          <div className="w-full min-h-[220px] md:min-h-[300px] h-full mt-6 lg:mt-0 bg-[#eceef1] rounded-xl overflow-hidden">
+          <div className="w-full h-[220px] sm:h-[280px] md:h-[340px] lg:h-full lg:min-h-[420px] mt-6 lg:mt-0 bg-[#eceef1] rounded-xl overflow-hidden">
             <img
               className="w-full h-full object-cover"
               src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=80"
@@ -89,7 +89,7 @@ export default function ServicePB() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
 
             {/* Large card — Risk Mitigation */}
-            <div className="md:col-span-2 bg-[#f2f4f7] rounded-xl p-6 md:p-10 lg:p-12 flex flex-col justify-between min-h-[360px]">
+            <div className="md:col-span-2 bg-[#f2f4f7] rounded-xl p-6 md:p-10 lg:p-12 flex flex-col justify-between min-h-[240px] md:min-h-[360px]">
               <div>
                 <span className="material-symbols-outlined text-[#0a192f] mb-6 block" style={{ fontSize: '36px' }}>verified_user</span>
                 <h3 className="font-headline text-xl sm:text-2xl md:text-3xl font-bold mb-4 text-[#0a192f]">Risk Mitigation &amp; Brand Protection</h3>
@@ -214,7 +214,7 @@ export default function ServicePB() {
 
       {/* ── Metrics */}
       <section className="bg-white py-10 md:py-14">
-        <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-12">
+        <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-12">
           <div className="border-l-4 border-[#0a192f] pl-8 pb-6 border-b border-slate-200 sm:border-b-0 sm:pb-0">
             <div className="font-headline font-extrabold text-[#0a192f] mb-2 text-3xl md:text-4xl">200+</div>
             <div className="font-body text-xs font-bold uppercase tracking-[0.3em] text-[#39475f]">Brands Protected</div>
@@ -247,7 +247,7 @@ export default function ServicePB() {
               <h3 className="font-headline font-extrabold text-white tracking-tighter mb-2 text-xl sm:text-2xl md:text-3xl">
                 Secure your legacy. Protect what you've built.
               </h3>
-              <p className="font-body text-white/50 text-sm sm:text-base">Business Simplified ensures businesses do not just grow. They grow with protection, ownership, and long-term resilience.</p>
+              <p className="font-body text-white text-sm sm:text-base">Business Simplified ensures businesses do not just grow. They grow with protection, ownership, and long-term resilience.</p>
             </div>
             <Link
               to="/contact"

@@ -62,8 +62,8 @@ export default function ServiceGB() {
             <h1
               className="font-headline font-extrabold leading-[1.05] tracking-tight text-[#0a192f] mb-5 md:mb-8 lg:mb-12 text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
             >
-              Expansion Without<br />
-              <span className="text-[#515f78]">Complication.</span>
+              <span className="block">Expansion Without</span>
+              <span className="block text-[#515f78]">Complication.</span>
             </h1>
           </div>
           <div className="col-span-12 lg:col-span-4 pb-4">
@@ -171,7 +171,7 @@ export default function ServiceGB() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
           {/* Light card */}
-          <div className="bg-white p-6 md:p-12 rounded-xl flex flex-col justify-between min-h-[280px] md:h-[360px] group hover:shadow-xl transition-all duration-300 border border-slate-100">
+          <div className="bg-white p-6 md:p-12 rounded-xl flex flex-col justify-between min-h-[280px] md:min-h-[360px] group hover:shadow-xl transition-all duration-300 border border-slate-100">
             <h3 className="font-headline text-2xl md:text-3xl font-extrabold text-[#0a192f]">Grow Your Portfolio</h3>
             <p className="font-body text-[#5a5e6a] text-fs-body leading-relaxed">
               Diversify your assets and market reach with our proprietary investment and expansion frameworks.
@@ -186,7 +186,7 @@ export default function ServiceGB() {
           </div>
 
           {/* Dark card */}
-          <div className="bg-[#0a192f] p-6 md:p-12 rounded-xl flex flex-col justify-between min-h-[280px] md:h-[360px] group relative overflow-hidden">
+          <div className="bg-[#0a192f] p-6 md:p-12 rounded-xl flex flex-col justify-between min-h-[280px] md:min-h-[360px] group relative overflow-hidden">
             <h3 className="font-headline text-2xl md:text-3xl font-extrabold text-white">Scale Your Impact</h3>
             <p className="font-body text-[#76849f] text-fs-body leading-relaxed">
               Measure and amplify your corporate social responsibility and market influence on a global scale.
@@ -218,7 +218,7 @@ export default function ServiceGB() {
             >
               Ready to build something lasting?
             </h3>
-            <p className="font-body text-white/50 text-sm sm:text-base">Transform your business with our consulting expertise.</p>
+            <p className="font-body text-white text-sm sm:text-base">Transform your business with our consulting expertise.</p>
           </div>
           <Link
             to="/contact"

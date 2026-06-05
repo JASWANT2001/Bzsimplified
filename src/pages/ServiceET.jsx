@@ -70,7 +70,7 @@ export default function ServiceET() {
     <main className="pt-[82px] bg-[#f7f9fc] text-[#191c1e] min-h-screen">
 
       {/* ── Hero */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-12 gap-8 items-stretch mt-10 md:mt-16 mb-12 md:mb-24">
+      <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 grid grid-cols-12 gap-4 md:gap-8 items-stretch mt-8 md:mt-16 mb-10 md:mb-24">
         <div className="col-span-12 lg:col-span-7 flex flex-col justify-center">
           <h1 className="font-headline font-extrabold leading-[1.1] tracking-tighter text-[#0a192f] mb-5 md:mb-8 text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
             <span className="block text-[#0a192f]">Empowered Teams.</span>
@@ -85,11 +85,11 @@ export default function ServiceET() {
           </div>
         </div>
         <div className="col-span-12 lg:col-span-5 flex justify-end">
-          <div className="w-full min-h-[220px] md:min-h-[300px] h-full mt-6 lg:mt-0 bg-[#eceef1] rounded-xl overflow-hidden">
+          <div className="w-full h-[220px] sm:h-[280px] md:h-[340px] lg:h-full lg:min-h-[420px] mt-6 lg:mt-0 bg-[#eceef1] rounded-xl overflow-hidden">
             <img
               alt="Team empowerment"
               className="w-full h-full object-cover"
-              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=80"
+              src="https://images.unsplash.com/photo-1606857521015-7f9fcf423740?auto=format&fit=crop&w=900&q=80"
             />
           </div>
         </div>
@@ -121,7 +121,7 @@ export default function ServiceET() {
       {/* ── Assessment CTA + Metrics */}
       <section className="bg-[#eceef1] py-16 md:py-24">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16">
-          <div className="grid grid-cols-1 lg:grid-cols-2 overflow-hidden rounded-2xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 overflow-hidden rounded-2xl">
             <div className="bg-[#0a192f] text-white p-8 md:p-12 lg:p-16 relative overflow-hidden">
               <div className="relative z-10">
                 <h2 className="font-headline text-2xl sm:text-3xl font-bold text-white mb-6">
@@ -192,7 +192,7 @@ export default function ServiceET() {
               <h3 className="font-headline font-extrabold text-white tracking-tighter mb-2 text-xl sm:text-2xl md:text-3xl">
                 Ready to build teams that perform and grow?
               </h3>
-              <p className="font-body text-white/50 text-sm sm:text-base">Transform capability into confidence. Strengthen execution. Empower lasting growth.</p>
+              <p className="font-body text-white text-sm sm:text-base">Transform capability into confidence. Strengthen execution. Empower lasting growth.</p>
             </div>
             <Link
               to="/contact"

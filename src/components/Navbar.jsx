@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom'
 const NAV_LINKS = [
   { label: 'About Us',      href: '/', isLink: true },
   { label: 'Services',      hasDropdown: true },
-  { label: 'Teams',         href: '/teams', isLink: true },
+  { label: 'Team',          href: '/teams', isLink: true },
   { label: 'Partners',      href: '/partners', isLink: true },
   // { label: 'Brands',        href: '/#brands'        },
   { label: 'Wall of Fame',  href: '/wall-of-fame', isLink: true },
@@ -82,10 +82,10 @@ export default function Navbar() {
         <div className="flex items-center justify-between px-6 md:px-10 lg:px-16 h-[82px] max-w-[1440px] mx-auto">
 
           {/* ── Logo */}
-          <Link to="/" className="shrink-0 flex items-center gap-2" onClick={close}>
-            <img src="/logo-brandmark-final.png" alt="" className="h-14 w-auto object-contain" />
-            <div className={`w-px h-9 transition-colors duration-300 ${light ? 'bg-slate-200' : 'bg-white/25'}`} />
-            <img src="/logo-wordmark-final.png" alt="Business Simplified" className="h-32 w-auto object-contain -ml-6" />
+          <Link to="/" className="shrink-0 flex items-center" onClick={close}>
+            <img src="/logo-brandmark-final.png" alt="" className="h-16 w-auto object-contain" />
+            <div className={`w-px h-10 transition-colors duration-300 ${light ? 'bg-slate-200' : 'bg-white/25'}`} />
+            <img src="/logo-wordmark-final.png" alt="Business Simplified" className="h-32 w-auto object-contain -ml-2" />
           </Link>
 
           {/* ── Desktop links */}
@@ -194,10 +194,10 @@ export default function Navbar() {
 
         {/* Panel header */}
         <div className="flex items-center justify-between px-6 h-[82px] border-b border-slate-100 shrink-0">
-          <div className="flex items-center gap-2">
-            <img src="/logo-brandmark-final.png" alt="" className="h-11 w-auto object-contain" />
-            <div className="w-px h-7 bg-slate-200" />
-            <img src="/logo-wordmark-final.png" alt="Business Simplified" className="h-24 w-auto object-contain -ml-6" />
+          <div className="flex items-center">
+            <img src="/logo-brandmark-final.png" alt="" className="h-14 w-auto object-contain" />
+            <div className="w-px h-9 bg-slate-200" />
+            <img src="/logo-wordmark-final.png" alt="Business Simplified" className="h-28 w-auto object-contain -ml-2" />
           </div>
           <button
             onClick={close}
