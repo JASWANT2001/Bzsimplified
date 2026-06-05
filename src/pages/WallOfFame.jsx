@@ -210,9 +210,6 @@ export default function WallOfFame() {
                     <span className="hidden absolute top-4 left-4 bg-[#0a192f]/80 backdrop-blur-sm text-white font-body font-bold text-[11px] tracking-[0.18em] uppercase px-3 py-1 rounded-full border border-white/10">
                       {client.category}
                     </span>
-                    <span className="absolute top-4 right-4 font-headline font-black text-white/20 text-5xl leading-none select-none">
-                      {String(i + 1).padStart(2, '0')}
-                    </span>
                   </div>
                 )}
 
