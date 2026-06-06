@@ -343,8 +343,8 @@ export default function WallOfFame() {
                     {/* CTA footer */}
                     <div className="px-4 md:px-10 py-7 bg-[#0a192f] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                       <div>
-                        <p className="font-headline font-bold text-white text-[16px] mb-1">Are you ready?</p>
-                        <p className="font-body text-white/70 text-[13px]">Let's talk about your business goals.</p>
+                        <p className="font-headline font-bold text-white text-[16px] md:text-[22px] mb-1">Are you ready?</p>
+                        <p className="font-body text-white text-[13px] md:text-[15px]">Let's talk about your business goals.</p>
                       </div>
                       <Link
                         to="/contact"

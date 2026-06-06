@@ -163,13 +163,6 @@ export default function ServiceVC() {
             <h2 className="font-headline font-extrabold text-[#0a192f] tracking-tighter text-2xl sm:text-3xl md:text-4xl">
               Acting as Your Virtual COO
             </h2>
-            <Link
-              to="/contact"
-              className="self-start inline-flex items-center gap-2 border border-[#0a192f] text-[#0a192f] px-6 py-3 rounded-lg font-headline font-semibold text-xs tracking-widest transition-colors duration-200 hover:bg-[#0a192f] hover:text-white group"
-            >
-              View Methodology
-              <span className="material-symbols-outlined text-[17px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
-            </Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {CAPABILITIES.map((cap, i) => (

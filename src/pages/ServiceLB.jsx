@@ -87,24 +87,18 @@ export default function ServiceLB() {
           </div>
 
           {/* Business Setup & Structure */}
-          <div className="group col-span-12 md:col-span-5 bg-[#f2f4f7] rounded-xl p-6 md:p-10 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:bg-[#e8ebf0]">
+          <div className="group col-span-12 md:col-span-5 bg-[#f2f4f7] rounded-xl p-6 md:p-10 flex flex-col justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:bg-[#e8ebf0]">
             <span className="material-symbols-outlined text-[#0a192f] mb-6" style={{ fontSize: '36px' }}>corporate_fare</span>
-            <h4 className="font-headline text-2xl font-bold mb-2 text-[#0a192f]">Business Setup &amp; Structure</h4>
-            <p className="font-body text-[#39475f] text-xs uppercase tracking-wider font-bold mb-4">Foundation • Processes • Operational Framework</p>
+            <h4 className="font-headline text-2xl font-bold mb-3 text-[#0a192f]">Business Setup &amp; Structure</h4>
             <p className="font-body text-[#5a5e6a]">
               Establish the systems and structures needed to run efficiently from day one.
             </p>
-            <Link to="/contact" className="mt-auto pt-6 border-t border-slate-100 flex justify-between items-center hover:text-[#e31e24] transition-colors duration-200 group/cta">
-              <span className="font-body text-xs font-bold tracking-tight uppercase text-[#0a192f] group-hover/cta:text-[#e31e24] transition-colors duration-200">Operational Framework</span>
-              <span className="material-symbols-outlined text-[#0a192f] text-[19px] group-hover/cta:text-[#e31e24] group-hover/cta:translate-x-1 transition-all duration-200">arrow_forward</span>
-            </Link>
           </div>
 
           {/* Compliance */}
-          <div className="col-span-12 md:col-span-4 bg-[#f2f4f7] rounded-xl p-6 md:p-10 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:bg-[#e8ebf0]">
+          <div className="col-span-12 md:col-span-4 bg-[#f2f4f7] rounded-xl p-6 md:p-10 flex flex-col justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:bg-[#e8ebf0]">
             <span className="material-symbols-outlined text-[#0a192f] mb-6" style={{ fontSize: '32px' }}>verified</span>
-            <h4 className="font-headline text-2xl font-bold mb-2 text-[#0a192f]">Compliance &amp; Essential Requirements</h4>
-            <p className="font-body text-[#39475f] text-xs uppercase tracking-wider font-bold mb-4">Registrations • Documentation • Advisory Support</p>
+            <h4 className="font-headline text-2xl font-bold mb-3 text-[#0a192f]">Compliance &amp; Essential Requirements</h4>
             <p className="font-body text-[#5a5e6a] text-sm leading-relaxed">
               Navigate key business requirements with confidence and reduce operational risks.
             </p>
@@ -114,8 +108,7 @@ export default function ServiceLB() {
           <div className="col-span-12 md:col-span-8 bg-[#f2f4f7] rounded-xl p-6 md:p-10 lg:p-12 flex flex-col sm:flex-row sm:items-start gap-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:bg-[#e8ebf0]">
             <div className="flex-1">
               <span className="material-symbols-outlined text-[#e31e24] mb-4" style={{ fontSize: '30px' }}>trending_up</span>
-              <h4 className="font-headline text-2xl font-bold mb-2 text-[#0a192f]">Finance &amp; Growth Planning</h4>
-              <p className="font-body text-[#39475f] text-xs uppercase tracking-wider font-bold mb-4">Budgeting • Financial Planning • Sustainability</p>
+              <h4 className="font-headline text-2xl font-bold mb-3 text-[#0a192f]">Finance &amp; Growth Planning</h4>
               <p className="font-body text-[#5a5e6a] text-sm leading-relaxed">
                 Build financial clarity and develop strategies for profitable growth.
               </p>
@@ -130,17 +123,12 @@ export default function ServiceLB() {
           </div>
 
           {/* Technology & Operational Support */}
-          <div className="group col-span-12 md:col-span-5 bg-[#f2f4f7] rounded-xl p-6 md:p-10 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:bg-[#e8ebf0]">
+          <div className="group col-span-12 md:col-span-5 bg-[#f2f4f7] rounded-xl p-6 md:p-10 flex flex-col justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:bg-[#e8ebf0]">
             <span className="material-symbols-outlined text-[#0a192f] mb-6" style={{ fontSize: '36px' }}>devices</span>
-            <h4 className="font-headline text-2xl font-bold mb-2 text-[#0a192f]">Technology &amp; Operational Support</h4>
-            <p className="font-body text-[#39475f] text-xs uppercase tracking-wider font-bold mb-4">Digital Tools • Process Improvement • Efficiency</p>
+            <h4 className="font-headline text-2xl font-bold mb-3 text-[#0a192f]">Technology &amp; Operational Support</h4>
             <p className="font-body text-[#5a5e6a]">
               Identify and implement the right tools and workflows to simplify operations.
             </p>
-            <Link to="/contact" className="mt-auto pt-6 border-t border-slate-100 flex justify-between items-center group/cta">
-              <span className="font-body text-xs font-bold tracking-tight uppercase text-[#0a192f] group-hover/cta:text-[#e31e24] transition-colors duration-200">Operational Efficiency</span>
-              <span className="material-symbols-outlined text-[#0a192f] text-[19px] group-hover/cta:text-[#e31e24] group-hover/cta:translate-x-1 transition-all duration-200">arrow_forward</span>
-            </Link>
           </div>
 
           {/* Dedicated Consulting Support */}

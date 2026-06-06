@@ -116,7 +116,7 @@ export default function ServicePB() {
             </div>
 
             {/* Dark card — Trademark & IP */}
-            <div className="bg-[#0a192f] text-white rounded-xl p-6 md:p-10 flex flex-col justify-between relative overflow-hidden">
+            <div className="bg-[#0a192f] text-white rounded-xl p-6 md:p-10 flex flex-col justify-center relative overflow-hidden">
               <div className="relative z-10">
                 <span className="material-symbols-outlined mb-6 block" style={{ fontSize: '32px' }}>monitoring</span>
                 <h4 className="font-headline text-xl font-bold mb-3">Trademark &amp; Intellectual Property Protection</h4>
@@ -124,36 +124,16 @@ export default function ServicePB() {
                   Secure your Trademarks and IP across the Indian Subcontinent, ensuring your brand names, logos, and proprietary assets remain protected as your business scales. We coordinate with legal and registration partners, acting as the single bridge between your business and the ecosystem involved.
                 </p>
               </div>
-              <div className="pt-6 border-t border-white/10 mt-6 relative z-10">
-                <Link
-                  to="/contact"
-                  className="group inline-flex items-center gap-2 text-white/70 hover:text-[#e31e24] text-xs font-body font-bold uppercase tracking-widest hover:gap-4 transition-all duration-200"
-                >
-                  Explore Protection
-                  <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform duration-200">arrow_forward</span>
-                </Link>
-              </div>
               <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-white/5 rounded-full blur-3xl pointer-events-none" />
             </div>
 
             {/* Small card — Compliance */}
-            <div className="bg-[#f2f4f7] rounded-xl p-6 md:p-10 flex flex-col justify-between">
-              <div>
+            <div className="bg-[#f2f4f7] rounded-xl p-6 md:p-10 flex flex-col justify-center">
                 <span className="material-symbols-outlined text-[#0a192f] mb-6 block" style={{ fontSize: '32px' }}>gavel</span>
                 <h4 className="font-headline text-xl font-bold mb-3 text-[#0a192f]">Compliance &amp; Governance</h4>
                 <p className="font-body text-[#5a5e6a] text-sm leading-relaxed">
                   Institutionalising brand standards through robust policy frameworks and governance models that support long-term stability.
                 </p>
-              </div>
-              <div className="pt-6 border-t border-slate-200 mt-6">
-                <Link
-                  to="/contact"
-                  className="group inline-flex items-center gap-2 text-[#0a192f] hover:text-[#e31e24] text-xs font-body font-bold uppercase tracking-widest hover:gap-4 transition-all duration-200"
-                >
-                  Policy Review
-                  <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform duration-200">arrow_forward</span>
-                </Link>
-              </div>
             </div>
 
             {/* Wide card — Strategic Brand Insurance */}

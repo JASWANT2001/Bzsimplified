@@ -104,29 +104,21 @@ export default function ServiceMO() {
             </div>
 
             {/* Process Blueprinting */}
-            <div className="bg-[#f2f4f7] rounded-xl p-6 md:p-10 flex flex-col justify-between">
-              <div>
+            <div className="bg-[#f2f4f7] rounded-xl p-6 md:p-10 flex flex-col justify-center">
                 <span className="material-symbols-outlined text-[#0a192f] mb-6 block" style={{ fontSize: '36px' }}>architecture</span>
                 <h4 className="font-headline text-xl font-bold text-[#0a192f] mb-3">Process Blueprinting</h4>
                 <p className="font-body text-sm text-[#5a5e6a] leading-relaxed">
                   We document and refine every touchpoint of your operation, creating a scalable manual for growth.
                 </p>
-              </div>
-              <Link to="/contact" className="group mt-auto pt-6 border-t border-slate-200 flex justify-between items-center">
-                <span className="font-body text-xs font-bold tracking-tight uppercase text-[#0a192f] group-hover:text-[#e31e24] transition-colors duration-200">View Methodology</span>
-                <span className="material-symbols-outlined text-[#0a192f] text-[19px] group-hover:text-[#e31e24] group-hover:translate-x-1 transition-all duration-200">arrow_forward</span>
-              </Link>
             </div>
 
             {/* Risk Mitigation */}
-            <div className="bg-[#f2f4f7] rounded-xl p-6 md:p-10 flex flex-col justify-between">
-              <div>
+            <div className="bg-[#f2f4f7] rounded-xl p-6 md:p-10 flex flex-col justify-center">
                 <span className="material-symbols-outlined text-[#0a192f] mb-6 block" style={{ fontSize: '36px' }}>security</span>
                 <h4 className="font-headline text-xl font-bold text-[#0a192f] mb-3">Risk Mitigation</h4>
                 <p className="font-body text-sm text-[#5a5e6a] leading-relaxed">
                   Identifying structural weaknesses before they become failures. We build resilience into your DNA.
                 </p>
-              </div>
             </div>
 
             {/* Stat card */}

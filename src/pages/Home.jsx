@@ -324,7 +324,7 @@ export default function Home() {
         {/* ═══════════════════════════════════════════════════════
             SERVICES NAVIGATION
         ═══════════════════════════════════════════════════════ */}
-        <section className="pt-14 md:pt-20 pb-10 md:pb-14 bg-[#f7f9fc]" id="services">
+        <section className="pt-14 md:pt-20 pb-10 md:pb-14 bg-[#eceef1]" id="services">
           <div className="mx-auto px-5 sm:px-8 md:px-10 lg:px-16 max-w-[1440px]">
 
             {/* Header */}
@@ -343,8 +343,8 @@ export default function Home() {
                 <Link
                   key={service.code}
                   to={`/service/${service.code.toLowerCase()}`}
-                  className="group relative bg-white rounded-2xl overflow-hidden border border-slate-100 cursor-pointer
-                    hover:shadow-2xl hover:-translate-y-1.5 hover:border-slate-200
+                  className="group relative bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm cursor-pointer
+                    hover:shadow-xl hover:-translate-y-1.5 hover:border-slate-300
                     transition-all duration-300 flex flex-col"
                 >
                   {/* Image strip */}
@@ -617,14 +617,14 @@ export default function Home() {
               ))}
             </div>
 
-            {/* Mobile pill button */}
-            <div className="sm:hidden flex justify-center mt-8">
+            {/* View All Stories — below grid, mobile only */}
+            <div className="mt-10 flex justify-center sm:hidden">
               <Link
                 to="/wall-of-fame"
-                className="inline-flex items-center gap-2 bg-[#0a192f] text-white font-body font-semibold text-[14px] px-6 py-3 rounded-full hover:bg-[#0e2340] transition-colors duration-200"
+                className="inline-flex items-center gap-2 font-body font-semibold text-[14px] text-[#0a192f]/60 hover:text-[#0a192f] border border-slate-300 hover:border-slate-400 px-6 py-3 rounded-full transition-all duration-200 group"
               >
                 View All Stories
-                <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
+                <span className="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform duration-200">arrow_forward</span>
               </Link>
             </div>
 
