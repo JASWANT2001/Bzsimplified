@@ -211,7 +211,7 @@ export default function Contact() {
                       <span className="material-symbols-outlined text-white/70 text-[18px]">{item.icon}</span>
                     </div>
                     <div>
-                      <p className="text-white/35 text-[11px] uppercase tracking-widest font-semibold mb-0.5">{item.label}</p>
+                      <p className="text-white/60 text-[11px] uppercase tracking-widest font-semibold mb-0.5">{item.label}</p>
                       {item.href
                         ? <a href={item.href} target={item.href.startsWith('http') ? '_blank' : undefined} rel="noreferrer" className="text-white text-[14px] font-medium hover:text-white/70 transition-colors duration-200">{item.val}</a>
                         : <p className="text-white text-[14px] font-medium">{item.val}</p>
@@ -226,7 +226,7 @@ export default function Contact() {
 
               {/* What happens next */}
               <div className="flex-1">
-                <p className="text-white/35 text-[11px] uppercase tracking-[0.25em] font-bold mb-5">What happens next</p>
+                <p className="text-white/60 text-[11px] uppercase tracking-[0.25em] font-bold mb-5">What happens next</p>
                 <div className="space-y-5">
                   {[
                     { step: '01', icon: 'edit_note',     title: 'Submit your details', desc: 'Fill the form and tell us what you need.' },
@@ -241,7 +241,7 @@ export default function Contact() {
                       </div>
                       <div className="pb-1">
                         <p className="text-white text-[13px] font-semibold leading-tight">{s.title}</p>
-                        <p className="text-white/35 text-[12px] leading-relaxed mt-0.5">{s.desc}</p>
+                        <p className="text-white/65 text-[12px] leading-relaxed mt-0.5">{s.desc}</p>
                       </div>
                     </div>
                   ))}

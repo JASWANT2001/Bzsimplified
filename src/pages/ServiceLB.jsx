@@ -46,7 +46,7 @@ export default function ServiceLB() {
           <div className="w-full h-[220px] sm:h-[280px] md:h-[340px] lg:h-full lg:min-h-[420px] mt-6 lg:mt-0 bg-[#eceef1] rounded-xl overflow-hidden">
             <img
               className="w-full h-full object-cover"
-              src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?auto=format&fit=crop&w=900&q=80"
+              src="https://ik.imagekit.io/glvwzrukg/Bzsimplified/93013d56-a7c7-43f3-9a96-2d2b37ef7296.jpeg"
               alt="Business strategy planning session"
             />
           </div>
