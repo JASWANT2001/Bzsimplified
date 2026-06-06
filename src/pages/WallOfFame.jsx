@@ -175,7 +175,7 @@ export default function WallOfFame() {
       <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 pt-8">
         <button
           onClick={() => expandedId ? setExpandedId(null) : navigate('/')}
-          className="inline-flex items-center gap-1.5 text-slate-400 hover:text-[#0a192f] font-body text-[13px] font-semibold transition-colors group"
+          className="inline-flex items-center gap-1.5 text-[#0a192f] hover:text-[#e31e24] font-body text-[14px] font-bold transition-colors group"
         >
           <span className="material-symbols-outlined text-[17px] group-hover:-translate-x-0.5 transition-transform">arrow_back</span>
           {expandedId ? 'Back to Wall of Fame' : 'Back to Home'}
@@ -344,7 +344,7 @@ export default function WallOfFame() {
                     <div className="px-4 md:px-10 py-7 bg-[#0a192f] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                       <div>
                         <p className="font-headline font-bold text-white text-[16px] mb-1">Are you ready?</p>
-                        <p className="font-body text-white/40 text-[13px]">Let's talk about your business goals.</p>
+                        <p className="font-body text-white/70 text-[13px]">Let's talk about your business goals.</p>
                       </div>
                       <Link
                         to="/contact"

@@ -142,7 +142,7 @@ export default function ServiceBB() {
             At Business Simplified, we work with founders, professionals, startups, and growing enterprises to transform ideas into structured, scalable businesses with strategy, compliance, operations, branding, and growth working together from day one.
           </p>
           <div className="border-l-2 border-[#e31e24] pl-4 mt-2">
-            <p className="font-body text-[#5a5e6a] text-sm leading-relaxed">We don't just help you start.</p>
+            <p className="font-body text-[#39475f] font-medium text-sm leading-relaxed">We don't just help you start.</p>
             <p className="font-headline font-extrabold text-[#0a192f] text-base leading-snug mt-1">We help you build businesses designed to last.</p>
           </div>
         </div>
@@ -273,15 +273,15 @@ export default function ServiceBB() {
           {/* Engagement Outcomes - grid of numbered cards */}
           <div className="col-span-12 lg:col-span-7 bg-white border border-slate-200 rounded-xl p-8 lg:p-10">
             <h3 className="font-headline text-2xl font-bold text-[#0a192f] mb-1">Engagement Outcomes</h3>
-            <p className="font-body text-sm text-[#5a5e6a] mb-8">Businesses we support gain:</p>
+            <p className="font-body text-sm text-[#39475f] font-medium mb-8">Businesses we support gain:</p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {OUTCOMES.map((o, i) => (
                 <div key={o} className="flex items-start gap-4 bg-[#f7f9fc] rounded-xl p-4 border border-slate-100">
-                  <span className="font-headline font-extrabold text-[#0a192f]/15 leading-none shrink-0 mt-0.5" style={{ fontSize: '1.6rem' }}>
+                  <span className="font-headline font-extrabold text-[#0a192f]/30 leading-none shrink-0 mt-0.5" style={{ fontSize: '1.6rem' }}>
                     {String(i + 1).padStart(2, '0')}
                   </span>
-                  <span className="font-body text-sm text-[#39475f] leading-snug pt-1">{o}</span>
+                  <span className="font-body text-sm font-medium text-[#0a192f] leading-snug pt-1">{o}</span>
                 </div>
               ))}
             </div>

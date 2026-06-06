@@ -239,13 +239,13 @@ export default function Navbar() {
                             onClick={close}
                             className="flex items-center gap-2 px-2 py-2.5 rounded-lg hover:bg-slate-50 transition-colors group/item"
                           >
-                            <span className="font-headline font-black text-[10px] text-slate-300 group-hover/item:text-[#0a192f] w-5 shrink-0 transition-colors">
+                            <span className="font-headline font-black text-[11px] text-slate-500 group-hover/item:text-[#0a192f] w-5 shrink-0 transition-colors">
                               {s.num}
                             </span>
-                            <span className="font-body text-[14px] text-slate-600 group-hover/item:text-[#0a192f] transition-colors leading-snug flex-1">
+                            <span className="font-body font-semibold text-[14px] text-slate-700 group-hover/item:text-[#0a192f] transition-colors leading-snug flex-1">
                               {s.title}
                             </span>
-                            <span className="material-symbols-outlined text-[16px] text-slate-300 group-hover/item:text-[#e31e24] transition-colors shrink-0">arrow_forward</span>
+                            <span className="material-symbols-outlined text-[16px] text-slate-400 group-hover/item:text-[#e31e24] transition-colors shrink-0">arrow_forward</span>
                           </Link>
                         ))}
                       </div>

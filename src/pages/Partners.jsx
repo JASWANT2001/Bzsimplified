@@ -273,7 +273,7 @@ export default function Partners() {
             >
               Ready to scale your influence?
             </h2>
-            <p className="font-body text-white/50 text-base mb-8 max-w-md mx-auto">
+            <p className="font-body text-white/75 text-base mb-8 max-w-md mx-auto">
               Join our elite network and help redefine consulting excellence.
             </p>
             <div className="flex flex-wrap justify-center gap-3">

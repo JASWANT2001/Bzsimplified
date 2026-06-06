@@ -45,7 +45,7 @@ function ColHeader({ children }) {
 }
 
 function NavLink({ href, isLink, children }) {
-  const cls = "font-body text-white/50 text-[13px] hover:text-white transition-colors duration-200"
+  const cls = "font-body text-white/70 text-[13px] hover:text-white transition-colors duration-200"
   return isLink
     ? <Link to={href} className={cls}>{children}</Link>
     : <a href={href} className={cls}>{children}</a>
@@ -62,7 +62,7 @@ export default function Footer() {
 
           {/* Col 1 — Brand + Follow Us */}
           <div className="flex flex-col gap-7">
-            <p className="font-body text-white/70 text-[13px] leading-relaxed max-w-[210px]">
+            <p className="font-body text-white/70 text-[15px] leading-relaxed">
               We help founders simplify operations and scale with purpose.
             </p>
 
@@ -121,7 +121,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {SERVICES_A.map(s => (
                 <li key={s.label}>
-                  <Link to={s.href} className="font-body text-white/50 text-[13px] hover:text-white transition-colors duration-200">
+                  <Link to={s.href} className="font-body text-white/70 text-[13px] hover:text-white transition-colors duration-200">
                     {s.label}
                   </Link>
                 </li>
@@ -135,7 +135,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {SERVICES_B.map(s => (
                 <li key={s.label}>
-                  <Link to={s.href} className="font-body text-white/50 text-[13px] hover:text-white transition-colors duration-200">
+                  <Link to={s.href} className="font-body text-white/70 text-[13px] hover:text-white transition-colors duration-200">
                     {s.label}
                   </Link>
                 </li>
@@ -151,12 +151,12 @@ export default function Footer() {
                 item.href ? (
                   <a key={item.val} href={item.href} target={item.href.startsWith('http') ? '_blank' : undefined} rel="noreferrer" className="flex items-center gap-2 group">
                     <span className="material-symbols-outlined text-[#e31e24] text-[14px] shrink-0">{item.icon}</span>
-                    <span className="font-body text-white/50 text-[13px] group-hover:text-white/80 transition-colors duration-200">{item.val}</span>
+                    <span className="font-body text-white/70 text-[13px] group-hover:text-white/80 transition-colors duration-200">{item.val}</span>
                   </a>
                 ) : (
                   <div key={item.val} className="flex items-center gap-2">
                     <span className="material-symbols-outlined text-[#e31e24] text-[14px] shrink-0">{item.icon}</span>
-                    <span className="font-body text-white/50 text-[13px]">{item.val}</span>
+                    <span className="font-body text-white/70 text-[13px]">{item.val}</span>
                   </div>
                 )
               ))}
@@ -169,7 +169,7 @@ export default function Footer() {
       {/* ── Bottom bar */}
       <div className="border-t border-white/8">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-          <p className="font-body text-white/25 text-[12px]">© {year} Bzsimplified. All rights reserved.</p>
+          <p className="font-body text-white/50 text-[12px]">© {year} Bzsimplified. All rights reserved.</p>
         </div>
       </div>
 

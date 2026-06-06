@@ -82,7 +82,7 @@ export default function ServiceST() {
             Technology should simplify your business, not complicate it. We help founders identify the right software, ERP solutions, and digital tools tailored to their operations, then act as the bridge between all vendors involved to ensure seamless implementation.
           </p>
           <div className="border-l-2 border-[#e31e24] pl-4 mt-2 self-start">
-            <p className="font-body text-[#5a5e6a] text-sm leading-relaxed">From selection to setup.</p>
+            <p className="font-body text-[#39475f] font-medium text-sm leading-relaxed">From selection to setup.</p>
             <p className="font-headline font-extrabold text-[#0a192f] text-base leading-snug mt-1">We make technology work together, so your business can move faster.</p>
           </div>
         </div>

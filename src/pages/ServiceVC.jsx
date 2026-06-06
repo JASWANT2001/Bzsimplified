@@ -114,7 +114,7 @@ export default function ServiceVC() {
             Businesses don't fail because of people alone. They fail when processes are unclear, fragmented, or dependent on individuals. At Business Simplified, we function as your Virtual Chief Operating Officer, building the operational backbone, aligning teams, optimising workflows, and creating processes that enable people to perform at their best.
           </p>
           <div className="border-l-2 border-[#e31e24] pl-4 mt-2 self-start">
-            <p className="font-body text-[#5a5e6a] text-sm leading-relaxed">We don't just manage operations.</p>
+            <p className="font-body text-[#39475f] font-medium text-sm leading-relaxed">We don't just manage operations.</p>
             <p className="font-headline font-extrabold text-[#0a192f] text-base leading-snug mt-1">We design businesses that run with clarity, resilience, and precision.</p>
           </div>
         </div>

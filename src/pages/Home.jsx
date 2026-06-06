@@ -88,14 +88,14 @@ const ARCH_CARDS = [
 ]
 
 const SERVICES = [
-  { code: 'LB', num: '01', icon: 'rocket_launch',   title: 'Launch Your Brand',      desc: 'Identity, positioning, and go-to-market.',          img: 'https://images.unsplash.com/photo-1611532736597-de2d4265fba3?auto=format&fit=crop&w=600&q=80' },
+  { code: 'LB', num: '01', icon: 'rocket_launch',   title: 'Launch Your Brand',      desc: 'Identity, positioning, and go-to-market.',          img: 'https://images.unsplash.com/photo-1609921212029-bb5a28e60960?auto=format&fit=crop&w=600&q=80' },
   { code: 'BB', num: '02', icon: 'business_center', title: 'Build Your Business',    desc: 'Legal structure, ops, and funding systems.',        img: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80' },
   { code: 'ST', num: '03', icon: 'devices',         title: 'Set Up Your Tech',       desc: 'Core stack to run and measure your business.',      img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80' },
   { code: 'PB', num: '04', icon: 'shield',          title: 'Protect Your Brand',     desc: 'Trademarks, contracts, and brand governance.',      img: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=600&q=80' },
   { code: 'FF', num: '05', icon: 'account_balance', title: 'Fix Your Finances',      desc: 'Books, cash flow, and profitability controls.',     img: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=600&q=80' },
   { code: 'EC', num: '06', icon: 'gavel',           title: 'Ensure Compliance',      desc: 'Statutory, regulatory, and internal policy.',       img: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=600&q=80' },
   { code: 'MO', num: '07', icon: 'tune',            title: 'Manage Your Operations', desc: 'SOPs, KPIs, and daily rhythm of execution.',        img: 'https://images.unsplash.com/photo-1553484771-371a605b060b?auto=format&fit=crop&w=600&q=80' },
-  { code: 'ET', num: '08', icon: 'groups',          title: 'Empower Your Team',      desc: 'Org design, hiring, and leadership cadence.',       img: 'https://images.unsplash.com/photo-1606857521015-7f9fcf423740?auto=format&fit=crop&w=600&q=80' },
+  { code: 'ET', num: '08', icon: 'groups',          title: 'Empower Your Team',      desc: 'Org design, hiring, and leadership cadence.',       img: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=600&q=80' },
   { code: 'VC', num: '09', icon: 'account_tree',    title: 'Virtual COO',            desc: 'Operational systems, processes, and execution.',    img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80' },
 ]
 
@@ -364,18 +364,18 @@ export default function Home() {
                           {service.icon}
                         </span>
                       </div>
-                      <span className="font-headline font-black text-slate-200 group-hover:text-slate-300 text-4xl leading-none transition-colors duration-300 select-none">
+                      <span className="font-headline font-black text-slate-300 group-hover:text-slate-400 text-4xl leading-none transition-colors duration-300 select-none">
                         {service.num}
                       </span>
                     </div>
 
                     {/* Title */}
-                    <h3 className="font-headline font-bold text-[#0a192f] text-[18px] mb-2 leading-snug">
+                    <h3 className="font-headline font-extrabold text-[#0a192f] text-[18px] mb-2 leading-snug">
                       {service.title}
                     </h3>
 
                     {/* Desc */}
-                    <p className="font-body text-slate-500 group-hover:text-slate-600 text-[14px] leading-relaxed mb-6 transition-colors duration-300">
+                    <p className="font-body font-medium text-slate-600 group-hover:text-slate-700 text-[14px] leading-relaxed mb-6 transition-colors duration-300">
                       {service.desc}
                     </p>
 
@@ -499,7 +499,7 @@ export default function Home() {
                   className="group relative bg-[#f7f9fc] rounded-lg p-5 sm:p-8 flex flex-col gap-4 sm:gap-5 overflow-hidden border border-slate-100 hover:border-transparent hover:bg-[#0a192f] transition-all duration-300 cursor-pointer"
                 >
                   {/* Category eyebrow */}
-                  <p className="font-body text-[10px] font-bold uppercase tracking-[0.22em] text-slate-400 group-hover:text-white/40 transition-colors duration-300 relative z-10">
+                  <p className="font-body text-[10px] font-bold uppercase tracking-[0.22em] text-slate-600 group-hover:text-white/60 transition-colors duration-300 relative z-10">
                     {p.category}
                   </p>
 
@@ -605,7 +605,7 @@ export default function Home() {
                     </div>
 
                     {/* Bottom row */}
-                    <div className="mt-auto pt-3 sm:pt-4 border-t border-slate-100 group-hover:border-slate-200 flex items-center justify-between transition-colors duration-300">
+                    <div className="mt-auto pt-3 sm:pt-4 flex items-center justify-between">
                       <span className="font-body font-bold text-[10px] sm:text-[11px] tracking-[0.18em] uppercase text-[#e31e24]">{brand.sector}</span>
                       <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-100 group-hover:bg-[#0a192f] flex items-center justify-center transition-all duration-300 group-hover:translate-x-1 flex-shrink-0">
                         <span className="material-symbols-outlined text-[15px] text-slate-500 group-hover:text-white transition-colors duration-300">arrow_forward</span>

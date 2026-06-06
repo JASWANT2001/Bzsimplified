@@ -88,7 +88,7 @@ export default function ServiceFF() {
             Financial confusion slows growth. We help businesses reorganize financial systems, align numbers with reality, and create structured visibility across every layer of operations.
           </p>
           <div className="border-l-2 border-[#e31e24] pl-4 mt-2 self-start">
-            <p className="font-body text-[#5a5e6a] text-sm leading-relaxed">From numbers to clarity.</p>
+            <p className="font-body text-[#39475f] font-medium text-sm leading-relaxed">From numbers to clarity.</p>
             <p className="font-headline font-extrabold text-[#0a192f] text-base leading-snug mt-1">Our Fix Your Finance framework brings together your Trial Balance (TB), Profit &amp; Loss (P&amp;L), Balance Sheet, and operational data into one clear financial story, so decisions are based on facts, not assumptions.</p>
           </div>
         </div>

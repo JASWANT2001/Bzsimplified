@@ -57,7 +57,7 @@ export default function ServiceMO() {
             We provide the structural integrity required to scale. Our Manage Your Operations suite transforms chaotic workflows into architectural precision, ensuring your business remains grounded while reaching new heights.
           </p>
           <div className="border-l-2 border-[#e31e24] pl-4 mt-2 self-start">
-            <p className="font-body text-[#5a5e6a] text-sm leading-relaxed">From chaos to clarity.</p>
+            <p className="font-body text-[#39475f] font-medium text-sm leading-relaxed">From chaos to clarity.</p>
             <p className="font-headline font-extrabold text-[#0a192f] text-base leading-snug mt-1">Systems that run your business, not the other way around.</p>
           </div>
         </div>

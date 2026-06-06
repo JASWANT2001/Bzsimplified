@@ -80,7 +80,7 @@ export default function ServiceET() {
             Growth happens when people perform with clarity, confidence, and capability. We help organizations empower teams through structured learning, leadership development, performance enablement, and execution-focused interventions designed to strengthen business outcomes.
           </p>
           <div className="border-l-2 border-[#e31e24] pl-4 mt-2 self-start">
-            <p className="font-body text-[#5a5e6a] text-sm leading-relaxed">People first. Performance always.</p>
+            <p className="font-body text-[#39475f] font-medium text-sm leading-relaxed">People first. Performance always.</p>
             <p className="font-headline font-extrabold text-[#0a192f] text-base leading-snug mt-1">We build teams that are ready to scale with your business.</p>
           </div>
         </div>
@@ -89,7 +89,7 @@ export default function ServiceET() {
             <img
               alt="Team empowerment"
               className="w-full h-full object-cover"
-              src="https://images.unsplash.com/photo-1606857521015-7f9fcf423740?auto=format&fit=crop&w=900&q=80"
+              src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=900&q=80"
             />
           </div>
         </div>
@@ -166,7 +166,7 @@ export default function ServiceET() {
             <img
               alt="Team empowerment"
               className="w-full h-full object-cover object-[center_30%]"
-              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1400&q=80"
+              src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1400&q=80"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0a192f]/90 via-[#0a192f]/40 to-transparent" />
             <div className="absolute bottom-10 left-10 lg:bottom-12 lg:left-12 max-w-xl">

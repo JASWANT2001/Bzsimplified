@@ -84,7 +84,7 @@ export default function ServiceEC() {
             We help businesses manage GST, bookkeeping, accounting, statutory filings, and CFO-level financial oversight, building systems that keep your business compliant while enabling smarter decisions.
           </p>
           <div className="border-l-2 border-[#e31e24] pl-4 mt-2 self-start">
-            <p className="font-body text-[#5a5e6a] text-sm leading-relaxed">Built for clarity. Built for growth.</p>
+            <p className="font-body text-[#39475f] font-medium text-sm leading-relaxed">Built for clarity. Built for growth.</p>
             <p className="font-headline font-extrabold text-[#0a192f] text-base leading-snug mt-1">Stay compliant. Stay financially clear. Stay growth-ready.</p>
           </div>
         </div>

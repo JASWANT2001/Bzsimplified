@@ -65,7 +65,7 @@ export default function ServicePB() {
             Your brand is more than a logo. It is reputation, trust, and commercial value. In an evolving market, protecting your intellectual assets is as critical as growing them.
           </p>
           <div className="border-l-2 border-[#e31e24] pl-4 mt-2 self-start">
-            <p className="font-body text-[#5a5e6a] text-sm leading-relaxed">Built to last. Built to protect.</p>
+            <p className="font-body text-[#39475f] font-medium text-sm leading-relaxed">Built to last. Built to protect.</p>
             <p className="font-headline font-extrabold text-[#0a192f] text-base leading-snug mt-1">We protect your brand.</p>
           </div>
         </div>
