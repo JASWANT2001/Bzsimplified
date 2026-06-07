@@ -24,7 +24,7 @@ const SERVICES_B = [
 ]
 
 const CONTACT = [
-  { icon: 'mail_outline', val: 'hello@bzsimplified.com', href: 'https://mail.google.com/mail/?view=cm&to=hello@bzsimplified.com' },
+  { icon: 'mail_outline', val: 'hello@bzsimplified.com', href: null },
   { icon: 'phone',        val: '+91 98410 27220',         href: 'tel:+919841027220' },
   { icon: 'schedule',     val: 'Response within 2 hrs',   href: null },
   { icon: 'location_on',  val: 'India · Qatar',           href: null },

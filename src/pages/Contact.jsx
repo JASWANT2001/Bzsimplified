@@ -170,13 +170,6 @@ export default function Contact() {
               Start the Conversation
               <span className="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform duration-200">arrow_forward</span>
             </a>
-            <a
-              href="https://mail.google.com/mail/?view=cm&to=hello@bzsimplified.com"
-              className="inline-flex items-center gap-2 px-6 py-3 border border-white text-white font-body font-semibold text-[14px] rounded-xl transition-all duration-200 hover:bg-transparent hover:text-white"
-            >
-              <span className="material-symbols-outlined text-[16px]">mail</span>
-              Email Us
-            </a>
           </div>
         </div>
         <button
@@ -202,7 +195,7 @@ export default function Contact() {
               {/* Contact details */}
               <div className="space-y-6">
                 {[
-                  { icon: 'mail_outline', label: 'Email',         val: 'hello@bzsimplified.com', href: 'https://mail.google.com/mail/?view=cm&to=hello@bzsimplified.com' },
+                  { icon: 'mail_outline', label: 'Email',         val: 'hello@bzsimplified.com', href: null },
                   { icon: 'phone',        label: 'Phone',         val: '+91-9841027220',          href: 'tel:+919841027220' },
                   { icon: 'schedule',     label: 'Response time', val: 'Within 2 hours',         href: null },
                 ].map(item => (
